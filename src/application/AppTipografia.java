@@ -2,30 +2,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXML.java to edit this template
  */
-package tipografias.script.fluida;
+package application;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-/**
- *
- * @author sonof
- */
-public class TipografiasScriptFluida extends Application {
+public class AppTipografia extends Application {
     
     @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+    public void start(Stage ventana) throws Exception {
         
-        Scene scene = new Scene(root);
+        //Creación de Nodo Raíz
+        AnchorPane nodoRaiz = new AnchorPane();
+        nodoRaiz.setPrefHeight(650.0);
+        nodoRaiz.setPrefWidth(1300.0);
         
-        stage.setScene(scene);
-        stage.show();
+        //Mostrar Escena
+        Scene escena = new Scene(nodoRaiz);
+        ventana.setScene(escena);
+        ventana.show();
     }
-
+    
     /**
      * @param args the command line arguments
      */
