@@ -45,6 +45,11 @@ public class AppTipografia extends Application {
         
         //Orden para mostrar la ventana
         primaryStage.show();
+        
+        //DIBUJO DE LAS FORMAS
+        
+        //Dibujar linea desde la posicion (x,y) a (x1, y1)
+        gc.strokeLine(40, 10, 10, 40);
     }
     
     /**
