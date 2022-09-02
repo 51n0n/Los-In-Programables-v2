@@ -5,24 +5,46 @@
 package application;
 
 import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class AppTipografia extends Application {
     
+    /**
+     *
+     * @param primaryStage
+     */
     @Override
-    public void start(Stage ventana) throws Exception {
+    public void start (Stage primaryStage){
         
-        //Creación de Nodo Raíz
-        AnchorPane nodoRaiz = new AnchorPane();
-        nodoRaiz.setPrefHeight(650.0);
-        nodoRaiz.setPrefWidth(1300.0);
+        //Creacion de la ventana y contenedores principales
+        Group root = new Group();
         
-        //Mostrar Escena
-        Scene escena = new Scene(nodoRaiz);
-        ventana.setScene(escena);
-        ventana.show();
+        //Creacion de zona de dibujo}
+        Canvas canvas = new Canvas(200, 150);
+        
+        //Obtención del contexto gráfico del canvas anterior que permitira realizar posteriormente los dibujos
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+        
+        //Se añade el canvas al contenedor principal (root)
+        root.getChildren().add(canvas);
+        //Creacion del área (scene), de 600x400 puntos, color gris claro
+        
+        Scene scene = new Scene(root, 600, 400, Color.LIGHTGRAY);
+        
+        //Se asocia la ventana (scene) al parametro primaryStage
+        primaryStage.setScene(scene);
+        
+        //Titulo que aparece en la ventana
+        primaryStage.setTitle("Tipografia Script Fluida");
+        
+        //Orden para mostrar la ventana
+        primaryStage.show();
     }
     
     /**
