@@ -19,6 +19,12 @@ public class AppTipografia extends Application {
         nodoRaiz.setPrefHeight(650.0);
         nodoRaiz.setPrefWidth(1300.0);
         
+        //Objetivo-> Intentar que lo de abajo funcione
+        /*
+        CrearCaracteres aux = new CrearCaracteres();
+        nodoRaiz.getChildren().add(aux.crear_A());
+        */
+        
         //Mostrar Escena
         Scene escena = new Scene(nodoRaiz);
         ventana.setScene(escena);
