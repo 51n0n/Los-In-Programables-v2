@@ -25,30 +25,26 @@ public class AppTipografia extends Application {
         //Creacion de la ventana y contenedores principales
         Group root = new Group();
         
-        //Creacion de zona de dibujo}
+        //Creacion de zona de dibujo
         Canvas canvas = new Canvas(200, 150);
         
-        //Obtención del contexto gráfico del canvas anterior que permitira realizar posteriormente los dibujos
+        //Obtención del canvas
         GraphicsContext gc = canvas.getGraphicsContext2D();
         
-        //Se añade el canvas al contenedor principal (root)
+        //Se añade el canvas al contenedor principal
         root.getChildren().add(canvas);
-        //Creacion del área (scene), de 600x400 puntos, color gris claro
         
+        //Crea escena de 600x400, gris claro
         Scene scene = new Scene(root, 600, 400, Color.LIGHTGRAY);
-        
-        //Se asocia la ventana (scene) al parametro primaryStage
         primaryStage.setScene(scene);
         
-        //Titulo que aparece en la ventana
+        //Titulo de la ventana
         primaryStage.setTitle("Tipografia Script Fluida");
         
-        //Orden para mostrar la ventana
         primaryStage.show();
         
-        //DIBUJO DE LAS FORMAS
-        
-        //Dibujar linea desde la posicion (x,y) a (x1, y1)
+        //DIBUJO
+        //Dibuja linea desde la posicion (x,y) a (x1, y1)
         gc.strokeLine(40, 10, 10, 40);
     }
     
