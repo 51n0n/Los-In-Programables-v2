@@ -30,12 +30,14 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void handleButtonIniciar(ActionEvent event) {
-        System.out.println("Inicio el proceso de dibujo");
+        //System.out.println("Inicio el proceso de dibujo");
+        String palabra = ingresarPalabra.getText();
+        System.out.println(palabra);
     }
     
     @FXML
     private void handleButtonFinalizar(ActionEvent event) {
-        System.out.println("Finalizo el programa");
+        System.exit(0);
     }
     
     @Override
