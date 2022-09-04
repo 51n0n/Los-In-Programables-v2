@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.QuadCurve;
 import javafx.stage.Stage;
 
 public class AppTipografia extends Application {
@@ -17,9 +18,10 @@ public class AppTipografia extends Application {
     /**
      *
      * @param primaryStage
+     * @throws java.lang.Exception
      */
     @Override
-    public void start (Stage primaryStage){
+    public void start (Stage primaryStage) throws Exception{
         
         //Creacion de la ventana y contenedores principales
         Group root = new Group();
@@ -34,7 +36,7 @@ public class AppTipografia extends Application {
         root.getChildren().add(canvas);
         
         //Crea escena de 600x400, gris claro
-        Scene scene = new Scene(root, 600, 400, Color.LIGHTGRAY);
+        Scene scene = new Scene(root, 600, 400, Color.WHITE);
         primaryStage.setScene(scene);
         
         //Titulo de la ventana
@@ -45,6 +47,17 @@ public class AppTipografia extends Application {
         //DIBUJO
         //Dibuja linea desde la posicion (x,y) a (x1, y1)
         gc.strokeLine(40, 10, 10, 40);
+        
+        /*
+        QuadCurve quad=new QuadCurve();
+        quad.setStartX(100);
+        quad.setStartY(220);
+        quad.setControlX(250);
+        quad.setControlY(0);
+        quad.setEndX(500);
+        quad.setEndY(220);
+        
+        root.getChildren().add(quad);*/
     }
     
     /**
