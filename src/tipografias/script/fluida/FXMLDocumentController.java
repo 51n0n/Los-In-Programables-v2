@@ -9,7 +9,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -19,11 +21,21 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
+    @FXML
+    private Button buttonFinalizar;
+    @FXML
+    private Button buttonIniciar;
+    @FXML
+    private TextField ingresarPalabra;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    private void handleButtonIniciar(ActionEvent event) {
+        System.out.println("Inicio el proceso de dibujo");
+    }
+    
+    @FXML
+    private void handleButtonFinalizar(ActionEvent event) {
+        System.out.println("Finalizo el programa");
     }
     
     @Override
