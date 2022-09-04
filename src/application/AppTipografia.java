@@ -47,10 +47,10 @@ public class AppTipografia extends Application {
     }
     
     private void drawLetter(GraphicsContext gc){
-        gc.setFill(Color.BLACK);
+        //gc.setFill(Color.BLACK);
         gc.setStroke(Color.BLACK);
         gc.setLineWidth(3);
         gc.strokeLine(40, 10, 10, 40); //Linea recta
-        gc.strokeArc(40, 10, 10, 40, 45, 200, ArcType.OPEN); //Curvas sin relleno
+        gc.strokeArc(43, 30, 45, 45, 45, 180, ArcType.OPEN); //Curvas sin relleno (x, y, ancho, largo, inicio del angulo, angulo)
     }
 }
