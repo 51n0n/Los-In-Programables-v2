@@ -9,54 +9,48 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.ArcType;
 import javafx.stage.Stage;
 
 public class AppTipografia extends Application {
     
-    /**
-     *
-     * @param primaryStage
-     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
-    public void start (Stage primaryStage){
+    public void start (Stage primaryStage) throws Exception{
+        
+        //Titulo de la ventana
+        primaryStage.setTitle("Tipografia Script Fluida");
         
         //Creacion de la ventana y contenedores principales
         Group root = new Group();
         
-        //Creacion de zona de dibujo}
-        Canvas canvas = new Canvas(200, 150);
+        //Creacion de zona de dibujo
+        Canvas canvas = new Canvas(300, 250);
         
-        //Obtención del contexto gráfico del canvas anterior que permitira realizar posteriormente los dibujos
+        //Obtención del canvas
         GraphicsContext gc = canvas.getGraphicsContext2D();
         
-        //Se añade el canvas al contenedor principal (root)
+        drawLetter(gc);
+        
+        //Se añade el canvas al contenedor principal
         root.getChildren().add(canvas);
-        //Creacion del área (scene), de 600x400 puntos, color gris claro
         
-        Scene scene = new Scene(root, 600, 400, Color.LIGHTGRAY);
+        //Crea escena
+        primaryStage.setScene(new Scene(root));
         
-        //Se asocia la ventana (scene) al parametro primaryStage
-        primaryStage.setScene(scene);
-        
-        //Titulo que aparece en la ventana
-        primaryStage.setTitle("Tipografia Script Fluida");
-        
-        //Orden para mostrar la ventana
+        //Muestra la escena
         primaryStage.show();
-        
-        //DIBUJO DE LAS FORMAS
-        
-        //Dibujar linea desde la posicion (x,y) a (x1, y1)
-        gc.strokeLine(40, 10, 10, 40);
     }
     
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
+    private void drawLetter(GraphicsContext gc){
+        //gc.setFill(Color.BLACK);
+        gc.setStroke(Color.BLACK);
+        gc.setLineWidth(3);
+        gc.strokeLine(40, 10, 10, 40); //Linea recta
+        gc.strokeArc(43, 30, 45, 45, 45, 180, ArcType.OPEN); //Curvas sin relleno (x, y, ancho, largo, inicio del angulo, angulo)
     }
-    
 }
