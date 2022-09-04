@@ -29,7 +29,7 @@ public class AppTipografia extends Application {
         Group root = new Group();
         
         //Creacion de zona de dibujo
-        Canvas canvas = new Canvas(300, 250);
+        Canvas canvas = new Canvas(725, 528);
         
         //Obtención del canvas
         GraphicsContext gc = canvas.getGraphicsContext2D();
@@ -47,7 +47,6 @@ public class AppTipografia extends Application {
     }
     
     private void drawLetter(GraphicsContext gc){
-        //gc.setFill(Color.BLACK);
         gc.setStroke(Color.BLACK);
         gc.setLineWidth(3);
         gc.strokeLine(40, 10, 10, 40); //Linea recta
