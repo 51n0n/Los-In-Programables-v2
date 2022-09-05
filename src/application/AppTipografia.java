@@ -37,6 +37,8 @@ public class AppTipografia extends Application {
         botonInicio.setPrefHeight(20);
         botonInicio.setLayoutX(681);
         botonInicio.setLayoutY(596);
+        nodoRaiz.getChildren().add(aux.crear_A());
+        nodoRaiz.getChildren().add(aux.crear_B());
         
         Button botonFinalizar = new Button();
         botonFinalizar.setGraphic(new Button("Finalizar"));
@@ -63,5 +65,12 @@ public class AppTipografia extends Application {
         Scene escena = new Scene(nodoRaiz);
         ventana.setScene(escena);
         ventana.show();
+    }
+    
+    private void drawLetter(GraphicsContext gc){
+        gc.setStroke(Color.BLACK);
+        gc.setLineWidth(3);
+        gc.strokeLine(40, 10, 10, 40); //Linea recta
+        gc.strokeArc(43, 30, 45, 45, 45, 180, ArcType.OPEN); //Curvas sin relleno (x, y, ancho, largo, inicio del angulo, angulo)
     }
 }
