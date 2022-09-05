@@ -15,13 +15,13 @@ public class Caracter {
     
     char nombre;
     AnchorPane fondo;
-    Line[] lineas;
-    QuadCurve[] cuadraticas;
-    CubicCurve[] cubicas;
+    Line lineas;
+    QuadCurve cuadraticas;
+    CubicCurve cubicas;
     
     //Constructor
     
-    public Caracter(char nombre, AnchorPane fondo, Line[] lineas, QuadCurve[] cuadraticas, CubicCurve[] cubicas) {
+    public Caracter(char nombre, AnchorPane fondo, Line lineas, QuadCurve cuadraticas, CubicCurve cubicas) {
         this.nombre = nombre;
         this.fondo = fondo;
         this.lineas = lineas;
@@ -39,15 +39,15 @@ public class Caracter {
         this.fondo = fondo;
     }
     
-    public void setLineas(Line[] lineas) {
+    public void setLineas(Line lineas) {
         this.lineas = lineas;
     }
     
-    public void setCuadraticas(QuadCurve[] cuadraticas) {
+    public void setCuadraticas(QuadCurve cuadraticas) {
         this.cuadraticas = cuadraticas;
     }
     
-    public void setCubicas(CubicCurve[] cubicas) {
+    public void setCubicas(CubicCurve cubicas) {
         this.cubicas = cubicas;
     }
     
@@ -61,15 +61,15 @@ public class Caracter {
         return fondo;
     }
     
-    public Line[] getLineas() {
+    public Line getLineas() {
         return lineas;
     }
     
-    public QuadCurve[] getCuadraticas() {
+    public QuadCurve getCuadraticas() {
         return cuadraticas;
     }
     
-    public CubicCurve[] getCubicas() {
+    public CubicCurve getCubicas() {
         return cubicas;
     }
     
