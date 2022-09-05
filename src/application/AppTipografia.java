@@ -17,7 +17,7 @@ public class AppTipografia extends Application {
     private static CrearCaracteres aux = new CrearCaracteres();
     
     @Override
-    public void start (Stage primaryStage) throws Exception{
+    public void start (Stage ventana) throws Exception{
         
         nodoRaiz.setPrefHeight(650.0);
         nodoRaiz.setPrefWidth(1300.0);
@@ -28,6 +28,7 @@ public class AppTipografia extends Application {
         nodoRaiz.getChildren().add(tabla);
         
         nodoRaiz.getChildren().add(aux.crear_A());
+        nodoRaiz.getChildren().add(aux.crear_B());
         
         
         //Mostrar Escena
@@ -36,10 +37,4 @@ public class AppTipografia extends Application {
         ventana.show();
     }
     
-    private void drawLetter(GraphicsContext gc){
-        gc.setStroke(Color.BLACK);
-        gc.setLineWidth(3);
-        gc.strokeLine(40, 10, 10, 40); //Linea recta
-        gc.strokeArc(43, 30, 45, 45, 45, 180, ArcType.OPEN); //Curvas sin relleno (x, y, ancho, largo, inicio del angulo, angulo)
-    }
 }
