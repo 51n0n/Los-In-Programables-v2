@@ -17,27 +17,29 @@ public class CrearCaracteres {
     public AnchorPane crear_A() {
         
         AnchorPane fondo = new AnchorPane();
-        Line[] lineas = new Line[0];
-        QuadCurve[] cuadraticas = new QuadCurve[0];
-        CubicCurve[] cubicas = new CubicCurve[0];
+        Line lineas = new Line();
+        QuadCurve cuadraticas = new QuadCurve();
+        CubicCurve cubicas = new CubicCurve();
         
         Caracter caracter_A = new Caracter('A',fondo,lineas,cuadraticas,cubicas);
         
-        caracter_A.getFondo().setLayoutX(14.0); //layouts mientras no esten dentro de un gridpane
-        caracter_A.getFondo().setLayoutY(27.0);
-        caracter_A.getFondo().setPrefHeight(60.0);
-        caracter_A.getFondo().setPrefWidth(45.0);        
+        caracter_A.getFondo().setLayoutX(140.0); //layouts mientras no esten dentro de un gridpane
+        caracter_A.getFondo().setLayoutY(270.0);
+        caracter_A.getFondo().setPrefHeight(60.0); //y
+        caracter_A.getFondo().setPrefWidth(45.0);  //x      
         
-        cuadraticas[0].setStartX(27.0);
-        cuadraticas[0].setStartY(-30.0);
-        cuadraticas[0].setEndX(16.75);
-        cuadraticas[0].setEndY(-54.0);
-        cuadraticas[0].setControlX(2.5);
-        cuadraticas[0].setStroke(Color.BLACK);
-        cuadraticas[0].setStrokeLineCap(StrokeLineCap.ROUND);
-        cuadraticas[0].setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cuadraticas.setLayoutX(18.0);
+        cuadraticas.setLayoutY(60.0);
+        cuadraticas.setStartX(27.0);
+        cuadraticas.setStartY(-30.0);
+        cuadraticas.setEndX(16.75);
+        cuadraticas.setEndY(-54.0);
+        cuadraticas.setControlX(2.5);
+        cuadraticas.setStroke(Color.BLACK);
+        //cuadraticas.setStrokeLineCap(StrokeLineCap.ROUND);
+        //cuadraticas.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        caracter_A.getFondo().getChildren().add(cuadraticas[0]);      
+        caracter_A.getFondo().getChildren().add(cuadraticas);
         
         return (caracter_A.getFondo());
     }

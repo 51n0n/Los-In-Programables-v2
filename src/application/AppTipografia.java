@@ -11,19 +11,20 @@ import javafx.stage.Stage;
 
 public class AppTipografia extends Application {
     
+    private static AnchorPane nodoRaiz = new AnchorPane();
+    private static CrearCaracteres aux = new CrearCaracteres();
+    
     @Override
     public void start(Stage ventana) throws Exception {
         
-        //Creación de Nodo Raíz
-        AnchorPane nodoRaiz = new AnchorPane();
         nodoRaiz.setPrefHeight(650.0);
         nodoRaiz.setPrefWidth(1300.0);
         
         //Objetivo-> Intentar que lo de abajo funcione
-        /*
-        CrearCaracteres aux = new CrearCaracteres();
+        
+        //CrearCaracteres aux = new CrearCaracteres();
         nodoRaiz.getChildren().add(aux.crear_A());
-        */
+        
         
         //Mostrar Escena
         Scene escena = new Scene(nodoRaiz);
