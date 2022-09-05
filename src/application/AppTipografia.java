@@ -7,43 +7,33 @@ package application;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.ArcType;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class AppTipografia extends Application {
     
-    public static void main(String[] args) {
-        launch(args);
-    }
-
+    private static BorderPane nodoRaiz = new BorderPane();
+    private static CrearCaracteres aux = new CrearCaracteres();
+    
     @Override
     public void start (Stage primaryStage) throws Exception{
         
-        //Titulo de la ventana
-        primaryStage.setTitle("Tipografia Script Fluida");
+        nodoRaiz.setPrefHeight(650.0);
+        nodoRaiz.setPrefWidth(1300.0);
         
-        //Creacion de la ventana y contenedores principales
-        Group root = new Group();
+        GridPane tabla = new GridPane();
+        tabla.setPrefHeight(500);
+        tabla.setPrefWidth(300);
+        nodoRaiz.getChildren().add(tabla);
         
-        //Creacion de zona de dibujo
-        Canvas canvas = new Canvas(725, 528);
+        nodoRaiz.getChildren().add(aux.crear_A());
         
-        //Obtención del canvas
-        GraphicsContext gc = canvas.getGraphicsContext2D();
         
-        drawLetter(gc);
-        
-        //Se añade el canvas al contenedor principal
-        root.getChildren().add(canvas);
-        
-        //Crea escena
-        primaryStage.setScene(new Scene(root));
-        
-        //Muestra la escena
-        primaryStage.show();
+        //Mostrar Escena
+        Scene escena = new Scene(nodoRaiz);
+        ventana.setScene(escena);
+        ventana.show();
     }
     
     private void drawLetter(GraphicsContext gc){
