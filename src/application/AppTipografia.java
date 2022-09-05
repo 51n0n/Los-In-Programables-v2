@@ -37,6 +37,8 @@ public class AppTipografia extends Application {
         botonInicio.setPrefHeight(20);
         botonInicio.setLayoutX(681);
         botonInicio.setLayoutY(596);
+        nodoRaiz.getChildren().add(aux.crear_A());
+        nodoRaiz.getChildren().add(aux.crear_B());
         
         Button botonFinalizar = new Button();
         botonFinalizar.setGraphic(new Button("Finalizar"));
