@@ -5,10 +5,15 @@
 package application;
 
 import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class AppTipografia extends Application {
@@ -18,20 +23,47 @@ public class AppTipografia extends Application {
     private static AnchorPane aux2 = new AnchorPane();
     
     @Override
-    public void start(Stage ventana) throws Exception {
+    public void start (Stage ventana) throws Exception{
         
         nodoRaiz.setPrefSize(1300,650);
         
         GridPane tabla = new GridPane();
         tabla.setPrefSize(500,500);
-        nodoRaiz.getChildren().add(tabla);
         aux2 = aux.crear_A();
         
-        //nodoRaiz.getChildren().add(aux2); //funciona sin esto
+        Button botonInicio = new Button();
+        botonInicio.setGraphic(new Button("Iniciar"));
+        botonInicio.setPrefSize(70, 20);
+        botonInicio.setPrefWidth(70);
+        botonInicio.setPrefHeight(20);
+        botonInicio.setLayoutX(681);
+        botonInicio.setLayoutY(596);
+        nodoRaiz.getChildren().add(aux.crear_A());
+        nodoRaiz.getChildren().add(aux.crear_B());
         
         tabla.addRow(0, aux2);
         tabla.setLayoutX(200);
         tabla.setLayoutY(200);
+        Button botonFinalizar = new Button();
+        botonFinalizar.setGraphic(new Button("Finalizar"));
+        botonFinalizar.setPrefSize(70, 20);
+        botonFinalizar.setLayoutX(1081);
+        botonFinalizar.setLayoutY(596);
+        
+        TextField ingresarTexto = new TextField();
+        ingresarTexto.setPrefWidth(614);
+        ingresarTexto.setPrefHeight(26);
+        ingresarTexto.setLayoutX(50);
+        ingresarTexto.setLayoutY(596);
+        
+        Text aviso = new Text("Para finalizar el programa, presione aqui:");
+        aviso.setStyle("-fx-font-20arial");
+        aviso.setLayoutX(771);
+        aviso.setLayoutY(600);
+        
+        nodoRaiz.getChildren().addAll(tabla, botonInicio, botonFinalizar, ingresarTexto, aviso);
+        
+        nodoRaiz.getChildren().add(aux.crear_A());
         
         AnchorPane a1 = new AnchorPane();
         AnchorPane a2 = new AnchorPane();
@@ -52,12 +84,4 @@ public class AppTipografia extends Application {
         ventana.setScene(escena);
         ventana.show();
     }
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
-    
 }
