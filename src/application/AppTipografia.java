@@ -6,12 +6,13 @@ package application;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class AppTipografia extends Application {
     
-    private static AnchorPane nodoRaiz = new AnchorPane();
+    private static BorderPane nodoRaiz = new BorderPane();
     private static CrearCaracteres aux = new CrearCaracteres();
     
     @Override
@@ -20,9 +21,11 @@ public class AppTipografia extends Application {
         nodoRaiz.setPrefHeight(650.0);
         nodoRaiz.setPrefWidth(1300.0);
         
-        //Objetivo-> Intentar que lo de abajo funcione
+        GridPane tabla = new GridPane();
+        tabla.setPrefHeight(500);
+        tabla.setPrefWidth(300);
+        nodoRaiz.getChildren().add(tabla);
         
-        //CrearCaracteres aux = new CrearCaracteres();
         nodoRaiz.getChildren().add(aux.crear_A());
         
         
