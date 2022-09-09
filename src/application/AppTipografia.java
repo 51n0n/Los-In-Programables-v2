@@ -62,6 +62,8 @@ public class AppTipografia extends Application {
         aviso.setLayoutX(771);
         aviso.setLayoutY(600);
         
+        llamar.leerEntrada();
+        
         nodoRaiz.getChildren().addAll(tabla, botonInicio, botonFinalizar, ingresarTexto, aviso);
         
         tabla.setGridLinesVisible(true);
@@ -70,5 +72,9 @@ public class AppTipografia extends Application {
         Scene escena = new Scene(nodoRaiz);
         ventana.setScene(escena);
         ventana.show();
+    }
+    public static void main (String[] args){
+        //llamar.leer();
+        launch(args);
     }
 }

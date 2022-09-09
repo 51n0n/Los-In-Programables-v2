@@ -5,6 +5,7 @@
 package application;
 
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.CubicCurve;
 import javafx.scene.shape.Line;
@@ -14,16 +15,141 @@ import javafx.scene.shape.StrokeLineJoin;
 
 public class CrearCaracteres {
     
-    public void leer(String texto) {
+    //private static GridPane tabla = new GridPane();
+    
+    public void leerEntrada() {
+        String entrada = "Hola mundo";
+        int size = entrada.length(); // Se guarda el tamaño de la cadena
+        char[] cadena = new char[size]; // Se crea un arreglo para guardar los caracteres de la cadena
+        for (int i=0;i<size;i++){ //Se recorre el arreglo
+            cadena[i]=entrada.charAt(i);
+        }
+        for (int j=0;j<size;j++){ //Se lee el arreglo
+            System.out.print(cadena[j]);
+        }
+        escribirEntrada(cadena,size);
+    }
+    
+    public void escribirEntrada(char[] cadena, int size){
         
-        int size = texto.length(); // Se guarda el tamaño de la cadena
-        char cadena[] = new char[size]; // Se crea un arreglo para guardar los caracteres de la cadena
-        for (int i=0;i<=size;i++){ //Se recorre el arreglo
-            cadena[i]=texto.charAt(i);
+        char caracterActual;
+        int espacioEnFila = 23; // Guarda cuanto espacio queda en una fila -1 cada caracter ingresado.
+        int letraCont = 0; // Contará las letras en una palabra +1 cada letra ingresada.
+        
+        for (int i=0;i<size;i++){ // Se recorre la cadena
+            caracterActual = cadena[i];
+            if (esLetra(caracterActual)){
+                
+            }
+            else if (esSimbolo(caracterActual)){
+                
+            }
+            else if (caracterActual == ' '){
+                
+            }
+            else{
+                System.out.println("Entrada no válida");
+            }
+            
+            
+            
+            
+            switch (caracterActual){
+                case ' ':
+                    espacioEnFila--;
+                    letraCont = 0;
+                    break;
+                case 'A':
+                    //tabla.addRow(0, crear_A());
+                    espacioEnFila--;
+                    letraCont++;
+                    break;
+                case 'B':
+                    break;
+                case 'C':
+                    break;
+                case 'D':
+                    break;
+                case 'E':
+                    break;
+                case 'F':
+                    break;
+                case 'G':
+                    break;
+                case 'H':
+                    break;
+                case 'I':
+                    break;
+                case 'J':
+                    break;
+                case 'K':
+                    break;
+                case 'L':
+                    break;
+                case 'M':
+                    break;
+                case 'N':
+                    break;
+                case 'Ñ':
+                    break;
+                case 'O':
+                    break;
+                case 'P':
+                    break;
+                case 'Q':
+                    break;
+                case 'R':
+                    break;
+                case 'S':
+                    break;
+                case 'T':
+                    break;
+                case 'U':
+                    break;
+                case 'V':
+                    break;
+                case 'W':
+                    break;
+                case 'X':
+                    break;
+                case 'Y':
+                    break;
+                case 'Z':
+                    break;
+            }
+            if (espacioEnFila == 23){
+                
+            }
         }
-        for (int j=0;j<=size;j++){ //Se lee el arreglo
-            System.out.println(cadena[j]+" ");
+    }
+    
+    public boolean esLetra(char caracter){
+        
+        /* Se crea un arreglo que contiene las 27 letras del abecedario español, minúsculas y mayúsculas,
+           en orden de mayor frecuencia de uso (según google).*/        
+        char[] letras = {'e','a','o','s','r','n','i','d','l','c','t','u','m','p','b','g','v','y','q','h','f','z','j','ñ','x','k','w'
+                        ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','G','H','F','Z','J','Ñ','X','K','W'};
+        
+        boolean esLetra = false;
+        for (int i=0;i<54;i++){
+            if (caracter == letras[i]){
+                esLetra = true;
+            }
         }
+        return esLetra;
+    }
+    
+    public boolean esSimbolo(char caracter){
+        
+        char[] simbolos = {'!','¡','¿','?','.',',',';',':','(',')','[',']','{','}','-','_',39,'"','«','»'};
+        
+        boolean esSimbolo = false;
+        for (int i=0;i<20;i++){
+            if (caracter == simbolos[i]){
+                esSimbolo = true;
+            }
+        }
+        return esSimbolo;
     }
     
     public AnchorPane crear_A() {
@@ -79,8 +205,9 @@ public class CrearCaracteres {
         
         fondo.getChildren().addAll(cuadratica,linea,cubica);
         
-        return (fondo);
+        return fondo;
     }
+    
     public AnchorPane crear_B() {
         
         //Objetos Clase Caracter
@@ -148,4 +275,5 @@ public class CrearCaracteres {
         caracter_B.getFondo().getChildren().addAll(cubicas,cubicas1,cubicas2);
         return (caracter_B.getFondo());
     }
+    
 }
