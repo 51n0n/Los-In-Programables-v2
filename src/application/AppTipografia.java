@@ -10,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
@@ -23,8 +25,9 @@ public class AppTipografia extends Application {
     private static Button botonInicio = new Button("Iniciar");
     private static Button botonFinalizar = new Button("Finalizar");
     private static Button botonLimpiar = new Button ("Limpiar");
-    private static TextField ingresarTexto = new TextField();
+    private static TextField ingresarTexto = new TextField("Escriba aquí");
     private static Text aviso = new Text("Para finalizar el programa, presione aquí:");
+    private static Text aviso2 = new Text("Seleccione un color:");
     private static ChoiceBox color = new ChoiceBox();
     
     @Override
@@ -40,6 +43,7 @@ public class AppTipografia extends Application {
         color.setLayoutX(1136);
         color.setLayoutY(14);
         color.setItems(observableArrayList(colores));
+        //color
         
         botonInicio.setGraphic(new Button("Iniciar"));
         botonInicio.setLayoutX(745);
@@ -71,9 +75,13 @@ public class AppTipografia extends Application {
         aviso.setLayoutX(900);
         aviso.setLayoutY(600);
         
+        aviso2.setStyle("-fx-font: 16 arials;");
+        aviso2.setLayoutX(970);
+        aviso2.setLayoutY(30);
+        
         //llamar.leerEntrada();
         
-        nodoRaiz.getChildren().addAll(tabla, botonInicio, botonFinalizar, ingresarTexto, aviso, botonLimpiar, color);
+        nodoRaiz.getChildren().addAll(tabla, botonInicio, botonFinalizar, ingresarTexto, aviso, botonLimpiar, color, aviso2);
         
         tabla.setGridLinesVisible(true);
         
