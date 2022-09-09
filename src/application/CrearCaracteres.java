@@ -32,94 +32,197 @@ public class CrearCaracteres {
     
     public void escribirEntrada(char[] cadena, int size){
         
-        char caracterActual;
+
         int espacioEnFila = 23; // Guarda cuanto espacio queda en una fila -1 cada caracter ingresado.
         int letraCont = 0; // Contará las letras en una palabra +1 cada letra ingresada.
         
         for (int i=0;i<size;i++){ // Se recorre la cadena
-            caracterActual = cadena[i];
-            if (esLetra(caracterActual)){
-                
+            
+            if (esLetra(cadena[i])){
+                int j = i;
+                while(esLetra(cadena[j])){
+                    letraCont++;
+                    j++;
+                }
+                if (letraCont <= espacioEnFila){
+                    //dibujar en la misma fila
+                }
+                else{
+                    //dibujar en una nueva fila
+                }
             }
-            else if (esSimbolo(caracterActual)){
-                
-            }
-            else if (caracterActual == ' '){
-                
+            else if ((esSimbolo(cadena[i]))||(cadena[i] == ' ')){
+                espacioEnFila--;
+                letraCont = 0;
+                //escribir caracterActual
             }
             else{
                 System.out.println("Entrada no válida");
             }
-            
-            
-            
-            
-            switch (caracterActual){
-                case ' ':
-                    espacioEnFila--;
-                    letraCont = 0;
-                    break;
-                case 'A':
-                    //tabla.addRow(0, crear_A());
-                    espacioEnFila--;
-                    letraCont++;
-                    break;
-                case 'B':
-                    break;
-                case 'C':
-                    break;
-                case 'D':
-                    break;
-                case 'E':
-                    break;
-                case 'F':
-                    break;
-                case 'G':
-                    break;
-                case 'H':
-                    break;
-                case 'I':
-                    break;
-                case 'J':
-                    break;
-                case 'K':
-                    break;
-                case 'L':
-                    break;
-                case 'M':
-                    break;
-                case 'N':
-                    break;
-                case 'Ñ':
-                    break;
-                case 'O':
-                    break;
-                case 'P':
-                    break;
-                case 'Q':
-                    break;
-                case 'R':
-                    break;
-                case 'S':
-                    break;
-                case 'T':
-                    break;
-                case 'U':
-                    break;
-                case 'V':
-                    break;
-                case 'W':
-                    break;
-                case 'X':
-                    break;
-                case 'Y':
-                    break;
-                case 'Z':
-                    break;
-            }
-            if (espacioEnFila == 23){
+        }
+    }
+    
+    public void dibujarLetras(char caracter){
+        
+        switch (caracter){
+            case 'A':
+                //tabla.addRow(0, crear_A());
                 
-            }
+                break;
+            case 'B':
+                break;
+            case 'C':
+                break;
+            case 'D':
+                break;
+            case 'E':
+                break;
+            case 'F':
+                break;
+            case 'G':
+                break;
+            case 'H':
+                break;
+            case 'I':
+                break;
+            case 'J':
+                break;
+            case 'K':
+                break;
+            case 'L':
+                break;
+            case 'M':
+                break;
+            case 'N':
+                break;
+            case 'Ñ':
+                break;
+            case 'O':
+                break;
+            case 'P':
+                break;
+            case 'Q':
+                break;
+            case 'R':
+                break;
+            case 'S':
+                break;
+            case 'T':
+                break;
+            case 'U':
+                break;
+            case 'V':
+                break;
+            case 'W':
+                break;
+            case 'X':
+                break;
+            case 'Y':
+                break;
+            case 'Z':
+                break;
+            case 'a':
+                break;
+            case 'b':
+                break;
+            case 'c':
+                break;
+            case 'd':
+                break;
+            case 'e':
+                break;
+            case 'f':
+                break;
+            case 'g':
+                break;
+            case 'h':
+                break;
+            case 'i':
+                break;
+            case 'j':
+                break;
+            case 'k':
+                break;
+            case 'l':
+                break;
+            case 'm':
+                break;
+            case 'n':
+                break;
+            case 'ñ':
+                break;
+            case 'o':
+                break;
+            case 'p':
+                break;
+            case 'q':
+                break;
+            case 'r':
+                break;
+            case 's':
+                break;
+            case 't':
+                break;
+            case 'u':
+                break;
+            case 'v':
+                break;
+            case 'w':
+                break;
+            case 'x':
+                break;
+            case 'y':
+                break;
+            case 'z':
+                break;
+        }
+    }
+    
+    public void dibujarSimbolos(char caracter){
+        
+        switch (caracter){
+            case ' ':
+                break;
+            case '!':
+                break;
+            case '¡':
+                break;
+            case '¿':
+                break;
+            case '?':
+                break;
+            case '.':
+                break;
+            case ',':
+                break;
+            case ';':
+                break;
+            case ':':
+                break;
+            case '(':
+                break;
+            case ')':
+                break;
+            case '[':
+                break;
+            case ']':
+                break;
+            case '{':
+                break;
+            case '}':
+                break;
+            case '-':
+                break;
+            case '_':
+                break;
+            case 39:
+                break;
+            case '"':
+                break;
+            case '«':
+                break;
+            case '»':
+                break;
         }
     }
     
