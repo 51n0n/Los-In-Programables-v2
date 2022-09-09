@@ -5,15 +5,13 @@
 package application;
 
 import javafx.application.Application;
-import javafx.scene.Group;
+import static javafx.collections.FXCollections.observableArrayList;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -32,22 +30,16 @@ public class AppTipografia extends Application {
     @Override
     public void start (Stage ventana) throws Exception{
         
+        //String para usar en el ChoiceBox
+        String colores[] = {"Negro", "Azul", "Marron", "Gris", "Verde", "Naranja", "Rosa", "Morado", "Rojo", "Amarillo"};
+        
         nodoRaiz.setPrefSize(1300,650);
         
-        //Sigo averiaguando como hacer visible el ChoiceBox
+        //Averiguar como ponerle un Titulo
         color.setStyle("-fx-font: 16 arials;");
         color.setLayoutX(1136);
         color.setLayoutY(14);
-        color.getItems().add("Negro");
-        color.getItems().add("Azul");
-        color.getItems().add("Marron");
-        color.getItems().add("Gris");
-        color.getItems().add("Verde");
-        color.getItems().add("Naranja");
-        color.getItems().add("Rosa");
-        color.getItems().add("Morado");
-        color.getItems().add("Rojo");
-        color.getItems().add("Amarillo");
+        color.setItems(observableArrayList(colores));
         
         botonInicio.setGraphic(new Button("Iniciar"));
         botonInicio.setLayoutX(745);
@@ -81,7 +73,7 @@ public class AppTipografia extends Application {
         
         //llamar.leerEntrada();
         
-        nodoRaiz.getChildren().addAll(tabla, botonInicio, botonFinalizar, ingresarTexto, aviso, botonLimpiar);
+        nodoRaiz.getChildren().addAll(tabla, botonInicio, botonFinalizar, ingresarTexto, aviso, botonLimpiar, color);
         
         tabla.setGridLinesVisible(true);
         
