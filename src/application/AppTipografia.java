@@ -29,6 +29,9 @@ public class AppTipografia extends Application {
         
         nodoRaiz.getChildren().add(aux.crear_A());
         nodoRaiz.getChildren().add(aux.crear_B());
+        nodoRaiz.getChildren().add(aux.crear_C());
+        nodoRaiz.getChildren().add(aux.crear_J());
+
         
         
         //Mostrar Escena
