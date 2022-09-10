@@ -4,6 +4,7 @@
  */
 package application;
 
+import javafx.scene.control.TextInputControl;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -15,6 +16,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Pos;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 
 public class AppTipografia extends Application {
     
@@ -23,13 +29,14 @@ public class AppTipografia extends Application {
     private static GridPane tabla = new GridPane();
     private static Button botonInicio = new Button("Iniciar");
     private static Button botonFinalizar = new Button("Finalizar");
-    private static TextField ingresarTexto = new TextField();
+    private static TextField t = new TextField();
     private static Text aviso = new Text("Para finalizar el programa, presione aquí:");
+    private static Label label = new Label("no text");
     
     @Override
     public void start (Stage ventana) throws Exception{
         
-        nodoRaiz.setPrefSize(1300,650);
+        //nodoRaiz.setPrefSize(1300,650);
         
         botonInicio.setGraphic(new Button("Iniciar"));
         botonInicio.setPrefSize(70, 20);
@@ -49,14 +56,24 @@ public class AppTipografia extends Application {
         botonFinalizar.setLayoutX(1081);
         botonFinalizar.setLayoutY(596);
         
+        nodoRaiz.getChildren().add(t);
         //ingresarTexto.setStyle("-fx-font: 12 arials;");
         //ingresarTexto.setStyle("-fx-background-color: black");
-        ingresarTexto.setVisible(true);
-        ingresarTexto.setEditable(true);
-        ingresarTexto.setPromptText("Escriba aquí");
-        ingresarTexto.setPrefSize(514,126);
-        ingresarTexto.setLayoutX(150);
-        ingresarTexto.setLayoutY(596);
+        t.setVisible(true);
+        
+        //ingresarTexto.setEditable(true);
+        t.setPromptText("Escriba aquí");
+        //t.setPrefSize(514,126);
+        t.setLayoutX(30);
+        t.setLayoutY(30);
+        t.setAlignment(Pos.CENTER);
+        t.setPrefColumnCount(50);
+        
+        EventHandler<ActionEvent> event = (ActionEvent e) -> {
+            label.setText(t.getText());
+        };
+        t.setOnAction(event);
+        
         
         aviso.setStyle("-fx-font: 16 arials;");
         aviso.setLayoutX(771);
@@ -64,17 +81,18 @@ public class AppTipografia extends Application {
         
         //llamar.leerEntrada();
         
-        nodoRaiz.getChildren().addAll(tabla, botonInicio, botonFinalizar, ingresarTexto, aviso);
+        
+        //nodoRaiz.getChildren().addAll(tabla, botonInicio, botonFinalizar, aviso);
         
         tabla.setGridLinesVisible(true);
         
         //Mostrar Escena
-        Scene escena = new Scene(nodoRaiz);
+        Scene escena = new Scene(nodoRaiz,1300,650);
+        ventana.setTitle("Tipografía Script");
         ventana.setScene(escena);
         ventana.show();
     }
     public static void main (String[] args){
-        //llamar.leer();
         launch(args);
     }
 }

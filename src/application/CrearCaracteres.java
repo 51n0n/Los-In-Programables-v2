@@ -15,9 +15,9 @@ import javafx.scene.shape.StrokeLineJoin;
 
 public class CrearCaracteres {
     
-    //private static GridPane tabla = new GridPane();
+    private static AnchorPane lienzo = new AnchorPane();
     
-    public void leerEntrada() {
+    public AnchorPane leerEntrada() {
         String entrada = "Hola mundo";
         int size = entrada.length(); // Se guarda el tamaño de la cadena
         char[] cadena = new char[size]; // Se crea un arreglo para guardar los caracteres de la cadena
@@ -27,14 +27,34 @@ public class CrearCaracteres {
         for (int j=0;j<size;j++){ //Se lee el arreglo
             System.out.print(cadena[j]);
         }
-        escribirEntrada(cadena,size);
+        if (validarEntrada(cadena,size)){
+            dibujarEntrada(cadena,size);
+        }
+        else{
+            System.out.println("Entrada no válida");
+        }
+        return lienzo;
     }
     
-    public void escribirEntrada(char[] cadena, int size){
+    public boolean validarEntrada(char[] cadena, int size){
+        boolean validar = true;
+        for (int i=0;i<size;i++){
+            if ((esLetra(cadena[i]))||(esSimbolo(cadena[i]))||(cadena[i] == ' ')){
+            }
+            else{
+                validar = false;
+            }
+        }
+        return validar;
+    }
+    
+    public void dibujarEntrada(char[] cadena, int size){
         
 
         int espacioEnFila = 23; // Guarda cuanto espacio queda en una fila -1 cada caracter ingresado.
         int letraCont = 0; // Contará las letras en una palabra +1 cada letra ingresada.
+        int posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
+        int posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
         
         for (int i=0;i<size;i++){ // Se recorre la cadena
             
@@ -46,30 +66,51 @@ public class CrearCaracteres {
                 }
                 if (letraCont <= espacioEnFila){
                     //dibujar en la misma fila
+                    while(i<j){
+                        lienzo.getChildren().add(dibujarLetras(cadena[i]));
+                        lienzo.getChildren().get(i).setLayoutX(posActualX);
+                        lienzo.getChildren().get(i).setLayoutY(posActualY);
+                        posActualX++;
+                        i++;
+                    }
+                    i--;
                 }
                 else{
                     //dibujar en una nueva fila
+                    espacioEnFila = 23;
+                    posActualX = 0;
+                    posActualY++;
+                    while(i<j){
+                        lienzo.getChildren().add(dibujarLetras(cadena[i]));
+                        lienzo.getChildren().get(i).setLayoutX(posActualX);
+                        lienzo.getChildren().get(i).setLayoutY(posActualY);
+                        posActualX++;
+                        i++;
+                    }
+                    i--;
                 }
             }
-            else if ((esSimbolo(cadena[i]))||(cadena[i] == ' ')){
+            else{
                 espacioEnFila--;
                 letraCont = 0;
-                //escribir caracterActual
-            }
-            else{
-                System.out.println("Entrada no válida");
+                lienzo.getChildren().add(dibujarSimbolos(cadena[i]));
+                lienzo.getChildren().get(i).setLayoutX(posActualX);
+                lienzo.getChildren().get(i).setLayoutY(posActualY);
+                posActualX++;
             }
         }
     }
     
-    public void dibujarLetras(char caracter){
+    public AnchorPane dibujarLetras(char caracter){
+        
+        AnchorPane nuevoNodo = new AnchorPane();
         
         switch (caracter){
             case 'A':
-                //tabla.addRow(0, crear_A());
-                
+                nuevoNodo = crear_A();
                 break;
             case 'B':
+                nuevoNodo = crear_B();
                 break;
             case 'C':
                 break;
@@ -176,9 +217,12 @@ public class CrearCaracteres {
             case 'z':
                 break;
         }
+        return nuevoNodo;
     }
     
-    public void dibujarSimbolos(char caracter){
+    public AnchorPane dibujarSimbolos(char caracter){
+        
+        AnchorPane nuevoNodo = new AnchorPane();
         
         switch (caracter){
             case ' ':
@@ -224,6 +268,7 @@ public class CrearCaracteres {
             case '»':
                 break;
         }
+        return nuevoNodo;
     }
     
     public boolean esLetra(char caracter){
