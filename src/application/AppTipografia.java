@@ -40,6 +40,12 @@ public class AppTipografia extends Application {
         nodoRaiz.getChildren().add(aux.crear_A());
         nodoRaiz.getChildren().add(aux.crear_B());
         nodoRaiz.getChildren().add(aux.crear_C());
+        nodoRaiz.getChildren().add(aux.crear_D());
+        nodoRaiz.getChildren().add(aux.crear_E());
+        nodoRaiz.getChildren().add(aux.crear_F());
+        nodoRaiz.getChildren().add(aux.crear_G());
+        nodoRaiz.getChildren().add(aux.crear_H());
+        nodoRaiz.getChildren().add(aux.crear_I());
         nodoRaiz.getChildren().add(aux.crear_J());
 
         
