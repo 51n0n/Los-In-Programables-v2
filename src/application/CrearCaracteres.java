@@ -5,7 +5,6 @@
 package application;
 
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.CubicCurve;
 import javafx.scene.shape.Line;
@@ -15,292 +14,7 @@ import javafx.scene.shape.StrokeLineJoin;
 
 public class CrearCaracteres {
     
-    private static AnchorPane lienzo = new AnchorPane();
-    
-    public AnchorPane leerEntrada() {
-        String entrada = "Hola mundo";
-        int size = entrada.length(); // Se guarda el tamaño de la cadena
-        char[] cadena = new char[size]; // Se crea un arreglo para guardar los caracteres de la cadena
-        for (int i=0;i<size;i++){ //Se recorre el arreglo
-            cadena[i]=entrada.charAt(i);
-        }
-        for (int j=0;j<size;j++){ //Se lee el arreglo
-            System.out.print(cadena[j]);
-        }
-        if (validarEntrada(cadena,size)){
-            dibujarEntrada(cadena,size);
-        }
-        else{
-            System.out.println("Entrada no válida");
-        }
-        return lienzo;
-    }
-    
-    public boolean validarEntrada(char[] cadena, int size){
-        boolean validar = true;
-        for (int i=0;i<size;i++){
-            if ((esLetra(cadena[i]))||(esSimbolo(cadena[i]))||(cadena[i] == ' ')){
-            }
-            else{
-                validar = false;
-            }
-        }
-        return validar;
-    }
-    
-    public void dibujarEntrada(char[] cadena, int size){
-        
-
-        int espacioEnFila = 23; // Guarda cuanto espacio queda en una fila -1 cada caracter ingresado.
-        int letraCont = 0; // Contará las letras en una palabra +1 cada letra ingresada.
-        int posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
-        int posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
-        
-        for (int i=0;i<size;i++){ // Se recorre la cadena
-            
-            if (esLetra(cadena[i])){
-                int j = i;
-                while(esLetra(cadena[j])){
-                    letraCont++;
-                    j++;
-                }
-                if (letraCont <= espacioEnFila){
-                    //dibujar en la misma fila
-                    while(i<j){
-                        lienzo.getChildren().add(dibujarLetras(cadena[i]));
-                        lienzo.getChildren().get(i).setLayoutX(posActualX);
-                        lienzo.getChildren().get(i).setLayoutY(posActualY);
-                        posActualX++;
-                        i++;
-                    }
-                    i--;
-                }
-                else{
-                    //dibujar en una nueva fila
-                    espacioEnFila = 23;
-                    posActualX = 0;
-                    posActualY++;
-                    while(i<j){
-                        lienzo.getChildren().add(dibujarLetras(cadena[i]));
-                        lienzo.getChildren().get(i).setLayoutX(posActualX);
-                        lienzo.getChildren().get(i).setLayoutY(posActualY);
-                        posActualX++;
-                        i++;
-                    }
-                    i--;
-                }
-            }
-            else{
-                espacioEnFila--;
-                letraCont = 0;
-                lienzo.getChildren().add(dibujarSimbolos(cadena[i]));
-                lienzo.getChildren().get(i).setLayoutX(posActualX);
-                lienzo.getChildren().get(i).setLayoutY(posActualY);
-                posActualX++;
-            }
-        }
-    }
-    
-    public AnchorPane dibujarLetras(char caracter){
-        
-        AnchorPane nuevoNodo = new AnchorPane();
-        
-        switch (caracter){
-            case 'A':
-                nuevoNodo = crear_A();
-                break;
-            case 'B':
-                nuevoNodo = crear_B();
-                break;
-            case 'C':
-                break;
-            case 'D':
-                break;
-            case 'E':
-                break;
-            case 'F':
-                break;
-            case 'G':
-                break;
-            case 'H':
-                break;
-            case 'I':
-                break;
-            case 'J':
-                break;
-            case 'K':
-                break;
-            case 'L':
-                break;
-            case 'M':
-                break;
-            case 'N':
-                break;
-            case 'Ñ':
-                break;
-            case 'O':
-                break;
-            case 'P':
-                break;
-            case 'Q':
-                break;
-            case 'R':
-                break;
-            case 'S':
-                break;
-            case 'T':
-                break;
-            case 'U':
-                break;
-            case 'V':
-                break;
-            case 'W':
-                break;
-            case 'X':
-                break;
-            case 'Y':
-                break;
-            case 'Z':
-                break;
-            case 'a':
-                break;
-            case 'b':
-                break;
-            case 'c':
-                break;
-            case 'd':
-                break;
-            case 'e':
-                break;
-            case 'f':
-                break;
-            case 'g':
-                break;
-            case 'h':
-                break;
-            case 'i':
-                break;
-            case 'j':
-                break;
-            case 'k':
-                break;
-            case 'l':
-                break;
-            case 'm':
-                break;
-            case 'n':
-                break;
-            case 'ñ':
-                break;
-            case 'o':
-                break;
-            case 'p':
-                break;
-            case 'q':
-                break;
-            case 'r':
-                break;
-            case 's':
-                break;
-            case 't':
-                break;
-            case 'u':
-                break;
-            case 'v':
-                break;
-            case 'w':
-                break;
-            case 'x':
-                break;
-            case 'y':
-                break;
-            case 'z':
-                break;
-        }
-        return nuevoNodo;
-    }
-    
-    public AnchorPane dibujarSimbolos(char caracter){
-        
-        AnchorPane nuevoNodo = new AnchorPane();
-        
-        switch (caracter){
-            case ' ':
-                break;
-            case '!':
-                break;
-            case '¡':
-                break;
-            case '¿':
-                break;
-            case '?':
-                break;
-            case '.':
-                break;
-            case ',':
-                break;
-            case ';':
-                break;
-            case ':':
-                break;
-            case '(':
-                break;
-            case ')':
-                break;
-            case '[':
-                break;
-            case ']':
-                break;
-            case '{':
-                break;
-            case '}':
-                break;
-            case '-':
-                break;
-            case '_':
-                break;
-            case 39:
-                break;
-            case '"':
-                break;
-            case '«':
-                break;
-            case '»':
-                break;
-        }
-        return nuevoNodo;
-    }
-    
-    public boolean esLetra(char caracter){
-        
-        /* Se crea un arreglo que contiene las 27 letras del abecedario español, minúsculas y mayúsculas,
-           en orden de mayor frecuencia de uso (según google).*/        
-        char[] letras = {'e','a','o','s','r','n','i','d','l','c','t','u','m','p','b','g','v','y','q','h','f','z','j','ñ','x','k','w'
-                        ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','G','H','F','Z','J','Ñ','X','K','W'};
-        
-        boolean esLetra = false;
-        for (int i=0;i<54;i++){
-            if (caracter == letras[i]){
-                esLetra = true;
-            }
-        }
-        return esLetra;
-    }
-    
-    public boolean esSimbolo(char caracter){
-        
-        char[] simbolos = {'!','¡','¿','?','.',',',';',':','(',')','[',']','{','}','-','_',39,'"','«','»'};
-        
-        boolean esSimbolo = false;
-        for (int i=0;i<20;i++){
-            if (caracter == simbolos[i]){
-                esSimbolo = true;
-            }
-        }
-        return esSimbolo;
-    }
-    
-    public AnchorPane crear_A() {
+    public static AnchorPane crear_A() {
         
         //Objetos Clase Caracter
         AnchorPane fondo = new AnchorPane();
@@ -356,72 +70,69 @@ public class CrearCaracteres {
         return fondo;
     }
     
-    public AnchorPane crear_B() {
+    public static AnchorPane crear_B() {
         
         //Objetos Clase Caracter
         AnchorPane fondo = new AnchorPane();
-        Line lineas = new Line();
-        QuadCurve cuadraticas = new QuadCurve();
-        CubicCurve cubicas = new CubicCurve();
-        CubicCurve cubicas1 = new CubicCurve();
-        CubicCurve cubicas2 = new CubicCurve();
-        CubicCurve cubicas3 = new CubicCurve();
-        //Constructor Caracter
-        Caracter caracter_B = new Caracter('B',fondo,lineas,cuadraticas,cubicas);
+        CubicCurve cubica1 = new CubicCurve();
+        CubicCurve cubica2 = new CubicCurve();
+        CubicCurve cubica3 = new CubicCurve();
         
         //Atributos del Fondo
-        caracter_B.getFondo().setLayoutX(200.0); //layouts mientras no esten dentro de un gridpane
-        caracter_B.getFondo().setLayoutY(270.0);
-        caracter_B.getFondo().setPrefHeight(60.0); //y
-        caracter_B.getFondo().setPrefWidth(45.0);  //x      
+        fondo.setLayoutX(200.0); //layouts mientras no esten dentro de un gridpane
+        fondo.setLayoutY(270.0);
+        fondo.setPrefHeight(60.0); //y
+        fondo.setPrefWidth(45.0);  //x      
         
         //Atributos primera linea pirmera curba de la b
-        cubicas1.setLayoutX(27.0);
-        cubicas1.setLayoutY(19.0);
-        cubicas1.setStartX(-24.3);
-        cubicas1.setStartY(-5.8);
-        cubicas1.setEndX(-2.8);
-        cubicas1.setEndY(9.86);
-        cubicas1.setControlX1(-22.59);
-        cubicas1.setControlY1(-25);
-        cubicas1.setControlX2(34.59);
-        cubicas1.setControlY2(-5.8);
-        cubicas1.setFill(Color.TRANSPARENT);
-        cubicas1.setStroke(Color.BLACK);
-        cubicas1.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubicas1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubica1.setLayoutX(27.0);
+        cubica1.setLayoutY(19.0);
+        cubica1.setStartX(-24.3);
+        cubica1.setStartY(-5.8);
+        cubica1.setEndX(-2.8);
+        cubica1.setEndY(9.86);
+        cubica1.setControlX1(-22.59);
+        cubica1.setControlY1(-25);
+        cubica1.setControlX2(34.59);
+        cubica1.setControlY2(-5.8);
+        cubica1.setFill(Color.TRANSPARENT);
+        cubica1.setStroke(Color.BLACK);
+        cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //segunda parte
-        cubicas2.setLayoutX(33);
-        cubicas2.setLayoutY(38);
-        cubicas2.setStartX(-17.19);
-        cubicas2.setStartY(11);
-        cubicas2.setEndX(-8);
-        cubicas2.setEndY(-9);
-        cubicas2.setControlX1(-4);
-        cubicas2.setControlY1(25.19);
-        cubicas2.setControlX2(23.59);
-        cubicas2.setControlY2(-1.6);
-        cubicas2.setFill(Color.TRANSPARENT);
-        cubicas2.setStroke(Color.BLACK);
-        cubicas2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubicas2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubica2.setLayoutX(33);
+        cubica2.setLayoutY(38);
+        cubica2.setStartX(-17.19);
+        cubica2.setStartY(11);
+        cubica2.setEndX(-8);
+        cubica2.setEndY(-9);
+        cubica2.setControlX1(-4);
+        cubica2.setControlY1(25.19);
+        cubica2.setControlX2(23.59);
+        cubica2.setControlY2(-1.6);
+        cubica2.setFill(Color.TRANSPARENT);
+        cubica2.setStroke(Color.BLACK);
+        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //tercera parte
-        cubicas3.setLayoutX(33);
-        cubicas3.setLayoutY(38);
-        cubicas3.setStartX(-17.19);
-        cubicas3.setStartY(11);
-        cubicas3.setEndX(-8);
-        cubicas3.setEndY(-9);
-        cubicas3.setControlX1(-4);
-        cubicas3.setControlY1(25.19);
-        cubicas3.setControlX2(23.59);
-        cubicas3.setControlY2(-1.6);
-        cubicas3.setFill(Color.TRANSPARENT);
-        cubicas3.setStroke(Color.BLACK);
-        cubicas3.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubicas3.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        caracter_B.getFondo().getChildren().addAll(cubicas,cubicas1,cubicas2);
-        return (caracter_B.getFondo());
+        cubica3.setLayoutX(33);
+        cubica3.setLayoutY(38);
+        cubica3.setStartX(-17.19);
+        cubica3.setStartY(11);
+        cubica3.setEndX(-8);
+        cubica3.setEndY(-9);
+        cubica3.setControlX1(-4);
+        cubica3.setControlY1(25.19);
+        cubica3.setControlX2(23.59);
+        cubica3.setControlY2(-1.6);
+        cubica3.setFill(Color.TRANSPARENT);
+        cubica3.setStroke(Color.BLACK);
+        cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubica1,cubica2,cubica3);
+        
+        return fondo;
     }
     
 }
