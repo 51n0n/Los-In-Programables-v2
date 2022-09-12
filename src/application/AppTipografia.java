@@ -52,6 +52,7 @@ public class AppTipografia extends Application {
         tabla.setPrefSize(300,300);
         tabla.addRow(0, llamar.crear_A());
         tabla.addRow(0, llamar.crear_B());
+        tabla.addRow(0, llamar.crear_Punto());
         tabla.setLayoutX(200);
         tabla.setLayoutY(200);
         
@@ -64,9 +65,9 @@ public class AppTipografia extends Application {
         botonLimpiar.setLayoutY(600);
         
         //Sigo averiguando como hacer que se muestre el TextField
-        /*ingresarTexto.setPrefSize(514,126);
+        ingresarTexto.setPrefSize(514,126);
         ingresarTexto.setLayoutX(150);
-        ingresarTexto.setLayoutY(600);*/
+        ingresarTexto.setLayoutY(600);
         
         aviso.setStyle("-fx-font: 16 arials;");
         aviso.setLayoutX(900);

@@ -6,6 +6,7 @@ package application;
 
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.CubicCurve;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.QuadCurve;
@@ -148,4 +149,31 @@ public class CrearCaracteres {
         caracter_B.getFondo().getChildren().addAll(cubicas,cubicas1,cubicas2);
         return (caracter_B.getFondo());
     }
+    public AnchorPane crear_Punto(){
+        //Objetos
+        AnchorPane fondo = new AnchorPane();
+        Circle circulo = new Circle();
+        
+        //Atributos del fondo
+        fondo.setLayoutX(300.0);
+        fondo.setLayoutY(270.0);
+        fondo.setPrefHeight(60.0);
+        fondo.setPrefWidth(45.0);
+        
+        //Circulo
+        circulo.setRadius(3);
+        circulo.setFill(Color.BLACK);
+        circulo.setStroke(Color.BLACK);
+        circulo.setLayoutX(9);
+        circulo.setLayoutY(47);
+        
+        fondo.getChildren().addAll(circulo);
+        return fondo;
+    }
+    /*public AnchorPane crear_Coma(){
+        //Objetos
+        AnchorPane fondo = new AnchorPane();
+        Circle circulo = new Circle();
+        QuadCurve cuadratica = 
+    }*/
 }
