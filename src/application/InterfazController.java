@@ -14,6 +14,8 @@ import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import static application.Dibujar.getLienzo;
+import javafx.scene.control.Label;
 
 public class InterfazController implements Initializable {
     
@@ -29,6 +31,8 @@ public class InterfazController implements Initializable {
     private TextField textoEntrada;
     @FXML
     private ColorPicker selectColor;
+    @FXML
+    private Label labelValidacion;
     
     /**
      * Initializes the controller class.
@@ -36,27 +40,34 @@ public class InterfazController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        fondoInterfaz.getChildren().add(getLienzo());
+        botonFinal.setDisable(true);
     }
     
     String cadena = new String();
     Dibujar dibujar = new Dibujar();
+    
     
     @FXML
     private void leer (ActionEvent event){
         cadena = textoEntrada.getText();
         System.out.println(cadena);
         if(dibujar.validarEntrada(cadena)){
-            fondoInterfaz.getChildren().add(dibujar.dibujarEntrada(cadena));
+            dibujar.dibujarEntrada(cadena);
         }
         else{
+            labelValidacion.setText("Entrada no válida");
             System.out.println("Entrada no válida");
         }
+        botonInicio.setDisable(true);
+        botonFinal.setDisable(false);
     }
-    
-    /*
-        EventHandler<ActionEvent> event = (ActionEvent e) -> {
-        label.setText(t.getText());
-        };
-        t.setOnAction(event);
-    */
+    @FXML
+    private void reset (ActionEvent event){
+        textoEntrada.clear();
+        getLienzo().getChildren().clear();
+        labelValidacion.setText("");
+        botonInicio.setDisable(false);
+        botonFinal.setDisable(true);
+    }
 }

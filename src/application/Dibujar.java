@@ -30,7 +30,7 @@ public class Dibujar {
         return validar;
     }
     
-    public AnchorPane dibujarEntrada(String entrada){
+    public void dibujarEntrada(String entrada){
         
         lienzo.setLayoutX(30);
         lienzo.setLayoutY(70);
@@ -64,11 +64,14 @@ public class Dibujar {
                 if (letraCont <= espacioEnFila){
                     //dibujar en la misma fila
                     while(i<j){
+                        System.out.println(posActualX+" "+i);
                         lienzo.getChildren().add(dibujarLetras(cadena[i]));
                         lienzo.getChildren().get(i).setLayoutX(posActualX);
                         lienzo.getChildren().get(i).setLayoutY(posActualY);
-                        posActualX = posActualX + lienzo.getChildren().get(i).getLayoutX();
+                        posActualX = posActualX + 45;
+                        //posActualX = posActualX + lienzo.getChildren().get(i).getLayoutX();
                         espacioEnFila = espacioEnFila - lienzo.getChildren().get(i).getLayoutX();
+                        System.out.println(posActualX+" "+i);
                         i++;
                     }
                     i--;
@@ -89,7 +92,7 @@ public class Dibujar {
                     i--;
                 }
             }
-            else{ // falta condicional si hay espacio para el simbolo
+            else{
                 letraCont = 0;
                 if ((lienzo.getChildren().get(i).getLayoutX()) > espacioEnFila){
                     posActualY = posActualY + 60;
@@ -101,7 +104,7 @@ public class Dibujar {
                 posActualX = posActualX + lienzo.getChildren().get(i).getLayoutX();
             }
         }
-        return lienzo;
+        
     }
     
     public AnchorPane dibujarLetras(char caracter){
@@ -313,4 +316,9 @@ public class Dibujar {
         }
         return esSimbolo;
     }
+    
+    public static AnchorPane getLienzo() {
+        return lienzo;
+    }
+    
 }
