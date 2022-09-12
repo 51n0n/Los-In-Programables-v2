@@ -6,6 +6,7 @@ package application;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -13,9 +14,11 @@ import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import static application.Dibujar.getLienzo;
+import javafx.scene.control.Label;
 
 public class InterfazController implements Initializable {
-
+    
     @FXML
     private AnchorPane fondoInterfaz;
     @FXML
@@ -23,23 +26,48 @@ public class InterfazController implements Initializable {
     @FXML
     private Button botonInicio;
     @FXML
-    private TextField textoFondo;
+    private TextArea textoFondo;
     @FXML
-    private TextArea textoEntrada;
+    private TextField textoEntrada;
     @FXML
     private ColorPicker selectColor;
-
+    @FXML
+    private Label labelValidacion;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        fondoInterfaz.getChildren().add(getLienzo());
+        botonFinal.setDisable(true);
     }
-    /*
-        EventHandler<ActionEvent> event = (ActionEvent e) -> {
-        label.setText(t.getText());
-        };
-        t.setOnAction(event);
-    */
+    
+    String cadena = new String();
+    Dibujar dibujar = new Dibujar();
+    
+    
+    @FXML
+    private void leer (ActionEvent event){
+        cadena = textoEntrada.getText();
+        System.out.println(cadena);
+        if(dibujar.validarEntrada(cadena)){
+            dibujar.dibujarEntrada(cadena);
+        }
+        else{
+            labelValidacion.setText("Entrada no válida");
+            System.out.println("Entrada no válida");
+        }
+        botonInicio.setDisable(true);
+        botonFinal.setDisable(false);
+    }
+    @FXML
+    private void reset (ActionEvent event){
+        textoEntrada.clear();
+        getLienzo().getChildren().clear();
+        labelValidacion.setText("");
+        botonInicio.setDisable(false);
+        botonFinal.setDisable(true);
+    }
 }
