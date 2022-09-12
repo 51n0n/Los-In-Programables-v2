@@ -17,7 +17,7 @@ public class AppTipografia extends Application {
     private static Dibujar llamar = new Dibujar();
     
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage ventana) throws Exception {
         
         //nodoRaiz.setPrefSize(1300,650);
         Parent interfaz = FXMLLoader.load(getClass().getResource("Interfaz.fxml"));

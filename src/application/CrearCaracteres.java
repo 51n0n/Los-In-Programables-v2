@@ -82,58 +82,58 @@ public class CrearCaracteres {
         CubicCurve cubica1 = new CubicCurve();
         CubicCurve cubica2 = new CubicCurve();
         CubicCurve cubica3 = new CubicCurve();
-        
+        CubicCurve cubicas = new CubicCurve();
         //Atributos del Fondo
-        caracter_B.getFondo().setLayoutX(145.0); //layouts mientras no esten dentro de un gridpane
-        caracter_B.getFondo().setLayoutY(270.0);
-        caracter_B.getFondo().setPrefHeight(60.0); //y
-        caracter_B.getFondo().setPrefWidth(45.0);  //x      
+        fondo.setLayoutX(145.0); //layouts mientras no esten dentro de un gridpane
+        fondo.setLayoutY(270.0);
+        fondo.setPrefHeight(60.0); //y
+        fondo.setPrefWidth(45.0);  //x      
         
         //Atributos principal linea
-        cubicas1.setLayoutX(25.0);
-        cubicas1.setLayoutY(33.0);
-        cubicas1.setStartX(-16.6);
-        cubicas1.setStartY(17.0);
-        cubicas1.setEndX(11.19);
-        cubicas1.setEndY(-24.8);
-        cubicas1.setControlX1(0.19);
-        cubicas1.setControlY1(23.4);
-        cubicas1.setControlX2(-6.8);
-        cubicas1.setControlY2(-33.0);
-        cubicas1.setFill(Color.TRANSPARENT);
-        cubicas1.setStroke(Color.BLACK);
-        cubicas1.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubicas1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubica1.setLayoutX(25.0);
+        cubica1.setLayoutY(33.0);
+        cubica1.setStartX(-16.6);
+        cubica1.setStartY(17.0);
+        cubica1.setEndX(11.19);
+        cubica1.setEndY(-24.8);
+        cubica1.setControlX1(0.19);
+        cubica1.setControlY1(23.4);
+        cubica1.setControlX2(-6.8);
+        cubica1.setControlY2(-33.0);
+        cubica1.setFill(Color.TRANSPARENT);
+        cubica1.setStroke(Color.BLACK);
+        cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //segunda parte superior derecha
-        cubicas2.setLayoutX(30);
-        cubicas2.setLayoutY(21);
-        cubicas2.setStartX(-25.84);
-        cubicas2.setStartY(-3.8);
-        cubicas2.setEndX(-1.1);
-        cubicas2.setEndY(7.8);
-        cubicas2.setControlX1(-21.99);
-        cubicas2.setControlY1(-22.99);
-        cubicas2.setControlX2(27.19);
-        cubicas2.setControlY2(-7.6);
-        cubicas2.setFill(Color.TRANSPARENT);
-        cubicas2.setStroke(Color.BLACK);
-        cubicas2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubicas2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubica2.setLayoutX(30);
+        cubica2.setLayoutY(21);
+        cubica2.setStartX(-25.84);
+        cubica2.setStartY(-3.8);
+        cubica2.setEndX(-1.1);
+        cubica2.setEndY(7.8);
+        cubica2.setControlX1(-21.99);
+        cubica2.setControlY1(-22.99);
+        cubica2.setControlX2(27.19);
+        cubica2.setControlY2(-7.6);
+        cubica2.setFill(Color.TRANSPARENT);
+        cubica2.setStroke(Color.BLACK);
+        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //tercera parte inferior//
-        cubicas3.setLayoutX(37);
-        cubicas3.setLayoutY(38);
-        cubicas3.setStartX(-17.4);
-        cubicas3.setStartY(8.79);
-        cubicas3.setEndX(-8);
-        cubicas3.setEndY(-9);
-        cubicas3.setControlX1(-4);
-        cubicas3.setControlY1(22.59);
-        cubicas3.setControlX2(16.4);
-        cubicas3.setControlY2(-1.8);
-        cubicas3.setFill(Color.TRANSPARENT);
-        cubicas3.setStroke(Color.BLACK);
-        cubicas3.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubicas3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubica3.setLayoutX(37);
+        cubica3.setLayoutY(38);
+        cubica3.setStartX(-17.4);
+        cubica3.setStartY(8.79);
+        cubica3.setEndX(-8);
+        cubica3.setEndY(-9);
+        cubica3.setControlX1(-4);
+        cubica3.setControlY1(22.59);
+        cubica3.setControlX2(16.4);
+        cubica3.setControlY2(-1.8);
+        cubica3.setFill(Color.TRANSPARENT);
+        cubica3.setStroke(Color.BLACK);
+        cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //cuarta terminacion inferior izquierda//
         cubicas.setLayoutX(4);
         cubicas.setLayoutY(47.5);
@@ -149,8 +149,10 @@ public class CrearCaracteres {
         cubicas.setStroke(Color.BLACK);
         cubicas.setStrokeLineCap(StrokeLineCap.ROUND);
         cubicas.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        caracter_B.getFondo().getChildren().addAll(cubicas,cubicas1,cubicas2,cubicas3);
-        return (caracter_B.getFondo());
+        
+        fondo.getChildren().addAll(cubicas,cubica1,cubica2,cubica3);
+        
+        return fondo;
     }    
     public AnchorPane crear_C() {
         
@@ -162,14 +164,11 @@ public class CrearCaracteres {
         CubicCurve cubicas1 = new CubicCurve();
         CubicCurve cubicas2 = new CubicCurve();
         
-        //Constructor Caracter
-        Caracter caracter_C = new Caracter('C',fondo,lineas,cuadraticas,cubicas);
-        
         //Atributos del Fondo
-        caracter_C.getFondo().setLayoutX(190.0); //layouts mientras no esten dentro de un gridpane
-        caracter_C.getFondo().setLayoutY(270.0);
-        caracter_C.getFondo().setPrefHeight(60.0); //y
-        caracter_C.getFondo().setPrefWidth(45.0);  //x  
+        fondo.setLayoutX(190.0); //layouts mientras no esten dentro de un gridpane
+        fondo.setLayoutY(270.0);
+        fondo.setPrefHeight(60.0); //y
+        fondo.setPrefWidth(45.0);  //x  
         
         
         //PRIMERA costado izquierdo
@@ -217,8 +216,9 @@ public class CrearCaracteres {
         cubicas2.setStroke(Color.BLACK);
         cubicas2.setStrokeLineCap(StrokeLineCap.ROUND);
         cubicas2.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        caracter_C.getFondo().getChildren().addAll(cubicas,cubicas1,cubicas2);
-        return (caracter_C.getFondo());
+        
+        fondo.getChildren().addAll(cubicas,cubicas1,cubicas2);
+        return fondo;
     }
     /*public AnchorPane crear_D(){
         //Objetos Clase Caracter
