@@ -842,7 +842,7 @@ public class CrearCaracteres {
         Caracter caracter_L = new Caracter('L',fondo,lineas,cuadraticas,cubicas);
         
         //Atributos del Fondo
-        caracter_L.getFondo().setLayoutX(300.0); //layouts mientras no esten dentro de un gridpane
+        caracter_L.getFondo().setLayoutX(595.0); //layouts mientras no esten dentro de un gridpane
         caracter_L.getFondo().setLayoutY(270.0);
         caracter_L.getFondo().setPrefHeight(60.0); //y
         caracter_L.getFondo().setPrefWidth(45.0);  //x  
@@ -853,7 +853,7 @@ public class CrearCaracteres {
         cubicas.setLayoutY(13.0);
         cubicas.setStartX(-31.19);
         cubicas.setStartY(37.60);
-        cubicas.setEndX(-4);
+        cubicas.setEndX(-4.0);
         cubicas.setEndY(-7.18);
         cubicas.setControlX1(1.19);
         cubicas.setControlY1(41.4);
@@ -888,15 +888,15 @@ public class CrearCaracteres {
         cubica2.setStartY(-10.79);
         cubica2.setEndX(-1.8);
         cubica2.setEndY(-14.59);
-        cubica2.setControlX1();
-        cubica2.setControlY1();
-        cubica2.setControlX2();
-        cubica2.setControlY2();
+        cubica2.setControlX1(-51.39);
+        cubica2.setControlY1(-24.2);
+        cubica2.setControlX2(5.4);
+        cubica2.setControlY2(2.0);
         cubica2.setFill(Color.TRANSPARENT);
         cubica2.setStroke(Color.BLACK);
         cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        caracter_L.getFondo().getChildren().addAll(cubicas);
+        caracter_L.getFondo().getChildren().addAll(cubicas,cubica1,cubica2);
         return (caracter_L.getFondo());
         
     }

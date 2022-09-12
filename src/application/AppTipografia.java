@@ -47,6 +47,8 @@ public class AppTipografia extends Application {
         nodoRaiz.getChildren().add(aux.crear_H());
         nodoRaiz.getChildren().add(aux.crear_I());
         nodoRaiz.getChildren().add(aux.crear_J());
+        nodoRaiz.getChildren().add(aux.crear_K());
+        nodoRaiz.getChildren().add(aux.crear_L());
 
         
         Button botonFinalizar = new Button();
