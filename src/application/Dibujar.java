@@ -5,24 +5,24 @@
 package application;
 
 import javafx.scene.layout.AnchorPane;
-import static application.CrearCaracteres.*;
 
 public class Dibujar {
     
     private static AnchorPane lienzo = new AnchorPane();
+    private static CrearCaracteres llamar = new CrearCaracteres();
     
     public AnchorPane leerEntrada() {
         String entrada = "Hola mundo";
-        int size = entrada.length(); // Se guarda el tamaño de la cadena
-        char[] cadena = new char[size]; // Se crea un arreglo para guardar los caracteres de la cadena
-        for (int i=0;i<size;i++){ //Se recorre el arreglo
+        int size = entrada.length(); // Se guarda el tamaño de la cadena completa en "size"
+        char[] cadena = new char[size]; // Se crea un arreglo de caracteres "cadena" con tamaño "size"
+        for (int i=0;i<size;i++){ //Se recorre el arreglo y se guardan los caracteres en las posiciones del arreglo "cadena"
             cadena[i]=entrada.charAt(i);
         }
         for (int j=0;j<size;j++){ //Se lee el arreglo
             System.out.print(cadena[j]);
         }
-        if (validarEntrada(cadena,size)){
-            dibujarEntrada(cadena,size);
+        if (validarEntrada(cadena,size)){ // Se llama a la funcion validarEntrada y solo se dibujará si la entrada es válida
+            dibujarEntrada(cadena,size); //
         }
         else{
             System.out.println("Entrada no válida");
@@ -44,18 +44,18 @@ public class Dibujar {
     
     public void dibujarEntrada(char[] cadena, int size){
         
-
-        int espacioEnFila = 23; // Guarda cuanto espacio queda en una fila -1 cada caracter ingresado.
-        int letraCont = 0; // Contará las letras en una palabra +1 cada letra ingresada.
-        int posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
-        int posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
+        //1035x450
+        double espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
+        double letraCont = 0; // Contará el espacio a usar de las letras de una palabra.
+        double posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
+        double posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
         
         for (int i=0;i<size;i++){ // Se recorre la cadena
             
             if (esLetra(cadena[i])){
                 int j = i;
                 while(esLetra(cadena[j])){
-                    letraCont++;
+                    letraCont = letraCont + dibujarLetras(cadena[j]).getPrefWidth();
                     j++;
                 }
                 if (letraCont <= espacioEnFila){
@@ -64,33 +64,38 @@ public class Dibujar {
                         lienzo.getChildren().add(dibujarLetras(cadena[i]));
                         lienzo.getChildren().get(i).setLayoutX(posActualX);
                         lienzo.getChildren().get(i).setLayoutY(posActualY);
-                        posActualX++;
+                        posActualX = posActualX + lienzo.getChildren().get(i).getLayoutX();
+                        espacioEnFila = espacioEnFila - lienzo.getChildren().get(i).getLayoutX();
                         i++;
                     }
                     i--;
                 }
                 else{
                     //dibujar en una nueva fila
-                    espacioEnFila = 23;
+                    espacioEnFila = 1035;
                     posActualX = 0;
-                    posActualY++;
+                    posActualY = posActualY + 60;
                     while(i<j){
                         lienzo.getChildren().add(dibujarLetras(cadena[i]));
                         lienzo.getChildren().get(i).setLayoutX(posActualX);
                         lienzo.getChildren().get(i).setLayoutY(posActualY);
-                        posActualX++;
+                        posActualX = posActualX + lienzo.getChildren().get(i).getLayoutX();
+                        espacioEnFila = espacioEnFila - lienzo.getChildren().get(i).getLayoutX();
                         i++;
                     }
                     i--;
                 }
             }
-            else{
-                espacioEnFila--;
+            else{ // falta condicional si hay espacio para el simbolo
                 letraCont = 0;
+                if ((lienzo.getChildren().get(i).getLayoutX()) > espacioEnFila){
+                    posActualY = posActualY + 60;
+                }
                 lienzo.getChildren().add(dibujarSimbolos(cadena[i]));
                 lienzo.getChildren().get(i).setLayoutX(posActualX);
                 lienzo.getChildren().get(i).setLayoutY(posActualY);
-                posActualX++;
+                espacioEnFila = espacioEnFila - lienzo.getChildren().get(i).getLayoutX();
+                posActualX = posActualX + lienzo.getChildren().get(i).getLayoutX();
             }
         }
     }
@@ -101,10 +106,10 @@ public class Dibujar {
         
         switch (caracter){
             case 'A':
-                nuevoNodo = crear_A();
+                nuevoNodo = llamar.crear_A();
                 break;
             case 'B':
-                nuevoNodo = crear_B();
+                nuevoNodo = llamar.crear_B();
                 break;
             case 'C':
                 break;

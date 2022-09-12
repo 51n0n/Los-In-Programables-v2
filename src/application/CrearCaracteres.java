@@ -14,7 +14,7 @@ import javafx.scene.shape.StrokeLineJoin;
 
 public class CrearCaracteres {
     
-    public static AnchorPane crear_A() {
+    public AnchorPane crear_A() {
         
         //Objetos Clase Caracter
         AnchorPane fondo = new AnchorPane();
@@ -70,7 +70,7 @@ public class CrearCaracteres {
         return fondo;
     }
     
-    public static AnchorPane crear_B() {
+    public AnchorPane crear_B() {
         
         //Objetos Clase Caracter
         AnchorPane fondo = new AnchorPane();
