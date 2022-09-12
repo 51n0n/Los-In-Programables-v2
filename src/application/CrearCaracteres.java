@@ -232,7 +232,7 @@ public class CrearCaracteres {
         caracter_C.getFondo().getChildren().addAll(cubicas,cubicas1,cubicas2);
         return (caracter_C.getFondo());
     }
-    public AnchorPane crear_D(){
+    /*public AnchorPane crear_D(){
         //Objetos Clase Caracter
         AnchorPane fondo = new AnchorPane();
         Line lineas = new Line();
@@ -712,7 +712,7 @@ public class CrearCaracteres {
         
         
         //PRIMERA  
-    }
+    }*/
         
     
 
