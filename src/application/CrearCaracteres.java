@@ -1194,10 +1194,7 @@ public class CrearCaracteres {
         Circle circulo = new Circle();
         
         //Atributos del fondo
-        fondo.setLayoutX(300.0);
-        fondo.setLayoutY(270.0);
-        fondo.setPrefHeight(60.0);
-        fondo.setPrefWidth(45.0);
+        fondo.setPrefSize(22, 60);
         
         //Circulo
         circulo.setRadius(3);
@@ -1209,10 +1206,574 @@ public class CrearCaracteres {
         fondo.getChildren().addAll(circulo);
         return fondo;
     }
-    /*public AnchorPane crear_Coma(){
+    public AnchorPane crear_Coma(){
         //Objetos
         AnchorPane fondo = new AnchorPane();
         Circle circulo = new Circle();
-        QuadCurve cuadratica = 
-    }*/   
+        QuadCurve cuadratica = new QuadCurve();
+        
+        fondo.setPrefSize(22, 60);
+        
+        //Circulo
+        circulo.setRadius(3);
+        circulo.setFill(Color.BLACK);
+        circulo.setStroke(Color.BLACK);
+        circulo.setLayoutX(6);
+        circulo.setLayoutY(47);
+        
+        //Cuadratica
+        cuadratica.setLayoutX(9);
+        cuadratica.setLayoutY(78);
+        cuadratica.setStartX(-3.79);
+        cuadratica.setStartY(-19);
+        cuadratica.setEndX(-7.62);
+        cuadratica.setEndY(-31);
+        cuadratica.setControlX(3.39);
+        cuadratica.setControlY(-23);
+        cuadratica.setFill(Color.TRANSPARENT);
+        cuadratica.setStroke(Color.BLACK);
+        cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(circulo, cuadratica);
+        return fondo;
+    }
+    public AnchorPane crear_PuntoyComa(){
+        //Objetos
+        AnchorPane fondo = new AnchorPane();
+        Circle circulo = new Circle();
+        Circle circulo2 = new Circle();
+        QuadCurve cuadratica = new QuadCurve();
+        
+        fondo.setPrefSize(22, 60);
+        
+        //Circulo
+        circulo.setRadius(3);
+        circulo.setFill(Color.BLACK);
+        circulo.setStroke(Color.BLACK);
+        circulo.setLayoutX(6);
+        circulo.setLayoutY(34);
+        
+        //Circulo2
+        circulo2.setRadius(3);
+        circulo2.setFill(Color.BLACK);
+        circulo2.setStroke(Color.BLACK);
+        circulo2.setLayoutX(6);
+        circulo2.setLayoutY(47);
+        
+        //Cuadratica
+        cuadratica.setLayoutX(9);
+        cuadratica.setLayoutY(78);
+        cuadratica.setStartX(-3.79);
+        cuadratica.setStartY(-19);
+        cuadratica.setEndX(-7.62);
+        cuadratica.setEndY(-31);
+        cuadratica.setControlX(3.39);
+        cuadratica.setControlY(-23);
+        cuadratica.setFill(Color.TRANSPARENT);
+        cuadratica.setStroke(Color.BLACK);
+        cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(circulo, cuadratica, circulo2);
+        return fondo;
+    }
+    public AnchorPane crear_DosPuntos(){
+        //Objetos
+        AnchorPane fondo = new AnchorPane();
+        Circle circulo = new Circle();
+        Circle circulo2 = new Circle();
+        
+        fondo.setPrefSize(22, 60);
+        
+        //Circulo
+        circulo.setRadius(3);
+        circulo.setFill(Color.BLACK);
+        circulo.setStroke(Color.BLACK);
+        circulo.setLayoutX(6);
+        circulo.setLayoutY(34);
+        
+        //Circulo2
+        circulo2.setRadius(3);
+        circulo2.setFill(Color.BLACK);
+        circulo2.setStroke(Color.BLACK);
+        circulo2.setLayoutX(6);
+        circulo2.setLayoutY(47);
+        
+        fondo.getChildren().addAll(circulo, circulo2);
+        return fondo;
+    }
+    public AnchorPane crear_ComillaSimple(){
+        //Objetos
+        AnchorPane fondo = new AnchorPane();
+        Circle circulo = new Circle();
+        QuadCurve cuadratica = new QuadCurve();
+        
+        fondo.setPrefSize(22, 60);
+        
+        //Circulo
+        circulo.setRadius(2);
+        circulo.setFill(Color.BLACK);
+        circulo.setStroke(Color.BLACK);
+        circulo.setLayoutX(5);
+        circulo.setLayoutY(5);
+        
+        //Cuadratica
+        cuadratica.setLayoutX(7);
+        cuadratica.setLayoutY(36);
+        cuadratica.setStartX(-2);
+        cuadratica.setStartY(-23.59);
+        cuadratica.setEndX(-7.62);
+        cuadratica.setEndY(-31);
+        cuadratica.setControlX(0);
+        cuadratica.setControlY(-23);
+        cuadratica.setFill(Color.TRANSPARENT);
+        cuadratica.setStroke(Color.BLACK);
+        cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(circulo, cuadratica);
+        return fondo;
+    }
+    public AnchorPane crear_ComillasDoble(){
+        //Objetos
+        AnchorPane fondo = new AnchorPane();
+        Circle circulo = new Circle();
+        QuadCurve cuadratica = new QuadCurve();
+        Circle circulo2 = new Circle();
+        QuadCurve cuadratica2 = new QuadCurve();
+        
+        fondo.setPrefSize(22, 60);
+        
+        //Circulo
+        circulo.setRadius(2);
+        circulo.setFill(Color.BLACK);
+        circulo.setStroke(Color.BLACK);
+        circulo.setLayoutX(5);
+        circulo.setLayoutY(5);
+        
+        //Circulo2
+        circulo2.setRadius(2);
+        circulo2.setFill(Color.BLACK);
+        circulo2.setStroke(Color.BLACK);
+        circulo2.setLayoutX(11);
+        circulo2.setLayoutY(5);
+        
+        //Cuadratica
+        cuadratica.setLayoutX(7);
+        cuadratica.setLayoutY(35);
+        cuadratica.setStartX(-2);
+        cuadratica.setStartY(-23.59);
+        cuadratica.setEndX(-7.62);
+        cuadratica.setEndY(-31);
+        cuadratica.setControlX(0);
+        cuadratica.setControlY(-25.59);
+        cuadratica.setFill(Color.TRANSPARENT);
+        cuadratica.setStroke(Color.BLACK);
+        cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Cuadratica2
+        cuadratica2.setLayoutX(13);
+        cuadratica2.setLayoutY(35);
+        cuadratica2.setStartX(-2);
+        cuadratica2.setStartY(-23.59);
+        cuadratica2.setEndX(-7.62);
+        cuadratica2.setEndY(-31);
+        cuadratica2.setControlX(0);
+        cuadratica2.setControlY(-25.59);
+        cuadratica2.setFill(Color.TRANSPARENT);
+        cuadratica2.setStroke(Color.BLACK);
+        cuadratica2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cuadratica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(circulo, cuadratica, circulo2, cuadratica2);
+        return fondo;
+    }
+    public AnchorPane crear_ComillasEspañolaInicio(){
+        AnchorPane fondo = new AnchorPane();
+        QuadCurve cubica = new QuadCurve();
+        QuadCurve cubica2 = new QuadCurve();
+        
+        fondo.setPrefSize(30, 60);
+        
+        //Cubica
+        cubica.setLayoutX(31);
+        cubica.setLayoutY(55);
+        cubica.setStartX(-14.79);
+        cubica.setStartY(-14.19);
+        cubica.setEndX(-14.79);
+        cubica.setEndY(-36.19);
+        cubica.setControlX(-46);
+        cubica.setControlY(-24.6);
+        cubica.setFill(Color.TRANSPARENT);
+        cubica.setStroke(Color.BLACK);
+        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Cubica2
+        cubica2.setLayoutX(41);
+        cubica2.setLayoutY(55);
+        cubica2.setStartX(-14.79);
+        cubica2.setStartY(-15);
+        cubica2.setEndX(-14.79);
+        cubica2.setEndY(-35);
+        cubica2.setControlX(-46);
+        cubica2.setControlY(-24.6);
+        cubica2.setFill(Color.TRANSPARENT);
+        cubica2.setStroke(Color.BLACK);
+        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubica, cubica2);
+        return fondo;
+    }
+    public AnchorPane crear_ComillasEspañolaFinal(){
+        AnchorPane fondo = new AnchorPane();
+        QuadCurve cubica = new QuadCurve();
+        QuadCurve cubica2 = new QuadCurve();
+        
+        fondo.setPrefSize(30, 60);
+        
+        //Cubica
+        cubica.setLayoutX(23);
+        cubica.setLayoutY(58);
+        cubica.setStartX(-21.19);
+        cubica.setStartY(-18.8);
+        cubica.setEndX(-21.19);
+        cubica.setEndY(-36.4);
+        cubica.setControlX(11.39);
+        cubica.setControlY(-28.4);
+        cubica.setFill(Color.TRANSPARENT);
+        cubica.setStroke(Color.BLACK);
+        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Cubica2
+        cubica2.setLayoutX(34);
+        cubica2.setLayoutY(58);
+        cubica2.setStartX(-21.19);
+        cubica2.setStartY(-18.8);
+        cubica2.setEndX(-21.19);
+        cubica2.setEndY(-36.4);
+        cubica2.setControlX(11.39);
+        cubica2.setControlY(-28.4);
+        cubica2.setFill(Color.TRANSPARENT);
+        cubica2.setStroke(Color.BLACK);
+        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubica, cubica2);
+        return fondo;
+    }
+    public AnchorPane crear_ParentesisInicio(){
+        AnchorPane fondo = new AnchorPane();
+        QuadCurve cubica = new QuadCurve();
+        
+        fondo.setPrefSize(22, 60);
+        
+        //Cubica
+        cubica.setLayoutX(20);
+        cubica.setLayoutY(55);
+        cubica.setStartX(-6.6);
+        cubica.setStartY(1.8);
+        cubica.setEndX(-6.6);
+        cubica.setEndY(-51.8);
+        cubica.setControlX(-29.3);
+        cubica.setControlY(-25.8);
+        cubica.setFill(Color.TRANSPARENT);
+        cubica.setStroke(Color.BLACK);
+        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubica);
+        return fondo;
+    }
+    public AnchorPane crear_ParentesisFinal(){
+        AnchorPane fondo = new AnchorPane();
+        QuadCurve cubica = new QuadCurve();
+        
+        fondo.setPrefSize(22, 60);
+        
+        //Cubica
+        cubica.setLayoutX(9);
+        cubica.setLayoutY(55);
+        cubica.setStartX(-6.6);
+        cubica.setStartY(1.8);
+        cubica.setEndX(-6.6);
+        cubica.setEndY(-51.8);
+        cubica.setControlX(14.6);
+        cubica.setControlY(-25);
+        cubica.setFill(Color.TRANSPARENT);
+        cubica.setStroke(Color.BLACK);
+        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubica);
+        return fondo;
+    }
+    public AnchorPane crear_CorcheteInicio(){
+        AnchorPane fondo = new AnchorPane();
+        Line linea = new Line();
+        Line linea2 = new Line();
+        Line linea3 = new Line();
+        
+        fondo.setPrefSize(34, 60);
+        
+        //Linea Vertical
+        linea.setLayoutX(18);
+        linea.setLayoutY(34);
+        linea.setStartX(-13.6);
+        linea.setStartY(-27.6);
+        linea.setEndX(-13.69);
+        linea.setEndY(21.39);
+        linea.setFill(Color.TRANSPARENT);
+        linea.setStroke(Color.BLACK);
+        linea.setStrokeLineCap(StrokeLineCap.ROUND);
+        linea.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Linea Superior
+        linea2.setLayoutX(14);
+        linea2.setLayoutY(26);
+        linea2.setStartX(-9.19);
+        linea2.setStartY(-19.6);
+        linea2.setEndX(8.8);
+        linea2.setEndY(-19.6);
+        linea2.setFill(Color.TRANSPARENT);
+        linea2.setStroke(Color.BLACK);
+        linea2.setStrokeLineCap(StrokeLineCap.ROUND);
+        linea2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Linea Inferior
+        linea3.setLayoutX(14);
+        linea3.setLayoutY(75);
+        linea3.setStartX(-9.19);
+        linea3.setStartY(-19.6);
+        linea3.setEndX(8.8);
+        linea3.setEndY(-19.6);
+        linea3.setFill(Color.TRANSPARENT);
+        linea3.setStroke(Color.BLACK);
+        linea3.setStrokeLineCap(StrokeLineCap.ROUND);
+        linea3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(linea, linea2, linea3);
+        return fondo;
+    }
+    public AnchorPane crear_CorcheteFinal(){
+        AnchorPane fondo = new AnchorPane();
+        Line linea = new Line();
+        Line linea2 = new Line();
+        Line linea3 = new Line();
+        
+        fondo.setPrefSize(34, 60);
+        
+        //Linea Vertical
+        linea.setLayoutX(35);
+        linea.setLayoutY(33);
+        linea.setStartX(-13.6);
+        linea.setStartY(-27.6);
+        linea.setEndX(-13.69);
+        linea.setEndY(21.39);
+        linea.setFill(Color.TRANSPARENT);
+        linea.setStroke(Color.BLACK);
+        linea.setStrokeLineCap(StrokeLineCap.ROUND);
+        linea.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Linea Superior
+        linea2.setLayoutX(12);
+        linea2.setLayoutY(25);
+        linea2.setStartX(-9.19);
+        linea2.setStartY(-19.6);
+        linea2.setEndX(8.8);
+        linea2.setEndY(-19.6);
+        linea2.setFill(Color.TRANSPARENT);
+        linea2.setStroke(Color.BLACK);
+        linea2.setStrokeLineCap(StrokeLineCap.ROUND);
+        linea2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Linea Inferior
+        linea3.setLayoutX(12);
+        linea3.setLayoutY(74);
+        linea3.setStartX(-9.19);
+        linea3.setStartY(-19.6);
+        linea3.setEndX(8.8);
+        linea3.setEndY(-19.6);
+        linea3.setFill(Color.TRANSPARENT);
+        linea3.setStroke(Color.BLACK);
+        linea3.setStrokeLineCap(StrokeLineCap.ROUND);
+        linea3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(linea, linea2, linea3);
+        return fondo;
+    }
+    public AnchorPane crear_LlaveInicial(){
+        AnchorPane fondo = new AnchorPane();
+        CubicCurve cubica = new CubicCurve();
+        CubicCurve cubica2 = new CubicCurve();
+        
+        fondo.setPrefSize(34, 60);
+        
+        //Cubica superior
+        cubica.setLayoutX(4);
+        cubica.setLayoutY(29);
+        cubica.setStartX(-0.2);
+        cubica.setStartY(1);
+        cubica.setEndX(17);
+        cubica.setEndY(-24.6);
+        cubica.setControlX1(17);
+        cubica.setControlY1(1);
+        cubica.setControlX2(-4.2);
+        cubica.setControlY2(-24.6);
+        cubica.setFill(Color.TRANSPARENT);
+        cubica.setStroke(Color.BLACK);
+        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Cubica Inferior
+        cubica2.setLayoutX(7);
+        cubica2.setLayoutY(45);
+        cubica2.setStartX(13.59);
+        cubica2.setStartY(10.59);
+        cubica2.setEndX(-4.2);
+        cubica2.setEndY(-14);
+        cubica2.setControlX1(-0.79);
+        cubica2.setControlY1(10.59);
+        cubica2.setControlX2(13.59);
+        cubica2.setControlY2(-14);
+        cubica2.setFill(Color.TRANSPARENT);
+        cubica2.setStroke(Color.BLACK);
+        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubica, cubica2);
+        return fondo;
+    }
+    public AnchorPane crear_LlaveFinal(){
+        AnchorPane fondo = new AnchorPane();
+        CubicCurve cubica = new CubicCurve();
+        CubicCurve cubica2 = new CubicCurve();
+        
+        fondo.setPrefSize(34, 60);
+        
+        //Cubica superior
+        cubica.setLayoutX(11);
+        cubica.setLayoutY(15);
+        cubica.setStartX(11.08);
+        cubica.setStartY(15);
+        cubica.setEndX(-9.39);
+        cubica.setEndY(-11.4);
+        cubica.setControlX1(-8.12);
+        cubica.setControlY1(15);
+        cubica.setControlX2(11.08);
+        cubica.setControlY2(-11.4);
+        cubica.setFill(Color.TRANSPARENT);
+        cubica.setStroke(Color.BLACK);
+        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Cubica Inferior
+        cubica2.setLayoutX(15);
+        cubica2.setLayoutY(36);
+        cubica2.setStartX(-11);
+        cubica2.setStartY(20.39);
+        cubica2.setEndX(8.21);
+        cubica2.setEndY(-4.86);
+        cubica2.setControlX1(8.21);
+        cubica2.setControlY1(20.39);
+        cubica2.setControlX2(-11);
+        cubica2.setControlY2(-4.86);
+        cubica2.setFill(Color.TRANSPARENT);
+        cubica2.setStroke(Color.BLACK);
+        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubica, cubica2);
+        return fondo;
+    }
+    public AnchorPane crear_Guion(){
+        AnchorPane fondo = new AnchorPane();
+        Line linea = new Line();
+        
+        fondo.setPrefSize(34, 60);
+        
+        linea.setLayoutX(12);
+        linea.setLayoutY(23);
+        linea.setStartX(-14.4);
+        linea.setStartY(4.19);
+        linea.setEndX(15.2);
+        linea.setEndY(4.19);
+        linea.setFill(Color.TRANSPARENT);
+        linea.setStroke(Color.BLACK);
+        linea.setStrokeLineCap(StrokeLineCap.ROUND);
+        linea.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(linea);
+        return fondo;
+    }
+    public AnchorPane crear_GuionBajo(){
+        AnchorPane fondo = new AnchorPane();
+        Line linea = new Line();
+        
+        fondo.setPrefSize(34, 60);
+        
+        linea.setLayoutX(12);
+        linea.setLayoutY(49);
+        linea.setStartX(-10.4);
+        linea.setStartY(4.19);
+        linea.setEndX(15.2);
+        linea.setEndY(4.19);
+        linea.setFill(Color.TRANSPARENT);
+        linea.setStroke(Color.BLACK);
+        linea.setStrokeLineCap(StrokeLineCap.ROUND);
+        linea.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(linea);
+        return fondo;
+    }
+    public AnchorPane crear_interrogacionInicial(){
+        AnchorPane fondo = new AnchorPane();
+        CubicCurve cubica = new CubicCurve();
+        Line linea = new Line();
+        Circle circulo = new Circle();
+        
+        fondo.setPrefSize(34, 60);
+        
+        //Cubica
+        cubica.setLayoutX(12);
+        cubica.setLayoutY(30);
+        cubica.setStartX(13.33);
+        cubica.setStartY(-25.19);
+        cubica.setEndX(13.33);
+        cubica.setEndY(-5.46);
+        cubica.setControlX1(-18.66);
+        cubica.setControlY1(-34.79);
+        cubica.setControlX2(-18.66);
+        cubica.setControlY2(2.53);
+        cubica.setFill(Color.TRANSPARENT);
+        cubica.setStroke(Color.BLACK);
+        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Linea
+        linea.setLayoutX(21);
+        linea.setLayoutY(37);
+        linea.setStartX(3.8);
+        linea.setStartY(-13);
+        linea.setEndX(3.8);
+        linea.setEndY(7.8);
+        linea.setFill(Color.TRANSPARENT);
+        linea.setStroke(Color.BLACK);
+        linea.setStrokeLineCap(StrokeLineCap.ROUND);
+        linea.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //Circulo
+        circulo.setRadius(3);
+        circulo.setFill(Color.BLACK);
+        circulo.setStroke(Color.BLACK);
+        circulo.setLayoutX(25);
+        circulo.setLayoutY(51);
+        
+        fondo.getChildren().addAll(cubica, linea, circulo);
+        return fondo;
+    }
 }
