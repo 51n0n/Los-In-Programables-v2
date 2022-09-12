@@ -33,11 +33,11 @@ public class Dibujar {
     public void dibujarEntrada(String entrada){
         
         lienzo.setLayoutX(30);
-        lienzo.setLayoutY(70);
+        lienzo.setLayoutY(60);
         lienzo.setPrefSize(1035, 450);
         int size = entrada.length();
         char[] cadena = new char[size];
-        boolean salir = false;
+        boolean salir;
         
         for (int i=0;i<size;i++){ //Se recorre el arreglo y se guardan los caracteres en las posiciones del arreglo "cadena"
             cadena[i]=entrada.charAt(i);
@@ -49,12 +49,13 @@ public class Dibujar {
         double posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
         
         for (int i=0;i<size;i++){ // Se recorre la cadena
-            
+            salir = false;
             if (esLetra(cadena[i])){
                 int j = i;
                 while(j<size && salir==false){
                     if (esLetra(cadena[j])){
-                        letraCont = letraCont + dibujarLetras(cadena[j]).getPrefWidth();
+                        letraCont = letraCont + tamañoCaracter(cadena[j]);
+                        System.out.println(letraCont);
                         j++;
                     }
                     else{
@@ -68,13 +69,11 @@ public class Dibujar {
                         lienzo.getChildren().add(dibujarLetras(cadena[i]));
                         lienzo.getChildren().get(i).setLayoutX(posActualX);
                         lienzo.getChildren().get(i).setLayoutY(posActualY);
-                        posActualX = posActualX + 45;
-                        //posActualX = posActualX + lienzo.getChildren().get(i).getLayoutX();
-                        espacioEnFila = espacioEnFila - lienzo.getChildren().get(i).getLayoutX();
+                        posActualX = posActualX + tamañoCaracter(cadena[i]);
+                        espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]);
                         System.out.println(posActualX+" "+i);
                         i++;
                     }
-                    i--;
                 }
                 else{
                     //dibujar en una nueva fila
@@ -85,23 +84,24 @@ public class Dibujar {
                         lienzo.getChildren().add(dibujarLetras(cadena[i]));
                         lienzo.getChildren().get(i).setLayoutX(posActualX);
                         lienzo.getChildren().get(i).setLayoutY(posActualY);
-                        posActualX = posActualX + lienzo.getChildren().get(i).getLayoutX();
-                        espacioEnFila = espacioEnFila - lienzo.getChildren().get(i).getLayoutX();
+                        posActualX = posActualX + tamañoCaracter(cadena[i]);
+                        espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]);
                         i++;
                     }
-                    i--;
                 }
+                i--;
             }
             else{
                 letraCont = 0;
-                if ((lienzo.getChildren().get(i).getLayoutX()) > espacioEnFila){
+                if (tamañoCaracter(cadena[i]) > espacioEnFila){
                     posActualY = posActualY + 60;
+                    posActualX = 0;
                 }
                 lienzo.getChildren().add(dibujarSimbolos(cadena[i]));
                 lienzo.getChildren().get(i).setLayoutX(posActualX);
                 lienzo.getChildren().get(i).setLayoutY(posActualY);
-                espacioEnFila = espacioEnFila - lienzo.getChildren().get(i).getLayoutX();
-                posActualX = posActualX + lienzo.getChildren().get(i).getLayoutX();
+                espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]);
+                posActualX = posActualX + tamañoCaracter(cadena[i]);
             }
         }
         
@@ -243,6 +243,7 @@ public class Dibujar {
         
         switch (caracter){
             case ' ':
+                //nuevoNodo = llamar.crear_espacio();
                 break;
             case '!':
                 break;
@@ -316,7 +317,18 @@ public class Dibujar {
         }
         return esSimbolo;
     }
-    
+    public double tamañoCaracter(char caracter){
+        
+        if((caracter == '!')||(caracter == '¡')){
+            return 22;
+        }
+        else if(caracter == 'i'){
+            return 34;
+        }
+        else{
+            return 45;
+        }
+    }
     public static AnchorPane getLienzo() {
         return lienzo;
     }
