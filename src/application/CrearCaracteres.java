@@ -1120,8 +1120,9 @@ public class CrearCaracteres {
         
         //PRIMERA 
         fondo.getChildren().addAll(cubicas);
-        //PRIMERA  
-    }*/
+        //PRIMERA 
+        return fondo;
+    }
         
     
 
