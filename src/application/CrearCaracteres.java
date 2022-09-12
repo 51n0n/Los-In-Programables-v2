@@ -83,7 +83,7 @@ public class CrearCaracteres {
         cubicas.setStroke(Color.BLACK);
         cubicas.setStrokeLineCap(StrokeLineCap.ROUND);
         cubicas.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        fondo.getChildren().addAll(cuadratica,linea,cubica);
+        fondo.getChildren().addAll(cubica1,lineas,cubicas);
         return (fondo);
     }
     public AnchorPane crear_B() {
@@ -1230,9 +1230,5 @@ public class CrearCaracteres {
         AnchorPane fondo = new AnchorPane();
         Circle circulo = new Circle();
         QuadCurve cuadratica = 
-    }*/
-        //PRIMERA 
-        caracter_Z.getFondo().getChildren().addAll(cubicas);
-        return (caracter_Z.getFondo());
-    }      
+    }*/   
 }
