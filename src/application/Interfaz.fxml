@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="fondoInterfaz" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterfazController">
+   <children>
+      <Button fx:id="botonFinal" layoutX="1085.0" layoutY="590.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="75.0" text="Reset" />
+      <Button fx:id="botonInicio" layoutX="1085.0" layoutY="540.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="75.0" text="Dibujar" />
+      <TextField fx:id="textoFondo" layoutX="30.0" layoutY="540.0" prefHeight="40.0" prefWidth="1035.0" promptText="Escriba aquí">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextArea fx:id="textoEntrada" disable="true" editable="false" layoutX="30.0" layoutY="70.0" prefHeight="450.0" prefWidth="1035.0" />
+      <ColorPicker fx:id="selectColor" layoutX="1132.0" layoutY="36.0" />
+   </children>
+</AnchorPane>
