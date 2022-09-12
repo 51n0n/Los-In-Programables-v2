@@ -15,18 +15,6 @@ import javafx.scene.shape.StrokeLineJoin;
 
 public class CrearCaracteres {
     
-    public void leer(String texto) {
-        
-        int size = texto.length(); // Se guarda el tamaño de la cadena
-        char cadena[] = new char[size]; // Se crea un arreglo para guardar los caracteres de la cadena
-        for (int i=0;i<=size;i++){ //Se recorre el arreglo
-            cadena[i]=texto.charAt(i);
-        }
-        for (int j=0;j<=size;j++){ //Se lee el arreglo
-            System.out.println(cadena[j]+" ");
-        }
-    }
-    
     public AnchorPane crear_A() {
         
         //Objetos Clase Caracter
@@ -86,18 +74,14 @@ public class CrearCaracteres {
         fondo.getChildren().addAll(cubica1,lineas,cubicas);
         return (fondo);
     }
+    
     public AnchorPane crear_B() {
         
         //Objetos Clase Caracter
         AnchorPane fondo = new AnchorPane();
-        Line lineas = new Line();
-        QuadCurve cuadraticas = new QuadCurve();
-        CubicCurve cubicas = new CubicCurve();
-        CubicCurve cubicas1 = new CubicCurve();
-        CubicCurve cubicas2 = new CubicCurve();
-        CubicCurve cubicas3 = new CubicCurve();
-        //Constructor Caracter
-        Caracter caracter_B = new Caracter('B',fondo,lineas,cuadraticas,cubicas);
+        CubicCurve cubica1 = new CubicCurve();
+        CubicCurve cubica2 = new CubicCurve();
+        CubicCurve cubica3 = new CubicCurve();
         
         //Atributos del Fondo
         caracter_B.getFondo().setLayoutX(145.0); //layouts mientras no esten dentro de un gridpane

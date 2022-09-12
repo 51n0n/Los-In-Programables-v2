@@ -5,43 +5,32 @@
 package application;
 
 import javafx.application.Application;
-import static javafx.application.Application.launch;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class AppTipografia extends Application {
     
-    public static final int XSIZE = 1200;
-    public static final int YSIZE = 600;
-    private static AnchorPane nodoRaiz = new AnchorPane();
-    private static Caracter objeto;
-    private static Caracter sigObjeto = Controller.crear_A();
+    private static BorderPane nodoRaiz = new BorderPane();
+    private static Dibujar llamar = new Dibujar();
     
     @Override
     public void start(Stage stage) throws Exception {
         
-        GridPane tabla = new GridPane();
-        tabla.setPrefHeight(200);
-        tabla.setPrefWidth(200);
-        //nodoRaiz.getChildren().add(tabla);
-        
-        Caracter a = sigObjeto;
-        nodoRaiz.getChildren().addAll(tabla,a.fondo,a.cuadraticas);
+        //nodoRaiz.setPrefSize(1300,650);
+        Parent interfaz = FXMLLoader.load(getClass().getResource("Interfaz.fxml"));
+        nodoRaiz.getChildren().add(interfaz);
+        //nodoRaiz.getChildren().add(llamar.leerEntrada());
         
         //Mostrar Escena
-        Scene scene = new Scene(nodoRaiz,XSIZE,YSIZE);
-        stage.setScene(scene);
-        stage.setTitle("Tipografía Script Fluida");
-        stage.show();
+        Scene escena = new Scene(nodoRaiz,1300,650);
+        ventana.setTitle("Tipografía Script");
+        ventana.setScene(escena);
+        ventana.show();
     }
-    
-    /**
-     * @param args the command line arguments
-     */
-    public void main(String[] args) {
+    public static void main (String[] args){
         launch(args);
     }
-    
 }
