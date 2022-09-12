@@ -297,5 +297,5 @@ public class Dibujar {
             }
         }
         return esSimbolo;
-    }    
+    }
 }

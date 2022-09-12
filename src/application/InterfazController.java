@@ -6,6 +6,7 @@ package application;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -15,7 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 public class InterfazController implements Initializable {
-
+    
     @FXML
     private AnchorPane fondoInterfaz;
     @FXML
@@ -28,13 +29,21 @@ public class InterfazController implements Initializable {
     private TextArea textoEntrada;
     @FXML
     private ColorPicker selectColor;
-
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+    }
+    
+    String cadena = new String();
+    
+    @FXML
+    public void leer (ActionEvent event){
+        cadena = textoEntrada.getText();
+        System.out.println(""+cadena);
     }
     /*
         EventHandler<ActionEvent> event = (ActionEvent e) -> {

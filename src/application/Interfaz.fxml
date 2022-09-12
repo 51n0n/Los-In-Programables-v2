@@ -10,7 +10,7 @@
 <AnchorPane fx:id="fondoInterfaz" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterfazController">
    <children>
       <Button fx:id="botonFinal" layoutX="1085.0" layoutY="590.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="75.0" text="Reset" />
-      <Button fx:id="botonInicio" layoutX="1085.0" layoutY="540.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="75.0" text="Dibujar" />
+      <Button fx:id="botonInicio" layoutX="1085.0" layoutY="540.0" mnemonicParsing="false" onAction="#leer" prefHeight="40.0" prefWidth="75.0" text="Dibujar" />
       <TextField fx:id="textoFondo" layoutX="30.0" layoutY="540.0" prefHeight="40.0" prefWidth="1035.0" promptText="Escriba aquí">
          <font>
             <Font size="18.0" />
