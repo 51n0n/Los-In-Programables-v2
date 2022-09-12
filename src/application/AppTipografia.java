@@ -25,7 +25,7 @@ public class AppTipografia extends Application {
         //nodoRaiz.getChildren().add(llamar.leerEntrada());
         
         //Mostrar Escena
-        Scene escena = new Scene(nodoRaiz,1300,650);
+        Scene escena = new Scene(nodoRaiz,1350,670);
         ventana.setTitle("Tipografía Script");
         ventana.setScene(escena);
         ventana.show();

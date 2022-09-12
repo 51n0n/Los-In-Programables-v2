@@ -11,27 +11,15 @@ public class Dibujar {
     private static AnchorPane lienzo = new AnchorPane();
     private static CrearCaracteres llamar = new CrearCaracteres();
     
-    public AnchorPane leerEntrada() {
-        String entrada = "Hola mundo";
-        int size = entrada.length(); // Se guarda el tamaño de la cadena completa en "size"
-        char[] cadena = new char[size]; // Se crea un arreglo de caracteres "cadena" con tamaño "size"
+    public boolean validarEntrada(String entrada){
+        boolean validar = true;
+        int size = entrada.length();
+        char[] cadena = new char[size];
+        
         for (int i=0;i<size;i++){ //Se recorre el arreglo y se guardan los caracteres en las posiciones del arreglo "cadena"
             cadena[i]=entrada.charAt(i);
         }
-        for (int j=0;j<size;j++){ //Se lee el arreglo
-            System.out.print(cadena[j]);
-        }
-        if (validarEntrada(cadena,size)){ // Se llama a la funcion validarEntrada y solo se dibujará si la entrada es válida
-            dibujarEntrada(cadena,size); //
-        }
-        else{
-            System.out.println("Entrada no válida");
-        }
-        return lienzo;
-    }
-    
-    public boolean validarEntrada(char[] cadena, int size){
-        boolean validar = true;
+        
         for (int i=0;i<size;i++){
             if ((esLetra(cadena[i]))||(esSimbolo(cadena[i]))||(cadena[i] == ' ')){
             }
@@ -42,8 +30,18 @@ public class Dibujar {
         return validar;
     }
     
-    public void dibujarEntrada(char[] cadena, int size){
+    public AnchorPane dibujarEntrada(String entrada){
         
+        lienzo.setLayoutX(30);
+        lienzo.setLayoutY(70);
+        lienzo.setPrefSize(1035, 450);
+        int size = entrada.length();
+        char[] cadena = new char[size];
+        boolean salir = false;
+        
+        for (int i=0;i<size;i++){ //Se recorre el arreglo y se guardan los caracteres en las posiciones del arreglo "cadena"
+            cadena[i]=entrada.charAt(i);
+        }
         //1035x450
         double espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
         double letraCont = 0; // Contará el espacio a usar de las letras de una palabra.
@@ -54,9 +52,14 @@ public class Dibujar {
             
             if (esLetra(cadena[i])){
                 int j = i;
-                while(esLetra(cadena[j])){
-                    letraCont = letraCont + dibujarLetras(cadena[j]).getPrefWidth();
-                    j++;
+                while(j<size && salir==false){
+                    if (esLetra(cadena[j])){
+                        letraCont = letraCont + dibujarLetras(cadena[j]).getPrefWidth();
+                        j++;
+                    }
+                    else{
+                        salir=true;
+                    }
                 }
                 if (letraCont <= espacioEnFila){
                     //dibujar en la misma fila
@@ -98,6 +101,7 @@ public class Dibujar {
                 posActualX = posActualX + lienzo.getChildren().get(i).getLayoutX();
             }
         }
+        return lienzo;
     }
     
     public AnchorPane dibujarLetras(char caracter){
@@ -112,26 +116,37 @@ public class Dibujar {
                 nuevoNodo = llamar.crear_B();
                 break;
             case 'C':
+                nuevoNodo = llamar.crear_C();
                 break;
             case 'D':
+                nuevoNodo = llamar.crear_D();
                 break;
             case 'E':
+                nuevoNodo = llamar.crear_E();
                 break;
             case 'F':
+                nuevoNodo = llamar.crear_F();
                 break;
             case 'G':
+                nuevoNodo = llamar.crear_G();
                 break;
             case 'H':
+                nuevoNodo = llamar.crear_H();
                 break;
             case 'I':
+                nuevoNodo = llamar.crear_I();
                 break;
             case 'J':
+                nuevoNodo = llamar.crear_J();
                 break;
             case 'K':
+                nuevoNodo = llamar.crear_K();
                 break;
             case 'L':
+                nuevoNodo = llamar.crear_L();
                 break;
             case 'M':
+                nuevoNodo = llamar.crear_M();
                 break;
             case 'N':
                 break;

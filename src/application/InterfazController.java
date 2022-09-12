@@ -24,9 +24,9 @@ public class InterfazController implements Initializable {
     @FXML
     private Button botonInicio;
     @FXML
-    private TextField textoFondo;
+    private TextArea textoFondo;
     @FXML
-    private TextArea textoEntrada;
+    private TextField textoEntrada;
     @FXML
     private ColorPicker selectColor;
     
@@ -39,12 +39,20 @@ public class InterfazController implements Initializable {
     }
     
     String cadena = new String();
+    Dibujar dibujar = new Dibujar();
     
     @FXML
-    public void leer (ActionEvent event){
+    private void leer (ActionEvent event){
         cadena = textoEntrada.getText();
-        System.out.println(""+cadena);
+        System.out.println(cadena);
+        if(dibujar.validarEntrada(cadena)){
+            fondoInterfaz.getChildren().add(dibujar.dibujarEntrada(cadena));
+        }
+        else{
+            System.out.println("Entrada no válida");
+        }
     }
+    
     /*
         EventHandler<ActionEvent> event = (ActionEvent e) -> {
         label.setText(t.getText());
