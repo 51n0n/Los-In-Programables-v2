@@ -5,6 +5,7 @@
 package application;
 
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.CubicCurve;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.QuadCurve;
@@ -18,6 +19,7 @@ public class Caracter {
     private Line lineas;
     private QuadCurve cuadraticas;
     private CubicCurve cubicas;
+    private Circle circulo;
     
     //Constructor
     

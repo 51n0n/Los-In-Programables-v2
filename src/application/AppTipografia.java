@@ -5,11 +5,12 @@
 package application;
 
 import javafx.application.Application;
-import javafx.scene.Group;
+import static javafx.collections.FXCollections.observableArrayList;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ProgressBar;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
@@ -18,48 +19,69 @@ import javafx.stage.Stage;
 public class AppTipografia extends Application {
     
     private static BorderPane nodoRaiz = new BorderPane();
-    private static CrearCaracteres aux = new CrearCaracteres();
+    private static CrearCaracteres llamar = new CrearCaracteres();
+    private static GridPane tabla = new GridPane();
+    private static Button botonInicio = new Button("Iniciar");
+    private static Button botonFinalizar = new Button("Finalizar");
+    private static Button botonLimpiar = new Button ("Limpiar");
+    private static TextField ingresarTexto = new TextField();
+    private static Text aviso = new Text("Para finalizar el programa, presione aquí:");
+    private static Text aviso2 = new Text("Seleccione un color:");
+    private static ChoiceBox color = new ChoiceBox();
     
     @Override
     public void start (Stage ventana) throws Exception{
         
-        nodoRaiz.setPrefHeight(650.0);
-        nodoRaiz.setPrefWidth(1300.0);
+        ventana.setTitle("Tipografia Script a Tipografia Fluida");
         
-        GridPane tabla = new GridPane();
-        tabla.setPrefHeight(500);
-        tabla.setPrefWidth(300);
+        //String para usar en el ChoiceBox
+        String colores[] = {"Negro", "Azul", "Marron", "Gris", "Verde", "Naranja", "Rosa", "Morado", "Rojo", "Amarillo"};
         
-        Button botonInicio = new Button();
+        nodoRaiz.setPrefSize(1300,650);
+        
+        //Averiguar como hacer que se vea una eleccion por defecto
+        color.setStyle("-fx-font: 16 arials;");
+        color.setLayoutX(1136);
+        color.setLayoutY(14);
+        color.setItems(observableArrayList(colores));
+        
         botonInicio.setGraphic(new Button("Iniciar"));
-        botonInicio.setPrefSize(70, 20);
-        botonInicio.setPrefWidth(70);
-        botonInicio.setPrefHeight(20);
-        botonInicio.setLayoutX(681);
-        botonInicio.setLayoutY(596);
-        nodoRaiz.getChildren().add(aux.crear_A());
-        nodoRaiz.getChildren().add(aux.crear_B());
+        botonInicio.setLayoutX(745);
+        botonInicio.setLayoutY(600);
         
-        Button botonFinalizar = new Button();
+        tabla.setPrefSize(300,300);
+        tabla.addRow(0, llamar.crear_A());
+        tabla.addRow(0, llamar.crear_B());
+        tabla.addRow(0, llamar.crear_Punto());
+        tabla.setLayoutX(200);
+        tabla.setLayoutY(200);
+        
         botonFinalizar.setGraphic(new Button("Finalizar"));
-        botonFinalizar.setPrefSize(70, 20);
-        botonFinalizar.setLayoutX(1081);
-        botonFinalizar.setLayoutY(596);
+        botonFinalizar.setLayoutX(1200);
+        botonFinalizar.setLayoutY(600);
         
-        TextField ingresarTexto = new TextField();
-        ingresarTexto.setPrefWidth(614);
-        ingresarTexto.setPrefHeight(26);
-        ingresarTexto.setLayoutX(50);
-        ingresarTexto.setLayoutY(596);
+        botonLimpiar.setGraphic(new Button("Limpiar"));
+        botonLimpiar.setLayoutX(810);
+        botonLimpiar.setLayoutY(600);
         
-        Text aviso = new Text("Para finalizar el programa, presione aqui:");
-        aviso.setStyle("-fx-font-20arial");
-        aviso.setLayoutX(771);
+        //Sigo averiguando como hacer que se muestre el TextField
+        ingresarTexto.setPrefSize(514,126);
+        ingresarTexto.setLayoutX(150);
+        ingresarTexto.setLayoutY(600);
+        
+        aviso.setStyle("-fx-font: 16 arials;");
+        aviso.setLayoutX(900);
         aviso.setLayoutY(600);
         
-        nodoRaiz.getChildren().addAll(tabla, botonInicio, botonFinalizar, ingresarTexto, aviso);
+        aviso2.setStyle("-fx-font: 16 arials;");
+        aviso2.setLayoutX(970);
+        aviso2.setLayoutY(30);
         
-        nodoRaiz.getChildren().add(aux.crear_A());
+        //llamar.leerEntrada();
+        
+        nodoRaiz.getChildren().addAll(tabla, botonInicio, botonFinalizar, ingresarTexto, aviso, botonLimpiar, color, aviso2);
+        
+        tabla.setGridLinesVisible(true);
         
         //Mostrar Escena
         Scene escena = new Scene(nodoRaiz);
