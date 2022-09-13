@@ -152,32 +152,46 @@ public class Dibujar {
                 nuevoNodo = llamar.crear_M();
                 break;
             case 'N':
+                nuevoNodo = llamar.crear_N();
                 break;
             case 'Ñ':
+                nuevoNodo = llamar.crear_Ñ();
                 break;
             case 'O':
+                nuevoNodo = llamar.crear_O();
                 break;
             case 'P':
+                nuevoNodo = llamar.crear_P();
                 break;
             case 'Q':
+                nuevoNodo = llamar.crear_Q();
                 break;
             case 'R':
+                nuevoNodo = llamar.crear_R();
                 break;
             case 'S':
+                nuevoNodo = llamar.crear_S();
                 break;
             case 'T':
+                nuevoNodo = llamar.crear_T();
                 break;
             case 'U':
+                nuevoNodo = llamar.crear_U();
                 break;
             case 'V':
+                nuevoNodo = llamar.crear_V();
                 break;
             case 'W':
+                nuevoNodo = llamar.crear_W();
                 break;
             case 'X':
+                nuevoNodo = llamar.crear_X();
                 break;
             case 'Y':
+                nuevoNodo = llamar.crear_Y();
                 break;
             case 'Z':
+                nuevoNodo = llamar.crear_Z();
                 break;
             case 'a':
                 break;
@@ -243,47 +257,67 @@ public class Dibujar {
         
         switch (caracter){
             case ' ':
-                //nuevoNodo = llamar.crear_espacio();
+                
                 break;
             case '!':
+                nuevoNodo = llamar.crear_exclamacionFinal();
                 break;
             case '¡':
+                nuevoNodo = llamar.crear_exclamacionInicial();
                 break;
             case '¿':
+                nuevoNodo = llamar.crear_interrogacionInicial();
                 break;
             case '?':
+                nuevoNodo = llamar.crear_interrogacionFinal();
                 break;
             case '.':
+                nuevoNodo = llamar.crear_Punto();
                 break;
             case ',':
+                nuevoNodo = llamar.crear_Coma();
                 break;
             case ';':
+                nuevoNodo = llamar.crear_PuntoyComa();
                 break;
             case ':':
+                nuevoNodo = llamar.crear_DosPuntos();
                 break;
             case '(':
+                nuevoNodo = llamar.crear_ParentesisInicio();
                 break;
             case ')':
+                nuevoNodo = llamar.crear_ParentesisFinal();
                 break;
             case '[':
+                nuevoNodo = llamar.crear_CorcheteInicio();
                 break;
             case ']':
+                nuevoNodo = llamar.crear_CorcheteFinal();
                 break;
             case '{':
+                nuevoNodo = llamar.crear_LlaveInicial();
                 break;
             case '}':
+                nuevoNodo = llamar.crear_LlaveFinal();
                 break;
             case '-':
+                nuevoNodo = llamar.crear_Guion();
                 break;
             case '_':
+                nuevoNodo = llamar.crear_GuionBajo();
                 break;
             case 39:
+                nuevoNodo = llamar.crear_ComillaSimple();
                 break;
             case '"':
+                nuevoNodo = llamar.crear_ComillasDoble();
                 break;
             case '«':
+                nuevoNodo = llamar.crear_ComillasEspañolaInicio();
                 break;
             case '»':
+                nuevoNodo = llamar.crear_ComillasEspañolaFinal();
                 break;
         }
         return nuevoNodo;
@@ -294,7 +328,7 @@ public class Dibujar {
         /* Se crea un arreglo que contiene las 27 letras del abecedario español, minúsculas y mayúsculas,
            en orden de mayor frecuencia de uso (según google).*/        
         char[] letras = {'e','a','o','s','r','n','i','d','l','c','t','u','m','p','b','g','v','y','q','h','f','z','j','ñ','x','k','w'
-                        ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','G','H','F','Z','J','Ñ','X','K','W'};
+                        ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','Q','H','F','Z','J','Ñ','X','K','W'};
         
         boolean esLetra = false;
         for (int i=0;i<54;i++){
@@ -317,6 +351,7 @@ public class Dibujar {
         }
         return esSimbolo;
     }
+    
     public double tamañoCaracter(char caracter){
         
         if((caracter == '!')||(caracter == '¡')){
@@ -329,6 +364,7 @@ public class Dibujar {
             return 45;
         }
     }
+    
     public static AnchorPane getLienzo() {
         return lienzo;
     }

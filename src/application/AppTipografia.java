@@ -15,9 +15,7 @@ public class AppTipografia extends Application {
     @Override
     public void start(Stage ventana) throws Exception {
         
-        //nodoRaiz.setPrefSize(1300,650);
         Parent interfaz = FXMLLoader.load(getClass().getResource("Interfaz.fxml"));
-        //nodoRaiz.getChildren().add(llamar.leerEntrada());
         
         //Mostrar Escena
         Scene escena = new Scene(interfaz);
