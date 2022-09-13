@@ -962,7 +962,7 @@ public class CrearCaracteres {
         //derecho
         cubica2.setLayoutX(62.0);
         cubica2.setLayoutY(14.0);
-        cubica2.setStartX(-2819);
+        cubica2.setStartX(-28.19);
         cubica2.setStartY(35.4);
         cubica2.setEndX(-19.6);
         cubica2.setEndY(-4.2);
@@ -993,7 +993,7 @@ public class CrearCaracteres {
         fondo.getChildren().addAll(cubicas,cubica1,cubica2,cubica3);
         return fondo;
     }
-        public AnchorPane crear_Ñ(){
+    public AnchorPane crear_Ñ(){
         //Objetos Clase Caracter
         AnchorPane fondo = new AnchorPane();
         //Line lineas = new Line();
@@ -1041,7 +1041,7 @@ public class CrearCaracteres {
         //derecho
         cubica2.setLayoutX(62.0);
         cubica2.setLayoutY(14.0);
-        cubica2.setStartX(-2819);
+        cubica2.setStartX(-28.19);
         cubica2.setStartY(35.4);
         cubica2.setEndX(-19.6);
         cubica2.setEndY(-4.2);
@@ -1268,20 +1268,20 @@ public class CrearCaracteres {
         cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //cachito inferior derecho
-        cubica2.setLayoutX(65.5);
-        cubica2.setLayoutY(50.0);
-        cubica2.setStartX(-31.2);
-        cubica2.setStartY(0.8);
-        cubica2.setEndX(-43.0);
-        cubica2.setEndY(-18.59);
-        cubica2.setControlX1(-59.6);
-        cubica2.setControlY1(-28.79);
-        cubica2.setControlX2(-27.6);
-        cubica2.setControlY2(-28.79);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(Color.BLACK);
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubica3.setLayoutX(65.5);
+        cubica3.setLayoutY(50.0);
+        cubica3.setStartX(-31.2);
+        cubica3.setStartY(0.8);
+        cubica3.setEndX(-43.0);
+        cubica3.setEndY(-18.59);
+        cubica3.setControlX1(-59.6);
+        cubica3.setControlY1(-28.79);
+        cubica3.setControlX2(-27.6);
+        cubica3.setControlY2(-28.79);
+        cubica3.setFill(Color.TRANSPARENT);
+        cubica3.setStroke(Color.BLACK);
+        cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         fondo.getChildren().addAll(cubicas,cubica1,cubica2); 
         return fondo;
     }
@@ -1938,7 +1938,7 @@ public class CrearCaracteres {
         cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
 
-        fondo.getChildren().addAll(cubicas);
+        fondo.getChildren().addAll(cubicas,cubica1,cubica2,cubica3);
         //PRIMERA 
         return fondo;
     }
