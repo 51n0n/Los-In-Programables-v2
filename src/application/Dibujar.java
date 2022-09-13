@@ -328,7 +328,7 @@ public class Dibujar {
         /* Se crea un arreglo que contiene las 27 letras del abecedario español, minúsculas y mayúsculas,
            en orden de mayor frecuencia de uso (según google).*/        
         char[] letras = {'e','a','o','s','r','n','i','d','l','c','t','u','m','p','b','g','v','y','q','h','f','z','j','ñ','x','k','w'
-                        ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','G','H','F','Z','J','Ñ','X','K','W'};
+                        ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','Q','H','F','Z','J','Ñ','X','K','W'};
         
         boolean esLetra = false;
         for (int i=0;i<54;i++){
