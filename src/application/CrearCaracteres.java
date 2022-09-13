@@ -1282,7 +1282,7 @@ public class CrearCaracteres {
         cubica3.setStroke(Color.BLACK);
         cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        fondo.getChildren().addAll(cubicas,cubica1,cubica2); 
+        fondo.getChildren().addAll(cubicas,cubica1,cubica2,cubica3); 
         return fondo;
     }
     public AnchorPane crear_R(){
