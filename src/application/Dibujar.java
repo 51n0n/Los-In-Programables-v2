@@ -155,7 +155,7 @@ public class Dibujar {
                 nuevoNodo = llamar.crear_N();
                 break;
             case 'Ñ':
-                //nuevoNodo = llamar.crear_Ñ();
+                nuevoNodo = llamar.crear_Ñ();
                 break;
             case 'O':
                 nuevoNodo = llamar.crear_O();
