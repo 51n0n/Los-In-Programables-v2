@@ -5,11 +5,13 @@
 package application;
 
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 
 public class Dibujar {
     
     private static AnchorPane lienzo = new AnchorPane();
     private static CrearCaracteres llamar = new CrearCaracteres();
+    private static Color colorActual = Color.BLACK;
     
     public boolean validarEntrada(String entrada){
         boolean validar = true;
@@ -94,6 +96,7 @@ public class Dibujar {
             else{
                 letraCont = 0;
                 if (tamañoCaracter(cadena[i]) > espacioEnFila){
+                    espacioEnFila = 1035;
                     posActualY = posActualY + 60;
                     posActualX = 0;
                 }
@@ -367,6 +370,14 @@ public class Dibujar {
     
     public static AnchorPane getLienzo() {
         return lienzo;
+    }
+    
+    public static void setColor(Color nuevoColor){
+        colorActual = nuevoColor;
+    }
+    
+    public static Color getColor(){
+        return colorActual;
     }
     
 }

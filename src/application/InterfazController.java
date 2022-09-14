@@ -15,7 +15,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import static application.Dibujar.getLienzo;
+import static application.Dibujar.setColor;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
 
 public class InterfazController implements Initializable {
     
@@ -39,14 +41,13 @@ public class InterfazController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
         fondoInterfaz.getChildren().add(getLienzo());
         botonFinal.setDisable(true);
     }
     
+    
     String cadena = new String();
     Dibujar dibujar = new Dibujar();
-    
     
     @FXML
     private void leer (ActionEvent event){
@@ -62,6 +63,7 @@ public class InterfazController implements Initializable {
         botonInicio.setDisable(true);
         botonFinal.setDisable(false);
     }
+    
     @FXML
     private void reset (ActionEvent event){
         textoEntrada.clear();
@@ -69,5 +71,12 @@ public class InterfazController implements Initializable {
         labelValidacion.setText("");
         botonInicio.setDisable(false);
         botonFinal.setDisable(true);
+    }
+    
+    
+    @FXML
+    private void cambioColor (ActionEvent event){
+        Color nuevoColor = selectColor.getValue();
+        setColor(nuevoColor);
     }
 }
