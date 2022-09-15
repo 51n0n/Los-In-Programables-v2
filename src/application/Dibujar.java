@@ -194,58 +194,85 @@ public class Dibujar {
                 nuevoNodo = llamar.crear_Z();
                 break;
             case 'a':
+                //nuevoNodo = llamar.crear_a();
                 break;
             case 'b':
+                //nuevoNodo = llamar.crear_b();
                 break;
             case 'c':
+                //nuevoNodo = llamar.crear_c();
                 break;
             case 'd':
+                //nuevoNodo = llamar.crear_d();
                 break;
             case 'e':
+                //nuevoNodo = llamar.crear_e();
                 break;
             case 'f':
+                //nuevoNodo = llamar.crear_f();
                 break;
             case 'g':
+                //nuevoNodo = llamar.crear_g();
                 break;
             case 'h':
+                //nuevoNodo = llamar.crear_h();
                 break;
             case 'i':
+                //nuevoNodo = llamar.crear_i();
                 break;
             case 'j':
+                //nuevoNodo = llamar.crear_j();
                 break;
             case 'k':
+                //nuevoNodo = llamar.crear_k();
                 break;
             case 'l':
+                nuevoNodo = llamar.crear_l();
                 break;
             case 'm':
+                nuevoNodo = llamar.crear_m();
                 break;
             case 'n':
+                nuevoNodo = llamar.crear_n();
                 break;
             case 'ñ':
+                nuevoNodo = llamar.crear_ñ();
                 break;
             case 'o':
+                //nuevoNodo = llamar.crear_o();
                 break;
             case 'p':
+                //nuevoNodo = llamar.crear_p();
                 break;
             case 'q':
+                //nuevoNodo = llamar.crear_q();
                 break;
             case 'r':
+                //nuevoNodo = llamar.crear_r();
                 break;
             case 's':
+                //nuevoNodo = llamar.crear_s();
                 break;
             case 't':
+                //nuevoNodo = llamar.crear_t();
                 break;
             case 'u':
+                //nuevoNodo = llamar.crear_u();
                 break;
             case 'v':
+                //nuevoNodo = llamar.crear_v();
                 break;
             case 'w':
+                //nuevoNodo = llamar.crear_w();
                 break;
             case 'x':
+                //nuevoNodo = llamar.crear_x();
                 break;
             case 'y':
+                //nuevoNodo = llamar.crear_y();
                 break;
             case 'z':
+                //nuevoNodo = llamar.crear_z();
                 break;
         }
         return nuevoNodo;
