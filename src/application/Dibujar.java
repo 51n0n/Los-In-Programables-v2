@@ -242,16 +242,16 @@ public class Dibujar {
                 //nuevoNodo = llamar.crear_o();
                 break;
             case 'p':
-                //nuevoNodo = llamar.crear_p();
+                nuevoNodo = llamar.crear_p();
                 break;
             case 'q':
-                //nuevoNodo = llamar.crear_q();
+                nuevoNodo = llamar.crear_q();
                 break;
             case 'r':
-                //nuevoNodo = llamar.crear_r();
+                nuevoNodo = llamar.crear_r();
                 break;
             case 's':
-                //nuevoNodo = llamar.crear_s();
+                nuevoNodo = llamar.crear_s();
                 break;
             case 't':
                 //nuevoNodo = llamar.crear_t();
