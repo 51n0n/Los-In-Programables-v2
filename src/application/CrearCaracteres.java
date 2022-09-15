@@ -2497,7 +2497,7 @@ public class CrearCaracteres {
         
         //Cubica
         cubica.setLayoutX(12);
-        cubica.setLayoutY(30);
+        cubica.setLayoutY(59);
         cubica.setStartX(13.33);
         cubica.setStartY(-25.19);
         cubica.setEndX(13.33);
@@ -2513,7 +2513,7 @@ public class CrearCaracteres {
         
         //Linea
         linea.setLayoutX(21);
-        linea.setLayoutY(37);
+        linea.setLayoutY(25);
         linea.setStartX(3.8);
         linea.setStartY(-13);
         linea.setEndX(3.8);
@@ -2528,7 +2528,7 @@ public class CrearCaracteres {
         circulo.setFill(Color.BLACK);
         circulo.setStroke(Color.BLACK);
         circulo.setLayoutX(25);
-        circulo.setLayoutY(51);
+        circulo.setLayoutY(6);
         
         fondo.getChildren().addAll(cubica, linea, circulo);
         return fondo;
