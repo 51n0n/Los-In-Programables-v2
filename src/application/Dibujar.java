@@ -254,25 +254,25 @@ public class Dibujar {
                 nuevoNodo = llamar.crear_s();
                 break;
             case 't':
-                //nuevoNodo = llamar.crear_t();
+                nuevoNodo = llamar.crear_t();
                 break;
             case 'u':
                 //nuevoNodo = llamar.crear_u();
                 break;
             case 'v':
-                //nuevoNodo = llamar.crear_v();
+                nuevoNodo = llamar.crear_v();
                 break;
             case 'w':
-                //nuevoNodo = llamar.crear_w();
+                nuevoNodo = llamar.crear_w();
                 break;
             case 'x':
-                //nuevoNodo = llamar.crear_x();
+                nuevoNodo = llamar.crear_x();
                 break;
             case 'y':
-                //nuevoNodo = llamar.crear_y();
+                nuevoNodo = llamar.crear_y();
                 break;
             case 'z':
-                //nuevoNodo = llamar.crear_z();
+                nuevoNodo = llamar.crear_z();
                 break;
         }
         return nuevoNodo;
