@@ -2949,7 +2949,7 @@ public class CrearCaracteres {
         AnchorPane fondo = new AnchorPane();
         CubicCurve cubica= new CubicCurve();
         Line linea = new Line();
-        fondo.setPrefSize(22,60);
+        fondo.setPrefSize(30,60);
         
         //primerabase
         cubica.setLayoutX(67.0);
