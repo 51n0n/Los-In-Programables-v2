@@ -9,24 +9,20 @@ import javafx.scene.paint.Color;
 
 public class Dibujar {
     
-    private static AnchorPane lienzo = new AnchorPane();
-    private static CrearCaracteres llamar = new CrearCaracteres();
-    private static Color colorActual = Color.BLACK;
+    private static AnchorPane lienzo = new AnchorPane(); // Nodo que guardará las letras dibujadas
+    private static CrearCaracteres llamar = new CrearCaracteres(); // "Puntero"
+    private static Color colorActual = Color.BLACK; // Valor inicial para el color de las letras
     
     public boolean validarEntrada(String entrada){
-        boolean validar = true;
-        int size = entrada.length();
-        char[] cadena = new char[size];
+        boolean validar = true; // Se inicia el retorno en true hasta encontrar una entrada no válida
+        int size = entrada.length(); // Se guarda el tamaño de la cadena ingresada
         
-        for (int i=0;i<size;i++){ //Se recorre el arreglo y se guardan los caracteres en las posiciones del arreglo "cadena"
-            cadena[i]=entrada.charAt(i);
-        }
-        
-        for (int i=0;i<size;i++){
-            if ((esLetra(cadena[i]))||(esSimbolo(cadena[i]))||(cadena[i] == ' ')){
-            }
-            else{
+        for (int i=0;i<size;i++){ // Se recorre el arreglo buscando entradas no validas
+            if ((esLetra(entrada.charAt(i)))||(esSimbolo(entrada.charAt(i)))||(entrada.charAt(i) == ' ')){
+            } // Las entradas deben ser letras, simbolos, o un espacio
+            else{ // Si se encuentra algo distinto entonces el retorno será false y se terminará el ciclo
                 validar = false;
+                break;
             }
         }
         return validar;
@@ -34,14 +30,13 @@ public class Dibujar {
     
     public void dibujarEntrada(String entrada){
         
-        lienzo.setLayoutX(30);
+        lienzo.setLayoutX(30); // Posición (0,0) para las letras
         lienzo.setLayoutY(60);
         lienzo.setPrefSize(1035, 450);
-        int size = entrada.length();
-        char[] cadena = new char[size];
-        boolean salir;
+        int size = entrada.length(); // Se guarda el tamaño de la cadena ingresada
+        char[] cadena = new char[size]; // Se crea un arreglo de caracteres del tamaño de la cadena ingresada
         
-        for (int i=0;i<size;i++){ //Se recorre el arreglo y se guardan los caracteres en las posiciones del arreglo "cadena"
+        for (int i=0;i<size;i++){ //Se recorre el arreglo y se guardan los caracteres en las posiciones del arreglo
             cadena[i]=entrada.charAt(i);
         }
         //1035x450
@@ -51,60 +46,57 @@ public class Dibujar {
         double posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
         
         for (int i=0;i<size;i++){ // Se recorre la cadena
-            salir = false;
-            if (esLetra(cadena[i])){
-                int j = i;
-                while(j<size && salir==false){
-                    if (esLetra(cadena[j])){
+            if (esLetra(cadena[i])){ // Si el caracter es una letra
+                int j = i; // Guardamos el contador en j para no alterar i
+                while(j<size){ // Recorremos la palabra actual (una cantidad de letras seguidas)
+                    if (esLetra(cadena[j])){ // Buscamos el tamaño que ocupará la palabra
                         letraCont = letraCont + tamañoCaracter(cadena[j]);
                         System.out.println(letraCont);
                         j++;
                     }
-                    else{
-                        salir=true;
+                    else{ // Cuando se encuentre algo distinto a una letra (simbolo o espacio) se finaliza el ciclo
+                        break;
                     }
                 }
-                if (letraCont <= espacioEnFila){
+                if (letraCont <= espacioEnFila){ // Se dibuja en la fila actual si el tamaño de la palabra es menor al disponible
                     //dibujar en la misma fila
-                    while(i<j){
-                        System.out.println(posActualX+" "+i);
-                        lienzo.getChildren().add(dibujarLetras(cadena[i]));
-                        lienzo.getChildren().get(i).setLayoutX(posActualX);
-                        lienzo.getChildren().get(i).setLayoutY(posActualY);
-                        posActualX = posActualX + tamañoCaracter(cadena[i]);
-                        espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]);
-                        System.out.println(posActualX+" "+i);
-                        i++;
+                    while(i<j){ // Desde el inicio al final de la palabra
+                        lienzo.getChildren().add(dibujarLetras(cadena[i])); // Se agrega el nodo
+                        lienzo.getChildren().get(i).setLayoutX(posActualX); // Posición X para el nodo
+                        lienzo.getChildren().get(i).setLayoutY(posActualY); // Posición Y para el nodo
+                        posActualX = posActualX + tamañoCaracter(cadena[i]); // Aumento de la posición X por el espacio usado
+                        espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]); // Se resta el espacio usado al disponible
+                        i++; // Siguiente caracter
                     }
                 }
-                else{
+                else{ // Si el tamaño de la palabra es mayor al espacio disponible
                     //dibujar en una nueva fila
-                    espacioEnFila = 1035;
-                    posActualX = 0;
-                    posActualY = posActualY + 60;
+                    espacioEnFila = 1035; // Se reestablece el espacio disponible
+                    posActualX = 0; // Se posiciona la X al inicio
+                    posActualY = posActualY + 60; // Se aumenta la Y para una nueva fila
                     while(i<j){
-                        lienzo.getChildren().add(dibujarLetras(cadena[i]));
-                        lienzo.getChildren().get(i).setLayoutX(posActualX);
-                        lienzo.getChildren().get(i).setLayoutY(posActualY);
-                        posActualX = posActualX + tamañoCaracter(cadena[i]);
-                        espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]);
-                        i++;
+                        lienzo.getChildren().add(dibujarLetras(cadena[i])); // Se agrega el nodo
+                        lienzo.getChildren().get(i).setLayoutX(posActualX); // Posición X para el nodo
+                        lienzo.getChildren().get(i).setLayoutY(posActualY); // Posición Y para el nodo
+                        posActualX = posActualX + tamañoCaracter(cadena[i]); // Aumento de la posición X por el espacio usado
+                        espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]); // Se resta el espacio usado al disponible
+                        i++; // Siguiente caracter
                     }
                 }
-                i--;
+                i--; // Se resta 1 al contador que es la posición del siguiente caracter
             }
-            else{
-                letraCont = 0;
-                if (tamañoCaracter(cadena[i]) > espacioEnFila){
+            else{ // Si no es letra
+                letraCont = 0; // No hay letras, así que el contador de palabras debe ser cero, y se dibujará de inmediato
+                if (tamañoCaracter(cadena[i]) > espacioEnFila){ // Si el caracter usa más espacio que el disponible se usa una nueva fila
                     espacioEnFila = 1035;
                     posActualY = posActualY + 60;
                     posActualX = 0;
                 }
-                lienzo.getChildren().add(dibujarSimbolos(cadena[i]));
-                lienzo.getChildren().get(i).setLayoutX(posActualX);
-                lienzo.getChildren().get(i).setLayoutY(posActualY);
-                espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]);
-                posActualX = posActualX + tamañoCaracter(cadena[i]);
+                lienzo.getChildren().add(dibujarSimbolos(cadena[i])); // Se agrega el nodo
+                lienzo.getChildren().get(i).setLayoutX(posActualX); // Posición X para el nodo
+                lienzo.getChildren().get(i).setLayoutY(posActualY); // Posición Y para el nodo
+                espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]); // Aumento de la posición X por el espacio usado
+                posActualX = posActualX + tamañoCaracter(cadena[i]); // Se resta el espacio usado al disponible
             }
         }
         
@@ -112,9 +104,9 @@ public class Dibujar {
     
     public AnchorPane dibujarLetras(char caracter){
         
-        AnchorPane nuevoNodo = new AnchorPane();
+        AnchorPane nuevoNodo = new AnchorPane(); // Objeto para el retorno
         
-        switch (caracter){
+        switch (caracter){ // Este switch recibe el caracter que se va a dibujar y llama al método del caracter correspondiente
             case 'A':
                 nuevoNodo = llamar.crear_A();
                 break;
@@ -256,11 +248,11 @@ public class Dibujar {
     
     public AnchorPane dibujarSimbolos(char caracter){
         
-        AnchorPane nuevoNodo = new AnchorPane();
+        AnchorPane nuevoNodo = new AnchorPane(); // Objeto para el retorno
         
-        switch (caracter){
+        switch (caracter){ // Este switch recibe el caracter que se va a dibujar y llama al método del caracter correspondiente
             case ' ':
-                
+                // Nodo vacío para Espacio
                 break;
             case '!':
                 nuevoNodo = llamar.crear_exclamacionFinal();
@@ -333,9 +325,9 @@ public class Dibujar {
         char[] letras = {'e','a','o','s','r','n','i','d','l','c','t','u','m','p','b','g','v','y','q','h','f','z','j','ñ','x','k','w'
                         ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','Q','H','F','Z','J','Ñ','X','K','W'};
         
-        boolean esLetra = false;
-        for (int i=0;i<54;i++){
-            if (caracter == letras[i]){
+        boolean esLetra = false; // Se inicializa el retorno en false hasta encontrar la letra
+        for (int i=0;i<54;i++){ // Se recorre el arreglo
+            if (caracter == letras[i]){ // Si el caracter es igual a un caracter de la lista entonces es letra
                 esLetra = true;
             }
         }
@@ -345,10 +337,10 @@ public class Dibujar {
     public boolean esSimbolo(char caracter){
         
         char[] simbolos = {'!','¡','¿','?','.',',',';',':','(',')','[',']','{','}','-','_',39,'"','«','»'};
-        
-        boolean esSimbolo = false;
-        for (int i=0;i<20;i++){
-            if (caracter == simbolos[i]){
+        // Se usa el código ascii 39 para la comilla simple, ya que el compilador no permite poner el caracter entre comillas simples
+        boolean esSimbolo = false; // Se inicializa el retorno en false hasta encontrar el símbolo
+        for (int i=0;i<20;i++){ // Se recorre el arreglo
+            if (caracter == simbolos[i]){ // Si el caracter es igual a un caracter de la lista entonces es símbolo
                 esSimbolo = true;
             }
         }
@@ -356,7 +348,7 @@ public class Dibujar {
     }
     
     public double tamañoCaracter(char caracter){
-        
+        // Retorna el tamaño que usarán los caracteres al momento de dibujar
         if((caracter == '!')||(caracter == '¡')){
             return 22;
         }
@@ -368,15 +360,15 @@ public class Dibujar {
         }
     }
     
-    public static AnchorPane getLienzo() {
+    public static AnchorPane getLienzo() { // Getter de lienzo
         return lienzo;
     }
     
-    public static void setColor(Color nuevoColor){
+    public static void setColor(Color nuevoColor){ // Setter del color de las letras
         colorActual = nuevoColor;
     }
     
-    public static Color getColor(){
+    public static Color getColor(){ // Getter del color de las letras
         return colorActual;
     }
     
