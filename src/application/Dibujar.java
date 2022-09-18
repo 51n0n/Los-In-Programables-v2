@@ -194,37 +194,37 @@ public class Dibujar {
                 nuevoNodo = llamar.crear_Z();
                 break;
             case 'a':
-                //nuevoNodo = llamar.crear_a();
+                nuevoNodo = llamar.crear_a();
                 break;
             case 'b':
-                //nuevoNodo = llamar.crear_b();
+                nuevoNodo = llamar.crear_b();
                 break;
             case 'c':
-                //nuevoNodo = llamar.crear_c();
+                nuevoNodo = llamar.crear_c();
                 break;
             case 'd':
-                //nuevoNodo = llamar.crear_d();
+                nuevoNodo = llamar.crear_d();
                 break;
             case 'e':
-                //nuevoNodo = llamar.crear_e();
+                nuevoNodo = llamar.crear_e();
                 break;
             case 'f':
-                //nuevoNodo = llamar.crear_f();
+                nuevoNodo = llamar.crear_f();
                 break;
             case 'g':
-                //nuevoNodo = llamar.crear_g();
+                nuevoNodo = llamar.crear_g();
                 break;
             case 'h':
-                //nuevoNodo = llamar.crear_h();
+                nuevoNodo = llamar.crear_h();
                 break;
             case 'i':
-                //nuevoNodo = llamar.crear_i();
+                nuevoNodo = llamar.crear_i();
                 break;
             case 'j':
-                //nuevoNodo = llamar.crear_j();
+                nuevoNodo = llamar.crear_j();
                 break;
             case 'k':
-                //nuevoNodo = llamar.crear_k();
+                nuevoNodo = llamar.crear_k();
                 break;
             case 'l':
                 nuevoNodo = llamar.crear_l();
@@ -257,7 +257,7 @@ public class Dibujar {
                 nuevoNodo = llamar.crear_t();
                 break;
             case 'u':
-                //nuevoNodo = llamar.crear_u();
+                nuevoNodo = llamar.crear_u();
                 break;
             case 'v':
                 nuevoNodo = llamar.crear_v();
