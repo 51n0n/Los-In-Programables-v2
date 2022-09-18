@@ -1087,10 +1087,7 @@ public class CrearCaracteres {
         return fondo;
     }
     public AnchorPane crear_O(){
-        //Objetos Clase Caracter
         AnchorPane fondo = new AnchorPane();
-        //Line lineas = new Line();
-        //QuadCurve cuadraticas = new QuadCurve();
         CubicCurve cubicas = new CubicCurve();
         CubicCurve cubica1 = new CubicCurve();
         CubicCurve cubica2 = new CubicCurve();        
@@ -1099,17 +1096,17 @@ public class CrearCaracteres {
         fondo.setPrefWidth(45.0);//x
         
         
-        //IZQUIERDO
-	cubicas.setLayoutX(39.0);
-        cubicas.setLayoutY(13.0);
-        cubicas.setStartX(-19.60);
-        cubicas.setStartY(37.6);
-        cubicas.setEndX(-17.2);
-        cubicas.setEndY(-2.59);
-        cubicas.setControlX1(-39.0);
-        cubicas.setControlY1(39.6);
-        cubicas.setControlX2(-37.0);
-        cubicas.setControlY2(-6.0);
+        //base
+	cubicas.setLayoutX(37.0);
+        cubicas.setLayoutY(43.0);
+        cubicas.setStartX(-37.06);
+        cubicas.setStartY(-7.8);
+        cubicas.setEndX(-20.9);
+        cubicas.setEndY(-7.8);
+        cubicas.setControlX1(-38.7);
+        cubicas.setControlY1(10.19);
+        cubicas.setControlX2(-20.9);
+        cubicas.setControlY2(8.0);
         cubicas.setFill(Color.TRANSPARENT);
         cubicas.setStroke(Color.BLACK);
         cubicas.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -1130,7 +1127,7 @@ public class CrearCaracteres {
         cubica1.setStroke(Color.BLACK);
         cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        //DERECHO
+        //superior
         cubica2.setLayoutX(39.0);
         cubica2.setLayoutY(13.0);
         cubica2.setStartX(-18.55);

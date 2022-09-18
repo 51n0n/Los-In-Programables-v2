@@ -229,6 +229,7 @@ public class Dibujar {
             case 'l':
                 nuevoNodo = llamar.crear_l();
                 break;
+
             case 'm':
                 nuevoNodo = llamar.crear_m();
                 break;
@@ -239,7 +240,7 @@ public class Dibujar {
                 nuevoNodo = llamar.crear_ñ();
                 break;
             case 'o':
-                //nuevoNodo = llamar.crear_o();
+                nuevoNodo = llamar.crear_o();
                 break;
             case 'p':
                 nuevoNodo = llamar.crear_p();
