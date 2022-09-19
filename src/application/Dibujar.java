@@ -188,58 +188,86 @@ public class Dibujar {
                 nuevoNodo = llamar.crear_Z();
                 break;
             case 'a':
+                nuevoNodo = llamar.crear_a();
                 break;
             case 'b':
+                nuevoNodo = llamar.crear_b();
                 break;
             case 'c':
+                nuevoNodo = llamar.crear_c();
                 break;
             case 'd':
+                nuevoNodo = llamar.crear_d();
                 break;
             case 'e':
+                nuevoNodo = llamar.crear_e();
                 break;
             case 'f':
+                nuevoNodo = llamar.crear_f();
                 break;
             case 'g':
+                nuevoNodo = llamar.crear_g();
                 break;
             case 'h':
+                nuevoNodo = llamar.crear_h();
                 break;
             case 'i':
+                nuevoNodo = llamar.crear_i();
                 break;
             case 'j':
+                nuevoNodo = llamar.crear_j();
                 break;
             case 'k':
+                nuevoNodo = llamar.crear_k();
                 break;
             case 'l':
+                nuevoNodo = llamar.crear_l();
                 break;
+
             case 'm':
+                nuevoNodo = llamar.crear_m();
                 break;
             case 'n':
+                nuevoNodo = llamar.crear_n();
                 break;
             case 'ñ':
+                nuevoNodo = llamar.crear_ñ();
                 break;
             case 'o':
+                nuevoNodo = llamar.crear_o();
                 break;
             case 'p':
+                nuevoNodo = llamar.crear_p();
                 break;
             case 'q':
+                nuevoNodo = llamar.crear_q();
                 break;
             case 'r':
+                nuevoNodo = llamar.crear_r();
                 break;
             case 's':
+                nuevoNodo = llamar.crear_s();
                 break;
             case 't':
+                nuevoNodo = llamar.crear_t();
                 break;
             case 'u':
+                nuevoNodo = llamar.crear_u();
                 break;
             case 'v':
+                nuevoNodo = llamar.crear_v();
                 break;
             case 'w':
+                nuevoNodo = llamar.crear_w();
                 break;
             case 'x':
+                nuevoNodo = llamar.crear_x();
                 break;
             case 'y':
+                nuevoNodo = llamar.crear_y();
                 break;
             case 'z':
+                nuevoNodo = llamar.crear_z();
                 break;
         }
         return nuevoNodo;
@@ -351,43 +379,43 @@ public class Dibujar {
         // Retorna el tamaño que usarán los caracteres al momento de dibujar
         switch(caracter){
             case 'a':
-                tamaño = 22;
+                tamaño = 20;
                 break;
             case 'b':
                 tamaño = 22;
                 break;
             case 'c':
-                tamaño = 22;
+                tamaño = 18;
                 break;
             case 'd':
-                tamaño = 22;
+                tamaño = 18;
                 break;
             case 'e':
-                tamaño = 22;
+                tamaño = 12;
                 break;
             case 'f':
-                tamaño = 22;
+                tamaño = 24;
                 break;
             case 'g':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'h':
-                tamaño = 22;
+                tamaño = 15;
                 break;
             case 'i':
-                tamaño = 22;
+                tamaño = 16;
                 break;
             case 'j':
-                tamaño = 22;
+                tamaño = 12;
                 break;
             case 'k':
-                tamaño = 22;
+                tamaño = 20;
                 break;
             case 'l':
-                tamaño = 22;
+                tamaño = 20;
                 break;
             case 'm':
-                tamaño = 45;
+                tamaño = 44;
                 break;
             case 'n':
                 tamaño = 34;
@@ -402,13 +430,13 @@ public class Dibujar {
                 tamaño = 34;
                 break;
             case 'q':
-                tamaño = 34;
+                tamaño = 32;
                 break;
             case 'r':
-                tamaño = 34;
+                tamaño = 24;
                 break;
             case 's':
-                tamaño = 34;
+                tamaño = 28;
                 break;
             case 't':
                 tamaño = 22;
@@ -417,19 +445,19 @@ public class Dibujar {
                 tamaño = 22;
                 break;
             case 'v':
-                tamaño = 32;
+                tamaño = 22;
                 break;
             case 'w':
-                tamaño = 45;
+                tamaño = 38;
                 break;
             case 'x':
-                tamaño = 34;
+                tamaño = 26;
                 break;
             case 'y':
-                tamaño = 34;
+                tamaño = 26;
                 break;
             case 'z':
-                tamaño = 34;
+                tamaño = 26;
                 break;
             case '.':
                 tamaño = 22;
