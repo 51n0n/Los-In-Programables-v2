@@ -379,43 +379,43 @@ public class Dibujar {
         // Retorna el tamaño que usarán los caracteres al momento de dibujar
         switch(caracter){
             case 'a':
-                tamaño = 22;
+                tamaño = 20;
                 break;
             case 'b':
                 tamaño = 22;
                 break;
             case 'c':
-                tamaño = 22;
+                tamaño = 18;
                 break;
             case 'd':
-                tamaño = 22;
+                tamaño = 18;
                 break;
             case 'e':
-                tamaño = 22;
+                tamaño = 12;
                 break;
             case 'f':
-                tamaño = 22;
+                tamaño = 24;
                 break;
             case 'g':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'h':
-                tamaño = 22;
+                tamaño = 15;
                 break;
             case 'i':
-                tamaño = 22;
+                tamaño = 16;
                 break;
             case 'j':
-                tamaño = 22;
+                tamaño = 12;
                 break;
             case 'k':
-                tamaño = 22;
+                tamaño = 20;
                 break;
             case 'l':
-                tamaño = 22;
+                tamaño = 20;
                 break;
             case 'm':
-                tamaño = 45;
+                tamaño = 44;
                 break;
             case 'n':
                 tamaño = 34;
@@ -430,13 +430,13 @@ public class Dibujar {
                 tamaño = 34;
                 break;
             case 'q':
-                tamaño = 34;
+                tamaño = 32;
                 break;
             case 'r':
-                tamaño = 34;
+                tamaño = 24;
                 break;
             case 's':
-                tamaño = 34;
+                tamaño = 28;
                 break;
             case 't':
                 tamaño = 22;
@@ -445,19 +445,19 @@ public class Dibujar {
                 tamaño = 22;
                 break;
             case 'v':
-                tamaño = 32;
+                tamaño = 22;
                 break;
             case 'w':
-                tamaño = 45;
+                tamaño = 38;
                 break;
             case 'x':
-                tamaño = 34;
+                tamaño = 26;
                 break;
             case 'y':
-                tamaño = 34;
+                tamaño = 26;
                 break;
             case 'z':
-                tamaño = 34;
+                tamaño = 26;
                 break;
             case '.':
                 tamaño = 22;
