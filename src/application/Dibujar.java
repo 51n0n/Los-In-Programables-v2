@@ -51,7 +51,6 @@ public class Dibujar {
                 while(j<size){ // Recorremos la palabra actual (una cantidad de letras seguidas)
                     if (esLetra(cadena[j])){ // Buscamos el tamaño que ocupará la palabra
                         letraCont = letraCont + tamañoCaracter(cadena[j]);
-                        System.out.println(letraCont);
                         j++;
                     }
                     else{ // Cuando se encuentre algo distinto a una letra (simbolo o espacio) se finaliza el ciclo
@@ -376,16 +375,155 @@ public class Dibujar {
     }
     
     public double tamañoCaracter(char caracter){
+        double tamaño;
         // Retorna el tamaño que usarán los caracteres al momento de dibujar
-        if((caracter == '!')||(caracter == '¡')){
-            return 22;
+        switch(caracter){
+            case 'a':
+                tamaño = 20;
+                break;
+            case 'b':
+                tamaño = 22;
+                break;
+            case 'c':
+                tamaño = 18;
+                break;
+            case 'd':
+                tamaño = 18;
+                break;
+            case 'e':
+                tamaño = 12;
+                break;
+            case 'f':
+                tamaño = 24;
+                break;
+            case 'g':
+                tamaño = 19;
+                break;
+            case 'h':
+                tamaño = 15;
+                break;
+            case 'i':
+                tamaño = 16;
+                break;
+            case 'j':
+                tamaño = 12;
+                break;
+            case 'k':
+                tamaño = 20;
+                break;
+            case 'l':
+                tamaño = 20;
+                break;
+            case 'm':
+                tamaño = 44;
+                break;
+            case 'n':
+                tamaño = 34;
+                break;
+            case 'ñ':
+                tamaño = 34;
+                break;
+            case 'o':
+                tamaño = 22;
+                break;
+            case 'p':
+                tamaño = 34;
+                break;
+            case 'q':
+                tamaño = 32;
+                break;
+            case 'r':
+                tamaño = 24;
+                break;
+            case 's':
+                tamaño = 28;
+                break;
+            case 't':
+                tamaño = 22;
+                break;
+            case 'u':
+                tamaño = 22;
+                break;
+            case 'v':
+                tamaño = 22;
+                break;
+            case 'w':
+                tamaño = 38;
+                break;
+            case 'x':
+                tamaño = 26;
+                break;
+            case 'y':
+                tamaño = 26;
+                break;
+            case 'z':
+                tamaño = 26;
+                break;
+            case '.':
+                tamaño = 22;
+                break;
+            case ',':
+                tamaño = 22;
+                break;
+            case ';':
+                tamaño = 22;
+                break;
+            case ':':
+                tamaño = 22;
+                break;
+            case 39:
+                tamaño = 22;
+                break;
+            case '"':
+                tamaño = 22;
+                break;
+            case '«':
+                tamaño = 30;
+                break;
+            case '»':
+                tamaño = 30;
+                break;
+            case '(':
+                tamaño = 22;
+                break;
+            case ')':
+                tamaño = 22;
+                break;
+            case '[':
+                tamaño = 34;
+                break;
+            case ']':
+                tamaño = 34;
+                break;
+            case '{':
+                tamaño = 34;
+                break;
+            case '}':
+                tamaño = 34;
+                break;
+            case '-':
+                tamaño = 34;
+                break;
+            case '_':
+                tamaño = 34;
+                break;
+            case '¿':
+                tamaño = 34;
+                break;
+            case '?':
+                tamaño = 34;
+                break;
+            case '¡':
+                tamaño = 34;
+                break;
+            case '!':
+                tamaño = 34;
+                break;
+            default:
+                tamaño = 45;
+                break;
         }
-        else if(caracter == 'i'){
-            return 34;
-        }
-        else{
-            return 45;
-        }
+        return tamaño;
     }
     
     public static AnchorPane getLienzo() { // Getter de lienzo
