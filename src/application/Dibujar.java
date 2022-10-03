@@ -526,11 +526,11 @@ public class Dibujar {
         return tamaño;
     }
     
-    public static AnchorPane getLienzo() { // Getter de lienzo
+    public AnchorPane getLienzo() { // Getter de lienzo
         return lienzo;
     }
     
-    public static void setColor(Color nuevoColor){ // Setter del color de las letras
+    public void setColor(Color nuevoColor){ // Setter del color de las letras
         colorActual = nuevoColor;
     }
     
