@@ -37,8 +37,13 @@ public class InterfazController implements Initializable {
         fondoInterfaz.getChildren().add(dibujar.getLienzo()); // Se añade el lienzo de dibujo
         //fondoDibujo.setStyle("-fx-background-color: BLACK");
         
+        textoEntrada.setOnKeyTyped((KeyEvent event) -> {
+            if (!dibujar.validarEntrada(event.getCharacter())){
+                event.consume();
+            }
+        });
+        
         textoEntrada.setOnKeyReleased((KeyEvent event) -> {
-            
             dibujar.getLienzo().getChildren().clear();
             dibujar.dibujarEntrada(textoEntrada.getText()); // Se dibuja
         });
