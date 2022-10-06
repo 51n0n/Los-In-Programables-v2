@@ -4,6 +4,7 @@
  */
 package application;
 
+import java.util.ArrayList;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
@@ -12,6 +13,11 @@ public class Dibujar {
     private static AnchorPane lienzo = new AnchorPane(); // Nodo que guardará las letras dibujadas
     private static CrearCaracteres llamar = new CrearCaracteres(); // "Puntero"
     private static Color colorActual = Color.BLACK; // Valor inicial para el color de las letras
+    
+    private static double espacioEnFila;
+    private static double letraCont;
+    private static double posActualX;
+    private static double posActualY;
     
     public boolean validarEntrada(String entrada){
         boolean validar = true; // Se inicia el retorno en true hasta encontrar una entrada no válida
@@ -28,6 +34,79 @@ public class Dibujar {
         return validar;
     }
     
+    public void guardarPalabras(String entrada){
+        
+        lienzo.setLayoutX(30); // Posición (0,0) para las letras
+        lienzo.setLayoutY(60);
+        lienzo.setPrefSize(1035, 450);
+        
+        reiniciarVariables();
+        int cont = 0;
+        
+        ArrayList<Palabra> palabras = new ArrayList<>();
+        
+        for (int i=0;i<entrada.length();i++){
+            
+            palabras.add(new Palabra(false,false,false));
+            
+            if (entrada.charAt(i) != ' '){
+                int j = i;
+                while (j<entrada.length()){
+                    if (entrada.charAt(j) != ' '){
+                        j++;
+                    }
+                    else{
+                        break;
+                    }
+                }
+                
+                palabras.get(cont).setPalabra(entrada.substring(i, j-1));
+                i = j-1;
+            }
+            else{
+                palabras.get(cont).setPalabra(" ");
+            }
+            cont++;
+        }
+        
+        for (int i=0;i<palabras.size();i++){
+            
+            String p = palabras.get(i).getPalabra();
+            cont = i;
+            
+            if (p.charAt(0) == '^'){ // Si el primer caracter es sombrero
+                // Cambio de Estilo
+                for (int j=1;j<p.length();j++){
+                    
+                    switch (p.charAt(j)){
+                        case 'N':
+                            palabras.get(cont).setN(true);
+                            break;
+                        case 'K':
+                            palabras.get(cont).setK(true);
+                            break;
+                        case 'S':
+                            palabras.get(cont).setS(true);
+                            break;
+                        case 'T':
+                            break;
+                        case ',':
+                            cont++;
+                            break;
+                        case '+':
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            else{
+                // Estilo default
+            }
+            
+        }
+    }
+    
     public void dibujarEntrada(String entrada){
         
         lienzo.setLayoutX(30); // Posición (0,0) para las letras
@@ -39,11 +118,8 @@ public class Dibujar {
         for (int i=0;i<size;i++){ //Se recorre el arreglo y se guardan los caracteres en las posiciones del arreglo
             cadena[i]=entrada.charAt(i);
         }
-        //1035x450
-        double espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
-        double letraCont = 0; // Contará el espacio a usar de las letras de una palabra.
-        double posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
-        double posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
+        
+        reiniciarVariables();
         
         for (int i=0;i<size;i++){ // Se recorre la cadena
             if (esLetra(cadena[i])){ // Si el caracter es una letra
@@ -343,6 +419,13 @@ public class Dibujar {
                 break;
         }
         return nuevoNodo;
+    }
+    
+    public void reiniciarVariables(){
+        espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
+        letraCont = 0; // Contará el espacio a usar de las letras de una palabra.
+        posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
+        posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
     }
     
     public boolean esLetra(char caracter){
