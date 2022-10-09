@@ -36,7 +36,8 @@ public class Dibujar {
     
     public void guardarPalabras(String entrada){
         
-        lienzo.setLayoutX(30); // Posición (0,0) para las letras
+        // Posición y tamaño del fondo de dibujo
+        lienzo.setLayoutX(30);
         lienzo.setLayoutY(60);
         lienzo.setPrefSize(1035, 450);
         
@@ -60,7 +61,7 @@ public class Dibujar {
                     }
                 }
                 
-                palabras.get(cont).setPalabra(entrada.substring(i, j-1));
+                palabras.get(cont).setPalabra(entrada.substring(i, j));
                 i = j-1;
             }
             else{
@@ -68,16 +69,21 @@ public class Dibujar {
             }
             cont++;
         }
-        
+        System.out.println("1");
         for (int i=0;i<palabras.size();i++){
+            System.out.println(palabras.get(i).getPalabra());
+        }
+        
+        for (int i=0;i<palabras.size();i++){ // Comprobaremos los comandos que puedan tener cada palabra
             
             String p = palabras.get(i).getPalabra();
             cont = i;
             
             if (p.charAt(0) == '^'){ // Si el primer caracter es sombrero
                 // Cambio de Estilo
-                for (int j=1;j<p.length();j++){
-                    
+                boolean salir = false;
+                int j;
+                for (j=1;j<p.length() && !salir && cont<palabras.size();j++){
                     switch (p.charAt(j)){
                         case 'N':
                             palabras.get(cont).setN(true);
@@ -91,20 +97,59 @@ public class Dibujar {
                         case 'T':
                             break;
                         case ',':
-                            cont++;
+                            if (cont+1<palabras.size()){
+                                cont++;
+                            }
                             break;
                         case '+':
                             break;
                         default:
+                            while(p.charAt(j-1) == ',' || p.charAt(j-1) == '+'){
+                                j--;
+                            }
+                            salir = true;
+                            j--;
                             break;
                     }
+                    /*
+                    if ( (p.charAt(j+1) == ',' || p.charAt(j+1) == '+') && !salir ){
+                        if (p.charAt(j+1) == ','){
+                            cont++;
+                        }
+                        j++;
+                    }
+                    else{
+                        salir = true;
+                    }
+                    */
+                }
+                if (j > 1){
+                    palabras.get(i).setPalabra(p.substring(j)); // Se elimina la cadena de comando de la palabra
+                    // Elimina desde 0 hasta j reemplazando por la cadena desde j+1 hasta el final
                 }
             }
-            else{
-                // Estilo default
-            }
-            
         }
+        System.out.println("2");
+        for (int i=0;i<palabras.size();i++){
+            System.out.println(palabras.get(i).getPalabra());
+        }
+        
+        /*
+        // Al terminar este ciclo tenemos un arreglo de palabras sin caracteres de comando, listo para dibujar
+        // Además cada palabra tiene sus estilos asignados por los comandos anteriores
+        cont = 0;
+        for (int i=0;i<palabras.size();i++){
+            for (int j=0;j<palabras.get(i).getPalabra().length();j++){
+                
+                lienzo.getChildren().add(dibujarLetras(palabras.get(i).getPalabra().charAt(j)));
+                lienzo.getChildren().get(cont).setLayoutX(posActualX);
+                lienzo.getChildren().get(cont).setLayoutY(posActualY);
+                posActualX = posActualX + tamañoCaracter(palabras.get(i).getPalabra().charAt(j));
+                espacioEnFila = espacioEnFila - tamañoCaracter(palabras.get(i).getPalabra().charAt(j));
+                cont++;
+            }
+        }
+        */
     }
     
     public void dibujarEntrada(String entrada){

@@ -36,7 +36,7 @@ public class InterfazController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         fondoInterfaz.getChildren().add(dibujar.getLienzo()); // Se añade el lienzo de dibujo
         //fondoDibujo.setStyle("-fx-background-color: BLACK");
-        
+        dibujar.guardarPalabras(", ^malo,  ^N+Kbueno ^S,,Khola, ^N,S+Kmundo");
         textoEntrada.setOnKeyTyped((KeyEvent event) -> {
             if (!dibujar.validarEntrada(event.getCharacter())){
                 event.consume();
