@@ -79,7 +79,7 @@ public class Dibujar {
             String p = palabras.get(i).getPalabra();
             cont = i;
             
-            if (p.charAt(0) == '^'){ // Si el primer caracter es sombrero
+            if (p.charAt(0) == '^'){ // Si el primer caracter es ^
                 // Cambio de Estilo
                 boolean salir = false;
                 int j;
@@ -111,21 +111,10 @@ public class Dibujar {
                             j--;
                             break;
                     }
-                    /*
-                    if ( (p.charAt(j+1) == ',' || p.charAt(j+1) == '+') && !salir ){
-                        if (p.charAt(j+1) == ','){
-                            cont++;
-                        }
-                        j++;
-                    }
-                    else{
-                        salir = true;
-                    }
-                    */
                 }
                 if (j > 1){
                     palabras.get(i).setPalabra(p.substring(j)); // Se elimina la cadena de comando de la palabra
-                    // Elimina desde 0 hasta j reemplazando por la cadena desde j+1 hasta el final
+                    // Elimina desde 0 hasta j-1 reemplazando por la cadena desde j hasta el final
                 }
             }
         }
@@ -344,7 +333,6 @@ public class Dibujar {
             case 'l':
                 nuevoNodo = llamar.crear_l();
                 break;
-
             case 'm':
                 nuevoNodo = llamar.crear_m();
                 break;
