@@ -4,6 +4,7 @@
  */
 package application;
 
+import java.util.ArrayList;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 
@@ -12,6 +13,11 @@ public class Dibujar {
     private static AnchorPane lienzo = new AnchorPane(); // Nodo que guardará las letras dibujadas
     private static CrearCaracteres llamar = new CrearCaracteres(); // "Puntero"
     private static Color colorActual = Color.BLACK; // Valor inicial para el color de las letras
+    
+    private static double espacioEnFila;
+    private static double letraCont;
+    private static double posActualX;
+    private static double posActualY;
     
     public boolean validarEntrada(String entrada){
         boolean validar = true; // Se inicia el retorno en true hasta encontrar una entrada no válida
@@ -28,6 +34,113 @@ public class Dibujar {
         return validar;
     }
     
+    public void guardarPalabras(String entrada){
+        
+        // Posición y tamaño del fondo de dibujo
+        lienzo.setLayoutX(30);
+        lienzo.setLayoutY(60);
+        lienzo.setPrefSize(1035, 450);
+        
+        reiniciarVariables();
+        int cont = 0;
+        
+        ArrayList<Palabra> palabras = new ArrayList<>();
+        
+        for (int i=0;i<entrada.length();i++){
+            
+            palabras.add(new Palabra(false,false,false));
+            
+            if (entrada.charAt(i) != ' '){
+                int j = i;
+                while (j<entrada.length()){
+                    if (entrada.charAt(j) != ' '){
+                        j++;
+                    }
+                    else{
+                        break;
+                    }
+                }
+                
+                palabras.get(cont).setPalabra(entrada.substring(i, j));
+                i = j-1;
+            }
+            else{
+                palabras.get(cont).setPalabra(" ");
+            }
+            cont++;
+        }
+        System.out.println("1");
+        for (int i=0;i<palabras.size();i++){
+            System.out.println(palabras.get(i).getPalabra());
+        }
+        
+        for (int i=0;i<palabras.size();i++){ // Comprobaremos los comandos que puedan tener cada palabra
+            
+            String p = palabras.get(i).getPalabra();
+            cont = i;
+            
+            if (p.charAt(0) == '^'){ // Si el primer caracter es ^
+                // Cambio de Estilo
+                boolean salir = false;
+                int j;
+                for (j=1;j<p.length() && !salir && cont<palabras.size();j++){
+                    switch (p.charAt(j)){
+                        case 'N':
+                            palabras.get(cont).setN(true);
+                            break;
+                        case 'K':
+                            palabras.get(cont).setK(true);
+                            break;
+                        case 'S':
+                            palabras.get(cont).setS(true);
+                            break;
+                        case 'T':
+                            break;
+                        case ',':
+                            if (cont+1<palabras.size()){
+                                cont++;
+                            }
+                            break;
+                        case '+':
+                            break;
+                        default:
+                            while(p.charAt(j-1) == ',' || p.charAt(j-1) == '+'){
+                                j--;
+                            }
+                            salir = true;
+                            j--;
+                            break;
+                    }
+                }
+                if (j > 1){
+                    palabras.get(i).setPalabra(p.substring(j)); // Se elimina la cadena de comando de la palabra
+                    // Elimina desde 0 hasta j-1 reemplazando por la cadena desde j hasta el final
+                }
+            }
+        }
+        System.out.println("2");
+        for (int i=0;i<palabras.size();i++){
+            System.out.println(palabras.get(i).getPalabra());
+        }
+        
+        /*
+        // Al terminar este ciclo tenemos un arreglo de palabras sin caracteres de comando, listo para dibujar
+        // Además cada palabra tiene sus estilos asignados por los comandos anteriores
+        cont = 0;
+        for (int i=0;i<palabras.size();i++){
+            for (int j=0;j<palabras.get(i).getPalabra().length();j++){
+                
+                lienzo.getChildren().add(dibujarLetras(palabras.get(i).getPalabra().charAt(j)));
+                lienzo.getChildren().get(cont).setLayoutX(posActualX);
+                lienzo.getChildren().get(cont).setLayoutY(posActualY);
+                posActualX = posActualX + tamañoCaracter(palabras.get(i).getPalabra().charAt(j));
+                espacioEnFila = espacioEnFila - tamañoCaracter(palabras.get(i).getPalabra().charAt(j));
+                cont++;
+            }
+        }
+        */
+    }
+    
     public void dibujarEntrada(String entrada){
         
         lienzo.setLayoutX(30); // Posición (0,0) para las letras
@@ -39,11 +152,8 @@ public class Dibujar {
         for (int i=0;i<size;i++){ //Se recorre el arreglo y se guardan los caracteres en las posiciones del arreglo
             cadena[i]=entrada.charAt(i);
         }
-        //1035x450
-        double espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
-        double letraCont = 0; // Contará el espacio a usar de las letras de una palabra.
-        double posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
-        double posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
+        
+        reiniciarVariables();
         
         for (int i=0;i<size;i++){ // Se recorre la cadena
             if (esLetra(cadena[i])){ // Si el caracter es una letra
@@ -223,7 +333,6 @@ public class Dibujar {
             case 'l':
                 nuevoNodo = llamar.crear_l();
                 break;
-
             case 'm':
                 nuevoNodo = llamar.crear_m();
                 break;
@@ -345,6 +454,13 @@ public class Dibujar {
         return nuevoNodo;
     }
     
+    public void reiniciarVariables(){
+        espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
+        letraCont = 0; // Contará el espacio a usar de las letras de una palabra.
+        posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
+        posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
+    }
+    
     public boolean esLetra(char caracter){
         
         /* Se crea un arreglo que contiene las 27 letras del abecedario español, minúsculas y mayúsculas,
@@ -379,85 +495,85 @@ public class Dibujar {
         // Retorna el tamaño que usarán los caracteres al momento de dibujar
         switch(caracter){
             case 'a':
-                tamaño = 20;
+                tamaño = 19;
                 break;
             case 'b':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'c':
-                tamaño = 18;
+                tamaño = 19;
                 break;
             case 'd':
-                tamaño = 18;
+                tamaño = 19;
                 break;
             case 'e':
-                tamaño = 12;
+                tamaño = 19;
                 break;
             case 'f':
-                tamaño = 24;
+                tamaño = 19;
                 break;
             case 'g':
                 tamaño = 19;
                 break;
             case 'h':
-                tamaño = 15;
+                tamaño = 19;
                 break;
             case 'i':
-                tamaño = 16;
+                tamaño = 19;
                 break;
             case 'j':
-                tamaño = 12;
+                tamaño = 19;
                 break;
             case 'k':
-                tamaño = 20;
+                tamaño = 19;
                 break;
             case 'l':
-                tamaño = 20;
+                tamaño = 19;
                 break;
             case 'm':
-                tamaño = 44;
+                tamaño = 19;
                 break;
             case 'n':
-                tamaño = 34;
+                tamaño = 19;
                 break;
             case 'ñ':
-                tamaño = 34;
+                tamaño = 19;
                 break;
             case 'o':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'p':
-                tamaño = 34;
+                tamaño = 19;
                 break;
             case 'q':
-                tamaño = 32;
+                tamaño = 19;
                 break;
             case 'r':
-                tamaño = 24;
+                tamaño = 19;
                 break;
             case 's':
-                tamaño = 28;
+                tamaño = 19;
                 break;
             case 't':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'u':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'v':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'w':
-                tamaño = 38;
+                tamaño = 19;
                 break;
             case 'x':
-                tamaño = 26;
+                tamaño = 19;
                 break;
             case 'y':
-                tamaño = 26;
+                tamaño = 19;
                 break;
             case 'z':
-                tamaño = 26;
+                tamaño = 19;
                 break;
             case '.':
                 tamaño = 22;
