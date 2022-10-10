@@ -17,6 +17,295 @@ import javafx.scene.shape.Ellipse;
 
 public class CrearCaracteres {
     
+    public AnchorPane dibujarCaracter(char caracter){
+        
+        AnchorPane fondo = new AnchorPane();
+        
+        switch (caracter){
+            case 'A':
+                //Objetos
+                Line linea = new Line();
+                CubicCurve cubica1 = new CubicCurve();
+                CubicCurve cubica2= new CubicCurve();
+                
+                //Atributos del Fondo
+                fondo.setPrefHeight(60.0);//y
+                fondo.setPrefWidth(45.0);//x
+                
+                //Atributos Lineas
+                cubica1.setLayoutX(41);
+                cubica1.setLayoutY(44);
+                cubica1.setStartX(-1.2);
+                cubica1.setStartY(4.79);
+                cubica1.setEndX(-4.88);
+                cubica1.setEndY(-35.8);
+                cubica1.setControlX1(-11.6);
+                cubica1.setControlY1(11.39);
+                cubica1.setControlX2(-14.39);
+                cubica1.setControlY2(-14.2);
+                cubica1.setFill(Color.TRANSPARENT);
+                cubica1.setStroke(getColor());
+                cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                linea.setLayoutX(29.0);
+                linea.setLayoutY(27.0);
+                linea.setStartX(-12.5);
+                linea.setStartY(0);
+                linea.setEndX(0);
+                linea.setEndY(0);
+                linea.setFill(Color.TRANSPARENT);
+                linea.setStroke(getColor());
+                linea.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                cubica2.setLayoutX(33);
+                cubica2.setLayoutY(29);
+                cubica2.setStartX(-33);
+                cubica2.setStartY(16.39);
+                cubica2.setEndX(3.79);
+                cubica2.setEndY(-21.95);
+                cubica2.setControlX1(-27.60);
+                cubica2.setControlY1(38);
+                cubica2.setControlX2(-17.39);
+                cubica2.setControlY2(-17);
+                cubica2.setFill(Color.TRANSPARENT);
+                cubica2.setStroke(getColor());
+                cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                fondo.getChildren().addAll(cubica1,cubica2,linea);
+                return fondo;
+            case 'B':
+                
+                return fondo;
+            case 'C':
+                
+                return fondo;
+            case 'D':
+                
+                return fondo;
+            case 'E':
+                
+                return fondo;
+            case 'F':
+                
+                return fondo;
+            case 'G':
+                
+                return fondo;
+            case 'H':
+                
+                return fondo;
+            case 'I':
+                
+                return fondo;
+            case 'J':
+                
+                return fondo;
+            case 'K':
+                
+                return fondo;
+            case 'L':
+                
+                return fondo;
+            case 'M':
+                
+                return fondo;
+            case 'N':
+                
+                return fondo;
+            case 'Ñ':
+                
+                return fondo;
+            case 'O':
+                
+                return fondo;
+            case 'P':
+                
+                return fondo;
+            case 'Q':
+                
+                return fondo;
+            case 'R':
+                
+                return fondo;
+            case 'S':
+                
+                return fondo;
+            case 'T':
+                
+                return fondo;
+            case 'U':
+                
+                return fondo;
+            case 'V':
+                
+                return fondo;
+            case 'W':
+                
+                return fondo;
+            case 'X':
+                
+                return fondo;
+            case 'Y':
+                
+                return fondo;
+            case 'Z':
+                
+                return fondo;
+            case 'a':
+                
+                return fondo;
+            case 'b':
+                
+                return fondo;
+            case 'c':
+                
+                return fondo;
+            case 'd':
+                
+                return fondo;
+            case 'e':
+                
+                return fondo;
+            case 'f':
+                
+                return fondo;
+            case 'g':
+                
+                return fondo;
+            case 'h':
+                
+                return fondo;
+            case 'i':
+                
+                return fondo;
+            case 'j':
+                
+                return fondo;
+            case 'k':
+                
+                return fondo;
+            case 'l':
+                
+                return fondo;
+            case 'm':
+                
+                return fondo;
+            case 'n':
+                
+                return fondo;
+            case 'ñ':
+                
+                return fondo;
+            case 'o':
+                
+                return fondo;
+            case 'p':
+                
+                return fondo;
+            case 'q':
+                
+                return fondo;
+            case 'r':
+                
+                return fondo;
+            case 's':
+                
+                return fondo;
+            case 't':
+                
+                return fondo;
+            case 'u':
+                
+                return fondo;
+            case 'v':
+                
+                return fondo;
+            case 'w':
+                
+                return fondo;
+            case 'x':
+                
+                return fondo;
+            case 'y':
+                
+                return fondo;
+            case 'z':
+                
+                return fondo;
+            case ' ':
+                
+                return fondo;
+            case '!':
+                
+                return fondo;
+            case '¡':
+                
+                return fondo;
+            case '¿':
+                
+                return fondo;
+            case '?':
+                
+                return fondo;
+            case '.':
+                
+                return fondo;
+            case ',':
+                
+                return fondo;
+            case ';':
+                
+                return fondo;
+            case ':':
+                
+                return fondo;
+            case '(':
+                
+                return fondo;
+            case ')':
+                
+                return fondo;
+            case '[':
+                
+                return fondo;
+            case ']':
+                
+                return fondo;
+            case '{':
+                
+                return fondo;
+            case '}':
+                
+                return fondo;
+            case '-':
+                
+                return fondo;
+            case '_':
+                
+                return fondo;
+            case 39:
+                
+                return fondo;
+            case '"':
+                
+                return fondo;
+            case '«':
+                
+                return fondo;
+            case '»':
+                
+                return fondo;
+            case '^':
+                // Se debe hacer diseño de nuevo símbolo
+                return fondo;
+            default:
+                return null;
+        }
+    }
+    
     public AnchorPane crear_A() {
         
         //Objetos
