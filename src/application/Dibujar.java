@@ -495,85 +495,85 @@ public class Dibujar {
         // Retorna el tamaño que usarán los caracteres al momento de dibujar
         switch(caracter){
             case 'a':
-                tamaño = 20;
+                tamaño = 19;
                 break;
             case 'b':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'c':
-                tamaño = 18;
+                tamaño = 19;
                 break;
             case 'd':
-                tamaño = 18;
+                tamaño = 19;
                 break;
             case 'e':
-                tamaño = 12;
+                tamaño = 19;
                 break;
             case 'f':
-                tamaño = 24;
+                tamaño = 19;
                 break;
             case 'g':
                 tamaño = 19;
                 break;
             case 'h':
-                tamaño = 15;
+                tamaño = 19;
                 break;
             case 'i':
-                tamaño = 16;
+                tamaño = 19;
                 break;
             case 'j':
-                tamaño = 12;
+                tamaño = 19;
                 break;
             case 'k':
-                tamaño = 20;
+                tamaño = 19;
                 break;
             case 'l':
-                tamaño = 20;
+                tamaño = 19;
                 break;
             case 'm':
-                tamaño = 44;
+                tamaño = 19;
                 break;
             case 'n':
-                tamaño = 34;
+                tamaño = 19;
                 break;
             case 'ñ':
-                tamaño = 34;
+                tamaño = 19;
                 break;
             case 'o':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'p':
-                tamaño = 34;
+                tamaño = 19;
                 break;
             case 'q':
-                tamaño = 32;
+                tamaño = 19;
                 break;
             case 'r':
-                tamaño = 24;
+                tamaño = 19;
                 break;
             case 's':
-                tamaño = 28;
+                tamaño = 19;
                 break;
             case 't':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'u':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'v':
-                tamaño = 22;
+                tamaño = 19;
                 break;
             case 'w':
-                tamaño = 38;
+                tamaño = 19;
                 break;
             case 'x':
-                tamaño = 26;
+                tamaño = 19;
                 break;
             case 'y':
-                tamaño = 26;
+                tamaño = 19;
                 break;
             case 'z':
-                tamaño = 26;
+                tamaño = 19;
                 break;
             case '.':
                 tamaño = 22;
