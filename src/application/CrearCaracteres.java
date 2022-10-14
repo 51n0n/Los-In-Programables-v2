@@ -2324,6 +2324,9 @@ public class CrearCaracteres {
             case '^':
                 // Se debe hacer diseño de nuevo símbolo
                 return fondo;
+            case '+':
+                // Se debe hacer diseño de nuevo símbolo
+                return fondo;
             default:
                 return null;
         }
