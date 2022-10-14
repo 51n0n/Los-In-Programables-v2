@@ -13,7 +13,6 @@ import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 
 public class InterfazController implements Initializable {
@@ -24,8 +23,6 @@ public class InterfazController implements Initializable {
     private TextField textoEntrada;
     @FXML
     private ColorPicker selectColor;
-    @FXML
-    private Pane fondoDibujo;
     
     Dibujar dibujar = new Dibujar(); // Objeto de la clase Dibujar
     
@@ -34,9 +31,15 @@ public class InterfazController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        dibujar.getLienzo().setStyle("-fx-background-color: LIGHTGRAY");
+        dibujar.getLienzo().setLayoutX(30);
+        dibujar.getLienzo().setLayoutY(60);
+        dibujar.getLienzo().setPrefSize(1070, 450);
+        dibujar.getLienzo().setMaxSize(1070, 450);
         fondoInterfaz.getChildren().add(dibujar.getLienzo()); // Se añade el lienzo de dibujo
         //fondoDibujo.setStyle("-fx-background-color: BLACK");
-        dibujar.guardarPalabras(", ^malo,  ^N+Kbueno ^S,,Khola, ^N,S+Kmundo");
+        //dibujar.guardarPalabras(", ^malo,  ^N+Kbueno ^S,,Khola, ^N,S+Kmundo");
+        //dibujar.guardarPalabras(", malo,  ^N+Kbueno ^S,,Khola, ^N,S+Kmundo hghsfdsgsdgweeryrtjrtjrthergwegge");
         textoEntrada.setOnKeyTyped((KeyEvent event) -> {
             if (!dibujar.validarEntrada(event.getCharacter())){
                 event.consume();
@@ -45,7 +48,8 @@ public class InterfazController implements Initializable {
         
         textoEntrada.setOnKeyReleased((KeyEvent event) -> {
             dibujar.getLienzo().getChildren().clear();
-            dibujar.dibujarEntrada(textoEntrada.getText()); // Se dibuja
+            //dibujar.dibujarEntrada(textoEntrada.getText()); // Se dibuja
+            dibujar.guardarPalabras(textoEntrada.getText());
         });
     }
     
@@ -55,7 +59,7 @@ public class InterfazController implements Initializable {
         Color nuevoColor = selectColor.getValue(); // Se obtiene el valor de color del color picker de la interfaz
         dibujar.setColor(nuevoColor); // Se llama al setter del color para las letras y se asigna el color seleccionado en la interfaz
         dibujar.getLienzo().getChildren().clear();
-        dibujar.dibujarEntrada(textoEntrada.getText());
+        dibujar.guardarPalabras(textoEntrada.getText());
     }
     
 }
