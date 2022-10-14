@@ -24,57 +24,57 @@ public class CrearCaracteres {
         switch (caracter){
             case 'A':
                 //Objetos
-                Line linea = new Line();
-                CubicCurve cubica1 = new CubicCurve();
-                CubicCurve cubica2= new CubicCurve();
+                Line lineaA = new Line();
+                CubicCurve cubicaA1 = new CubicCurve();
+                CubicCurve cubicaA2= new CubicCurve();
                 
                 //Atributos del Fondo
                 fondo.setPrefHeight(60.0);//y
                 fondo.setPrefWidth(45.0);//x
                 
                 //Atributos Lineas
-                cubica1.setLayoutX(41);
-                cubica1.setLayoutY(44);
-                cubica1.setStartX(-1.2);
-                cubica1.setStartY(4.79);
-                cubica1.setEndX(-4.88);
-                cubica1.setEndY(-35.8);
-                cubica1.setControlX1(-11.6);
-                cubica1.setControlY1(11.39);
-                cubica1.setControlX2(-14.39);
-                cubica1.setControlY2(-14.2);
-                cubica1.setFill(Color.TRANSPARENT);
-                cubica1.setStroke(getColor());
-                cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
-                cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                cubicaA1.setLayoutX(41);
+                cubicaA1.setLayoutY(44);
+                cubicaA1.setStartX(-1.2);
+                cubicaA1.setStartY(4.79);
+                cubicaA1.setEndX(-4.88);
+                cubicaA1.setEndY(-35.8);
+                cubicaA1.setControlX1(-11.6);
+                cubicaA1.setControlY1(11.39);
+                cubicaA1.setControlX2(-14.39);
+                cubicaA1.setControlY2(-14.2);
+                cubicaA1.setFill(Color.TRANSPARENT);
+                cubicaA1.setStroke(getColor());
+                cubicaA1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaA1.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
-                linea.setLayoutX(29.0);
-                linea.setLayoutY(27.0);
-                linea.setStartX(-12.5);
-                linea.setStartY(0);
-                linea.setEndX(0);
-                linea.setEndY(0);
-                linea.setFill(Color.TRANSPARENT);
-                linea.setStroke(getColor());
-                linea.setStrokeLineCap(StrokeLineCap.ROUND);
-                linea.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                lineaA.setLayoutX(29.0);
+                lineaA.setLayoutY(27.0);
+                lineaA.setStartX(-12.5);
+                lineaA.setStartY(0);
+                lineaA.setEndX(0);
+                lineaA.setEndY(0);
+                lineaA.setFill(Color.TRANSPARENT);
+                lineaA.setStroke(getColor());
+                lineaA.setStrokeLineCap(StrokeLineCap.ROUND);
+                lineaA.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
-                cubica2.setLayoutX(33);
-                cubica2.setLayoutY(29);
-                cubica2.setStartX(-33);
-                cubica2.setStartY(16.39);
-                cubica2.setEndX(3.79);
-                cubica2.setEndY(-21.95);
-                cubica2.setControlX1(-27.60);
-                cubica2.setControlY1(38);
-                cubica2.setControlX2(-17.39);
-                cubica2.setControlY2(-17);
-                cubica2.setFill(Color.TRANSPARENT);
-                cubica2.setStroke(getColor());
-                cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-                cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                cubicaA2.setLayoutX(33);
+                cubicaA2.setLayoutY(29);
+                cubicaA2.setStartX(-33);
+                cubicaA2.setStartY(16.39);
+                cubicaA2.setEndX(3.79);
+                cubicaA2.setEndY(-21.95);
+                cubicaA2.setControlX1(-27.60);
+                cubicaA2.setControlY1(38);
+                cubicaA2.setControlX2(-17.39);
+                cubicaA2.setControlY2(-17);
+                cubicaA2.setFill(Color.TRANSPARENT);
+                cubicaA2.setStroke(getColor());
+                cubicaA2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaA2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
-                fondo.getChildren().addAll(cubica1,cubica2,linea);
+                fondo.getChildren().addAll(cubicaA1,cubicaA2,lineaA);
                 return fondo;
             case 'B':
                 
@@ -155,148 +155,2171 @@ public class CrearCaracteres {
                 
                 return fondo;
             case 'a':
-                
-                return fondo;
-            case 'b':
-                
+                CubicCurve cubicaa= new CubicCurve();
+                CubicCurve cubicaa1 = new CubicCurve();
+                CubicCurve cubicaa2 = new CubicCurve();
+                fondo.setPrefSize(19,60);
+
+                //primerabase
+                cubicaa.setLayoutX(39.0);
+                cubicaa.setLayoutY(38.0);
+                cubicaa.setStartX(-29.79);
+                cubicaa.setStartY(-33.8);
+                cubicaa.setEndX(-27.19);
+                cubicaa.setEndY(6.0);
+                cubicaa.setControlX1(-40.59);
+                cubicaa.setControlY1(2.4);
+                cubicaa.setControlX2(-39.0);
+                cubicaa.setControlY2(10.79);
+                cubicaa.setFill(Color.TRANSPARENT);
+                cubicaa.setStroke(getColor());
+                cubicaa.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaa.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //curva 
+                cubicaa1.setLayoutX(50);
+                cubicaa1.setLayoutY(56.5);
+                cubicaa1.setStartX(-45.39);
+                cubicaa1.setStartY(-25.3);
+                cubicaa1.setEndX(-38.07);
+                cubicaa1.setEndY(-12.9);
+                cubicaa1.setControlX1(-38.07);
+                cubicaa1.setControlY1(-27.03);
+                cubicaa1.setControlX2(-31.20);
+                cubicaa1.setControlY2(-20.95);
+                cubicaa1.setFill(Color.TRANSPARENT);
+                cubicaa1.setStroke(getColor());
+                cubicaa1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaa1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //unioaan
+                cubicaa2.setLayoutX(40.0);
+                cubicaa2.setLayoutY(58.0);
+                cubicaa2.setStartX(-35.0);
+                cubicaa2.setStartY(-26.5);
+                cubicaa2.setEndX(-22.19);
+                cubicaa2.setEndY(-26.5);
+                cubicaa2.setControlX1(-39.04);
+                cubicaa2.setControlY1(-24.08);
+                cubicaa2.setControlX2(-30.37);
+                cubicaa2.setControlY2(-20.68);
+                cubicaa2.setFill(Color.TRANSPARENT);
+                cubicaa2.setStroke(getColor());
+                cubicaa2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaa2.setStrokeLineJoin(StrokeLineJoin.ROUND);  
+                fondo.getChildren().addAll(cubicaa,cubicaa1,cubicaa2);
+                return fondo; 
+           case 'b':
+                CubicCurve cubicab= new CubicCurve();
+                CubicCurve cubicab1 = new CubicCurve();
+                CubicCurve cubicab2 = new CubicCurve();
+                fondo.setPrefSize(19,60);
+
+                //primerabase
+                cubicab.setLayoutX(39.0);
+                cubicab.setLayoutY(38.0);
+                cubicab.setStartX(-29.79);
+                cubicab.setStartY(-33.8);
+                cubicab.setEndX(-27.19);
+                cubicab.setEndY(6.0);
+                cubicab.setControlX1(-40.59);
+                cubicab.setControlY1(2.4);
+                cubicab.setControlX2(-39.0);
+                cubicab.setControlY2(10.79);
+                cubicab.setFill(Color.TRANSPARENT);
+                cubicab.setStroke(getColor());
+                cubicab.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicab.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //curvba 
+                cubicab1.setLayoutX(50);
+                cubicab1.setLayoutY(56.5);
+                cubicab1.setStartX(-45.39);
+                cubicab1.setStartY(-25.3);
+                cubicab1.setEndX(-38.07);
+                cubicab1.setEndY(-12.9);
+                cubicab1.setControlX1(-38.07);
+                cubicab1.setControlY1(-27.03);
+                cubicab1.setControlX2(-31.20);
+                cubicab1.setControlY2(-20.95);
+                cubicab1.setFill(Color.TRANSPARENT);
+                cubicab1.setStroke(getColor());
+                cubicab1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicab1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //uniobn
+                cubicab2.setLayoutX(40.0);
+                cubicab2.setLayoutY(58.0);
+                cubicab2.setStartX(-35.0);
+                cubicab2.setStartY(-26.5);
+                cubicab2.setEndX(-22.19);
+                cubicab2.setEndY(-26.5);
+                cubicab2.setControlX1(-39.04);
+                cubicab2.setControlY1(-24.08);
+                cubicab2.setControlX2(-30.37);
+                cubicab2.setControlY2(-20.68);
+                cubicab2.setFill(Color.TRANSPARENT);
+                cubicab2.setStroke(getColor());
+                cubicab2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicab2.setStrokeLineJoin(StrokeLineJoin.ROUND);  
+                fondo.getChildren().addAll(cubicab,cubicab1,cubicab2);                
                 return fondo;
             case 'c':
-                
+                CubicCurve cubicac= new CubicCurve();
+                CubicCurve cubicac1 = new CubicCurve();   
+                fondo.setPrefSize(19,60);
+
+                //primerabase
+                cubicac.setLayoutX(48);
+                cubicac.setLayoutY(48.898);
+                cubicac.setStartX(-43.60);
+                cubicac.setStartY(-5.8);
+                cubicac.setEndX(-32);
+                cubicac.setEndY(-11.69);
+                cubicac.setControlX1(-38.39);
+                cubicac.setControlY1(-0.8);
+                cubicac.setControlX2(-32);
+                cubicac.setControlY2(-5.8);
+                cubicac.setFill(Color.TRANSPARENT);
+                cubicac.setStroke(getColor());
+                cubicac.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicac.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //curva
+                cubicac1.setLayoutX(42);
+                cubicac1.setLayoutY(41);
+                cubicac1.setStartX(-30.8);
+                cubicac1.setStartY(-14);
+                cubicac1.setEndX(-37.2);
+                cubicac1.setEndY(2.79);
+                cubicac1.setControlX1(-40.6);
+                cubicac1.setControlY1(-18.4);
+                cubicac1.setControlX2(-42.6);
+                cubicac1.setControlY2(-2.2);
+                cubicac1.setFill(Color.TRANSPARENT);
+                cubicac1.setStroke(getColor());
+                cubicac1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicac1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                fondo.getChildren().addAll(cubicac,cubicac1);
                 return fondo;
             case 'd':
-                
+                CubicCurve cubicad = new CubicCurve();
+                CubicCurve cubicad1 = new CubicCurve();
+                CubicCurve cubicad2 = new CubicCurve();
+                fondo.setPrefSize(19, 60);
+                // superior
+                cubicad.setLayoutX(35);
+                cubicad.setLayoutY(42);
+                cubicad.setStartX(-35.8);
+                cubicad.setStartY(-6.54);
+                cubicad.setEndX(-23.76);
+                cubicad.setEndY(-6.54);
+                cubicad.setControlX1(-32.39);
+                cubicad.setControlY1(-20.8);
+                cubicad.setControlX2(-22);
+                cubicad.setControlY2(-20.8);
+                cubicad.setFill(Color.TRANSPARENT);
+                cubicad.setStroke(getColor());
+                cubicad.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicad.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //inferior
+                cubicad1.setLayoutX(34);
+                cubicad1.setLayoutY(43);
+                cubicad1.setStartX(-34.6);
+                cubicad1.setStartY(-7.8);
+                cubicad1.setEndX(-22.76);
+                cubicad1.setEndY(-7.8);
+                cubicad1.setControlX1(-37.6);
+                cubicad1.setControlY1(7);
+                cubicad1.setControlX2(-22.76);
+                cubicad1.setControlY2(5.17);
+                cubicad1.setFill(Color.TRANSPARENT);
+                cubicad1.setStroke(getColor());
+                cubicad1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicad1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                // unidon
+                cubicad2.setLayoutX(54);
+                cubicad2.setLayoutY(51);
+                cubicad2.setStartX(-37.19);
+                cubicad2.setStartY(-11.8);
+                cubicad2.setEndX(-37.19);
+                cubicad2.setEndY(-47.4);
+                cubicad2.setControlX1(-44.59);
+                cubicad2.setControlY1(6.0);
+                cubicad2.setControlX2(-44.59);
+                cubicad2.setControlY2(-21.4);
+                cubicad2.setFill(Color.TRANSPARENT);
+                cubicad2.setStroke(getColor());
+                cubicad2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicad2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                fondo.getChildren().addAll(cubicad, cubicad1,cubicad2);
                 return fondo;
             case 'e':
-                
+                CubicCurve cubicae= new CubicCurve();
+                CubicCurve cubicae1 = new CubicCurve();   
+                fondo.setPrefSize(19,60);
+
+                //primerabase
+                cubicae.setLayoutX(40.5);
+                cubicae.setLayoutY(41);
+                cubicae.setStartX(-39.19);
+                cubicae.setStartY(-8);
+                cubicae.setEndX(-39.19);
+                cubicae.setEndY(-2.8);
+                cubicae.setControlX1(-36.39);
+                cubicae.setControlY1(-24.59);
+                cubicae.setControlX2(-21);
+                cubicae.setControlY2(-14.59);
+                cubicae.setFill(Color.TRANSPARENT);
+                cubicae.setStroke(getColor());
+                cubicae.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicae.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //base union
+                cubicae1.setLayoutX(40.5);
+                cubicae1.setLayoutY(37);
+                cubicae1.setStartX(-38.59);
+                cubicae1.setStartY(-6.59);
+                cubicae1.setEndX(-28.06);
+                cubicae1.setEndY(0.59);
+                cubicae1.setControlX1(-43.39);
+                cubicae1.setControlY1(12.19);
+                cubicae1.setControlX2(-32.69);
+                cubicae1.setControlY2(10.59);
+                cubicae1.setFill(Color.TRANSPARENT);
+                cubicae1.setStroke(getColor());
+                cubicae1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicae1.setStrokeLineJoin(StrokeLineJoin.ROUND); 
+                fondo.getChildren().addAll(cubicae,cubicae1);
                 return fondo;
             case 'f':
-                
+                CubicCurve cubicaf= new CubicCurve();
+                CubicCurve cubicaf1= new CubicCurve();
+                CubicCurve cubicaf2= new CubicCurve();
+                fondo.setPrefSize(19,60);
+
+                //primera inferior
+                cubicaf.setLayoutX(64.99);
+                cubicaf.setLayoutY(59.0);
+                cubicaf.setStartX(-60.78);
+                cubicaf.setStartY(-14.8);
+                cubicaf.setEndX(-60.78);
+                cubicaf.setEndY(-23.0);
+                cubicaf.setControlX1(-66.18);
+                cubicaf.setControlY1(-79);
+                cubicaf.setControlX2(-50.99);
+                cubicaf.setControlY2(-53.59);
+                cubicaf.setFill(Color.TRANSPARENT);
+                cubicaf.setStroke(getColor());
+                cubicaf.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaf.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //Linea inferior
+                cubicaf1.setLayoutX(75);
+                cubicaf1.setLayoutY(66);
+                cubicaf1.setStartX(-70.60);
+                cubicaf1.setStartY(-31.20);
+                cubicaf1.setEndX(-70.60);
+                cubicaf1.setEndY(-28.4);
+                cubicaf1.setControlX1(-58.39);
+                cubicaf1.setControlY1(-18);
+                cubicaf1.setControlX2(-74.8);
+                cubicaf1.setControlY2(13.2);
+                cubicaf1.setFill(Color.TRANSPARENT);
+                cubicaf1.setStroke(getColor());
+                cubicaf1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaf1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //linefa media
+                cubicaf2.setLayoutX(77.2);
+                cubicaf2.setLayoutY(69.5);
+                cubicaf2.setStartX(-63.2);
+                cubicaf2.setStartY(-30.9);
+                cubicaf2.setEndX(-72.33);
+                cubicaf2.setEndY(-34.31);
+                cubicaf2.setControlX1(-76.19);
+                cubicaf2.setControlY1(-25.24);
+                cubicaf2.setControlX2(-80.69);
+                cubicaf2.setControlY2(-34.31);
+                cubicaf2.setFill(Color.TRANSPARENT);
+                cubicaf2.setStroke(getColor());
+                cubicaf2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaf2.setStrokeLineJoin(StrokeLineJoin.ROUND);       
+                fondo.getChildren().addAll(cubicaf,cubicaf1,cubicaf2);
                 return fondo;
             case 'g':
-                
+                CubicCurve cubicag= new CubicCurve();
+                CubicCurve cubicag1 = new CubicCurve(); 
+                CubicCurve cubicag2= new CubicCurve();
+                CubicCurve cubicag3= new CubicCurve();
+                fondo.setPrefSize(19,60);
+                //primerabase
+                cubicag.setLayoutX(35);
+                cubicag.setLayoutY(40);
+                cubicag.setStartX(-33.95);
+                cubicag.setStartY(-7.8);
+                cubicag.setEndX(-22.0);
+                cubicag.setEndY(-7.8);
+                cubicag.setControlX1(-37.5);
+                cubicag.setControlY1(3);
+                cubicag.setControlX2(-24.2);
+                cubicag.setControlY2(7);
+                cubicag.setFill(Color.TRANSPARENT);
+                cubicag.setStroke(getColor());
+                cubicag.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicag.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //lateral
+                cubicag1.setLayoutX(56.2);
+                cubicag1.setLayoutY(57);
+                cubicag1.setStartX(-53.19);
+                cubicag1.setStartY(-5.8);
+                cubicag1.setEndX(-42.6);
+                cubicag1.setEndY(-36);
+                cubicag1.setControlX1(-55.39);
+                cubicag1.setControlY1(10.59);
+                cubicag1.setControlX2(-42.6);
+                cubicag1.setControlY2(-0.4);
+                cubicag1.setFill(Color.TRANSPARENT);
+                cubicag1.setStroke(getColor());
+                cubicag1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicag1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //curva superior
+                cubicag2.setLayoutX(35.5);
+                cubicag2.setLayoutY(42);
+                cubicag2.setStartX(-34.94);
+                cubicag2.setStartY(-8.93);
+                cubicag2.setEndX(-23.39);
+                cubicag2.setEndY(-5.2);
+                cubicag2.setControlX1(-33.95);
+                cubicag2.setControlY1(-20.99);
+                cubicag2.setControlX2(-19.5);
+                cubicag2.setControlY2(-24.19);
+                cubicag2.setFill(Color.TRANSPARENT);
+                cubicag2.setStroke(getColor());
+                cubicag2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicag2.setStrokeLineJoin(StrokeLineJoin.ROUND); 
+                //uniogn
+                cubicag3.setLayoutX(59.5);
+                cubicag3.setLayoutY(70);
+                cubicag3.setStartX(-56.89);
+                cubicag3.setStartY(-17);
+                cubicag3.setEndX(-42.5);
+                cubicag3.setEndY(-33.8);
+                cubicag3.setControlX1(-54.69);
+                cubicag3.setControlY1(-28.59);
+                cubicag3.setControlX2(-45.43);
+                cubicag3.setControlY2(-27.14);
+                cubicag3.setFill(Color.TRANSPARENT);
+                cubicag3.setStroke(getColor());
+                cubicag3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicag3.setStrokeLineJoin(StrokeLineJoin.ROUND); 
+                fondo.getChildren().addAll(cubicag,cubicag1,cubicag2,cubicag3);  
                 return fondo;
             case 'h':
-                
+                CubicCurve cubicah= new CubicCurve();
+                CubicCurve cubicah1 = new CubicCurve();  
+                CubicCurve cubicah2 = new CubicCurve();
+                fondo.setPrefSize(19,60);
+                //primera 
+                cubicah.setLayoutX(70.0);
+                cubicah.setLayoutY(51.0);
+                cubicah.setStartX(-67);
+                cubicah.setStartY(-4.4);
+                cubicah.setEndX(-70);
+                cubicah.setEndY(-8.59);
+                cubicah.setControlX1(-70.79);
+                cubicah.setControlY1(-63.0);
+                cubicah.setControlX2(-54.2);
+                cubicah.setControlY2(-57.4);
+                cubicah.setFill(Color.TRANSPARENT);
+                cubicah.setStroke(getColor());
+                cubicah.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicah.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //curva superior
+                cubicah1.setLayoutX(39.0);
+                cubicah1.setLayoutY(45.0);
+                cubicah1.setStartX(-36.4);
+                cubicah1.setStartY(-9.4);
+                cubicah1.setEndX(-25.93);
+                cubicah1.setEndY(-6.2);
+                cubicah1.setControlX1(-34.6);
+                cubicah1.setControlY1(-19.39);
+                cubicah1.setControlX2(-20.8);
+                cubicah1.setControlY2(-19.4);
+                cubicah1.setFill(Color.TRANSPARENT);
+                cubicah1.setStroke(getColor());
+                cubicah1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicah1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //union
+                cubicah2.setLayoutX(76);
+                cubicah2.setLayoutY(68.5);
+                cubicah2.setStartX(-62.69);
+                cubicah2.setStartY(-30.55);
+                cubicah2.setEndX(-58.69);
+                cubicah2.setEndY(-27.7);
+                cubicah2.setControlX1(-68.7);
+                cubicah2.setControlY1(-15.5);
+                cubicah2.setControlX2(-60.89);
+                cubicah2.setControlY2(-24.3);
+                cubicah2.setFill(Color.TRANSPARENT);
+                cubicah2.setStroke(getColor());
+                cubicah2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicah2.setStrokeLineJoin(StrokeLineJoin.ROUND);  
+                fondo.getChildren().addAll(cubicah,cubicah1,cubicah2);
                 return fondo;
             case 'i':
-                
+                CubicCurve cubicai= new CubicCurve();
+                Circle circuloi = new Circle();
+                fondo.setPrefSize(19,60);
+                //base
+                cubicai.setLayoutX(34.0);
+                cubicai.setLayoutY(44.0);
+                cubicai.setStartX(-28.39);
+                cubicai.setStartY(-17);
+                cubicai.setEndX(-18.19);
+                cubicai.setEndY(-7.2);
+                cubicai.setControlX1(-35);
+                cubicai.setControlY1(3.19);
+                cubicai.setControlX2(-23.8);
+                cubicai.setControlY2(8.79);
+                cubicai.setFill(Color.TRANSPARENT);
+                cubicai.setStroke(getColor());
+                cubicai.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicai.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //Circulo
+                circuloi.setRadius(1);
+                circuloi.setFill(getColor());
+                circuloi.setStroke(getColor());
+                circuloi.setLayoutX(7);
+                circuloi.setLayoutY(19);
+                fondo.getChildren().addAll(cubicai,circuloi);
                 return fondo;
             case 'j':
-                
+                CubicCurve cubicaj= new CubicCurve();
+                CubicCurve cubicaj1 = new CubicCurve();   
+                Circle circuloj = new Circle();
+                fondo.setPrefSize(22,60);
+                //base
+                cubicaj.setLayoutX(73.5);
+                cubicaj.setLayoutY(79.5);
+                cubicaj.setStartX(-65.7);
+                cubicaj.setStartY(-52.9);
+                cubicaj.setEndX(-72.89);
+                cubicaj.setEndY(-29.09);
+                cubicaj.setControlX1(-58.3);
+                cubicaj.setControlY1(-36.5);
+                cubicaj.setControlX2(-77.5);
+                cubicaj.setControlY2(-5.09);
+                cubicaj.setFill(Color.TRANSPARENT);
+                cubicaj.setStroke(getColor());
+                cubicaj.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaj.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //union
+                cubicaj1.setLayoutX(25);
+                cubicaj1.setLayoutY(52);
+                cubicaj1.setStartX(-24.5);
+                cubicaj1.setStartY(-1.20);
+                cubicaj1.setEndX(-10.2);
+                cubicaj1.setEndY(-12.8);
+                cubicaj1.setControlX1(-16.4);
+                cubicaj1.setControlY1(-18.2);
+                cubicaj1.setControlX2(-14.48);
+                cubicaj1.setControlY2(-4.20);
+                cubicaj1.setFill(Color.TRANSPARENT);
+                cubicaj1.setStroke(getColor());
+                cubicaj1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaj1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //Circulo
+                circuloj.setRadius(1);
+                circuloj.setFill(getColor());
+                circuloj.setStroke(getColor());
+                circuloj.setLayoutX(8);
+                circuloj.setLayoutY(19);
+                fondo.getChildren().addAll(cubicaj,cubicaj1,circuloj);
                 return fondo;
             case 'k':
-                
+                CubicCurve cubicak= new CubicCurve();
+                CubicCurve cubicak1 = new CubicCurve();
+                CubicCurve cubicak2 = new CubicCurve(); 
+                fondo.setPrefSize(19,60);
+
+                // lateral
+                cubicak.setLayoutX(69);
+                cubicak.setLayoutY(49);
+                cubicak.setStartX(-66.39);
+                cubicak.setStartY(-3.59);
+                cubicak.setEndX(-70.79);
+                cubicak.setEndY(-7.8);
+                cubicak.setControlX1(-70.79);
+                cubicak.setControlY1(-63.0);
+                cubicak.setControlX2(-54.2);
+                cubicak.setControlY2(-57.4);
+                cubicak.setFill(Color.TRANSPARENT);
+                cubicak.setStroke(getColor());
+                cubicak.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicak.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //supekrior
+                cubicak1.setLayoutX(38);
+                cubicak1.setLayoutY(43);
+                cubicak1.setStartX(-36.4);
+                cubicak1.setStartY(-9.8);
+                cubicak1.setEndX(-36.4);
+                cubicak1.setEndY(-5.8);
+                cubicak1.setControlX1(-31.24);
+                cubicak1.setControlY1(-24.99);
+                cubicak1.setControlX2(-15.6);
+                cubicak1.setControlY2(-5.8);
+                cubicak1.setFill(Color.TRANSPARENT);
+                cubicak1.setStroke(getColor());
+                cubicak1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicak1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                //infekrior union
+                cubicak2.setLayoutX(75.5);
+                cubicak2.setLayoutY(69.5);
+                cubicak2.setStartX(-74.31);
+                cubicak2.setStartY(-32.9);
+                cubicak2.setEndX(-58.5);
+                cubicak2.setEndY(-27.09);
+                cubicak2.setControlX1(-53.3);
+                cubicak2.setControlY1(-36.9);
+                cubicak2.setControlX2(-69.3);
+                cubicak2.setControlY2(-17.3);
+                cubicak2.setFill(Color.TRANSPARENT);
+                cubicak2.setStroke(getColor());
+                cubicak2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicak2.setStrokeLineJoin(StrokeLineJoin.ROUND);    
+                fondo.getChildren().addAll(cubicak,cubicak1,cubicak2);
                 return fondo;
             case 'l':
-                
+                CubicCurve cubical1 = new CubicCurve();
+                CubicCurve cubical2 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica 1
+                cubical1.setLayoutX(5);
+                cubical1.setLayoutY(23);
+                cubical1.setStartX(-1.99);
+                cubical1.setStartY(19.2);
+                cubical1.setEndX(1.2);
+                cubical1.setEndY(19.2);
+                cubical1.setControlX1(13.79);
+                cubical1.setControlY1(-31.8);
+                cubical1.setControlX2(-13.39);
+                cubical1.setControlY2(-29.8);
+                cubical1.setFill(Color.TRANSPARENT);
+                cubical1.setStroke(getColor());
+                cubical1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubical1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubical2.setLayoutX(71.6);
+                cubical2.setLayoutY(69);
+                cubical2.setStartX(-66.4);
+                cubical2.setStartY(-31);
+                cubical2.setEndX(-58.3);
+                cubical2.setEndY(-29.4);
+                cubical2.setControlX1(-64.39);
+                cubical2.setControlY1(-21.59);
+                cubical2.setControlX2(-60.39);
+                cubical2.setControlY2(-21.59);
+                cubical2.setFill(Color.TRANSPARENT);
+                cubical2.setStroke(getColor());
+                cubical2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubical2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubical1, cubical2);
                 return fondo;
             case 'm':
-                
+                CubicCurve cubicam1 = new CubicCurve();
+                CubicCurve cubicam2 = new CubicCurve();
+                CubicCurve cubicam3 = new CubicCurve();
+                CubicCurve cubicam4 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica 1
+                cubicam1.setLayoutX(19);
+                cubicam1.setLayoutY(15);
+                cubicam1.setStartX(-8.2);
+                cubicam1.setStartY(30.4);
+                cubicam1.setEndX(-13.6);
+                cubicam1.setEndY(19.2);
+                cubicam1.setControlX1(-3.2);
+                cubicam1.setControlY1(4.39);
+                cubicam1.setControlX2(-13.6);
+                cubicam1.setControlY2(6);
+                cubicam1.setFill(Color.TRANSPARENT);
+                cubicam1.setStroke(getColor());
+                cubicam1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicam1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubicam2.setLayoutX(24);
+                cubicam2.setLayoutY(16);
+                cubicam2.setStartX(-7);
+                cubicam2.setStartY(23.4);
+                cubicam2.setEndX(-11.9);
+                cubicam2.setEndY(17.79);
+                cubicam2.setControlX1(-1.8);
+                cubicam2.setControlY1(6.79);
+                cubicam2.setControlX2(-11.9);
+                cubicam2.setControlY2(3.19);
+                cubicam2.setFill(Color.TRANSPARENT);
+                cubicam2.setStroke(getColor());
+                cubicam2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicam2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 3
+                cubicam3.setLayoutX(82.5);
+                cubicam3.setLayoutY(53.5);
+                cubicam3.setStartX(-60.89);
+                cubicam3.setStartY(-12.5);
+                cubicam3.setEndX(-65.4);
+                cubicam3.setEndY(-14.58);
+                cubicam3.setControlX1(-63.5);
+                cubicam3.setControlY1(-5.7);
+                cubicam3.setControlX2(-68.19);
+                cubicam3.setControlY2(-5.7);
+                cubicam3.setFill(Color.TRANSPARENT);
+                cubicam3.setStroke(getColor());
+                cubicam3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicam3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 4
+                cubicam4.setLayoutX(12);
+                cubicam4.setLayoutY(24);
+                cubicam4.setStartX(-7.93);
+                cubicam4.setStartY(21.91);
+                cubicam4.setEndX(-11.6);
+                cubicam4.setEndY(11.4);
+                cubicam4.setControlX1(-3.79);
+                cubicam4.setControlY1(-9.8);
+                cubicam4.setControlX2(-11.6);
+                cubicam4.setControlY2(0.19);
+                cubicam4.setFill(Color.TRANSPARENT);
+                cubicam4.setStroke(getColor());
+                cubicam4.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicam4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicam1, cubicam2, cubicam3, cubicam4);
                 return fondo;
             case 'n':
-                
+                CubicCurve cubican1 = new CubicCurve();
+                CubicCurve cubican2 = new CubicCurve();
+                CubicCurve cubican3 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubican1.setLayoutX(4.5);
+                cubican1.setLayoutY(22);
+                cubican1.setStartX(1.19);
+                cubican1.setStartY(11.4);
+                cubican1.setEndX(6.19);
+                cubican1.setEndY(18.79);
+                cubican1.setControlX1(3.69);
+                cubican1.setControlY1(-4.8);
+                cubican1.setControlX2(11.1);
+                cubican1.setControlY2(7);
+                cubican1.setFill(Color.TRANSPARENT);
+                cubican1.setStroke(getColor());
+                cubican1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubican1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubican2.setLayoutX(14);
+                cubican2.setLayoutY(25);
+                cubican2.setStartX(-10.8);
+                cubican2.setStartY(21);
+                cubican2.setEndX(-13);
+                cubican2.setEndY(11);
+                cubican2.setControlX1(-5);
+                cubican2.setControlY1(-10.39);
+                cubican2.setControlX2(-13);
+                cubican2.setControlY2(1.19);
+                cubican2.setFill(Color.TRANSPARENT);
+                cubican2.setStroke(getColor());
+                cubican2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubican2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 3
+                cubican3.setLayoutX(74.2);
+                cubican3.setLayoutY(56.5);
+                cubican3.setStartX(-59.59);
+                cubican3.setStartY(-14.58);
+                cubican3.setEndX(-63.2);
+                cubican3.setEndY(-16.5);
+                cubican3.setControlX1(-61.2);
+                cubican3.setControlY1(-10.3);
+                cubican3.setControlX2(-66);
+                cubican3.setControlY2(-6.7);
+                cubican3.setFill(Color.TRANSPARENT);
+                cubican3.setStroke(getColor());
+                cubican3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubican3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubican1, cubican2, cubican3);
                 return fondo;
             case 'ñ':
-                
+                CubicCurve cubicañ1 = new CubicCurve();
+                CubicCurve cubicañ2 = new CubicCurve();
+                CubicCurve cubicañ3 = new CubicCurve();
+                CubicCurve cubicañ4 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubicañ1.setLayoutX(4.5);
+                cubicañ1.setLayoutY(22);
+                cubicañ1.setStartX(1.19);
+                cubicañ1.setStartY(11.4);
+                cubicañ1.setEndX(6.19);
+                cubicañ1.setEndY(18.79);
+                cubicañ1.setControlX1(3.69);
+                cubicañ1.setControlY1(-4.8);
+                cubicañ1.setControlX2(11.1);
+                cubicañ1.setControlY2(7);
+                cubicañ1.setFill(Color.TRANSPARENT);
+                cubicañ1.setStroke(getColor());
+                cubicañ1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicañ1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubicañ2.setLayoutX(14);
+                cubicañ2.setLayoutY(25);
+                cubicañ2.setStartX(-10.8);
+                cubicañ2.setStartY(21);
+                cubicañ2.setEndX(-13);
+                cubicañ2.setEndY(11);
+                cubicañ2.setControlX1(-5);
+                cubicañ2.setControlY1(-10.39);
+                cubicañ2.setControlX2(-13);
+                cubicañ2.setControlY2(1.19);
+                cubicañ2.setFill(Color.TRANSPARENT);
+                cubicañ2.setStroke(getColor());
+                cubicañ2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicañ2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 3
+                cubicañ3.setLayoutX(74.2);
+                cubicañ3.setLayoutY(56.5);
+                cubicañ3.setStartX(-59.59);
+                cubicañ3.setStartY(-14.58);
+                cubicañ3.setEndX(-63.2);
+                cubicañ3.setEndY(-16.5);
+                cubicañ3.setControlX1(-61.2);
+                cubicañ3.setControlY1(-10.3);
+                cubicañ3.setControlX2(-66);
+                cubicañ3.setControlY2(-6.7);
+                cubicañ3.setFill(Color.TRANSPARENT);
+                cubicañ3.setStroke(getColor());
+                cubicañ3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicañ3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 4
+                cubicañ4.setLayoutX(71.2);
+                cubicañ4.setLayoutY(35.5);
+                cubicañ4.setStartX(-59.59);
+                cubicañ4.setStartY(-14.58);
+                cubicañ4.setEndX(-69.19);
+                cubicañ4.setEndY(-12.7);
+                cubicañ4.setControlX1(-63.2);
+                cubicañ4.setControlY1(-8.9);
+                cubicañ4.setControlX2(-65.4);
+                cubicañ4.setControlY2(-19.89);
+                cubicañ4.setFill(Color.TRANSPARENT);
+                cubicañ4.setStroke(getColor());
+                cubicañ4.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicañ4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicañ1, cubicañ2, cubicañ3, cubicañ4);
                 return fondo;
             case 'o':
-                
+                CubicCurve cubicao1 = new CubicCurve();
+                CubicCurve cubicao2 = new CubicCurve();
+                CubicCurve cubicao3 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //cubica 1
+                cubicao1.setLayoutX(38);
+                cubicao1.setLayoutY(44);
+                cubicao1.setStartX(-36.7);
+                cubicao1.setStartY(-8.21);
+                cubicao1.setEndX(-24);
+                cubicao1.setEndY(-8.21);
+                cubicao1.setControlX1(-33.4);
+                cubicao1.setControlY1(-20.4);
+                cubicao1.setControlX2(-24);
+                cubicao1.setControlY2(-20.4);
+                cubicao1.setFill(Color.TRANSPARENT);
+                cubicao1.setStroke(getColor());
+                cubicao1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicao1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubica 2
+                cubicao2.setLayoutX(38);
+                cubicao2.setLayoutY(44.5);
+                cubicao2.setStartX(-36.71);
+                cubicao2.setStartY(-8.68);
+                cubicao2.setEndX(-24.39);
+                cubicao2.setEndY(-8.68);
+                cubicao2.setControlX1(-39.6);
+                cubicao2.setControlY1(7);
+                cubicao2.setControlX2(-26.39);
+                cubicao2.setControlY2(5.5);
+                cubicao2.setFill(Color.TRANSPARENT);
+                cubicao2.setStroke(getColor());
+                cubicao2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicao2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubica 2
+                cubicao3.setLayoutX(43);
+                cubicao3.setLayoutY(52);
+                cubicao3.setStartX(-38.93);
+                cubicao3.setStartY(-22);
+                cubicao3.setEndX(-26);
+                cubicao3.setEndY(-19);
+                cubicao3.setControlX1(-38.93);
+                cubicao3.setControlY1(-15.88);
+                cubicao3.setControlX2(-31.6);
+                cubicao3.setControlY2(-14);
+                cubicao3.setFill(Color.TRANSPARENT);
+                cubicao3.setStroke(getColor());
+                cubicao3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicao3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                fondo.getChildren().addAll(cubicao1, cubicao2,cubicao3);
                 return fondo;
             case 'p':
-                
+                CubicCurve cubicap1 = new CubicCurve();
+                CubicCurve cubicap2 = new CubicCurve();
+                CubicCurve cubicap3 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubicap1.setLayoutX(13);
+                cubicap1.setLayoutY(28);
+                cubicap1.setStartX(-8.39);
+                cubicap1.setStartY(29.79);
+                cubicap1.setEndX(-13.19);
+                cubicap1.setEndY(14.4);
+                cubicap1.setControlX1(-10.19);
+                cubicap1.setControlY1(-27.99);
+                cubicap1.setControlX2(-5.19);
+                cubicap1.setControlY2(6.79);
+                cubicap1.setFill(Color.TRANSPARENT);
+                cubicap1.setStroke(getColor());
+                cubicap1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicap1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubicap2.setLayoutX(13);
+                cubicap2.setLayoutY(45);
+                cubicap2.setStartX(-7.38);
+                cubicap2.setStartY(-2.2);
+                cubicap2.setEndX(3.7);
+                cubicap2.setEndY(-2.2);
+                cubicap2.setControlX1(-14.39);
+                cubicap2.setControlY1(-8.8);
+                cubicap2.setControlX2(2.39);
+                cubicap2.setControlY2(5.79);
+                cubicap2.setFill(Color.TRANSPARENT);
+                cubicap2.setStroke(getColor());
+                cubicap2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicap2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 3
+                cubicap3.setLayoutX(5);
+                cubicap3.setLayoutY(31);
+                cubicap3.setStartX(-0.38);
+                cubicap3.setStartY(-0.2);
+                cubicap3.setEndX(1.2);
+                cubicap3.setEndY(12);
+                cubicap3.setControlX1(12);
+                cubicap3.setControlY1(-14.19);
+                cubicap3.setControlX2(15.39);
+                cubicap3.setControlY2(12);
+                cubicap3.setFill(Color.TRANSPARENT);
+                cubicap3.setStroke(getColor());
+                cubicap3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicap3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicap1, cubicap2, cubicap3);
                 return fondo;
             case 'q':
-                
+                CubicCurve cubicaq1 = new CubicCurve();
+                CubicCurve cubicaq2 = new CubicCurve();
+                CubicCurve cubicaq3 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubicaq1.setLayoutX(20);
+                cubicaq1.setLayoutY(28);
+                cubicaq1.setStartX(-6);
+                cubicaq1.setStartY(29.59);
+                cubicaq1.setEndX(0.19);
+                cubicaq1.setEndY(6.4);
+                cubicaq1.setControlX1(-6);
+                cubicaq1.setControlY1(-48.59);
+                cubicaq1.setControlX2(-8.6);
+                cubicaq1.setControlY2(40);
+                cubicaq1.setFill(Color.TRANSPARENT);
+                cubicaq1.setStroke(getColor());
+                cubicaq1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaq1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubicaq2.setLayoutX(10);
+                cubicaq2.setLayoutY(30);
+                cubicaq2.setStartX(2.19);
+                cubicaq2.setStartY(11);
+                cubicaq2.setEndX(-8.7);
+                cubicaq2.setEndY(11);
+                cubicaq2.setControlX1(6);
+                cubicaq2.setControlY1(5.19);
+                cubicaq2.setControlX2(-5.2);
+                cubicaq2.setControlY2(19);
+                cubicaq2.setFill(Color.TRANSPARENT);
+                cubicaq2.setStroke(getColor());
+                cubicaq2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaq2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 3
+                cubicaq3.setLayoutX(5);
+                cubicaq3.setLayoutY(29);
+                cubicaq3.setStartX(8);
+                cubicaq3.setStartY(-1);
+                cubicaq3.setEndX(9.6);
+                cubicaq3.setEndY(10);
+                cubicaq3.setControlX1(-9.39);
+                cubicaq3.setControlY1(-9.99);
+                cubicaq3.setControlX2(-3.2);
+                cubicaq3.setControlY2(21.79);
+                cubicaq3.setFill(Color.TRANSPARENT);
+                cubicaq3.setStroke(getColor());
+                cubicaq3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaq3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicaq1, cubicaq2, cubicaq3);
                 return fondo;
             case 'r':
-                
+                CubicCurve cubicar1 = new CubicCurve();
+                CubicCurve cubicar2 = new CubicCurve();
+                CubicCurve cubicar3 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubicar1.setLayoutX(-5.6);
+                cubicar1.setLayoutY(28);
+                cubicar1.setStartX(8.39);
+                cubicar1.setStartY(-0.59);
+                cubicar1.setEndX(5);
+                cubicar1.setEndY(18);
+                cubicar1.setControlX1(11);
+                cubicar1.setControlY1(13.59);
+                cubicar1.setControlX2(6.79);
+                cubicar1.setControlY2(16.19);
+                cubicar1.setFill(Color.TRANSPARENT);
+                cubicar1.setStroke(getColor());
+                cubicar1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicar1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubicar2.setLayoutX(13);
+                cubicar2.setLayoutY(28);
+                cubicar2.setStartX(2.6);
+                cubicar2.setStartY(-0.8);
+                cubicar2.setEndX(5.2);
+                cubicar2.setEndY(16);
+                cubicar2.setControlX1(-3.39);
+                cubicar2.setControlY1(-14.4);
+                cubicar2.setControlX2(0.39);
+                cubicar2.setControlY2(24.19);
+                cubicar2.setFill(Color.TRANSPARENT);
+                cubicar2.setStroke(getColor());
+                cubicar2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicar2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubica 3
+                cubicar3.setLayoutX(23);
+                cubicar3.setLayoutY(37);
+                cubicar3.setStartX(-20.6);
+                cubicar3.setStartY(-10.18);
+                cubicar3.setEndX(-7.17);
+                cubicar3.setEndY(-10.18);
+                cubicar3.setControlX1(-24.4);
+                cubicar3.setControlY1(-6.4);
+                cubicar3.setControlX2(-3.99);
+                cubicar3.setControlY2(-6.4);
+                cubicar3.setFill(Color.TRANSPARENT);
+                cubicar3.setStroke(getColor());
+                cubicar3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicar3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicar1, cubicar2, cubicar3);
                 return fondo;
             case 's':
-                
+                CubicCurve cubicas1 = new CubicCurve();
+                CubicCurve cubicas2 = new CubicCurve();
+                CubicCurve cubicas3 = new CubicCurve();
+                CubicCurve cubicas4 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubicas1.setLayoutX(6);
+                cubicas1.setLayoutY(30);
+                cubicas1.setStartX(7.79);
+                cubicas1.setStartY(13.79);
+                cubicas1.setEndX(-6);
+                cubicas1.setEndY(-4.55);
+                cubicas1.setControlX1(16.19);
+                cubicas1.setControlY1(1);
+                cubicas1.setControlX2(-3.6);
+                cubicas1.setControlY2(1);
+                cubicas1.setFill(Color.TRANSPARENT);
+                cubicas1.setStroke(getColor());
+                cubicas1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicas1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubicas2.setLayoutX(-3);
+                cubicas2.setLayoutY(67);
+                cubicas2.setStartX(3.22);
+                cubicas2.setStartY(-24.4);
+                cubicas2.setEndX(3.22);
+                cubicas2.setEndY(-40.4);
+                cubicas2.setControlX1(5.19);
+                cubicas2.setControlY1(-27.4);
+                cubicas2.setControlX2(6.79);
+                cubicas2.setControlY2(-30.59);
+                cubicas2.setFill(Color.TRANSPARENT);
+                cubicas2.setStroke(getColor());
+                cubicas2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicas2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 3
+                cubicas3.setLayoutX(10);
+                cubicas3.setLayoutY(77);
+                cubicas3.setStartX(3.6);
+                cubicas3.setStartY(-32.99);
+                cubicas3.setEndX(3.6);
+                cubicas3.setEndY(-32.99);
+                cubicas3.setControlX1(-9.96);
+                cubicas3.setControlY1(-33.21);
+                cubicas3.setControlX2(-3.6);
+                cubicas3.setControlY2(-28);
+                cubicas3.setFill(Color.TRANSPARENT);
+                cubicas3.setStroke(getColor());
+                cubicas3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicas3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubica 4
+                cubicas4.setLayoutX(19);
+                cubicas4.setLayoutY(86.2);
+                cubicas4.setStartX(-0.8);
+                cubicas4.setStartY(-44.6);
+                cubicas4.setEndX(-12);
+                cubicas4.setEndY(-42);
+                cubicas4.setControlX1(-0.8);
+                cubicas4.setControlY1(-35);
+                cubicas4.setControlX2(-4.2);
+                cubicas4.setControlY2(-44.6);
+                cubicas4.setFill(Color.TRANSPARENT);
+                cubicas4.setStroke(getColor());
+                cubicas4.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicas4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicas1, cubicas2, cubicas3, cubicas4);
                 return fondo;
             case 't':
-                
+                CubicCurve cubicat1 = new CubicCurve();
+                CubicCurve cubicat2 = new CubicCurve();
+                Line lineat1 = new Line();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubicat1.setLayoutX(9);
+                cubicat1.setLayoutY(25);
+                cubicat1.setStartX(-1.99);
+                cubicat1.setStartY(19.22);
+                cubicat1.setEndX(1.2);
+                cubicat1.setEndY(19.22);
+                cubicat1.setControlX1(3.6);
+                cubicat1.setControlY1(-35);
+                cubicat1.setControlX2(-5);
+                cubicat1.setControlY2(-35);
+                cubicat1.setFill(Color.TRANSPARENT);
+                cubicat1.setStroke(getColor());
+                cubicat1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicat1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubica 2
+                cubicat2.setLayoutX(76);
+                cubicat2.setLayoutY(71);
+                cubicat2.setStartX(-66.4);
+                cubicat2.setStartY(-31);
+                cubicat2.setEndX(-58.39);
+                cubicat2.setEndY(-29.4);
+                cubicat2.setControlX1(-66.39);
+                cubicat2.setControlY1(-21.59);
+                cubicat2.setControlX2(-60.39);
+                cubicat2.setControlY2(-21.59);
+                cubicat2.setFill(Color.TRANSPARENT);
+                cubicat2.setStroke(getColor());
+                cubicat2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicat2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea
+                lineat1.setLayoutX(10);
+                lineat1.setLayoutY(10);
+                lineat1.setStartX(-9.39);
+                lineat1.setStartY(3.59);
+                lineat1.setEndX(6.39);
+                lineat1.setEndY(3.59);
+                lineat1.setFill(Color.TRANSPARENT);
+                lineat1.setStroke(getColor());
+                lineat1.setStrokeLineCap(StrokeLineCap.ROUND);
+                lineat1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicat1, cubicat2, lineat1);
                 return fondo;
             case 'u':
-                
+                CubicCurve cubicau1= new CubicCurve();
+                CubicCurve cubicau2 = new CubicCurve(); 
+
+                fondo.setPrefSize(19,60);
+
+                //cubica 1
+                cubicau1.setLayoutX(36);
+                cubicau1.setLayoutY(42);
+                cubicau1.setStartX(-33.79);
+                cubicau1.setStartY(-16.4);
+                cubicau1.setEndX(-23.8);
+                cubicau1.setEndY(-16.4);
+                cubicau1.setControlX1(-40);
+                cubicau1.setControlY1(5.59);
+                cubicau1.setControlX2(-23.8);
+                cubicau1.setControlY2(16);
+                cubicau1.setFill(Color.TRANSPARENT);
+                cubicau1.setStroke(getColor());
+                cubicau1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicau1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                // cubica 2
+                cubicau2.setLayoutX(44);
+                cubicau2.setLayoutY(57);
+                cubicau2.setStartX(-31.8);
+                cubicau2.setStartY(-28.59);
+                cubicau2.setEndX(-26.39);
+                cubicau2.setEndY(-15.59);
+                cubicau2.setControlX1(-34);
+                cubicau2.setControlY1(-7.95);
+                cubicau2.setControlX2(-26.39);
+                cubicau2.setControlY2(-7.95);
+                cubicau2.setFill(Color.TRANSPARENT);
+                cubicau2.setStroke(getColor());
+                cubicau2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicau2.setStrokeLineJoin(StrokeLineJoin.ROUND);  
+
+                fondo.getChildren().addAll(cubicau1,cubicau2);
                 return fondo;
             case 'v':
-                
+                CubicCurve cubicav1 = new CubicCurve();
+                CubicCurve cubicav2 = new CubicCurve();
+                CubicCurve cubicav3 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica 1
+                cubicav1.setLayoutX(12.89);
+                cubicav1.setLayoutY(22.5);
+                cubicav1.setStartX(-10.19);
+                cubicav1.setStartY(3.8);
+                cubicav1.setEndX(-0.89);
+                cubicav1.setEndY(7.49);
+                cubicav1.setControlX1(-8.1);
+                cubicav1.setControlY1(45.1);
+                cubicav1.setControlX2(1.34);
+                cubicav1.setControlY2(13.29);
+                cubicav1.setFill(Color.TRANSPARENT);
+                cubicav1.setStroke(getColor());
+                cubicav1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicav1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubica 2
+                cubicav2.setLayoutX(65);
+                cubicav2.setLayoutY(63.5);
+                cubicav2.setStartX(-61.84);
+                cubicav2.setStartY(-33.84);
+                cubicav2.setEndX(-64.5);
+                cubicav2.setEndY(-23.29);
+                cubicav2.setControlX1(-61.84);
+                cubicav2.setControlY1(-41.8);
+                cubicav2.setControlX2(-66.39);
+                cubicav2.setControlY2(-41.8);
+                cubicav2.setFill(Color.TRANSPARENT);
+                cubicav2.setStroke(getColor());
+                cubicav2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicav2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubica3
+                cubicav3.setLayoutX(80.2);
+                cubicav3.setLayoutY(62);
+                cubicav3.setStartX(-62.79);
+                cubicav3.setStartY(-33.84);
+                cubicav3.setEndX(-67.99);
+                cubicav3.setEndY(-32.2);
+                cubicav3.setControlX1(-72.79);
+                cubicav3.setControlY1(-28.6);
+                cubicav3.setControlX2(-76.8);
+                cubicav3.setControlY2(-39);
+                cubicav3.setFill(Color.TRANSPARENT);
+                cubicav3.setStroke(getColor());
+                cubicav3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicav3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicav1,cubicav2,cubicav3);
                 return fondo;
             case 'w':
-                
+                CubicCurve cubicaw1 = new CubicCurve();
+                CubicCurve cubicaw2 = new CubicCurve();
+                CubicCurve cubicaw3 = new CubicCurve();
+                CubicCurve cubicaw4 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubicaw1.setLayoutX(88.2);
+                cubicaw1.setLayoutY(60);
+                cubicaw1.setStartX(-71.19);
+                cubicaw1.setStartY(-32.29);
+                cubicaw1.setEndX(-75.59);
+                cubicaw1.setEndY(-32.29);
+                cubicaw1.setControlX1(-83.97);
+                cubicaw1.setControlY1(-30.19);
+                cubicaw1.setControlX2(-78.39);
+                cubicaw1.setControlY2(-36.5);
+                cubicaw1.setFill(Color.TRANSPARENT);
+                cubicaw1.setStroke(getColor());
+                cubicaw1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaw1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubicaw2.setLayoutX(8.5);
+                cubicaw2.setLayoutY(23);
+                cubicaw2.setStartX(-6.4);
+                cubicaw2.setStartY(3.8);
+                cubicaw2.setEndX(-1.02);
+                cubicaw2.setEndY(3.8);
+                cubicaw2.setControlX1(-4.5);
+                cubicaw2.setControlY1(44.5);
+                cubicaw2.setControlX2(2.19);
+                cubicaw2.setControlY2(11.9);
+                cubicaw2.setFill(Color.TRANSPARENT);
+                cubicaw2.setStroke(getColor());
+                cubicaw2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaw2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 3
+                cubicaw3.setLayoutX(64);
+                cubicaw3.setLayoutY(63);
+                cubicaw3.setStartX(-61.84);
+                cubicaw3.setStartY(-33.84);
+                cubicaw3.setEndX(-64);
+                cubicaw3.setEndY(-23.29);
+                cubicaw3.setControlX1(-61.84);
+                cubicaw3.setControlY1(-41.8);
+                cubicaw3.setControlX2(-66.39);
+                cubicaw3.setControlY2(-41.8);
+                cubicaw3.setFill(Color.TRANSPARENT);
+                cubicaw3.setStroke(getColor());
+                cubicaw3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaw3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubica 4
+                cubicaw4.setLayoutX(13.89);
+                cubicaw4.setLayoutY(23);
+                cubicaw4.setStartX(-6.4);
+                cubicaw4.setStartY(3.8);
+                cubicaw4.setEndX(-0.88);
+                cubicaw4.setEndY(5.14);
+                cubicaw4.setControlX1(-4.5);
+                cubicaw4.setControlY1(44.5);
+                cubicaw4.setControlX2(2.19);
+                cubicaw4.setControlY2(11.9);
+                cubicaw4.setFill(Color.TRANSPARENT);
+                cubicaw4.setStroke(getColor());
+                cubicaw4.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaw4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicaw1, cubicaw2, cubicaw3, cubicaw4);
                 return fondo;
             case 'x':
-                
+                CubicCurve cubicax1 = new CubicCurve();
+                CubicCurve cubicax2 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubicax1.setLayoutX(8.5);
+                cubicax1.setLayoutY(23);
+                cubicax1.setStartX(-8.5);
+                cubicax1.setStartY(22.4);
+                cubicax1.setEndX(5.7);
+                cubicax1.setEndY(2.67);
+                cubicax1.setControlX1(-4.29);
+                cubicax1.setControlY1(30);
+                cubicax1.setControlX2(1.52);
+                cubicax1.setControlY2(2.30);
+                cubicax1.setFill(Color.TRANSPARENT);
+                cubicax1.setStroke(getColor());
+                cubicax1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicax1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubicax2.setLayoutX(13.89);
+                cubicax2.setLayoutY(23.5);
+                cubicax2.setStartX(-11.29);
+                cubicax2.setStartY(2.9);
+                cubicax2.setEndX(3.5);
+                cubicax2.setEndY(22.19);
+                cubicax2.setControlX1(-6.79);
+                cubicax2.setControlY1(0.98);
+                cubicax2.setControlX2(-3.9);
+                cubicax2.setControlY2(29.19);
+                cubicax2.setFill(Color.TRANSPARENT);
+                cubicax2.setStroke(getColor());
+                cubicax2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicax2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicax1, cubicax2);
                 return fondo;
             case 'y':
-                
+                CubicCurve cubicay1 = new CubicCurve();
+                CubicCurve cubicay2 = new CubicCurve();
+                CubicCurve cubicay3 = new CubicCurve();
+                CubicCurve cubicay4 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubicay1.setLayoutX(10.5);
+                cubicay1.setLayoutY(19);
+                cubicay1.setStartX(-6.5);
+                cubicay1.setStartY(6.19);
+                cubicay1.setEndX(1.5);
+                cubicay1.setEndY(6.19);
+                cubicay1.setControlX1(-10.5);
+                cubicay1.setControlY1(28);
+                cubicay1.setControlX2(4.9);
+                cubicay1.setControlY2(28);
+                cubicay1.setFill(Color.TRANSPARENT);
+                cubicay1.setStroke(getColor());
+                cubicay1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicay1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubicay2.setLayoutX(55);
+                cubicay2.setLayoutY(55);
+                cubicay2.setStartX(-52.79);
+                cubicay2.setStartY(-2.91);
+                cubicay2.setEndX(-42.39);
+                cubicay2.setEndY(-23.8);
+                cubicay2.setControlX1(-55.39);
+                cubicay2.setControlY1(10.59);
+                cubicay2.setControlX2(-40.2);
+                cubicay2.setControlY2(-0.2);
+                cubicay2.setFill(Color.TRANSPARENT);
+                cubicay2.setStroke(getColor());
+                cubicay2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicay2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 3
+                cubicay3.setLayoutX(59);
+                cubicay3.setLayoutY(69);
+                cubicay3.setStartX(-56.89);
+                cubicay3.setStartY(-17);
+                cubicay3.setEndX(-42.5);
+                cubicay3.setEndY(-33.8);
+                cubicay3.setControlX1(-53.79);
+                cubicay3.setControlY1(-27.14);
+                cubicay3.setControlX2(-45.43);
+                cubicay3.setControlY2(-27.14);
+                cubicay3.setFill(Color.TRANSPARENT);
+                cubicay3.setStroke(getColor());
+                cubicay3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicay3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubica 4
+                cubicay4.setLayoutX(66.2);
+                cubicay4.setLayoutY(63);
+                cubicay4.setStartX(-61.99);
+                cubicay4.setStartY(-37.2);
+                cubicay4.setEndX(-64);
+                cubicay4.setEndY(-23.39);
+                cubicay4.setControlX1(-61.84);
+                cubicay4.setControlY1(-41.9);
+                cubicay4.setControlX2(-66.39);
+                cubicay4.setControlY2(-41.8);
+                cubicay4.setFill(Color.TRANSPARENT);
+                cubicay4.setStroke(getColor());
+                cubicay4.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicay4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicay1, cubicay2, cubicay3, cubicay4);
                 return fondo;
             case 'z':
-                
+                CubicCurve cubicaz1 = new CubicCurve();
+                CubicCurve cubicaz2 = new CubicCurve();
+                CubicCurve cubicaz3 = new CubicCurve();
+                CubicCurve cubicaz4 = new CubicCurve();
+
+                fondo.setPrefSize(19, 60);
+
+                //Cubica
+                cubicaz1.setLayoutX(8.5);
+                cubicaz1.setLayoutY(28);
+                cubicaz1.setStartX(-6.9);
+                cubicaz1.setStartY(6);
+                cubicaz1.setEndX(-0.9);
+                cubicaz1.setEndY(9);
+                cubicaz1.setControlX1(-0.9);
+                cubicaz1.setControlY1(-5.99);
+                cubicaz1.setControlX2(14.5);
+                cubicaz1.setControlY2(-2);
+                cubicaz1.setFill(Color.TRANSPARENT);
+                cubicaz1.setStroke(getColor());
+                cubicaz1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaz1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica 2
+                cubicaz2.setLayoutX(54);
+                cubicaz2.setLayoutY(55);
+                cubicaz2.setStartX(-52.79);
+                cubicaz2.setStartY(-2.91);
+                cubicaz2.setEndX(-41);
+                cubicaz2.setEndY(-15.8);
+                cubicaz2.setControlX1(-55.39);
+                cubicaz2.setControlY1(10.59);
+                cubicaz2.setControlX2(-46.2);
+                cubicaz2.setControlY2(-2.91);
+                cubicaz2.setFill(Color.TRANSPARENT);
+                cubicaz2.setStroke(getColor());
+                cubicaz2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaz2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubic 3
+                cubicaz3.setLayoutX(58);
+                cubicaz3.setLayoutY(69);
+                cubicaz3.setStartX(-56.89);
+                cubicaz3.setStartY(-17);
+                cubicaz3.setEndX(-40.59);
+                cubicaz3.setEndY(-29.2);
+                cubicaz3.setControlX1(-52.14);
+                cubicaz3.setControlY1(-32.34);
+                cubicaz3.setControlX2(-45.79);
+                cubicaz3.setControlY2(-20.4);
+                cubicaz3.setFill(Color.TRANSPARENT);
+                cubicaz3.setStroke(getColor());
+                cubicaz3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaz3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //cubica4
+                cubicaz4.setLayoutX(15.5);
+                cubicaz4.setLayoutY(30);
+                cubicaz4.setStartX(-8.29);
+                cubicaz4.setStartY(7.04);
+                cubicaz4.setEndX(-3.5);
+                cubicaz4.setEndY(12);
+                cubicaz4.setControlX1(-14.62);
+                cubicaz4.setControlY1(8.2);
+                cubicaz4.setControlX2(3.9);
+                cubicaz4.setControlY2(-0.59);
+                cubicaz4.setFill(Color.TRANSPARENT);
+                cubicaz4.setStroke(getColor());
+                cubicaz4.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicaz4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubicaz1, cubicaz2, cubicaz3, cubicaz4);
                 return fondo;
             case ' ':
                 
                 return fondo;
             case '!':
-                
+                Ellipse elipse = new Ellipse();
+                Circle circulo = new Circle();
+
+                //Elipse
+                elipse.setRadiusX(1);
+                elipse.setRadiusY(20);
+                elipse.setFill(getColor());
+                elipse.setStroke(getColor());
+                elipse.setLayoutX(11);
+                elipse.setLayoutY(24);
+
+                //Circulo
+                circulo.setRadius(2);
+                circulo.setFill(getColor());
+                circulo.setStroke(getColor());
+                circulo.setLayoutX(11);
+                circulo.setLayoutY(50);
+
+                fondo.getChildren().addAll(elipse, circulo);
                 return fondo;
             case '¡':
-                
+                Ellipse elipse1 = new Ellipse();
+                Circle circulo1 = new Circle();
+
+                //Elipse
+                elipse1.setRadiusX(1);
+                elipse1.setRadiusY(20);
+                elipse1.setFill(getColor());
+                elipse1.setStroke(getColor());
+                elipse1.setLayoutX(11);
+                elipse1.setLayoutY(32);
+
+                //Circulo
+                circulo1.setRadius(2);
+                circulo1.setFill(getColor());
+                circulo1.setStroke(getColor());
+                circulo1.setLayoutX(11);
+                circulo1.setLayoutY(5);
+
+                fondo.getChildren().addAll(elipse1, circulo1);
                 return fondo;
             case '¿':
-                
+                CubicCurve cubica = new CubicCurve();
+                Line linea1 = new Line();
+                Circle circulo2 = new Circle();
+
+                fondo.setPrefSize(34, 60);
+
+                //Cubica
+                cubica.setLayoutX(12);
+                cubica.setLayoutY(59);
+                cubica.setStartX(13.33);
+                cubica.setStartY(-25.19);
+                cubica.setEndX(13.33);
+                cubica.setEndY(-5.46);
+                cubica.setControlX1(-18.66);
+                cubica.setControlY1(-34.79);
+                cubica.setControlX2(-18.66);
+                cubica.setControlY2(2.53);
+                cubica.setFill(Color.TRANSPARENT);
+                cubica.setStroke(getColor());
+                cubica.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea
+                linea1.setLayoutX(21);
+                linea1.setLayoutY(25);
+                linea1.setStartX(3.8);
+                linea1.setStartY(-13);
+                linea1.setEndX(3.8);
+                linea1.setEndY(7.8);
+                linea1.setFill(Color.TRANSPARENT);
+                linea1.setStroke(getColor());
+                linea1.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Circulo
+                circulo2.setRadius(3);
+                circulo2.setFill(getColor());
+                circulo2.setStroke(getColor());
+                circulo2.setLayoutX(25);
+                circulo2.setLayoutY(6);
+
+                fondo.getChildren().addAll(cubica, linea1, circulo2);
                 return fondo;
             case '?':
-                
+                CubicCurve cubica1 = new CubicCurve();
+                Line linea2 = new Line();
+                Circle circulo3 = new Circle();
+
+                fondo.setPrefSize(34, 60);
+
+                //Cubica
+                cubica1.setLayoutX(-7);
+                cubica1.setLayoutY(29);
+                cubica1.setStartX(13.33);
+                cubica1.setStartY(-24.19);
+                cubica1.setEndX(13.33);
+                cubica1.setEndY(-4.46);
+                cubica1.setControlX1(36.19);
+                cubica1.setControlY1(-35.93);
+                cubica1.setControlX2(36.19);
+                cubica1.setControlY2(4.59);
+                cubica1.setFill(Color.TRANSPARENT);
+                cubica1.setStroke(getColor());
+                cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea
+                linea2.setLayoutX(2);
+                linea2.setLayoutY(37);
+                linea2.setStartX(3.8);
+                linea2.setStartY(-13);
+                linea2.setEndX(3.8);
+                linea2.setEndY(7.8);
+                linea2.setFill(Color.TRANSPARENT);
+                linea2.setStroke(getColor());
+                linea2.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Circulo
+                circulo3.setRadius(3);
+                circulo3.setFill(getColor());
+                circulo3.setStroke(getColor());
+                circulo3.setLayoutX(6);
+                circulo3.setLayoutY(51);
+
+                fondo.getChildren().addAll(cubica1, linea2, circulo3);
                 return fondo;
             case '.':
-                
+                Circle circulo4 = new Circle();
+        
+                //Atributos del fondo
+                fondo.setPrefSize(22, 60);
+        
+                //Circulo
+                circulo4.setRadius(3);
+                circulo4.setFill(getColor());
+                circulo4.setStroke(getColor());
+                circulo4.setLayoutX(9);
+                circulo4.setLayoutY(47);
+
+                fondo.getChildren().addAll(circulo4);
                 return fondo;
             case ',':
-                
+                Circle circulo5 = new Circle();
+                QuadCurve cuadratica = new QuadCurve();
+
+                fondo.setPrefSize(22, 60);
+
+                //Circulo
+                circulo5.setRadius(2);
+                circulo5.setFill(getColor());
+                circulo5.setStroke(getColor());
+                circulo5.setLayoutX(9);
+                circulo5.setLayoutY(47);
+
+                //Cuadratica
+                cuadratica.setLayoutX(18);
+                cuadratica.setLayoutY(77);
+                cuadratica.setStartX(-9.39);
+                cuadratica.setStartY(-20.59);
+                cuadratica.setEndX(-7.62);
+                cuadratica.setEndY(-31);
+                cuadratica.setControlX(-5.8);
+                cuadratica.setControlY(-25.4);
+                cuadratica.setFill(Color.TRANSPARENT);
+                cuadratica.setStroke(getColor());
+                cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
+                cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(circulo5, cuadratica);
                 return fondo;
             case ';':
-                
+                Circle circulo6 = new Circle();
+                Circle circulo7 = new Circle();
+                QuadCurve cuadratica1 = new QuadCurve();
+
+                fondo.setPrefSize(22, 60);
+
+                //Circulo
+                circulo6.setRadius(2);
+                circulo6.setFill(getColor());
+                circulo6.setStroke(getColor());
+                circulo6.setLayoutX(9);
+                circulo6.setLayoutY(34);
+
+                //Circulo2
+                circulo7.setRadius(2);
+                circulo7.setFill(getColor());
+                circulo7.setStroke(getColor());
+                circulo7.setLayoutX(9);
+                circulo7.setLayoutY(47);
+
+                //Cuadratica
+                cuadratica1.setLayoutX(18);
+                cuadratica1.setLayoutY(77);
+                cuadratica1.setStartX(-9.39);
+                cuadratica1.setStartY(-20.59);
+                cuadratica1.setEndX(-7.62);
+                cuadratica1.setEndY(-31);
+                cuadratica1.setControlX(-5.8);
+                cuadratica1.setControlY(-25.4);
+                cuadratica1.setFill(Color.TRANSPARENT);
+                cuadratica1.setStroke(getColor());
+                cuadratica1.setStrokeLineCap(StrokeLineCap.ROUND);
+                cuadratica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(circulo6, cuadratica1, circulo7);
                 return fondo;
             case ':':
-                
+                Circle circulo8 = new Circle();
+                Circle circulo9 = new Circle();
+
+                fondo.setPrefSize(22, 60);
+
+                //Circulo
+                circulo8.setRadius(2);
+                circulo8.setFill(getColor());
+                circulo8.setStroke(getColor());
+                circulo8.setLayoutX(9);
+                circulo8.setLayoutY(34);
+
+                //Circulo2
+                circulo9.setRadius(2);
+                circulo9.setFill(getColor());
+                circulo9.setStroke(getColor());
+                circulo9.setLayoutX(9);
+                circulo9.setLayoutY(47);
+
+                fondo.getChildren().addAll(circulo8, circulo9);
                 return fondo;
             case '(':
-                
+                QuadCurve cubica2 = new QuadCurve();
+        
+                fondo.setPrefSize(22, 60);
+
+                //Cubica
+                cubica2.setLayoutX(20);
+                cubica2.setLayoutY(55);
+                cubica2.setStartX(-6.6);
+                cubica2.setStartY(1.8);
+                cubica2.setEndX(-6.6);
+                cubica2.setEndY(-51.8);
+                cubica2.setControlX(-29.3);
+                cubica2.setControlY(-25.8);
+                cubica2.setFill(Color.TRANSPARENT);
+                cubica2.setStroke(getColor());
+                cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubica2);
                 return fondo;
             case ')':
-                
+                QuadCurve cubica3 = new QuadCurve();
+        
+                fondo.setPrefSize(22, 60);
+
+                //Cubica
+                cubica3.setLayoutX(9);
+                cubica3.setLayoutY(55);
+                cubica3.setStartX(-6.6);
+                cubica3.setStartY(1.8);
+                cubica3.setEndX(-6.6);
+                cubica3.setEndY(-51.8);
+                cubica3.setControlX(14.6);
+                cubica3.setControlY(-25);
+                cubica3.setFill(Color.TRANSPARENT);
+                cubica3.setStroke(getColor());
+                cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubica3);
                 return fondo;
             case '[':
-                
+                Line linea3 = new Line();
+                Line linea4 = new Line();
+                Line linea5 = new Line();
+
+                fondo.setPrefSize(34, 60);
+
+                //Linea Vertical
+                linea3.setLayoutX(18);
+                linea3.setLayoutY(34);
+                linea3.setStartX(-13.6);
+                linea3.setStartY(-27.6);
+                linea3.setEndX(-13.69);
+                linea3.setEndY(21.39);
+                linea3.setFill(Color.TRANSPARENT);
+                linea3.setStroke(getColor());
+                linea3.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea Superior
+                linea4.setLayoutX(14);
+                linea4.setLayoutY(26);
+                linea4.setStartX(-9.19);
+                linea4.setStartY(-19.6);
+                linea4.setEndX(8.8);
+                linea4.setEndY(-19.6);
+                linea4.setFill(Color.TRANSPARENT);
+                linea4.setStroke(getColor());
+                linea4.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea Inferior
+                linea5.setLayoutX(14);
+                linea5.setLayoutY(75);
+                linea5.setStartX(-9.19);
+                linea5.setStartY(-19.6);
+                linea5.setEndX(8.8);
+                linea5.setEndY(-19.6);
+                linea5.setFill(Color.TRANSPARENT);
+                linea5.setStroke(getColor());
+                linea5.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea5.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(linea3, linea4, linea5);
                 return fondo;
             case ']':
-                
+                Line linea6 = new Line();
+                Line linea7 = new Line();
+                Line linea8 = new Line();
+
+                fondo.setPrefSize(34, 60);
+
+                //Linea Vertical
+                linea6.setLayoutX(44);
+                linea6.setLayoutY(34);
+                linea6.setStartX(-13.6);
+                linea6.setStartY(-27.6);
+                linea6.setEndX(-13.69);
+                linea6.setEndY(21.39);
+                linea6.setFill(Color.TRANSPARENT);
+                linea6.setStroke(getColor());
+                linea6.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea6.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea Superior
+                linea7.setLayoutX(21);
+                linea7.setLayoutY(26);
+                linea7.setStartX(-9.19);
+                linea7.setStartY(-19.6);
+                linea7.setEndX(8.8);
+                linea7.setEndY(-19.6);
+                linea7.setFill(Color.TRANSPARENT);
+                linea7.setStroke(getColor());
+                linea7.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea7.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea Inferior
+                linea8.setLayoutX(21);
+                linea8.setLayoutY(75);
+                linea8.setStartX(-9.19);
+                linea8.setStartY(-19.6);
+                linea8.setEndX(8.8);
+                linea8.setEndY(-19.6);
+                linea8.setFill(Color.TRANSPARENT);
+                linea8.setStroke(getColor());
+                linea8.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea8.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(linea6, linea7, linea8);
                 return fondo;
             case '{':
-                
+                CubicCurve cubica4 = new CubicCurve();
+                CubicCurve cubica5 = new CubicCurve();
+
+                fondo.setPrefSize(34, 60);
+
+                //Cubica superior
+                cubica4.setLayoutX(4);
+                cubica4.setLayoutY(29);
+                cubica4.setStartX(-0.2);
+                cubica4.setStartY(1);
+                cubica4.setEndX(17);
+                cubica4.setEndY(-24.6);
+                cubica4.setControlX1(17);
+                cubica4.setControlY1(1);
+                cubica4.setControlX2(-4.2);
+                cubica4.setControlY2(-24.6);
+                cubica4.setFill(Color.TRANSPARENT);
+                cubica4.setStroke(getColor());
+                cubica4.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubica4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica Inferior
+                cubica5.setLayoutX(7);
+                cubica5.setLayoutY(45);
+                cubica5.setStartX(13.59);
+                cubica5.setStartY(10.59);
+                cubica5.setEndX(-4.2);
+                cubica5.setEndY(-14);
+                cubica5.setControlX1(-0.79);
+                cubica5.setControlY1(10.59);
+                cubica5.setControlX2(13.59);
+                cubica5.setControlY2(-14);
+                cubica5.setFill(Color.TRANSPARENT);
+                cubica5.setStroke(getColor());
+                cubica5.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubica5.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubica4, cubica5);
                 return fondo;
             case '}':
-                
+                CubicCurve cubica6 = new CubicCurve();
+                CubicCurve cubica7 = new CubicCurve();
+
+                fondo.setPrefSize(34, 60);
+
+                //Cubica superior
+                cubica6.setLayoutX(11);
+                cubica6.setLayoutY(15);
+                cubica6.setStartX(11.08);
+                cubica6.setStartY(15);
+                cubica6.setEndX(-9.39);
+                cubica6.setEndY(-11.4);
+                cubica6.setControlX1(-8.12);
+                cubica6.setControlY1(15);
+                cubica6.setControlX2(11.08);
+                cubica6.setControlY2(-11.4);
+                cubica6.setFill(Color.TRANSPARENT);
+                cubica6.setStroke(getColor());
+                cubica6.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubica6.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cubica Inferior
+                cubica7.setLayoutX(15);
+                cubica7.setLayoutY(36);
+                cubica7.setStartX(-11);
+                cubica7.setStartY(20.39);
+                cubica7.setEndX(8.21);
+                cubica7.setEndY(-4.86);
+                cubica7.setControlX1(8.21);
+                cubica7.setControlY1(20.39);
+                cubica7.setControlX2(-11);
+                cubica7.setControlY2(-4.86);
+                cubica7.setFill(Color.TRANSPARENT);
+                cubica7.setStroke(getColor());
+                cubica7.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubica7.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(cubica6, cubica7);
                 return fondo;
             case '-':
-                
+                Line linea9 = new Line();
+        
+                fondo.setPrefSize(34, 60);
+
+                linea9.setLayoutX(17);
+                linea9.setLayoutY(25);
+                linea9.setStartX(-14);
+                linea9.setStartY(5);
+                linea9.setEndX(14);
+                linea9.setEndY(5);
+                linea9.setFill(Color.TRANSPARENT);
+                linea9.setStroke(getColor());
+                linea9.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea9.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(linea9);
                 return fondo;
             case '_':
-                
+                Line linea10 = new Line();
+        
+                fondo.setPrefSize(34, 60);
+
+                linea10.setLayoutX(13);
+                linea10.setLayoutY(50);
+                linea10.setStartX(-10);
+                linea10.setStartY(5);
+                linea10.setEndX(15.2);
+                linea10.setEndY(5);
+                linea10.setFill(Color.TRANSPARENT);
+                linea10.setStroke(getColor());
+                linea10.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea10.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(linea10);
                 return fondo;
             case 39:
-                
+                Circle circulo10 = new Circle();
+                QuadCurve cuadratica2 = new QuadCurve();
+
+                fondo.setPrefSize(22, 60);
+
+                //Circulo
+                circulo10.setRadius(2);
+                circulo10.setFill(getColor());
+                circulo10.setStroke(getColor());
+                circulo10.setLayoutX(9);
+                circulo10.setLayoutY(5);
+
+                //Cuadratica
+                cuadratica2.setLayoutX(15);
+                cuadratica2.setLayoutY(36);
+                cuadratica2.setStartX(-4.8);
+                cuadratica2.setStartY(-23);
+                cuadratica2.setEndX(-7.62);
+                cuadratica2.setEndY(-31);
+                cuadratica2.setControlX(-7.62);
+                cuadratica2.setControlY(-26);
+                cuadratica2.setFill(Color.TRANSPARENT);
+                cuadratica2.setStroke(getColor());
+                cuadratica2.setStrokeLineCap(StrokeLineCap.ROUND);
+                cuadratica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(circulo10, cuadratica2);
                 return fondo;
             case '"':
-                
+                Circle circulo11 = new Circle();
+                QuadCurve cuadratica3 = new QuadCurve();
+                Circle circulo12 = new Circle();
+                QuadCurve cuadratica4 = new QuadCurve();
+
+                fondo.setPrefSize(22, 60);
+
+                //Circulo
+                circulo11.setRadius(2);
+                circulo11.setFill(getColor());
+                circulo11.setStroke(getColor());
+                circulo11.setLayoutX(6);
+                circulo11.setLayoutY(5);
+
+                //Circulo2
+                circulo12.setRadius(2);
+                circulo12.setFill(getColor());
+                circulo12.setStroke(getColor());
+                circulo12.setLayoutX(12);
+                circulo12.setLayoutY(5);
+
+                //Cuadratica
+                cuadratica3.setLayoutX(12);
+                cuadratica3.setLayoutY(36);
+                cuadratica3.setStartX(-4.8);
+                cuadratica3.setStartY(-23);
+                cuadratica3.setEndX(-7.62);
+                cuadratica3.setEndY(-31);
+                cuadratica3.setControlX(-7.62);
+                cuadratica3.setControlY(-26);
+                cuadratica3.setFill(Color.TRANSPARENT);
+                cuadratica3.setStroke(getColor());
+                cuadratica3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cuadratica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Cuadratica2
+                cuadratica4.setLayoutX(18);
+                cuadratica4.setLayoutY(36);
+                cuadratica4.setStartX(-4.8);
+                cuadratica4.setStartY(-23);
+                cuadratica4.setEndX(-7.62);
+                cuadratica4.setEndY(-31);
+                cuadratica4.setControlX(-7.62);
+                cuadratica4.setControlY(-26);
+                cuadratica4.setFill(Color.TRANSPARENT);
+                cuadratica4.setStroke(getColor());
+                cuadratica4.setStrokeLineCap(StrokeLineCap.ROUND);
+                cuadratica4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(circulo11, cuadratica3, circulo12, cuadratica4);
                 return fondo;
             case '«':
-                
+                Line linea11 = new Line();
+                Line linea12 = new Line();
+                Line linea13 = new Line();
+                Line linea14 = new Line();
+
+                fondo.setPrefSize(34, 60);
+
+                //Linea 1
+                linea11.setLayoutX(11);
+                linea11.setLayoutY(31);
+                linea11.setStartX(-9.19);
+                linea11.setStartY(0);
+                linea11.setEndX(4);
+                linea11.setEndY(-9);
+                linea11.setFill(Color.TRANSPARENT);
+                linea11.setStroke(getColor());
+                linea11.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea11.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea 2
+                linea12.setLayoutX(11);
+                linea12.setLayoutY(31);
+                linea12.setStartX(-9.19);
+                linea12.setStartY(0);
+                linea12.setEndX(4);
+                linea12.setEndY(9);
+                linea12.setFill(Color.TRANSPARENT);
+                linea12.setStroke(getColor());
+                linea12.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea12.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea 3
+                linea13.setLayoutX(21);
+                linea13.setLayoutY(31);
+                linea13.setStartX(-9.19);
+                linea13.setStartY(0);
+                linea13.setEndX(4);
+                linea13.setEndY(-9);
+                linea13.setFill(Color.TRANSPARENT);
+                linea13.setStroke(getColor());
+                linea13.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea13.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea 4
+                linea14.setLayoutX(21);
+                linea14.setLayoutY(31);
+                linea14.setStartX(-9.19);
+                linea14.setStartY(0);
+                linea14.setEndX(4);
+                linea14.setEndY(9);
+                linea14.setFill(Color.TRANSPARENT);
+                linea14.setStroke(getColor());
+                linea14.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea14.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(linea11, linea12, linea13, linea14);
                 return fondo;
             case '»':
-                
+                Line linea15 = new Line();
+                Line linea16 = new Line();
+                Line linea17 = new Line();
+                Line linea18 = new Line();
+
+                fondo.setPrefSize(34, 60);
+
+                //Linea 1
+                linea15.setLayoutX(9);
+                linea15.setLayoutY(31);
+                linea15.setStartX(7);
+                linea15.setStartY(0);
+                linea15.setEndX(-4);
+                linea15.setEndY(-9);
+                linea15.setFill(Color.TRANSPARENT);
+                linea15.setStroke(getColor());
+                linea15.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea15.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea 2
+                linea16.setLayoutX(9);
+                linea16.setLayoutY(31);
+                linea16.setStartX(7);
+                linea16.setStartY(0);
+                linea16.setEndX(-4);
+                linea16.setEndY(9);
+                linea16.setFill(Color.TRANSPARENT);
+                linea16.setStroke(getColor());
+                linea16.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea16.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea 3
+                linea17.setLayoutX(19);
+                linea17.setLayoutY(31);
+                linea17.setStartX(7);
+                linea17.setStartY(0);
+                linea17.setEndX(-4);
+                linea17.setEndY(-9);
+                linea17.setFill(Color.TRANSPARENT);
+                linea17.setStroke(getColor());
+                linea17.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea17.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                //Linea 4
+                linea18.setLayoutX(19);
+                linea18.setLayoutY(31);
+                linea18.setStartX(7);
+                linea18.setStartY(0);
+                linea18.setEndX(-4);
+                linea18.setEndY(9);
+                linea18.setFill(Color.TRANSPARENT);
+                linea18.setStroke(getColor());
+                linea18.setStrokeLineCap(StrokeLineCap.ROUND);
+                linea18.setStrokeLineJoin(StrokeLineJoin.ROUND);
+
+                fondo.getChildren().addAll(linea15, linea16, linea17, linea18);
                 return fondo;
             case '^':
                 // Se debe hacer diseño de nuevo símbolo
@@ -305,7 +2328,7 @@ public class CrearCaracteres {
                 return null;
         }
     }
-    
+
     public AnchorPane crear_A() {
         
         //Objetos
@@ -2232,9 +4255,7 @@ public class CrearCaracteres {
         fondo.getChildren().addAll(cubicas,cubica1,cubica2,cubica3);
         //PRIMERA 
         return fondo;
-    }
-        
-    
+    }  
 //simbolos
     public AnchorPane crear_Punto(){
         //Objetos
@@ -2959,56 +4980,55 @@ public class CrearCaracteres {
         
         fondo.getChildren().addAll(elipse, circulo);
         return fondo;
-    }
-   
+    } 
 // minusculas
     public AnchorPane crear_a(){
         AnchorPane fondo = new AnchorPane();
         CubicCurve cubica = new CubicCurve();
         CubicCurve cubica1 = new CubicCurve();
         CubicCurve cubica2 = new CubicCurve();
-        fondo.setPrefSize(22, 60);
+        fondo.setPrefSize(19, 60);
         // superior
-        cubica.setLayoutX(38);
-        cubica.setLayoutY(43);
-        cubica.setStartX(-37.0);
-        cubica.setStartY(-7.79);
-        cubica.setEndX(-23.79);
-        cubica.setEndY(-6.54);
-        cubica.setControlX1(-33.39);
-        cubica.setControlY1(-21);
-        cubica.setControlX2(-22.53);
-        cubica.setControlY2(-23.39);
+        cubica.setLayoutX(35);
+        cubica.setLayoutY(44);
+        cubica.setStartX(-35.0);
+        cubica.setStartY(-7.8);
+        cubica.setEndX(-22.76);
+        cubica.setEndY(-7.8);
+        cubica.setControlX1(-37.0);
+        cubica.setControlY1(5.17);
+        cubica.setControlX2(-22.76);
+        cubica.setControlY2(5.17);
         cubica.setFill(Color.TRANSPARENT);
         cubica.setStroke(getColor());
         cubica.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //inferior
-        cubica1.setLayoutX(37.0);
-        cubica1.setLayoutY(44.0);
-        cubica1.setStartX(-36.19);
-        cubica1.setStartY(-7.79);
-        cubica1.setEndX(-22.76);
-        cubica1.setEndY(-7.8);
-        cubica1.setControlX1(-38.79);
-        cubica1.setControlY1(10.19);
-        cubica1.setControlX2(-22.76);
-        cubica1.setControlY2(5.17);
+        cubica1.setLayoutX(36);
+        cubica1.setLayoutY(42);
+        cubica1.setStartX(-36.0);
+        cubica1.setStartY(-6.54);
+        cubica1.setEndX(-23.76);
+        cubica1.setEndY(-6.54);
+        cubica1.setControlX1(-33.59);
+        cubica1.setControlY1(-19);
+        cubica1.setControlX2(-23.76);
+        cubica1.setControlY2(-21);
         cubica1.setFill(Color.TRANSPARENT);
         cubica1.setStroke(getColor());
         cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         // union
-        cubica2.setLayoutX(47.0);
-        cubica2.setLayoutY(45.0);
-        cubica2.setStartX(-31.81);
-        cubica2.setStartY(-20.20);
+        cubica2.setLayoutX(45);
+        cubica2.setLayoutY(42);
+        cubica2.setStartX(-31.76);
+        cubica2.setStartY(-15.4);
         cubica2.setEndX(-26.79);
         cubica2.setEndY(-3.59);
         cubica2.setControlX1(-35.2);
         cubica2.setControlY1(7.0);
         cubica2.setControlX2(-29.79);
-        cubica2.setControlY2(7.0);
+        cubica2.setControlY2(7);
         cubica2.setFill(Color.TRANSPARENT);
         cubica2.setStroke(getColor());
         cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3022,17 +5042,17 @@ public class CrearCaracteres {
         CubicCurve cubica= new CubicCurve();
         CubicCurve cubica1 = new CubicCurve();
         CubicCurve cubica2 = new CubicCurve();
-        fondo.setPrefSize(22,60);
+        fondo.setPrefSize(19,60);
         
         //primerabase
         cubica.setLayoutX(39.0);
-        cubica.setLayoutY(42.0);
+        cubica.setLayoutY(38.0);
         cubica.setStartX(-29.79);
         cubica.setStartY(-33.8);
         cubica.setEndX(-27.19);
         cubica.setEndY(6.0);
-        cubica.setControlX1(-43.8);
-        cubica.setControlY1(2.59);
+        cubica.setControlX1(-40.59);
+        cubica.setControlY1(2.4);
         cubica.setControlX2(-39.0);
         cubica.setControlY2(10.79);
         cubica.setFill(Color.TRANSPARENT);
@@ -3041,7 +5061,7 @@ public class CrearCaracteres {
         cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //curva 
         cubica1.setLayoutX(50);
-        cubica1.setLayoutY(60.5);
+        cubica1.setLayoutY(56.5);
         cubica1.setStartX(-45.39);
         cubica1.setStartY(-25.3);
         cubica1.setEndX(-38.07);
@@ -3056,15 +5076,15 @@ public class CrearCaracteres {
         cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //union
         cubica2.setLayoutX(40.0);
-        cubica2.setLayoutY(62.0);
+        cubica2.setLayoutY(58.0);
         cubica2.setStartX(-35.0);
         cubica2.setStartY(-26.5);
-        cubica2.setEndX(-18.89);
+        cubica2.setEndX(-22.19);
         cubica2.setEndY(-26.5);
-        cubica2.setControlX1(-33.5);
-        cubica2.setControlY1(-22.09);
-        cubica2.setControlX2(-23.51);
-        cubica2.setControlY2(-23.59);
+        cubica2.setControlX1(-39.04);
+        cubica2.setControlY1(-24.08);
+        cubica2.setControlX2(-30.37);
+        cubica2.setControlY2(-20.68);
         cubica2.setFill(Color.TRANSPARENT);
         cubica2.setStroke(getColor());
         cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3077,34 +5097,34 @@ public class CrearCaracteres {
         AnchorPane fondo = new AnchorPane();
         CubicCurve cubica= new CubicCurve();
         CubicCurve cubica1 = new CubicCurve();   
-        fondo.setPrefSize(22,60);
+        fondo.setPrefSize(19,60);
         
         //primerabase
-        cubica.setLayoutX(42.0);
-        cubica.setLayoutY(44.0);
-        cubica.setStartX(-29.60);
-        cubica.setStartY(-17.4);
-        cubica.setEndX(-37.20);
-        cubica.setEndY(2.79);
-        cubica.setControlX1(-43.2);
-        cubica.setControlY1(-22.0);
-        cubica.setControlX2(-45.6);
-        cubica.setControlY2(-1.59);
+        cubica.setLayoutX(48);
+        cubica.setLayoutY(48.898);
+        cubica.setStartX(-43.60);
+        cubica.setStartY(-5.8);
+        cubica.setEndX(-32);
+        cubica.setEndY(-11.69);
+        cubica.setControlX1(-38.39);
+        cubica.setControlY1(-0.8);
+        cubica.setControlX2(-32);
+        cubica.setControlY2(-5.8);
         cubica.setFill(Color.TRANSPARENT);
         cubica.setStroke(getColor());
         cubica.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        //curva union
-        cubica1.setLayoutX(50);
-        cubica1.setLayoutY(51.898);
-        cubica1.setStartX(-46.39);
-        cubica1.setStartY(-5.8);
-        cubica1.setEndX(-32);
-        cubica1.setEndY(-13.8);
-        cubica1.setControlX1(-38.39);
-        cubica1.setControlY1(-0.8);
-        cubica1.setControlX2(-32.0);
-        cubica1.setControlY2(-5.8);
+        //curva
+        cubica1.setLayoutX(42);
+        cubica1.setLayoutY(41);
+        cubica1.setStartX(-30.8);
+        cubica1.setStartY(-14);
+        cubica1.setEndX(-37.2);
+        cubica1.setEndY(2.79);
+        cubica1.setControlX1(-40.6);
+        cubica1.setControlY1(-18.4);
+        cubica1.setControlX2(-42.6);
+        cubica1.setControlY2(-2.2);
         cubica1.setFill(Color.TRANSPARENT);
         cubica1.setStroke(getColor());
         cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3120,31 +5140,31 @@ public class CrearCaracteres {
         CubicCurve cubica = new CubicCurve();
         CubicCurve cubica1 = new CubicCurve();
         CubicCurve cubica2 = new CubicCurve();
-        fondo.setPrefSize(22, 60);
+        fondo.setPrefSize(19, 60);
         // superior
-        cubica.setLayoutX(38.0);
-        cubica.setLayoutY(43);
-        cubica.setStartX(-37.0);
-        cubica.setStartY(-7.79);
-        cubica.setEndX(-23.79);
+        cubica.setLayoutX(35);
+        cubica.setLayoutY(42);
+        cubica.setStartX(-35.8);
+        cubica.setStartY(-6.54);
+        cubica.setEndX(-23.76);
         cubica.setEndY(-6.54);
-        cubica.setControlX1(-33.39);
-        cubica.setControlY1(-21);
-        cubica.setControlX2(-22.53);
-        cubica.setControlY2(-23.39);
+        cubica.setControlX1(-32.39);
+        cubica.setControlY1(-20.8);
+        cubica.setControlX2(-22);
+        cubica.setControlY2(-20.8);
         cubica.setFill(Color.TRANSPARENT);
         cubica.setStroke(getColor());
         cubica.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //inferior
-        cubica1.setLayoutX(37.0);
-        cubica1.setLayoutY(44.0);
-        cubica1.setStartX(-36.19);
-        cubica1.setStartY(-7.79);
+        cubica1.setLayoutX(34);
+        cubica1.setLayoutY(43);
+        cubica1.setStartX(-34.6);
+        cubica1.setStartY(-7.8);
         cubica1.setEndX(-22.76);
         cubica1.setEndY(-7.8);
-        cubica1.setControlX1(-38.79);
-        cubica1.setControlY1(10.19);
+        cubica1.setControlX1(-37.6);
+        cubica1.setControlY1(7);
         cubica1.setControlX2(-22.76);
         cubica1.setControlY2(5.17);
         cubica1.setFill(Color.TRANSPARENT);
@@ -3152,8 +5172,8 @@ public class CrearCaracteres {
         cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         // union
-        cubica2.setLayoutX(57.0);
-        cubica2.setLayoutY(55.0);
+        cubica2.setLayoutX(54);
+        cubica2.setLayoutY(51);
         cubica2.setStartX(-37.19);
         cubica2.setStartY(-11.8);
         cubica2.setEndX(-37.19);
@@ -3174,75 +5194,73 @@ public class CrearCaracteres {
         AnchorPane fondo = new AnchorPane();
         CubicCurve cubica= new CubicCurve();
         CubicCurve cubica1 = new CubicCurve();   
-        fondo.setPrefSize(22,60);
+        fondo.setPrefSize(19,60);
         
         //primerabase
-        cubica.setLayoutX(42.0);
-        cubica.setLayoutY(40.0);
+        cubica.setLayoutX(40.5);
+        cubica.setLayoutY(41);
         cubica.setStartX(-39.19);
-        cubica.setStartY(-7.8);
+        cubica.setStartY(-8);
         cubica.setEndX(-39.19);
-        cubica.setEndY(4.2);
+        cubica.setEndY(-2.8);
         cubica.setControlX1(-36.39);
         cubica.setControlY1(-24.59);
-        cubica.setControlX2(-14.8);
-        cubica.setControlY2(-17.79);
+        cubica.setControlX2(-21);
+        cubica.setControlY2(-14.59);
         cubica.setFill(Color.TRANSPARENT);
         cubica.setStroke(getColor());
         cubica.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //base union
-        cubica1.setLayoutX(42.0);
-        cubica1.setLayoutY(40.0);
-        cubica1.setStartX(-39.19);
-        cubica1.setStartY(-7.8);
-        cubica1.setEndX(-22.0);
-        cubica1.setEndY(-7.8);
+        cubica1.setLayoutX(40.5);
+        cubica1.setLayoutY(37);
+        cubica1.setStartX(-38.59);
+        cubica1.setStartY(-6.59);
+        cubica1.setEndX(-28.06);
+        cubica1.setEndY(0.59);
         cubica1.setControlX1(-43.39);
         cubica1.setControlY1(12.19);
-        cubica1.setControlX2(-24.0);
-        cubica1.setControlY2(12.19);
+        cubica1.setControlX2(-32.69);
+        cubica1.setControlY2(10.59);
         cubica1.setFill(Color.TRANSPARENT);
         cubica1.setStroke(getColor());
         cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        
+        cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND); 
         fondo.getChildren().addAll(cubica,cubica1);
         return fondo;   
     }
-    //posible f , puede llegar a cambiar por la union
     public AnchorPane crear_f(){   
         AnchorPane fondo = new AnchorPane();
         CubicCurve cubica= new CubicCurve();
         CubicCurve cubica1= new CubicCurve();
         CubicCurve cubica2= new CubicCurve();
-        fondo.setPrefSize(30,60);
+        fondo.setPrefSize(19,60);
         
         //primera inferior
-        cubica.setLayoutX(70.99);
-        cubica.setLayoutY(53.0);
+        cubica.setLayoutX(64.99);
+        cubica.setLayoutY(59.0);
         cubica.setStartX(-60.78);
         cubica.setStartY(-14.8);
         cubica.setEndX(-60.78);
-        cubica.setEndY(-18.8);
+        cubica.setEndY(-23.0);
         cubica.setControlX1(-66.18);
-        cubica.setControlY1(-64.4);
-        cubica.setControlX2(-46.79);
-        cubica.setControlY2(-53);
+        cubica.setControlY1(-79);
+        cubica.setControlX2(-50.99);
+        cubica.setControlY2(-53.59);
         cubica.setFill(Color.TRANSPARENT);
         cubica.setStroke(getColor());
         cubica.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Linea inferior
-        cubica1.setLayoutX(81.0);
-        cubica1.setLayoutY(62.0);
-        cubica1.setStartX(-68.39);
-        cubica1.setStartY(-29.8);
-        cubica1.setEndX(-70.6);
-        cubica1.setEndY(-26.79);
-        cubica1.setControlX1(-51.19);
-        cubica1.setControlY1(-13.19);
+        cubica1.setLayoutX(75);
+        cubica1.setLayoutY(66);
+        cubica1.setStartX(-70.60);
+        cubica1.setStartY(-31.20);
+        cubica1.setEndX(-70.60);
+        cubica1.setEndY(-28.4);
+        cubica1.setControlX1(-58.39);
+        cubica1.setControlY1(-18);
         cubica1.setControlX2(-74.8);
         cubica1.setControlY2(13.2);
         cubica1.setFill(Color.TRANSPARENT);
@@ -3250,16 +5268,16 @@ public class CrearCaracteres {
         cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //linea media
-        cubica2.setLayoutX(83.2);
-        cubica2.setLayoutY(68.5);
-        cubica2.setStartX(-57.4);
-        cubica2.setStartY(-33.84);
-        cubica2.setEndX(-68.6);
-        cubica2.setEndY(-33.84);
-        cubica2.setControlX1(-82.59);
-        cubica2.setControlY1(-26.5);
-        cubica2.setControlX2(-76.72);
-        cubica2.setControlY2(-46.09);
+        cubica2.setLayoutX(77.2);
+        cubica2.setLayoutY(69.5);
+        cubica2.setStartX(-63.2);
+        cubica2.setStartY(-30.9);
+        cubica2.setEndX(-72.33);
+        cubica2.setEndY(-34.31);
+        cubica2.setControlX1(-76.19);
+        cubica2.setControlY1(-25.24);
+        cubica2.setControlX2(-80.69);
+        cubica2.setControlY2(-34.31);
         cubica2.setFill(Color.TRANSPARENT);
         cubica2.setStroke(getColor());
         cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3274,63 +5292,63 @@ public class CrearCaracteres {
         CubicCurve cubica1 = new CubicCurve(); 
         CubicCurve cubica2= new CubicCurve();
         CubicCurve cubica3= new CubicCurve();
-        fondo.setPrefSize(22,60);
+        fondo.setPrefSize(19,60);
         //primerabase
-        cubica.setLayoutX(38.0);
-        cubica.setLayoutY(35.0);
-        cubica.setStartX(-36.19);
-        cubica.setStartY(-7.79);
+        cubica.setLayoutX(35);
+        cubica.setLayoutY(40);
+        cubica.setStartX(-33.95);
+        cubica.setStartY(-7.8);
         cubica.setEndX(-22.0);
         cubica.setEndY(-7.8);
-        cubica.setControlX1(-40.0);
-        cubica.setControlY1(7.0);
-        cubica.setControlX2(-27.2);
-        cubica.setControlY2(7.0);
+        cubica.setControlX1(-37.5);
+        cubica.setControlY1(3);
+        cubica.setControlX2(-24.2);
+        cubica.setControlY2(7);
         cubica.setFill(Color.TRANSPARENT);
         cubica.setStroke(getColor());
         cubica.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        //curva superior 
-        cubica1.setLayoutX(39.0);
-        cubica1.setLayoutY(34.0);
-        cubica1.setStartX(-37.0);
-        cubica1.setStartY(-7.79);
-        cubica1.setEndX(-23.39);
-        cubica1.setEndY(-5.2);
-        cubica1.setControlX1(-34.6);
-        cubica1.setControlY1(-19.39);
-        cubica1.setControlX2(-20.89);
-        cubica1.setControlY2(-22.6);
+        //lateral
+        cubica1.setLayoutX(56.2);
+        cubica1.setLayoutY(57);
+        cubica1.setStartX(-53.19);
+        cubica1.setStartY(-5.8);
+        cubica1.setEndX(-42.6);
+        cubica1.setEndY(-36);
+        cubica1.setControlX1(-55.39);
+        cubica1.setControlY1(10.59);
+        cubica1.setControlX2(-42.6);
+        cubica1.setControlY2(-0.4);
         cubica1.setFill(Color.TRANSPARENT);
         cubica1.setStroke(getColor());
         cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        //curva inferior
-        cubica2.setLayoutX(59.0);
-        cubica2.setLayoutY(57.0);
-        cubica2.setStartX(-58.2);
-        cubica2.setStartY(-6.0);
-        cubica2.setEndX(-42.6);
-        cubica2.setEndY(-36.0);
-        cubica2.setControlX1(-55.6);
-        cubica2.setControlY1(8.79);
-        cubica2.setControlX2(-42.6);
-        cubica2.setControlY2(0.4);
+        //curva superior
+        cubica2.setLayoutX(35.5);
+        cubica2.setLayoutY(42);
+        cubica2.setStartX(-34.94);
+        cubica2.setStartY(-8.93);
+        cubica2.setEndX(-23.39);
+        cubica2.setEndY(-5.2);
+        cubica2.setControlX1(-33.95);
+        cubica2.setControlY1(-20.99);
+        cubica2.setControlX2(-19.5);
+        cubica2.setControlY2(-24.19);
         cubica2.setFill(Color.TRANSPARENT);
         cubica2.setStroke(getColor());
         cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND); 
         //union
-        cubica3.setLayoutX(63.5);
-        cubica3.setLayoutY(69.0);
-        cubica3.setStartX(-62.6);
-        cubica3.setStartY(-18.2);
-        cubica3.setEndX(-42.6);
-        cubica3.setEndY(-36.0);
-        cubica3.setControlX1(-65.0);
-        cubica3.setControlY1(-27.0);
-        cubica3.setControlX2(-46.1);
-        cubica3.setControlY2(-32.59);
+        cubica3.setLayoutX(59.5);
+        cubica3.setLayoutY(70);
+        cubica3.setStartX(-56.89);
+        cubica3.setStartY(-17);
+        cubica3.setEndX(-42.5);
+        cubica3.setEndY(-33.8);
+        cubica3.setControlX1(-54.69);
+        cubica3.setControlY1(-28.59);
+        cubica3.setControlX2(-45.43);
+        cubica3.setControlY2(-27.14);
         cubica3.setFill(Color.TRANSPARENT);
         cubica3.setStroke(getColor());
         cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3346,15 +5364,15 @@ public class CrearCaracteres {
         CubicCurve cubica= new CubicCurve();
         CubicCurve cubica1 = new CubicCurve();  
         CubicCurve cubica2 = new CubicCurve();
-        fondo.setPrefSize(22,60);
+        fondo.setPrefSize(19,60);
         
         //primera 
         cubica.setLayoutX(70.0);
         cubica.setLayoutY(51.0);
-        cubica.setStartX(-66.48);
-        cubica.setStartY(-1.35);
-        cubica.setEndX(-68.4);
-        cubica.setEndY(-13.0);
+        cubica.setStartX(-67);
+        cubica.setStartY(-4.4);
+        cubica.setEndX(-70);
+        cubica.setEndY(-8.59);
         cubica.setControlX1(-70.79);
         cubica.setControlY1(-63.0);
         cubica.setControlX2(-54.2);
@@ -3368,21 +5386,21 @@ public class CrearCaracteres {
         cubica1.setLayoutY(45.0);
         cubica1.setStartX(-36.4);
         cubica1.setStartY(-9.4);
-        cubica1.setEndX(-24.39);
-        cubica1.setEndY(-5.2);
+        cubica1.setEndX(-25.93);
+        cubica1.setEndY(-6.2);
         cubica1.setControlX1(-34.6);
         cubica1.setControlY1(-19.39);
-        cubica1.setControlX2(-19.0);
-        cubica1.setControlY2(-22.2);
+        cubica1.setControlX2(-20.8);
+        cubica1.setControlY2(-19.4);
         cubica1.setFill(Color.TRANSPARENT);
         cubica1.setStroke(getColor());
         cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //union
-        cubica2.setLayoutX(80.5);
-        cubica2.setLayoutY(72.5);
-        cubica2.setStartX(-65.79);
-        cubica2.setStartY(-34.02);
+        cubica2.setLayoutX(76);
+        cubica2.setLayoutY(68.5);
+        cubica2.setStartX(-62.69);
+        cubica2.setStartY(-30.55);
         cubica2.setEndX(-58.69);
         cubica2.setEndY(-27.7);
         cubica2.setControlX1(-68.7);
@@ -3404,18 +5422,18 @@ public class CrearCaracteres {
         AnchorPane fondo = new AnchorPane();
         CubicCurve cubica= new CubicCurve();
         Circle circulo = new Circle();
-        fondo.setPrefSize(22,60);
+        fondo.setPrefSize(19,60);
         //base
-        cubica.setLayoutX(39.0);
-        cubica.setLayoutY(45.0);
-        cubica.setStartX(-32.0);
-        cubica.setStartY(-19.2);
-        cubica.setEndX(-19.6);
-        cubica.setEndY(-7.8);
-        cubica.setControlX1(-39.2);
-        cubica.setControlY1(7.0);
-        cubica.setControlX2(-19.6);
-        cubica.setControlY2(7.0);
+        cubica.setLayoutX(34.0);
+        cubica.setLayoutY(44.0);
+        cubica.setStartX(-28.39);
+        cubica.setStartY(-17);
+        cubica.setEndX(-18.19);
+        cubica.setEndY(-7.2);
+        cubica.setControlX1(-35);
+        cubica.setControlY1(3.19);
+        cubica.setControlX2(-23.8);
+        cubica.setControlY2(8.79);
         cubica.setFill(Color.TRANSPARENT);
         cubica.setStroke(getColor());
         cubica.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3425,8 +5443,8 @@ public class CrearCaracteres {
         circulo.setRadius(1);
         circulo.setFill(getColor());
         circulo.setStroke(getColor());
-        circulo.setLayoutX(8);
-        circulo.setLayoutY(22);
+        circulo.setLayoutX(7);
+        circulo.setLayoutY(19);
         fondo.getChildren().addAll(cubica,circulo);
         return fondo; 
     
@@ -3439,31 +5457,31 @@ public class CrearCaracteres {
         fondo.setPrefSize(22,60);
         
         //base
-        cubica.setLayoutX(76.5);
-        cubica.setLayoutY(78.5);
-        cubica.setStartX(-61.7);
-        cubica.setStartY(-56.7);
-        cubica.setEndX(-75.89);
-        cubica.setEndY(-29.37);
-        cubica.setControlX1(-57.89);
-        cubica.setControlY1(-34.09);
-        cubica.setControlX2(-78.3);
-        cubica.setControlY2(-8.69);
+        cubica.setLayoutX(73.5);
+        cubica.setLayoutY(79.5);
+        cubica.setStartX(-65.7);
+        cubica.setStartY(-52.9);
+        cubica.setEndX(-72.89);
+        cubica.setEndY(-29.09);
+        cubica.setControlX1(-58.3);
+        cubica.setControlY1(-36.5);
+        cubica.setControlX2(-77.5);
+        cubica.setControlY2(-5.09);
         cubica.setFill(Color.TRANSPARENT);
         cubica.setStroke(getColor());
         cubica.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //union
-        cubica1.setLayoutX(28.5);
-        cubica1.setLayoutY(50.0);
-        cubica1.setStartX(-27.7);
-        cubica1.setStartY(-1.8);
-        cubica1.setEndX(-7.7);
-        cubica1.setEndY(-17.0);
-        cubica1.setControlX1(-24.89);
-        cubica1.setControlY1(-17.0);
-        cubica1.setControlX2(-13.29);
-        cubica1.setControlY2(-3.8);
+        cubica1.setLayoutX(25);
+        cubica1.setLayoutY(52);
+        cubica1.setStartX(-24.5);
+        cubica1.setStartY(-1.20);
+        cubica1.setEndX(-10.2);
+        cubica1.setEndY(-12.8);
+        cubica1.setControlX1(-16.4);
+        cubica1.setControlY1(-18.2);
+        cubica1.setControlX2(-14.48);
+        cubica1.setControlY2(-4.20);
         cubica1.setFill(Color.TRANSPARENT);
         cubica1.setStroke(getColor());
         cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3472,8 +5490,8 @@ public class CrearCaracteres {
         circulo.setRadius(1);
         circulo.setFill(getColor());
         circulo.setStroke(getColor());
-        circulo.setLayoutX(14);
-        circulo.setLayoutY(13);
+        circulo.setLayoutX(8);
+        circulo.setLayoutY(19);
         
         
         fondo.getChildren().addAll(cubica,cubica1,circulo);
@@ -3485,15 +5503,15 @@ public class CrearCaracteres {
         CubicCurve cubica= new CubicCurve();
         CubicCurve cubica1 = new CubicCurve();
         CubicCurve cubica2 = new CubicCurve(); 
-        fondo.setPrefSize(22,60);
+        fondo.setPrefSize(19,60);
         
         // lateral
-        cubica.setLayoutX(77.0);
-        cubica.setLayoutY(50.0);
-        cubica.setStartX(-66.6);
-        cubica.setStartY(-1.0);
+        cubica.setLayoutX(69);
+        cubica.setLayoutY(49);
+        cubica.setStartX(-66.39);
+        cubica.setStartY(-3.59);
         cubica.setEndX(-70.79);
-        cubica.setEndY(-5.8);
+        cubica.setEndY(-7.8);
         cubica.setControlX1(-70.79);
         cubica.setControlY1(-63.0);
         cubica.setControlX2(-54.2);
@@ -3503,31 +5521,31 @@ public class CrearCaracteres {
         cubica.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //superior
-        cubica1.setLayoutX(46.0);
-        cubica1.setLayoutY(44.0);
+        cubica1.setLayoutX(38);
+        cubica1.setLayoutY(43);
         cubica1.setStartX(-36.4);
-        cubica1.setStartY(-8.4);
+        cubica1.setStartY(-9.8);
         cubica1.setEndX(-36.4);
         cubica1.setEndY(-5.8);
-        cubica1.setControlX1(-28.39);
-        cubica1.setControlY1(-31.8);
-        cubica1.setControlX2(-13.8);
+        cubica1.setControlX1(-31.24);
+        cubica1.setControlY1(-24.99);
+        cubica1.setControlX2(-15.6);
         cubica1.setControlY2(-5.8);
         cubica1.setFill(Color.TRANSPARENT);
         cubica1.setStroke(getColor());
         cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
         cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         //inferior union
-        cubica2.setLayoutX(89.5);
-        cubica2.setLayoutY(72.5);
-        cubica2.setStartX(-75.03);
-        cubica2.setStartY(-34.9);
-        cubica2.setEndX(-63.09);
-        cubica2.setEndY(-23.9);
-        cubica2.setControlX1(-60.0);
+        cubica2.setLayoutX(75.5);
+        cubica2.setLayoutY(69.5);
+        cubica2.setStartX(-74.31);
+        cubica2.setStartY(-32.9);
+        cubica2.setEndX(-58.5);
+        cubica2.setEndY(-27.09);
+        cubica2.setControlX1(-53.3);
         cubica2.setControlY1(-36.9);
-        cubica2.setControlX2(-71.5);
-        cubica2.setControlY2(-2.03);
+        cubica2.setControlX2(-69.3);
+        cubica2.setControlY2(-17.3);
         cubica2.setFill(Color.TRANSPARENT);
         cubica2.setStroke(getColor());
         cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3535,886 +5553,995 @@ public class CrearCaracteres {
         fondo.getChildren().addAll(cubica,cubica1,cubica2);
         return fondo; 
     
-    }  
+    }    
     public AnchorPane crear_l(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        QuadCurve cuadratica = new QuadCurve();
+        CubicCurve cubical1 = new CubicCurve();
+        CubicCurve cubical2 = new CubicCurve();
         
-        fondo.setPrefSize(22, 60);
+        fondo.setPrefSize(19, 60);
         
-        //Cubica
-        cubica.setLayoutX(10);
-        cubica.setLayoutY(30);
-        cubica.setStartX(-10);
-        cubica.setStartY(28.19);
-        cubica.setEndX(0.99);
-        cubica.setEndY(-26.8);
-        cubica.setControlX1(0.99);
-        cubica.setControlY1(24.79);
-        cubica.setControlX2(0.99);
-        cubica.setControlY2(24.79);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        //Cubica 1
+        cubical1.setLayoutX(5);
+        cubical1.setLayoutY(23);
+        cubical1.setStartX(-1.99);
+        cubical1.setStartY(19.2);
+        cubical1.setEndX(1.2);
+        cubical1.setEndY(19.2);
+        cubical1.setControlX1(13.79);
+        cubical1.setControlY1(-31.8);
+        cubical1.setControlX2(-13.39);
+        cubical1.setControlY2(-29.8);
+        cubical1.setFill(Color.TRANSPARENT);
+        cubical1.setStroke(getColor());
+        cubical1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubical1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        //Cuadratica
-        cuadratica.setLayoutX(11);
-        cuadratica.setLayoutY(60);
-        cuadratica.setStartX(-2.2);
-        cuadratica.setStartY(-6.4);
-        cuadratica.setEndX(9.4);
-        cuadratica.setEndY(-27.4);
-        cuadratica.setControlX(5.99);
-        cuadratica.setControlY(3.19);
-        cuadratica.setFill(Color.TRANSPARENT);
-        cuadratica.setStroke(getColor());
-        cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        //Cubica 2
+        cubical2.setLayoutX(71.6);
+        cubical2.setLayoutY(69);
+        cubical2.setStartX(-66.4);
+        cubical2.setStartY(-31);
+        cubical2.setEndX(-58.3);
+        cubical2.setEndY(-29.4);
+        cubical2.setControlX1(-64.39);
+        cubical2.setControlY1(-21.59);
+        cubical2.setControlX2(-60.39);
+        cubical2.setControlY2(-21.59);
+        cubical2.setFill(Color.TRANSPARENT);
+        cubical2.setStroke(getColor());
+        cubical2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubical2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cuadratica);
+        fondo.getChildren().addAll(cubical1, cubical2);
         return fondo;
     }
     public AnchorPane crear_m(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        CubicCurve cubica3 = new CubicCurve();
-        QuadCurve cuadratica = new QuadCurve();
+        CubicCurve cubicam1 = new CubicCurve();
+        CubicCurve cubicam2 = new CubicCurve();
+        CubicCurve cubicam3 = new CubicCurve();
+        CubicCurve cubicam4 = new CubicCurve();
         
-        fondo.setPrefSize(45, 60);
+        fondo.setPrefSize(19, 60);
         
-        //Cubica
-        cubica.setLayoutX(16);
-        cubica.setLayoutY(25);
-        cubica.setStartX(-6);
-        cubica.setStartY(29.59);
-        cubica.setEndX(-16);
-        cubica.setEndY(5);
-        cubica.setControlX1(-6);
-        cubica.setControlY1(-40.59);
-        cubica.setControlX2(-6);
-        cubica.setControlY2(41.19);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        //Cubica 1
+        cubicam1.setLayoutX(19);
+        cubicam1.setLayoutY(15);
+        cubicam1.setStartX(-8.2);
+        cubicam1.setStartY(30.4);
+        cubicam1.setEndX(-13.6);
+        cubicam1.setEndY(19.2);
+        cubicam1.setControlX1(-3.2);
+        cubicam1.setControlY1(4.39);
+        cubicam1.setControlX2(-13.6);
+        cubicam1.setControlY2(6);
+        cubicam1.setFill(Color.TRANSPARENT);
+        cubicam1.setStroke(getColor());
+        cubicam1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicam1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(15);
-        cubica2.setLayoutY(38);
-        cubica2.setStartX(-4.59);
-        cubica2.setStartY(-0.59);
-        cubica2.setEndX(7.8);
-        cubica2.setEndY(9.79);
-        cubica2.setControlX1(-2.8);
-        cubica2.setControlY1(-12.59);
-        cubica2.setControlX2(7.8);
-        cubica2.setControlY2(-11);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicam2.setLayoutX(24);
+        cubicam2.setLayoutY(16);
+        cubicam2.setStartX(-7);
+        cubicam2.setStartY(23.4);
+        cubicam2.setEndX(-11.9);
+        cubicam2.setEndY(17.79);
+        cubicam2.setControlX1(-1.8);
+        cubicam2.setControlY1(6.79);
+        cubicam2.setControlX2(-11.9);
+        cubicam2.setControlY2(3.19);
+        cubicam2.setFill(Color.TRANSPARENT);
+        cubicam2.setStroke(getColor());
+        cubicam2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicam2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 3
-        cubica3.setLayoutX(21);
-        cubica3.setLayoutY(26);
-        cubica3.setStartX(1.19);
-        cubica3.setStartY(11.40);
-        cubica3.setEndX(15);
-        cubica3.setEndY(27.19);
-        cubica3.setControlX1(6.19);
-        cubica3.setControlY1(-5);
-        cubica3.setControlX2(15);
-        cubica3.setControlY2(7.59);
-        cubica3.setFill(Color.TRANSPARENT);
-        cubica3.setStroke(getColor());
-        cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicam3.setLayoutX(82.5);
+        cubicam3.setLayoutY(53.5);
+        cubicam3.setStartX(-60.89);
+        cubicam3.setStartY(-12.5);
+        cubicam3.setEndX(-65.4);
+        cubicam3.setEndY(-14.58);
+        cubicam3.setControlX1(-63.5);
+        cubicam3.setControlY1(-5.7);
+        cubicam3.setControlX2(-68.19);
+        cubicam3.setControlY2(-5.7);
+        cubicam3.setFill(Color.TRANSPARENT);
+        cubicam3.setStroke(getColor());
+        cubicam3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicam3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        //Cuadratica
-        cuadratica.setLayoutX(33);
-        cuadratica.setLayoutY(66);
-        cuadratica.setStartX(11.19);
-        cuadratica.setStartY(-35.59);
-        cuadratica.setEndX(2.4);
-        cuadratica.setEndY(-12.8);
-        cuadratica.setControlX(5.8);
-        cuadratica.setControlY(-7);
-        cuadratica.setFill(Color.TRANSPARENT);
-        cuadratica.setStroke(getColor());
-        cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        //Cubica 4
+        cubicam4.setLayoutX(12);
+        cubicam4.setLayoutY(24);
+        cubicam4.setStartX(-7.93);
+        cubicam4.setStartY(21.91);
+        cubicam4.setEndX(-11.6);
+        cubicam4.setEndY(11.4);
+        cubicam4.setControlX1(-3.79);
+        cubicam4.setControlY1(-9.8);
+        cubicam4.setControlX2(-11.6);
+        cubicam4.setControlY2(0.19);
+        cubicam4.setFill(Color.TRANSPARENT);
+        cubicam4.setStroke(getColor());
+        cubicam4.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicam4.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2, cubica3, cuadratica);
+        fondo.getChildren().addAll(cubicam1, cubicam2, cubicam3, cubicam4);
         return fondo;
     }
     public AnchorPane crear_n(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        QuadCurve cuadratica = new QuadCurve();
+        CubicCurve cubican1 = new CubicCurve();
+        CubicCurve cubican2 = new CubicCurve();
+        CubicCurve cubican3 = new CubicCurve();
         
-        fondo.setPrefSize(34, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(16);
-        cubica.setLayoutY(25);
-        cubica.setStartX(-6);
-        cubica.setStartY(29.59);
-        cubica.setEndX(-16);
-        cubica.setEndY(5);
-        cubica.setControlX1(-6);
-        cubica.setControlY1(-40.59);
-        cubica.setControlX2(-6);
-        cubica.setControlY2(41.19);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubican1.setLayoutX(4.5);
+        cubican1.setLayoutY(22);
+        cubican1.setStartX(1.19);
+        cubican1.setStartY(11.4);
+        cubican1.setEndX(6.19);
+        cubican1.setEndY(18.79);
+        cubican1.setControlX1(3.69);
+        cubican1.setControlY1(-4.8);
+        cubican1.setControlX2(11.1);
+        cubican1.setControlY2(7);
+        cubican1.setFill(Color.TRANSPARENT);
+        cubican1.setStroke(getColor());
+        cubican1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubican1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(9);
-        cubica2.setLayoutY(23);
-        cubica2.setStartX(1.19);
-        cubica2.setStartY(11.4);
-        cubica2.setEndX(15.4);
-        cubica2.setEndY(27);
-        cubica2.setControlX1(6.19);
-        cubica2.setControlY1(-5);
-        cubica2.setControlX2(15);
-        cubica2.setControlY2(7.59);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubican2.setLayoutX(14);
+        cubican2.setLayoutY(25);
+        cubican2.setStartX(-10.8);
+        cubican2.setStartY(21);
+        cubican2.setEndX(-13);
+        cubican2.setEndY(11);
+        cubican2.setControlX1(-5);
+        cubican2.setControlY1(-10.39);
+        cubican2.setControlX2(-13);
+        cubican2.setControlY2(1.19);
+        cubican2.setFill(Color.TRANSPARENT);
+        cubican2.setStroke(getColor());
+        cubican2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubican2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        //Cuadratica
-        cuadratica.setLayoutX(22);
-        cuadratica.setLayoutY(64);
-        cuadratica.setStartX(11.8);
-        cuadratica.setStartY(-34.4);
-        cuadratica.setEndX(2.4);
-        cuadratica.setEndY(-12.8);
-        cuadratica.setControlX(5.8);
-        cuadratica.setControlY(-7);
-        cuadratica.setFill(Color.TRANSPARENT);
-        cuadratica.setStroke(getColor());
-        cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        //Cubica 3
+        cubican3.setLayoutX(74.2);
+        cubican3.setLayoutY(56.5);
+        cubican3.setStartX(-59.59);
+        cubican3.setStartY(-14.58);
+        cubican3.setEndX(-63.2);
+        cubican3.setEndY(-16.5);
+        cubican3.setControlX1(-61.2);
+        cubican3.setControlY1(-10.3);
+        cubican3.setControlX2(-66);
+        cubican3.setControlY2(-6.7);
+        cubican3.setFill(Color.TRANSPARENT);
+        cubican3.setStroke(getColor());
+        cubican3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubican3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2, cuadratica);
+        fondo.getChildren().addAll(cubican1, cubican2, cubican3);
         return fondo;
     }
     public AnchorPane crear_ñ(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        CubicCurve cubica3 = new CubicCurve();
-        QuadCurve cuadratica = new QuadCurve();
+        CubicCurve cubicañ1 = new CubicCurve();
+        CubicCurve cubicañ2 = new CubicCurve();
+        CubicCurve cubicañ3 = new CubicCurve();
+        CubicCurve cubicañ4 = new CubicCurve();
         
-        fondo.setPrefSize(34, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(16);
-        cubica.setLayoutY(25);
-        cubica.setStartX(-6);
-        cubica.setStartY(29.59);
-        cubica.setEndX(-16);
-        cubica.setEndY(5);
-        cubica.setControlX1(-6);
-        cubica.setControlY1(-40.59);
-        cubica.setControlX2(-6);
-        cubica.setControlY2(41.19);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicañ1.setLayoutX(4.5);
+        cubicañ1.setLayoutY(22);
+        cubicañ1.setStartX(1.19);
+        cubicañ1.setStartY(11.4);
+        cubicañ1.setEndX(6.19);
+        cubicañ1.setEndY(18.79);
+        cubicañ1.setControlX1(3.69);
+        cubicañ1.setControlY1(-4.8);
+        cubicañ1.setControlX2(11.1);
+        cubicañ1.setControlY2(7);
+        cubicañ1.setFill(Color.TRANSPARENT);
+        cubicañ1.setStroke(getColor());
+        cubicañ1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicañ1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(9);
-        cubica2.setLayoutY(23);
-        cubica2.setStartX(1.19);
-        cubica2.setStartY(11.4);
-        cubica2.setEndX(15.4);
-        cubica2.setEndY(27);
-        cubica2.setControlX1(6.19);
-        cubica2.setControlY1(-5);
-        cubica2.setControlX2(15);
-        cubica2.setControlY2(7.59);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        
-        //Cuadratica
-        cuadratica.setLayoutX(22);
-        cuadratica.setLayoutY(64);
-        cuadratica.setStartX(11.8);
-        cuadratica.setStartY(-34.4);
-        cuadratica.setEndX(2.4);
-        cuadratica.setEndY(-12.8);
-        cuadratica.setControlX(5.8);
-        cuadratica.setControlY(-7);
-        cuadratica.setFill(Color.TRANSPARENT);
-        cuadratica.setStroke(getColor());
-        cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicañ2.setLayoutX(14);
+        cubicañ2.setLayoutY(25);
+        cubicañ2.setStartX(-10.8);
+        cubicañ2.setStartY(21);
+        cubicañ2.setEndX(-13);
+        cubicañ2.setEndY(11);
+        cubicañ2.setControlX1(-5);
+        cubicañ2.setControlY1(-10.39);
+        cubicañ2.setControlX2(-13);
+        cubicañ2.setControlY2(1.19);
+        cubicañ2.setFill(Color.TRANSPARENT);
+        cubicañ2.setStroke(getColor());
+        cubicañ2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicañ2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 3
-        cubica3.setLayoutX(36);
-        cubica3.setLayoutY(35);
-        cubica3.setStartX(-26.39);
-        cubica3.setStartY(-14.2);
-        cubica3.setEndX(-10.99);
-        cubica3.setEndY(-14.2);
-        cubica3.setControlX1(-17.4);
-        cubica3.setControlY1(-27.8);
-        cubica3.setControlX2(-17.4);
-        cubica3.setControlY2(-4.59);
-        cubica3.setFill(Color.TRANSPARENT);
-        cubica3.setStroke(getColor());
-        cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicañ3.setLayoutX(74.2);
+        cubicañ3.setLayoutY(56.5);
+        cubicañ3.setStartX(-59.59);
+        cubicañ3.setStartY(-14.58);
+        cubicañ3.setEndX(-63.2);
+        cubicañ3.setEndY(-16.5);
+        cubicañ3.setControlX1(-61.2);
+        cubicañ3.setControlY1(-10.3);
+        cubicañ3.setControlX2(-66);
+        cubicañ3.setControlY2(-6.7);
+        cubicañ3.setFill(Color.TRANSPARENT);
+        cubicañ3.setStroke(getColor());
+        cubicañ3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicañ3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2, cubica3, cuadratica);
+        //Cubica 4
+        cubicañ4.setLayoutX(71.2);
+        cubicañ4.setLayoutY(35.5);
+        cubicañ4.setStartX(-59.59);
+        cubicañ4.setStartY(-14.58);
+        cubicañ4.setEndX(-69.19);
+        cubicañ4.setEndY(-12.7);
+        cubicañ4.setControlX1(-63.2);
+        cubicañ4.setControlY1(-8.9);
+        cubicañ4.setControlX2(-65.4);
+        cubicañ4.setControlY2(-19.89);
+        cubicañ4.setFill(Color.TRANSPARENT);
+        cubicañ4.setStroke(getColor());
+        cubicañ4.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicañ4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubicañ1, cubicañ2, cubicañ3, cubicañ4);
         return fondo;
     }
     public AnchorPane crear_o(){
-    AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica1 = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        fondo.setPrefSize(22, 60);
-        // base
-        cubica.setLayoutX(37);
-        cubica.setLayoutY(43);
-        cubica.setStartX(-37.06);
-        cubica.setStartY(-7.8);
-        cubica.setEndX(-20.9);
-        cubica.setEndY(-7.8);
-        cubica.setControlX1(-38.79);
-        cubica.setControlY1(10.19);
-        cubica.setControlX2(-20.9);
-        cubica.setControlY2(8.0);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        //superior
-        cubica1.setLayoutX(37.0);
-        cubica1.setLayoutY(42.0);
-        cubica1.setStartX(-37.0);
-        cubica1.setStartY(-7.79);
-        cubica1.setEndX(-20.89);
-        cubica1.setEndY(-6.9);
-        cubica1.setControlX1(-34.8);
-        cubica1.setControlY1(-23.39);
-        cubica1.setControlX2(-19.6);
-        cubica1.setControlY2(-23.39);
-        cubica1.setFill(Color.TRANSPARENT);
-        cubica1.setStroke(getColor());
-        cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        //union
-        cubica2.setLayoutX(44.0);
-        cubica2.setLayoutY(51.0);
-        cubica2.setStartX(-41.6);
-        cubica2.setStartY(-24.0);
-        cubica2.setEndX(-23.59);
-        cubica2.setEndY(-19.8);
-        cubica2.setControlX1(-38.9);
-        cubica2.setControlY1(-15.88);
-        cubica2.setControlX2(-31.8);
-        cubica2.setControlY2(-12.4);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        fondo.getChildren().addAll(cubica, cubica1,cubica2);
+        AnchorPane fondo = new AnchorPane();
+        CubicCurve cubicao1 = new CubicCurve();
+        CubicCurve cubicao2 = new CubicCurve();
+        CubicCurve cubicao3 = new CubicCurve();
+        
+        fondo.setPrefSize(19, 60);
+        
+        //cubica 1
+        cubicao1.setLayoutX(38);
+        cubicao1.setLayoutY(44);
+        cubicao1.setStartX(-36.7);
+        cubicao1.setStartY(-8.21);
+        cubicao1.setEndX(-24);
+        cubicao1.setEndY(-8.21);
+        cubicao1.setControlX1(-33.4);
+        cubicao1.setControlY1(-20.4);
+        cubicao1.setControlX2(-24);
+        cubicao1.setControlY2(-20.4);
+        cubicao1.setFill(Color.TRANSPARENT);
+        cubicao1.setStroke(getColor());
+        cubicao1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicao1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //cubica 2
+        cubicao2.setLayoutX(38);
+        cubicao2.setLayoutY(44.5);
+        cubicao2.setStartX(-36.71);
+        cubicao2.setStartY(-8.68);
+        cubicao2.setEndX(-24.39);
+        cubicao2.setEndY(-8.68);
+        cubicao2.setControlX1(-39.6);
+        cubicao2.setControlY1(7);
+        cubicao2.setControlX2(-26.39);
+        cubicao2.setControlY2(5.5);
+        cubicao2.setFill(Color.TRANSPARENT);
+        cubicao2.setStroke(getColor());
+        cubicao2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicao2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //cubica 2
+        cubicao3.setLayoutX(43);
+        cubicao3.setLayoutY(52);
+        cubicao3.setStartX(-38.93);
+        cubicao3.setStartY(-22);
+        cubicao3.setEndX(-26);
+        cubicao3.setEndY(-19);
+        cubicao3.setControlX1(-38.93);
+        cubicao3.setControlY1(-15.88);
+        cubicao3.setControlX2(-31.6);
+        cubicao3.setControlY2(-14);
+        cubicao3.setFill(Color.TRANSPARENT);
+        cubicao3.setStroke(getColor());
+        cubicao3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicao3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        fondo.getChildren().addAll(cubicao1, cubicao2,cubicao3);
         return fondo;
     }
     public AnchorPane crear_p(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        CubicCurve cubica3 = new CubicCurve();
+        CubicCurve cubicap1 = new CubicCurve();
+        CubicCurve cubicap2 = new CubicCurve();
+        CubicCurve cubicap3 = new CubicCurve();
         
-        fondo.setPrefSize(34, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(16);
-        cubica.setLayoutY(25);
-        cubica.setStartX(-6);
-        cubica.setStartY(29.59);
-        cubica.setEndX(-16);
-        cubica.setEndY(5);
-        cubica.setControlX1(-6);
-        cubica.setControlY1(-48.59);
-        cubica.setControlX2(-6);
-        cubica.setControlY2(41.19);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicap1.setLayoutX(13);
+        cubicap1.setLayoutY(28);
+        cubicap1.setStartX(-8.39);
+        cubicap1.setStartY(29.79);
+        cubicap1.setEndX(-13.19);
+        cubicap1.setEndY(14.4);
+        cubicap1.setControlX1(-10.19);
+        cubicap1.setControlY1(-27.99);
+        cubicap1.setControlX2(-5.19);
+        cubicap1.setControlY2(6.79);
+        cubicap1.setFill(Color.TRANSPARENT);
+        cubicap1.setStroke(getColor());
+        cubicap1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicap1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(13);
-        cubica2.setLayoutY(25);
-        cubica2.setStartX(-3);
-        cubica2.setStartY(0.59);
-        cubica2.setEndX(0.39);
-        cubica2.setEndY(14.59);
-        cubica2.setControlX1(2.4);
-        cubica2.setControlY1(-13.4);
-        cubica2.setControlX2(21.39);
-        cubica2.setControlY2(9.19);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicap2.setLayoutX(13);
+        cubicap2.setLayoutY(45);
+        cubicap2.setStartX(-7.38);
+        cubicap2.setStartY(-2.2);
+        cubicap2.setEndX(3.7);
+        cubicap2.setEndY(-2.2);
+        cubicap2.setControlX1(-14.39);
+        cubicap2.setControlY1(-8.8);
+        cubicap2.setControlX2(2.39);
+        cubicap2.setControlY2(5.79);
+        cubicap2.setFill(Color.TRANSPARENT);
+        cubicap2.setStroke(getColor());
+        cubicap2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicap2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 3
-        cubica3.setLayoutX(24);
-        cubica3.setLayoutY(38);
-        cubica3.setStartX(-10.59);
-        cubica3.setStartY(1);
-        cubica3.setEndX(8.4);
-        cubica3.setEndY(-6.59);
-        cubica3.setControlX1(0.054);
-        cubica3.setControlY1(-10.59);
-        cubica3.setControlX2(-4.59);
-        cubica3.setControlY2(12.79);
-        cubica3.setFill(Color.TRANSPARENT);
-        cubica3.setStroke(getColor());
-        cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicap3.setLayoutX(5);
+        cubicap3.setLayoutY(31);
+        cubicap3.setStartX(-0.38);
+        cubicap3.setStartY(-0.2);
+        cubicap3.setEndX(1.2);
+        cubicap3.setEndY(12);
+        cubicap3.setControlX1(12);
+        cubicap3.setControlY1(-14.19);
+        cubicap3.setControlX2(15.39);
+        cubicap3.setControlY2(12);
+        cubicap3.setFill(Color.TRANSPARENT);
+        cubicap3.setStroke(getColor());
+        cubicap3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicap3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2, cubica3);
+        fondo.getChildren().addAll(cubicap1, cubicap2, cubicap3);
         return fondo;
     }
     public AnchorPane crear_q(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        QuadCurve cuadratica = new QuadCurve();
+        CubicCurve cubicaq1 = new CubicCurve();
+        CubicCurve cubicaq2 = new CubicCurve();
+        CubicCurve cubicaq3 = new CubicCurve();
         
-        fondo.setPrefSize(34, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(13);
-        cubica.setLayoutY(27);
-        cubica.setStartX(8);
-        cubica.setStartY(-1);
-        cubica.setEndX(8);
-        cubica.setEndY(10.06);
-        cubica.setControlX1(-7.6);
-        cubica.setControlY1(-15.8);
-        cubica.setControlX2(-11.6);
-        cubica.setControlY2(24.4);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicaq1.setLayoutX(20);
+        cubicaq1.setLayoutY(28);
+        cubicaq1.setStartX(-6);
+        cubicaq1.setStartY(29.59);
+        cubicaq1.setEndX(0.19);
+        cubicaq1.setEndY(6.4);
+        cubicaq1.setControlX1(-6);
+        cubicaq1.setControlY1(-48.59);
+        cubicaq1.setControlX2(-8.6);
+        cubicaq1.setControlY2(40);
+        cubicaq1.setFill(Color.TRANSPARENT);
+        cubicaq1.setStroke(getColor());
+        cubicaq1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaq1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(28);
-        cubica2.setLayoutY(25);
-        cubica2.setStartX(-6);
-        cubica2.setStartY(29.59);
-        cubica2.setEndX(4.39);
-        cubica2.setEndY(6.19);
-        cubica2.setControlX1(-6);
-        cubica2.setControlY1(-48.59);
-        cubica2.setControlX2(-6);
-        cubica2.setControlY2(41.19);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicaq2.setLayoutX(10);
+        cubicaq2.setLayoutY(30);
+        cubicaq2.setStartX(2.19);
+        cubicaq2.setStartY(11);
+        cubicaq2.setEndX(-8.7);
+        cubicaq2.setEndY(11);
+        cubicaq2.setControlX1(6);
+        cubicaq2.setControlY1(5.19);
+        cubicaq2.setControlX2(-5.2);
+        cubicaq2.setControlY2(19);
+        cubicaq2.setFill(Color.TRANSPARENT);
+        cubicaq2.setStroke(getColor());
+        cubicaq2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaq2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        //Cuadratica
-        cuadratica.setLayoutX(7);
-        cuadratica.setLayoutY(62);
-        cuadratica.setStartX(3.79);
-        cuadratica.setStartY(-22.4);
-        cuadratica.setEndX(-7);
-        cuadratica.setEndY(-30.4);
-        cuadratica.setControlX(-3);
-        cuadratica.setControlY(-9.8);
-        cuadratica.setFill(Color.TRANSPARENT);
-        cuadratica.setStroke(getColor());
-        cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        //Cubica 3
+        cubicaq3.setLayoutX(5);
+        cubicaq3.setLayoutY(29);
+        cubicaq3.setStartX(8);
+        cubicaq3.setStartY(-1);
+        cubicaq3.setEndX(9.6);
+        cubicaq3.setEndY(10);
+        cubicaq3.setControlX1(-9.39);
+        cubicaq3.setControlY1(-9.99);
+        cubicaq3.setControlX2(-3.2);
+        cubicaq3.setControlY2(21.79);
+        cubicaq3.setFill(Color.TRANSPARENT);
+        cubicaq3.setStroke(getColor());
+        cubicaq3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaq3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2, cuadratica);
+        fondo.getChildren().addAll(cubicaq1, cubicaq2, cubicaq3);
         return fondo;
     }
     public AnchorPane crear_r(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
+        CubicCurve cubicar1 = new CubicCurve();
+        CubicCurve cubicar2 = new CubicCurve();
+        CubicCurve cubicar3 = new CubicCurve();
         
-        fondo.setPrefSize(34, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(17);
-        cubica.setLayoutY(25);
-        cubica.setStartX(-6);
-        cubica.setStartY(18.19);
-        cubica.setEndX(-16);
-        cubica.setEndY(5);
-        cubica.setControlX1(-6);
-        cubica.setControlY1(-48.59);
-        cubica.setControlX2(-6);
-        cubica.setControlY2(41.19);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicar1.setLayoutX(-5.6);
+        cubicar1.setLayoutY(28);
+        cubicar1.setStartX(8.39);
+        cubicar1.setStartY(-0.59);
+        cubicar1.setEndX(5);
+        cubicar1.setEndY(18);
+        cubicar1.setControlX1(11);
+        cubicar1.setControlY1(13.59);
+        cubicar1.setControlX2(6.79);
+        cubicar1.setControlY2(16.19);
+        cubicar1.setFill(Color.TRANSPARENT);
+        cubicar1.setStroke(getColor());
+        cubicar1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicar1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(18);
-        cubica2.setLayoutY(38);
-        cubica2.setStartX(-7);
-        cubica2.setStartY(-8.8);
-        cubica2.setEndX(13.2);
-        cubica2.setEndY(-8.8);
-        cubica2.setControlX1(13.2);
-        cubica2.setControlY1(-35);
-        cubica2.setControlX2(-7);
-        cubica2.setControlY2(13);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicar2.setLayoutX(13);
+        cubicar2.setLayoutY(28);
+        cubicar2.setStartX(2.6);
+        cubicar2.setStartY(-0.8);
+        cubicar2.setEndX(5.2);
+        cubicar2.setEndY(16);
+        cubicar2.setControlX1(-3.39);
+        cubicar2.setControlY1(-14.4);
+        cubicar2.setControlX2(0.39);
+        cubicar2.setControlY2(24.19);
+        cubicar2.setFill(Color.TRANSPARENT);
+        cubicar2.setStroke(getColor());
+        cubicar2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicar2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2);
+        //cubica 3
+        cubicar3.setLayoutX(23);
+        cubicar3.setLayoutY(37);
+        cubicar3.setStartX(-20.6);
+        cubicar3.setStartY(-10.18);
+        cubicar3.setEndX(-7.17);
+        cubicar3.setEndY(-10.18);
+        cubicar3.setControlX1(-24.4);
+        cubicar3.setControlY1(-6.4);
+        cubicar3.setControlX2(-3.99);
+        cubicar3.setControlY2(-6.4);
+        cubicar3.setFill(Color.TRANSPARENT);
+        cubicar3.setStroke(getColor());
+        cubicar3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicar3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubicar1, cubicar2, cubicar3);
         return fondo;
     }
     public AnchorPane crear_s(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        CubicCurve cubica3 = new CubicCurve();
+        CubicCurve cubicas1 = new CubicCurve();
+        CubicCurve cubicas2 = new CubicCurve();
+        CubicCurve cubicas3 = new CubicCurve();
+        CubicCurve cubicas4 = new CubicCurve();
         
-        fondo.setPrefSize(34, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(15);
-        cubica.setLayoutY(30);
-        cubica.setStartX(-1);
-        cubica.setStartY(2.79);
-        cubica.setEndX(4.7);
-        cubica.setEndY(-5.4);
-        cubica.setControlX1(-23.79);
-        cubica.setControlY1(-9.8);
-        cubica.setControlX2(1.79);
-        cubica.setControlY2(-16);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicas1.setLayoutX(6);
+        cubicas1.setLayoutY(30);
+        cubicas1.setStartX(7.79);
+        cubicas1.setStartY(13.79);
+        cubicas1.setEndX(-6);
+        cubicas1.setEndY(-4.55);
+        cubicas1.setControlX1(16.19);
+        cubicas1.setControlY1(1);
+        cubicas1.setControlX2(-3.6);
+        cubicas1.setControlY2(1);
+        cubicas1.setFill(Color.TRANSPARENT);
+        cubicas1.setStroke(getColor());
+        cubicas1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicas1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(59);
-        cubica2.setLayoutY(9);
-        cubica2.setStartX(-47.6);
-        cubica2.setStartY(44.5);
-        cubica2.setEndX(-45);
-        cubica2.setEndY(23.59);
-        cubica2.setControlX1(-35.39);
-        cubica2.setControlY1(48.08);
-        cubica2.setControlX2(-11.79);
-        cubica2.setControlY2(30.79);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicas2.setLayoutX(-3);
+        cubicas2.setLayoutY(67);
+        cubicas2.setStartX(3.22);
+        cubicas2.setStartY(-24.4);
+        cubicas2.setEndX(3.22);
+        cubicas2.setEndY(-40.4);
+        cubicas2.setControlX1(5.19);
+        cubicas2.setControlY1(-27.4);
+        cubicas2.setControlX2(6.79);
+        cubicas2.setControlY2(-30.59);
+        cubicas2.setFill(Color.TRANSPARENT);
+        cubicas2.setStroke(getColor());
+        cubicas2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicas2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 3
-        cubica3.setLayoutX(0);
-        cubica3.setLayoutY(67);
-        cubica3.setStartX(11.59);
-        cubica3.setStartY(-13.4);
-        cubica3.setEndX(7.2);
-        cubica3.setEndY(-23.59);
-        cubica3.setControlX1(0);
-        cubica3.setControlY1(-13.4);
-        cubica3.setControlX2(0);
-        cubica3.setControlY2(-23.59);
-        cubica3.setFill(Color.TRANSPARENT);
-        cubica3.setStroke(getColor());
-        cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicas3.setLayoutX(10);
+        cubicas3.setLayoutY(77);
+        cubicas3.setStartX(3.6);
+        cubicas3.setStartY(-32.99);
+        cubicas3.setEndX(3.6);
+        cubicas3.setEndY(-32.99);
+        cubicas3.setControlX1(-9.96);
+        cubicas3.setControlY1(-33.21);
+        cubicas3.setControlX2(-3.6);
+        cubicas3.setControlY2(-28);
+        cubicas3.setFill(Color.TRANSPARENT);
+        cubicas3.setStroke(getColor());
+        cubicas3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicas3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2, cubica3);
+        //cubica 4
+        cubicas4.setLayoutX(19);
+        cubicas4.setLayoutY(86.2);
+        cubicas4.setStartX(-0.8);
+        cubicas4.setStartY(-44.6);
+        cubicas4.setEndX(-12);
+        cubicas4.setEndY(-42);
+        cubicas4.setControlX1(-0.8);
+        cubicas4.setControlY1(-35);
+        cubicas4.setControlX2(-4.2);
+        cubicas4.setControlY2(-44.6);
+        cubicas4.setFill(Color.TRANSPARENT);
+        cubicas4.setStroke(getColor());
+        cubicas4.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicas4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubicas1, cubicas2, cubicas3, cubicas4);
         return fondo;
     }
     public AnchorPane crear_t(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        QuadCurve cuadratica = new QuadCurve();
-        Line linea = new Line();
+        CubicCurve cubicat1 = new CubicCurve();
+        CubicCurve cubicat2 = new CubicCurve();
+        Line lineat1 = new Line();
         
-        fondo.setPrefSize(22, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(10);
-        cubica.setLayoutY(30);
-        cubica.setStartX(-10);
-        cubica.setStartY(28.19);
-        cubica.setEndX(0.99);
-        cubica.setEndY(-26.8);
-        cubica.setControlX1(0.99);
-        cubica.setControlY1(24.79);
-        cubica.setControlX2(0.99);
-        cubica.setControlY2(24.79);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicat1.setLayoutX(9);
+        cubicat1.setLayoutY(25);
+        cubicat1.setStartX(-1.99);
+        cubicat1.setStartY(19.22);
+        cubicat1.setEndX(1.2);
+        cubicat1.setEndY(19.22);
+        cubicat1.setControlX1(3.6);
+        cubicat1.setControlY1(-35);
+        cubicat1.setControlX2(-5);
+        cubicat1.setControlY2(-35);
+        cubicat1.setFill(Color.TRANSPARENT);
+        cubicat1.setStroke(getColor());
+        cubicat1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicat1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        //Cuadratica
-        cuadratica.setLayoutX(11);
-        cuadratica.setLayoutY(60);
-        cuadratica.setStartX(-2.2);
-        cuadratica.setStartY(-6.4);
-        cuadratica.setEndX(9.4);
-        cuadratica.setEndY(-27.4);
-        cuadratica.setControlX(5.99);
-        cuadratica.setControlY(3.19);
-        cuadratica.setFill(Color.TRANSPARENT);
-        cuadratica.setStroke(getColor());
-        cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        //cubica 2
+        cubicat2.setLayoutX(76);
+        cubicat2.setLayoutY(71);
+        cubicat2.setStartX(-66.4);
+        cubicat2.setStartY(-31);
+        cubicat2.setEndX(-58.39);
+        cubicat2.setEndY(-29.4);
+        cubicat2.setControlX1(-66.39);
+        cubicat2.setControlY1(-21.59);
+        cubicat2.setControlX2(-60.39);
+        cubicat2.setControlY2(-21.59);
+        cubicat2.setFill(Color.TRANSPARENT);
+        cubicat2.setStroke(getColor());
+        cubicat2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicat2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Linea
-        linea.setLayoutX(9);
-        linea.setLayoutY(23);
-        linea.setStartX(-6);
-        linea.setStartY(-7.62);
-        linea.setEndX(7.79);
-        linea.setEndY(-7.72);
-        linea.setFill(Color.TRANSPARENT);
-        linea.setStroke(getColor());
-        linea.setStrokeLineCap(StrokeLineCap.ROUND);
-        linea.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        lineat1.setLayoutX(10);
+        lineat1.setLayoutY(10);
+        lineat1.setStartX(-9.39);
+        lineat1.setStartY(3.59);
+        lineat1.setEndX(6.39);
+        lineat1.setEndY(3.59);
+        lineat1.setFill(Color.TRANSPARENT);
+        lineat1.setStroke(getColor());
+        lineat1.setStrokeLineCap(StrokeLineCap.ROUND);
+        lineat1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cuadratica, linea);
+        fondo.getChildren().addAll(cubicat1, cubicat2, lineat1);
         return fondo;
     }
     public AnchorPane crear_u(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica= new CubicCurve();
-        CubicCurve cubica1 = new CubicCurve();   
-        fondo.setPrefSize(22,60);
-        //primerabase
-        cubica.setLayoutX(38.0);
-        cubica.setLayoutY(40.0);
-        cubica.setStartX(-38.0);
-        cubica.setStartY(-16.4);
-        cubica.setEndX(-23.8);
-        cubica.setEndY(-16.4);
-        cubica.setControlX1(-40.2);
-        cubica.setControlY1(16.0);
-        cubica.setControlX2(-23.8);
-        cubica.setControlY2(16.0);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        // union 
-        cubica1.setLayoutX(47);
-        cubica1.setLayoutY(56);
-        cubica1.setStartX(-32.8);
-        cubica1.setStartY(-31.4);
-        cubica1.setEndX(-26.39);
-        cubica1.setEndY(-15.59);
-        cubica1.setControlX1(-35.39);
-        cubica1.setControlY1(-7.75);
-        cubica1.setControlX2(-30.39);
-        cubica1.setControlY2(-3.2);
-        cubica1.setFill(Color.TRANSPARENT);
-        cubica1.setStroke(getColor());
-        cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);  
+        CubicCurve cubicau1= new CubicCurve();
+        CubicCurve cubicau2 = new CubicCurve(); 
         
+        fondo.setPrefSize(19,60);
         
+        //cubica 1
+        cubicau1.setLayoutX(36);
+        cubicau1.setLayoutY(42);
+        cubicau1.setStartX(-33.79);
+        cubicau1.setStartY(-16.4);
+        cubicau1.setEndX(-23.8);
+        cubicau1.setEndY(-16.4);
+        cubicau1.setControlX1(-40);
+        cubicau1.setControlY1(5.59);
+        cubicau1.setControlX2(-23.8);
+        cubicau1.setControlY2(16);
+        cubicau1.setFill(Color.TRANSPARENT);
+        cubicau1.setStroke(getColor());
+        cubicau1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicau1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica,cubica1);
-        return fondo; 
-            
+        // cubica 2
+        cubicau2.setLayoutX(44);
+        cubicau2.setLayoutY(57);
+        cubicau2.setStartX(-31.8);
+        cubicau2.setStartY(-28.59);
+        cubicau2.setEndX(-26.39);
+        cubicau2.setEndY(-15.59);
+        cubicau2.setControlX1(-34);
+        cubicau2.setControlY1(-7.95);
+        cubicau2.setControlX2(-26.39);
+        cubicau2.setControlY2(-7.95);
+        cubicau2.setFill(Color.TRANSPARENT);
+        cubicau2.setStroke(getColor());
+        cubicau2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicau2.setStrokeLineJoin(StrokeLineJoin.ROUND);  
+        
+        fondo.getChildren().addAll(cubicau1,cubicau2);
+        return fondo;   
     }
     public AnchorPane crear_w(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        CubicCurve cubica3 = new CubicCurve();
+        CubicCurve cubicaw1 = new CubicCurve();
+        CubicCurve cubicaw2 = new CubicCurve();
+        CubicCurve cubicaw3 = new CubicCurve();
+        CubicCurve cubicaw4 = new CubicCurve();
         
-        fondo.setPrefSize(45, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(11);
-        cubica.setLayoutY(33);
-        cubica.setStartX(-11);
-        cubica.setStartY(12.4);
-        cubica.setEndX(-3);
-        cubica.setEndY(-8);
-        cubica.setControlX1(-8.59);
-        cubica.setControlY1(31.4);
-        cubica.setControlX2(-3);
-        cubica.setControlY2(31.4);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicaw1.setLayoutX(88.2);
+        cubicaw1.setLayoutY(60);
+        cubicaw1.setStartX(-71.19);
+        cubicaw1.setStartY(-32.29);
+        cubicaw1.setEndX(-75.59);
+        cubicaw1.setEndY(-32.29);
+        cubicaw1.setControlX1(-83.97);
+        cubicaw1.setControlY1(-30.19);
+        cubicaw1.setControlX2(-78.39);
+        cubicaw1.setControlY2(-36.5);
+        cubicaw1.setFill(Color.TRANSPARENT);
+        cubicaw1.setStroke(getColor());
+        cubicaw1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaw1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(30);
-        cubica2.setLayoutY(33);
-        cubica2.setStartX(-22.8);
-        cubica2.setStartY(17.2);
-        cubica2.setEndX(-6.19);
-        cubica2.setEndY(0.8);
-        cubica2.setControlX1(-21);
-        cubica2.setControlY1(25.24);
-        cubica2.setControlX2(-3);
-        cubica2.setControlY2(25.24);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicaw2.setLayoutX(8.5);
+        cubicaw2.setLayoutY(23);
+        cubicaw2.setStartX(-6.4);
+        cubicaw2.setStartY(3.8);
+        cubicaw2.setEndX(-1.02);
+        cubicaw2.setEndY(3.8);
+        cubicaw2.setControlX1(-4.5);
+        cubicaw2.setControlY1(44.5);
+        cubicaw2.setControlX2(2.19);
+        cubicaw2.setControlY2(11.9);
+        cubicaw2.setFill(Color.TRANSPARENT);
+        cubicaw2.setStroke(getColor());
+        cubicaw2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaw2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 3
-        cubica3.setLayoutX(45);
-        cubica3.setLayoutY(33);
-        cubica3.setStartX(-23);
-        cubica3.setStartY(15.6);
-        cubica3.setEndX(-6.19);
-        cubica3.setEndY(-8.59);
-        cubica3.setControlX1(-20.8);
-        cubica3.setControlY1(28.6);
-        cubica3.setControlX2(1.6);
-        cubica3.setControlY2(23.8);
-        cubica3.setFill(Color.TRANSPARENT);
-        cubica3.setStroke(getColor());
-        cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicaw3.setLayoutX(64);
+        cubicaw3.setLayoutY(63);
+        cubicaw3.setStartX(-61.84);
+        cubicaw3.setStartY(-33.84);
+        cubicaw3.setEndX(-64);
+        cubicaw3.setEndY(-23.29);
+        cubicaw3.setControlX1(-61.84);
+        cubicaw3.setControlY1(-41.8);
+        cubicaw3.setControlX2(-66.39);
+        cubicaw3.setControlY2(-41.8);
+        cubicaw3.setFill(Color.TRANSPARENT);
+        cubicaw3.setStroke(getColor());
+        cubicaw3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaw3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2, cubica3);
+        //cubica 4
+        cubicaw4.setLayoutX(13.89);
+        cubicaw4.setLayoutY(23);
+        cubicaw4.setStartX(-6.4);
+        cubicaw4.setStartY(3.8);
+        cubicaw4.setEndX(-0.88);
+        cubicaw4.setEndY(5.14);
+        cubicaw4.setControlX1(-4.5);
+        cubicaw4.setControlY1(44.5);
+        cubicaw4.setControlX2(2.19);
+        cubicaw4.setControlY2(11.9);
+        cubicaw4.setFill(Color.TRANSPARENT);
+        cubicaw4.setStroke(getColor());
+        cubicaw4.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaw4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubicaw1, cubicaw2, cubicaw3, cubicaw4);
         return fondo;
     }
     public AnchorPane crear_v(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica1 = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        fondo.setPrefSize(32, 60);
+        CubicCurve cubicav1 = new CubicCurve();
+        CubicCurve cubicav2 = new CubicCurve();
+        CubicCurve cubicav3 = new CubicCurve();
         
-        //Cubica base
-        cubica.setLayoutX(16.9);
-        cubica.setLayoutY(23.5);
-        cubica.setStartX(-10.19);
-        cubica.setStartY(3.8);
-        cubica.setEndX(2.19);
-        cubica.setEndY(3.8);
-        cubica.setControlX1(-6.4);
-        cubica.setControlY1(48.8);
-        cubica.setControlX2(5.19);
-        cubica.setControlY2(11.8);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        //union primera
-        cubica1.setLayoutX(68.5);
-        cubica1.setLayoutY(62.5);
-        cubica1.setStartX(-61.84);
-        cubica1.setStartY(-33.84);
-        cubica1.setEndX(-69);
-        cubica1.setEndY(-31.8);
-        cubica1.setControlX1(-61.84);
-        cubica1.setControlY1(-41.8);
-        cubica1.setControlX2(-66.39);
-        cubica1.setControlY2(-41.8);
-        cubica1.setFill(Color.TRANSPARENT);
-        cubica1.setStroke(getColor());
-        cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        //union final
-        cubica2.setLayoutX(87.2);
-        cubica2.setLayoutY(60.5);
-        cubica2.setStartX(-58.19);
-        cubica2.setStartY(-35.8);
-        cubica2.setEndX(-68.6);
-        cubica2.setEndY(-33.84);
-        cubica2.setControlX1(-83.97);
-        cubica2.setControlY1(-30.19);
-        cubica2.setControlX2(-76.59);
-        cubica2.setControlY2(-44.8);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
-        fondo.getChildren().addAll(cubica,cubica1,cubica2);
+        fondo.setPrefSize(19, 60);
+        
+        //Cubica 1
+        cubicav1.setLayoutX(12.89);
+        cubicav1.setLayoutY(22.5);
+        cubicav1.setStartX(-10.19);
+        cubicav1.setStartY(3.8);
+        cubicav1.setEndX(-0.89);
+        cubicav1.setEndY(7.49);
+        cubicav1.setControlX1(-8.1);
+        cubicav1.setControlY1(45.1);
+        cubicav1.setControlX2(1.34);
+        cubicav1.setControlY2(13.29);
+        cubicav1.setFill(Color.TRANSPARENT);
+        cubicav1.setStroke(getColor());
+        cubicav1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicav1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //cubica 2
+        cubicav2.setLayoutX(65);
+        cubicav2.setLayoutY(63.5);
+        cubicav2.setStartX(-61.84);
+        cubicav2.setStartY(-33.84);
+        cubicav2.setEndX(-64.5);
+        cubicav2.setEndY(-23.29);
+        cubicav2.setControlX1(-61.84);
+        cubicav2.setControlY1(-41.8);
+        cubicav2.setControlX2(-66.39);
+        cubicav2.setControlY2(-41.8);
+        cubicav2.setFill(Color.TRANSPARENT);
+        cubicav2.setStroke(getColor());
+        cubicav2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicav2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        //cubica3
+        cubicav3.setLayoutX(80.2);
+        cubicav3.setLayoutY(62);
+        cubicav3.setStartX(-62.79);
+        cubicav3.setStartY(-33.84);
+        cubicav3.setEndX(-67.99);
+        cubicav3.setEndY(-32.2);
+        cubicav3.setControlX1(-72.79);
+        cubicav3.setControlY1(-28.6);
+        cubicav3.setControlX2(-76.8);
+        cubicav3.setControlY2(-39);
+        cubicav3.setFill(Color.TRANSPARENT);
+        cubicav3.setStroke(getColor());
+        cubicav3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicav3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubicav1,cubicav2,cubicav3);
         return fondo;
     }
     public AnchorPane crear_x(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
+        CubicCurve cubicax1 = new CubicCurve();
+        CubicCurve cubicax2 = new CubicCurve();
         
-        fondo.setPrefSize(34, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(18);
-        cubica.setLayoutY(36);
-        cubica.setStartX(12.19);
-        cubica.setStartY(20.19);
-        cubica.setEndX(-16.19);
-        cubica.setEndY(-12);
-        cubica.setControlX1(-18.19);
-        cubica.setControlY1(22.56);
-        cubica.setControlX2(12.19);
-        cubica.setControlY2(-12);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicax1.setLayoutX(8.5);
+        cubicax1.setLayoutY(23);
+        cubicax1.setStartX(-8.5);
+        cubicax1.setStartY(22.4);
+        cubicax1.setEndX(5.7);
+        cubicax1.setEndY(2.67);
+        cubicax1.setControlX1(-4.29);
+        cubicax1.setControlY1(30);
+        cubicax1.setControlX2(1.52);
+        cubicax1.setControlY2(2.30);
+        cubicax1.setFill(Color.TRANSPARENT);
+        cubicax1.setStroke(getColor());
+        cubicax1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicax1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(9);
-        cubica2.setLayoutY(42);
-        cubica2.setStartX(-8.19);
-        cubica2.setStartY(14.56);
-        cubica2.setEndX(20.19);
-        cubica2.setEndY(-18);
-        cubica2.setControlX1(22.26);
-        cubica2.setControlY1(14.56);
-        cubica2.setControlX2(-9);
-        cubica2.setControlY2(-18);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicax2.setLayoutX(13.89);
+        cubicax2.setLayoutY(23.5);
+        cubicax2.setStartX(-11.29);
+        cubicax2.setStartY(2.9);
+        cubicax2.setEndX(3.5);
+        cubicax2.setEndY(22.19);
+        cubicax2.setControlX1(-6.79);
+        cubicax2.setControlY1(0.98);
+        cubicax2.setControlX2(-3.9);
+        cubicax2.setControlY2(29.19);
+        cubicax2.setFill(Color.TRANSPARENT);
+        cubicax2.setStroke(getColor());
+        cubicax2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicax2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2);
+        fondo.getChildren().addAll(cubicax1, cubicax2);
         return fondo;
     }
     public AnchorPane crear_y(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        CubicCurve cubica3 = new CubicCurve();
+        CubicCurve cubicay1 = new CubicCurve();
+        CubicCurve cubicay2 = new CubicCurve();
+        CubicCurve cubicay3 = new CubicCurve();
+        CubicCurve cubicay4 = new CubicCurve();
         
-        fondo.setPrefSize(34, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(11);
-        cubica.setLayoutY(12);
-        cubica.setStartX(-8.59);
-        cubica.setStartY(16.8);
-        cubica.setEndX(-3);
-        cubica.setEndY(9.19);
-        cubica.setControlX1(-8.59);
-        cubica.setControlY1(31.4);
-        cubica.setControlX2(-3);
-        cubica.setControlY2(31.4);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicay1.setLayoutX(10.5);
+        cubicay1.setLayoutY(19);
+        cubicay1.setStartX(-6.5);
+        cubicay1.setStartY(6.19);
+        cubicay1.setEndX(1.5);
+        cubicay1.setEndY(6.19);
+        cubicay1.setControlX1(-10.5);
+        cubicay1.setControlY1(28);
+        cubicay1.setControlX2(4.9);
+        cubicay1.setControlY2(28);
+        cubicay1.setFill(Color.TRANSPARENT);
+        cubicay1.setStroke(getColor());
+        cubicay1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicay1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(29);
-        cubica2.setLayoutY(12);
-        cubica2.setStartX(-21);
-        cubica2.setStartY(17.6);
-        cubica2.setEndX(-3.79);
-        cubica2.setEndY(9.4);
-        cubica2.setControlX1(-16.39);
-        cubica2.setControlY1(31.4);
-        cubica2.setControlX2(-3.79);
-        cubica2.setControlY2(31.4);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicay2.setLayoutX(55);
+        cubicay2.setLayoutY(55);
+        cubicay2.setStartX(-52.79);
+        cubicay2.setStartY(-2.91);
+        cubicay2.setEndX(-42.39);
+        cubicay2.setEndY(-23.8);
+        cubicay2.setControlX1(-55.39);
+        cubicay2.setControlY1(10.59);
+        cubicay2.setControlX2(-40.2);
+        cubicay2.setControlY2(-0.2);
+        cubicay2.setFill(Color.TRANSPARENT);
+        cubicay2.setStroke(getColor());
+        cubicay2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicay2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 3
-        cubica3.setLayoutX(17);
-        cubica3.setLayoutY(43);
-        cubica3.setStartX(-8.39);
-        cubica3.setStartY(5.8);
-        cubica3.setEndX(7.59);
-        cubica3.setEndY(-15);
-        cubica3.setControlX1(4);
-        cubica3.setControlY1(20.39);
-        cubica3.setControlX2(7.59);
-        cubica3.setControlY2(17);
-        cubica3.setFill(Color.TRANSPARENT);
-        cubica3.setStroke(getColor());
-        cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicay3.setLayoutX(59);
+        cubicay3.setLayoutY(69);
+        cubicay3.setStartX(-56.89);
+        cubicay3.setStartY(-17);
+        cubicay3.setEndX(-42.5);
+        cubicay3.setEndY(-33.8);
+        cubicay3.setControlX1(-53.79);
+        cubicay3.setControlY1(-27.14);
+        cubicay3.setControlX2(-45.43);
+        cubicay3.setControlY2(-27.14);
+        cubicay3.setFill(Color.TRANSPARENT);
+        cubicay3.setStroke(getColor());
+        cubicay3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicay3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2, cubica3);
+        //cubica 4
+        cubicay4.setLayoutX(66.2);
+        cubicay4.setLayoutY(63);
+        cubicay4.setStartX(-61.99);
+        cubicay4.setStartY(-37.2);
+        cubicay4.setEndX(-64);
+        cubicay4.setEndY(-23.39);
+        cubicay4.setControlX1(-61.84);
+        cubicay4.setControlY1(-41.9);
+        cubicay4.setControlX2(-66.39);
+        cubicay4.setControlY2(-41.8);
+        cubicay4.setFill(Color.TRANSPARENT);
+        cubicay4.setStroke(getColor());
+        cubicay4.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicay4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubicay1, cubicay2, cubicay3, cubicay4);
         return fondo;
     }
     public AnchorPane crear_z(){
         AnchorPane fondo = new AnchorPane();
-        CubicCurve cubica = new CubicCurve();
-        CubicCurve cubica2 = new CubicCurve();
-        Line linea = new Line ();
+        CubicCurve cubicaz1 = new CubicCurve();
+        CubicCurve cubicaz2 = new CubicCurve();
+        CubicCurve cubicaz3 = new CubicCurve();
+        CubicCurve cubicaz4 = new CubicCurve();
         
-        fondo.setPrefSize(34, 60);
+        fondo.setPrefSize(19, 60);
         
         //Cubica
-        cubica.setLayoutX(14);
-        cubica.setLayoutY(32);
-        cubica.setStartX(-13.7);
-        cubica.setStartY(-1.59);
-        cubica.setEndX(17.48);
-        cubica.setEndY(-8.39);
-        cubica.setControlX1(4.8);
-        cubica.setControlY1(-11.4);
-        cubica.setControlX2(-3);
-        cubica.setControlY2(2);
-        cubica.setFill(Color.TRANSPARENT);
-        cubica.setStroke(getColor());
-        cubica.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicaz1.setLayoutX(8.5);
+        cubicaz1.setLayoutY(28);
+        cubicaz1.setStartX(-6.9);
+        cubicaz1.setStartY(6);
+        cubicaz1.setEndX(-0.9);
+        cubicaz1.setEndY(9);
+        cubicaz1.setControlX1(-0.9);
+        cubicaz1.setControlY1(-5.99);
+        cubicaz1.setControlX2(14.5);
+        cubicaz1.setControlY2(-2);
+        cubicaz1.setFill(Color.TRANSPARENT);
+        cubicaz1.setStroke(getColor());
+        cubicaz1.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaz1.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
         //Cubica 2
-        cubica2.setLayoutX(15);
-        cubica2.setLayoutY(62);
-        cubica2.setStartX(-14);
-        cubica2.setStartY(-8.39);
-        cubica2.setEndX(14.79);
-        cubica2.setEndY(-11.39);
-        cubica2.setControlX1(8.79);
-        cubica2.setControlY1(-19);
-        cubica2.setControlX2(3);
-        cubica2.setControlY2(2.6);
-        cubica2.setFill(Color.TRANSPARENT);
-        cubica2.setStroke(getColor());
-        cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
-        cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        cubicaz2.setLayoutX(54);
+        cubicaz2.setLayoutY(55);
+        cubicaz2.setStartX(-52.79);
+        cubicaz2.setStartY(-2.91);
+        cubicaz2.setEndX(-41);
+        cubicaz2.setEndY(-15.8);
+        cubicaz2.setControlX1(-55.39);
+        cubicaz2.setControlY1(10.59);
+        cubicaz2.setControlX2(-46.2);
+        cubicaz2.setControlY2(-2.91);
+        cubicaz2.setFill(Color.TRANSPARENT);
+        cubicaz2.setStroke(getColor());
+        cubicaz2.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaz2.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        //Linea
-        linea.setLayoutX(16);
-        linea.setLayoutY(39);
-        linea.setStartX(-15);
-        linea.setStartY(14.8);
-        linea.setEndX(14.78);
-        linea.setEndY(-14.84);
-        linea.setFill(Color.TRANSPARENT);
-        linea.setStroke(getColor());
-        linea.setStrokeLineCap(StrokeLineCap.ROUND);
-        linea.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        //cubic 3
+        cubicaz3.setLayoutX(58);
+        cubicaz3.setLayoutY(69);
+        cubicaz3.setStartX(-56.89);
+        cubicaz3.setStartY(-17);
+        cubicaz3.setEndX(-40.59);
+        cubicaz3.setEndY(-29.2);
+        cubicaz3.setControlX1(-52.14);
+        cubicaz3.setControlY1(-32.34);
+        cubicaz3.setControlX2(-45.79);
+        cubicaz3.setControlY2(-20.4);
+        cubicaz3.setFill(Color.TRANSPARENT);
+        cubicaz3.setStroke(getColor());
+        cubicaz3.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaz3.setStrokeLineJoin(StrokeLineJoin.ROUND);
         
-        fondo.getChildren().addAll(cubica, cubica2, linea);
+        //cubica4
+        cubicaz4.setLayoutX(15.5);
+        cubicaz4.setLayoutY(30);
+        cubicaz4.setStartX(-8.29);
+        cubicaz4.setStartY(7.04);
+        cubicaz4.setEndX(-3.5);
+        cubicaz4.setEndY(12);
+        cubicaz4.setControlX1(-14.62);
+        cubicaz4.setControlY1(8.2);
+        cubicaz4.setControlX2(3.9);
+        cubicaz4.setControlY2(-0.59);
+        cubicaz4.setFill(Color.TRANSPARENT);
+        cubicaz4.setStroke(getColor());
+        cubicaz4.setStrokeLineCap(StrokeLineCap.ROUND);
+        cubicaz4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+        
+        fondo.getChildren().addAll(cubicaz1, cubicaz2, cubicaz3, cubicaz4);
         return fondo;
     }
 }
