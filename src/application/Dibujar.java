@@ -10,12 +10,12 @@ import javafx.scene.paint.Color;
 
 public class Dibujar {
     
-    private static AnchorPane lienzo = new AnchorPane(); // Nodo que guardará las letras dibujadas
-    private static CrearCaracteres llamar = new CrearCaracteres(); // "Puntero"
+    private static final AnchorPane lienzo = new AnchorPane(); // Nodo que guardará las letras dibujadas
+    private static final CrearCaracteres llamar = new CrearCaracteres(); // Objeto clase CrearCaracteres
     private static Color colorActual = Color.BLACK; // Valor inicial para el color de las letras
     
     private static double espacioEnFila;
-    private static double letraCont;
+    private static int charCont;
     private static double posActualX;
     private static double posActualY;
     
@@ -36,20 +36,14 @@ public class Dibujar {
     
     public void guardarPalabras(String entrada){
         
-        // Posición y tamaño del fondo de dibujo
-        lienzo.setLayoutX(30);
-        lienzo.setLayoutY(60);
-        lienzo.setPrefSize(1035, 450);
-        
         reiniciarVariables();
         int cont = 0;
         
         ArrayList<Palabra> palabras = new ArrayList<>();
         
+        // Se guardan palabras y espacios
         for (int i=0;i<entrada.length();i++){
-            
             palabras.add(new Palabra(false,false,false));
-            
             if (entrada.charAt(i) != ' '){
                 int j = i;
                 while (j<entrada.length()){
@@ -60,7 +54,6 @@ public class Dibujar {
                         break;
                     }
                 }
-                
                 palabras.get(cont).setPalabra(entrada.substring(i, j));
                 i = j-1;
             }
@@ -69,33 +62,47 @@ public class Dibujar {
             }
             cont++;
         }
-        System.out.println("1");
-        for (int i=0;i<palabras.size();i++){
-            System.out.println(palabras.get(i).getPalabra());
-        }
         
-        for (int i=0;i<palabras.size();i++){ // Comprobaremos los comandos que puedan tener cada palabra
-            
+        // Comprobaremos los comandos de cada palabra
+        for (int i=0;i<palabras.size();i++){
             String p = palabras.get(i).getPalabra();
             cont = i;
-            
             if (p.charAt(0) == '^'){ // Si el primer caracter es ^
-                // Cambio de Estilo
                 boolean salir = false;
                 int j;
                 for (j=1;j<p.length() && !salir && cont<palabras.size();j++){
                     switch (p.charAt(j)){
                         case 'N':
-                            palabras.get(cont).setN(true);
+                            if (p.charAt(j-1) == 'N' || p.charAt(j-1) == 'K' || p.charAt(j-1) == 'S'){
+                                j--;
+                                salir = true;
+                            }
+                            else{
+                                palabras.get(cont).setN(true);
+                            }
                             break;
                         case 'K':
-                            palabras.get(cont).setK(true);
+                            if (p.charAt(j-1) == 'N' || p.charAt(j-1) == 'K' || p.charAt(j-1) == 'S'){
+                                j--;
+                                salir = true;
+                            }
+                            else{
+                                palabras.get(cont).setK(true);
+                            }
                             break;
                         case 'S':
-                            palabras.get(cont).setS(true);
+                            if (p.charAt(j-1) == 'N' || p.charAt(j-1) == 'K' || p.charAt(j-1) == 'S'){
+                                j--;
+                                salir = true;
+                            }
+                            else{
+                                palabras.get(cont).setS(true);
+                            }
                             break;
+                            /*
                         case 'T':
                             break;
+                            */
                         case ',':
                             if (cont+1<palabras.size()){
                                 cont++;
@@ -118,29 +125,40 @@ public class Dibujar {
                 }
             }
         }
-        System.out.println("2");
-        for (int i=0;i<palabras.size();i++){
-            System.out.println(palabras.get(i).getPalabra());
-        }
-        
-        /*
+
         // Al terminar este ciclo tenemos un arreglo de palabras sin caracteres de comando, listo para dibujar
         // Además cada palabra tiene sus estilos asignados por los comandos anteriores
-        cont = 0;
         for (int i=0;i<palabras.size();i++){
-            for (int j=0;j<palabras.get(i).getPalabra().length();j++){
-                
-                lienzo.getChildren().add(dibujarLetras(palabras.get(i).getPalabra().charAt(j)));
-                lienzo.getChildren().get(cont).setLayoutX(posActualX);
-                lienzo.getChildren().get(cont).setLayoutY(posActualY);
-                posActualX = posActualX + tamañoCaracter(palabras.get(i).getPalabra().charAt(j));
-                espacioEnFila = espacioEnFila - tamañoCaracter(palabras.get(i).getPalabra().charAt(j));
-                cont++;
+            String p = palabras.get(i).getPalabra();
+            if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < 1035){ // espacioEnFila < tamañoPalabra < 1035
+                espacioEnFila = 1035;
+                posActualX = 0;
+                posActualY = posActualY + 60;
             }
+            dibujarPalabra(p);
         }
-        */
     }
     
+    public void dibujarPalabra(String palabra){
+        for (int i=0;i<palabra.length();i++){
+            if (posActualX + tamañoCaracter(palabra.charAt(i)) > 1035){
+                lienzo.getChildren().add(dibujarLetras('-'));
+                lienzo.getChildren().get(charCont).setLayoutX(posActualX);
+                lienzo.getChildren().get(charCont).setLayoutY(posActualY);
+                charCont++;
+                espacioEnFila = 1035;
+                posActualX = 0;
+                posActualY = posActualY + 60;
+            }
+            lienzo.getChildren().add(dibujarLetras(palabra.charAt(i))); // Se agrega el nodo
+            lienzo.getChildren().get(charCont).setLayoutX(posActualX); // Posición X para el nodo
+            lienzo.getChildren().get(charCont).setLayoutY(posActualY); // Posición Y para el nodo
+            posActualX = posActualX + tamañoCaracter(palabra.charAt(i)); // Aumento de la posición X por el espacio usado
+            espacioEnFila = espacioEnFila - tamañoCaracter(palabra.charAt(i)); // Se resta el espacio usado al disponible
+            charCont++;
+        }
+    }
+    /*
     public void dibujarEntrada(String entrada){
         
         lienzo.setLayoutX(30); // Posición (0,0) para las letras
@@ -210,7 +228,7 @@ public class Dibujar {
         }
         
     }
-    
+    */
     public AnchorPane dibujarLetras(char caracter){
         
         AnchorPane nuevoNodo = new AnchorPane(); // Objeto para el retorno
@@ -378,6 +396,69 @@ public class Dibujar {
             case 'z':
                 nuevoNodo = llamar.crear_z();
                 break;
+            case ' ':
+                // Nodo vacío para Espacio
+                break;
+            case '!':
+                nuevoNodo = llamar.crear_exclamacionFinal();
+                break;
+            case '¡':
+                nuevoNodo = llamar.crear_exclamacionInicial();
+                break;
+            case '¿':
+                nuevoNodo = llamar.crear_interrogacionInicial();
+                break;
+            case '?':
+                nuevoNodo = llamar.crear_interrogacionFinal();
+                break;
+            case '.':
+                nuevoNodo = llamar.crear_Punto();
+                break;
+            case ',':
+                nuevoNodo = llamar.crear_Coma();
+                break;
+            case ';':
+                nuevoNodo = llamar.crear_PuntoyComa();
+                break;
+            case ':':
+                nuevoNodo = llamar.crear_DosPuntos();
+                break;
+            case '(':
+                nuevoNodo = llamar.crear_ParentesisInicio();
+                break;
+            case ')':
+                nuevoNodo = llamar.crear_ParentesisFinal();
+                break;
+            case '[':
+                nuevoNodo = llamar.crear_CorcheteInicio();
+                break;
+            case ']':
+                nuevoNodo = llamar.crear_CorcheteFinal();
+                break;
+            case '{':
+                nuevoNodo = llamar.crear_LlaveInicial();
+                break;
+            case '}':
+                nuevoNodo = llamar.crear_LlaveFinal();
+                break;
+            case '-':
+                nuevoNodo = llamar.crear_Guion();
+                break;
+            case '_':
+                nuevoNodo = llamar.crear_GuionBajo();
+                break;
+            case 39:
+                nuevoNodo = llamar.crear_ComillaSimple();
+                break;
+            case '"':
+                nuevoNodo = llamar.crear_ComillasDoble();
+                break;
+            case '«':
+                nuevoNodo = llamar.crear_ComillasEspañolaInicio();
+                break;
+            case '»':
+                nuevoNodo = llamar.crear_ComillasEspañolaFinal();
+                break;
         }
         return nuevoNodo;
     }
@@ -456,7 +537,7 @@ public class Dibujar {
     
     public void reiniciarVariables(){
         espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
-        letraCont = 0; // Contará el espacio a usar de las letras de una palabra.
+        charCont = 0; // Contador de caracteres dibujados.
         posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
         posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
     }
@@ -469,9 +550,10 @@ public class Dibujar {
                         ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','Q','H','F','Z','J','Ñ','X','K','W'};
         
         boolean esLetra = false; // Se inicializa el retorno en false hasta encontrar la letra
-        for (int i=0;i<54;i++){ // Se recorre el arreglo
+        for (int i=0;i<letras.length;i++){ // Se recorre el arreglo
             if (caracter == letras[i]){ // Si el caracter es igual a un caracter de la lista entonces es letra
                 esLetra = true;
+                break;
             }
         }
         return esLetra;
@@ -479,17 +561,24 @@ public class Dibujar {
     
     public boolean esSimbolo(char caracter){
         
-        char[] simbolos = {'!','¡','¿','?','.',',',';',':','(',')','[',']','{','}','-','_',39,'"','«','»'};
+        char[] simbolos = {'!','¡','¿','?','.',',',';',':','(',')','[',']','{','}','-','_',39,'"','«','»','^','+'};
         // Se usa el código ascii 39 para la comilla simple, ya que el compilador no permite poner el caracter entre comillas simples
         boolean esSimbolo = false; // Se inicializa el retorno en false hasta encontrar el símbolo
-        for (int i=0;i<20;i++){ // Se recorre el arreglo
+        for (int i=0;i<simbolos.length;i++){ // Se recorre el arreglo
             if (caracter == simbolos[i]){ // Si el caracter es igual a un caracter de la lista entonces es símbolo
                 esSimbolo = true;
+                break;
             }
         }
         return esSimbolo;
     }
-    
+    public double tamañoPalabra(String cadena){
+        double cont = 0;
+        for (int i=0;i<cadena.length();i++){
+            cont = cont + tamañoCaracter(cadena.charAt(i));
+        }
+        return cont;
+    }
     public double tamañoCaracter(char caracter){
         double tamaño;
         // Retorna el tamaño que usarán los caracteres al momento de dibujar
