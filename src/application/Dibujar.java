@@ -36,7 +36,11 @@ public class Dibujar {
     
     public void guardarPalabras(String entrada){
         
-        reiniciarVariables();
+        espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
+        charCont = 0; // Contador de caracteres dibujados.
+        posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
+        posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
+        
         int cont = 0;
         
         ArrayList<Palabra> palabras = new ArrayList<>();
@@ -142,7 +146,7 @@ public class Dibujar {
     public void dibujarPalabra(String palabra){
         for (int i=0;i<palabra.length();i++){
             if (posActualX + tamañoCaracter(palabra.charAt(i)) > 1035){
-                lienzo.getChildren().add(dibujarLetras('-'));
+                lienzo.getChildren().add(llamar.dibujarCaracter('-'));
                 lienzo.getChildren().get(charCont).setLayoutX(posActualX);
                 lienzo.getChildren().get(charCont).setLayoutY(posActualY);
                 charCont++;
@@ -150,396 +154,13 @@ public class Dibujar {
                 posActualX = 0;
                 posActualY = posActualY + 60;
             }
-            lienzo.getChildren().add(dibujarLetras(palabra.charAt(i))); // Se agrega el nodo
+            lienzo.getChildren().add(llamar.dibujarCaracter(palabra.charAt(i))); // Se agrega el nodo
             lienzo.getChildren().get(charCont).setLayoutX(posActualX); // Posición X para el nodo
             lienzo.getChildren().get(charCont).setLayoutY(posActualY); // Posición Y para el nodo
             posActualX = posActualX + tamañoCaracter(palabra.charAt(i)); // Aumento de la posición X por el espacio usado
             espacioEnFila = espacioEnFila - tamañoCaracter(palabra.charAt(i)); // Se resta el espacio usado al disponible
             charCont++;
         }
-    }
-    /*
-    public void dibujarEntrada(String entrada){
-        
-        lienzo.setLayoutX(30); // Posición (0,0) para las letras
-        lienzo.setLayoutY(60);
-        lienzo.setPrefSize(1035, 450);
-        int size = entrada.length(); // Se guarda el tamaño de la cadena ingresada
-        char[] cadena = new char[size]; // Se crea un arreglo de caracteres del tamaño de la cadena ingresada
-        
-        for (int i=0;i<size;i++){ //Se recorre el arreglo y se guardan los caracteres en las posiciones del arreglo
-            cadena[i]=entrada.charAt(i);
-        }
-        
-        reiniciarVariables();
-        
-        for (int i=0;i<size;i++){ // Se recorre la cadena
-            if (esLetra(cadena[i])){ // Si el caracter es una letra
-                int j = i; // Guardamos el contador en j para no alterar i
-                while(j<size){ // Recorremos la palabra actual (una cantidad de letras seguidas)
-                    if (esLetra(cadena[j])){ // Buscamos el tamaño que ocupará la palabra
-                        letraCont = letraCont + tamañoCaracter(cadena[j]);
-                        j++;
-                    }
-                    else{ // Cuando se encuentre algo distinto a una letra (simbolo o espacio) se finaliza el ciclo
-                        break;
-                    }
-                }
-                if (letraCont <= espacioEnFila){ // Se dibuja en la fila actual si el tamaño de la palabra es menor al disponible
-                    //dibujar en la misma fila
-                    while(i<j){ // Desde el inicio al final de la palabra
-                        lienzo.getChildren().add(dibujarLetras(cadena[i])); // Se agrega el nodo
-                        lienzo.getChildren().get(i).setLayoutX(posActualX); // Posición X para el nodo
-                        lienzo.getChildren().get(i).setLayoutY(posActualY); // Posición Y para el nodo
-                        posActualX = posActualX + tamañoCaracter(cadena[i]); // Aumento de la posición X por el espacio usado
-                        espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]); // Se resta el espacio usado al disponible
-                        i++; // Siguiente caracter
-                    }
-                }
-                else{ // Si el tamaño de la palabra es mayor al espacio disponible
-                    //dibujar en una nueva fila
-                    espacioEnFila = 1035; // Se reestablece el espacio disponible
-                    posActualX = 0; // Se posiciona la X al inicio
-                    posActualY = posActualY + 60; // Se aumenta la Y para una nueva fila
-                    while(i<j){
-                        lienzo.getChildren().add(dibujarLetras(cadena[i])); // Se agrega el nodo
-                        lienzo.getChildren().get(i).setLayoutX(posActualX); // Posición X para el nodo
-                        lienzo.getChildren().get(i).setLayoutY(posActualY); // Posición Y para el nodo
-                        posActualX = posActualX + tamañoCaracter(cadena[i]); // Aumento de la posición X por el espacio usado
-                        espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]); // Se resta el espacio usado al disponible
-                        i++; // Siguiente caracter
-                    }
-                }
-                i--; // Se resta 1 al contador que es la posición del siguiente caracter
-            }
-            else{ // Si no es letra
-                letraCont = 0; // No hay letras, así que el contador de palabras debe ser cero, y se dibujará de inmediato
-                if (tamañoCaracter(cadena[i]) > espacioEnFila){ // Si el caracter usa más espacio que el disponible se usa una nueva fila
-                    espacioEnFila = 1035;
-                    posActualY = posActualY + 60;
-                    posActualX = 0;
-                }
-                lienzo.getChildren().add(dibujarSimbolos(cadena[i])); // Se agrega el nodo
-                lienzo.getChildren().get(i).setLayoutX(posActualX); // Posición X para el nodo
-                lienzo.getChildren().get(i).setLayoutY(posActualY); // Posición Y para el nodo
-                espacioEnFila = espacioEnFila - tamañoCaracter(cadena[i]); // Aumento de la posición X por el espacio usado
-                posActualX = posActualX + tamañoCaracter(cadena[i]); // Se resta el espacio usado al disponible
-            }
-        }
-        
-    }
-    */
-    public AnchorPane dibujarLetras(char caracter){
-        
-        AnchorPane nuevoNodo = new AnchorPane(); // Objeto para el retorno
-        
-        switch (caracter){ // Este switch recibe el caracter que se va a dibujar y llama al método del caracter correspondiente
-            case 'A':
-                nuevoNodo = llamar.crear_A();
-                break;
-            case 'B':
-                nuevoNodo = llamar.crear_B();
-                break;
-            case 'C':
-                nuevoNodo = llamar.crear_C();
-                break;
-            case 'D':
-                nuevoNodo = llamar.crear_D();
-                break;
-            case 'E':
-                nuevoNodo = llamar.crear_E();
-                break;
-            case 'F':
-                nuevoNodo = llamar.crear_F();
-                break;
-            case 'G':
-                nuevoNodo = llamar.crear_G();
-                break;
-            case 'H':
-                nuevoNodo = llamar.crear_H();
-                break;
-            case 'I':
-                nuevoNodo = llamar.crear_I();
-                break;
-            case 'J':
-                nuevoNodo = llamar.crear_J();
-                break;
-            case 'K':
-                nuevoNodo = llamar.crear_K();
-                break;
-            case 'L':
-                nuevoNodo = llamar.crear_L();
-                break;
-            case 'M':
-                nuevoNodo = llamar.crear_M();
-                break;
-            case 'N':
-                nuevoNodo = llamar.crear_N();
-                break;
-            case 'Ñ':
-                nuevoNodo = llamar.crear_Ñ();
-                break;
-            case 'O':
-                nuevoNodo = llamar.crear_O();
-                break;
-            case 'P':
-                nuevoNodo = llamar.crear_P();
-                break;
-            case 'Q':
-                nuevoNodo = llamar.crear_Q();
-                break;
-            case 'R':
-                nuevoNodo = llamar.crear_R();
-                break;
-            case 'S':
-                nuevoNodo = llamar.crear_S();
-                break;
-            case 'T':
-                nuevoNodo = llamar.crear_T();
-                break;
-            case 'U':
-                nuevoNodo = llamar.crear_U();
-                break;
-            case 'V':
-                nuevoNodo = llamar.crear_V();
-                break;
-            case 'W':
-                nuevoNodo = llamar.crear_W();
-                break;
-            case 'X':
-                nuevoNodo = llamar.crear_X();
-                break;
-            case 'Y':
-                nuevoNodo = llamar.crear_Y();
-                break;
-            case 'Z':
-                nuevoNodo = llamar.crear_Z();
-                break;
-            case 'a':
-                nuevoNodo = llamar.crear_a();
-                break;
-            case 'b':
-                nuevoNodo = llamar.crear_b();
-                break;
-            case 'c':
-                nuevoNodo = llamar.crear_c();
-                break;
-            case 'd':
-                nuevoNodo = llamar.crear_d();
-                break;
-            case 'e':
-                nuevoNodo = llamar.crear_e();
-                break;
-            case 'f':
-                nuevoNodo = llamar.crear_f();
-                break;
-            case 'g':
-                nuevoNodo = llamar.crear_g();
-                break;
-            case 'h':
-                nuevoNodo = llamar.crear_h();
-                break;
-            case 'i':
-                nuevoNodo = llamar.crear_i();
-                break;
-            case 'j':
-                nuevoNodo = llamar.crear_j();
-                break;
-            case 'k':
-                nuevoNodo = llamar.crear_k();
-                break;
-            case 'l':
-                nuevoNodo = llamar.crear_l();
-                break;
-            case 'm':
-                nuevoNodo = llamar.crear_m();
-                break;
-            case 'n':
-                nuevoNodo = llamar.crear_n();
-                break;
-            case 'ñ':
-                nuevoNodo = llamar.crear_ñ();
-                break;
-            case 'o':
-                nuevoNodo = llamar.crear_o();
-                break;
-            case 'p':
-                nuevoNodo = llamar.crear_p();
-                break;
-            case 'q':
-                nuevoNodo = llamar.crear_q();
-                break;
-            case 'r':
-                nuevoNodo = llamar.crear_r();
-                break;
-            case 's':
-                nuevoNodo = llamar.crear_s();
-                break;
-            case 't':
-                nuevoNodo = llamar.crear_t();
-                break;
-            case 'u':
-                nuevoNodo = llamar.crear_u();
-                break;
-            case 'v':
-                nuevoNodo = llamar.crear_v();
-                break;
-            case 'w':
-                nuevoNodo = llamar.crear_w();
-                break;
-            case 'x':
-                nuevoNodo = llamar.crear_x();
-                break;
-            case 'y':
-                nuevoNodo = llamar.crear_y();
-                break;
-            case 'z':
-                nuevoNodo = llamar.crear_z();
-                break;
-            case ' ':
-                // Nodo vacío para Espacio
-                break;
-            case '!':
-                nuevoNodo = llamar.crear_exclamacionFinal();
-                break;
-            case '¡':
-                nuevoNodo = llamar.crear_exclamacionInicial();
-                break;
-            case '¿':
-                nuevoNodo = llamar.crear_interrogacionInicial();
-                break;
-            case '?':
-                nuevoNodo = llamar.crear_interrogacionFinal();
-                break;
-            case '.':
-                nuevoNodo = llamar.crear_Punto();
-                break;
-            case ',':
-                nuevoNodo = llamar.crear_Coma();
-                break;
-            case ';':
-                nuevoNodo = llamar.crear_PuntoyComa();
-                break;
-            case ':':
-                nuevoNodo = llamar.crear_DosPuntos();
-                break;
-            case '(':
-                nuevoNodo = llamar.crear_ParentesisInicio();
-                break;
-            case ')':
-                nuevoNodo = llamar.crear_ParentesisFinal();
-                break;
-            case '[':
-                nuevoNodo = llamar.crear_CorcheteInicio();
-                break;
-            case ']':
-                nuevoNodo = llamar.crear_CorcheteFinal();
-                break;
-            case '{':
-                nuevoNodo = llamar.crear_LlaveInicial();
-                break;
-            case '}':
-                nuevoNodo = llamar.crear_LlaveFinal();
-                break;
-            case '-':
-                nuevoNodo = llamar.crear_Guion();
-                break;
-            case '_':
-                nuevoNodo = llamar.crear_GuionBajo();
-                break;
-            case 39:
-                nuevoNodo = llamar.crear_ComillaSimple();
-                break;
-            case '"':
-                nuevoNodo = llamar.crear_ComillasDoble();
-                break;
-            case '«':
-                nuevoNodo = llamar.crear_ComillasEspañolaInicio();
-                break;
-            case '»':
-                nuevoNodo = llamar.crear_ComillasEspañolaFinal();
-                break;
-        }
-        return nuevoNodo;
-    }
-    
-    public AnchorPane dibujarSimbolos(char caracter){
-        
-        AnchorPane nuevoNodo = new AnchorPane(); // Objeto para el retorno
-        
-        switch (caracter){ // Este switch recibe el caracter que se va a dibujar y llama al método del caracter correspondiente
-            case ' ':
-                // Nodo vacío para Espacio
-                break;
-            case '!':
-                nuevoNodo = llamar.crear_exclamacionFinal();
-                break;
-            case '¡':
-                nuevoNodo = llamar.crear_exclamacionInicial();
-                break;
-            case '¿':
-                nuevoNodo = llamar.crear_interrogacionInicial();
-                break;
-            case '?':
-                nuevoNodo = llamar.crear_interrogacionFinal();
-                break;
-            case '.':
-                nuevoNodo = llamar.crear_Punto();
-                break;
-            case ',':
-                nuevoNodo = llamar.crear_Coma();
-                break;
-            case ';':
-                nuevoNodo = llamar.crear_PuntoyComa();
-                break;
-            case ':':
-                nuevoNodo = llamar.crear_DosPuntos();
-                break;
-            case '(':
-                nuevoNodo = llamar.crear_ParentesisInicio();
-                break;
-            case ')':
-                nuevoNodo = llamar.crear_ParentesisFinal();
-                break;
-            case '[':
-                nuevoNodo = llamar.crear_CorcheteInicio();
-                break;
-            case ']':
-                nuevoNodo = llamar.crear_CorcheteFinal();
-                break;
-            case '{':
-                nuevoNodo = llamar.crear_LlaveInicial();
-                break;
-            case '}':
-                nuevoNodo = llamar.crear_LlaveFinal();
-                break;
-            case '-':
-                nuevoNodo = llamar.crear_Guion();
-                break;
-            case '_':
-                nuevoNodo = llamar.crear_GuionBajo();
-                break;
-            case 39:
-                nuevoNodo = llamar.crear_ComillaSimple();
-                break;
-            case '"':
-                nuevoNodo = llamar.crear_ComillasDoble();
-                break;
-            case '«':
-                nuevoNodo = llamar.crear_ComillasEspañolaInicio();
-                break;
-            case '»':
-                nuevoNodo = llamar.crear_ComillasEspañolaFinal();
-                break;
-        }
-        return nuevoNodo;
-    }
-    
-    public void reiniciarVariables(){
-        espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
-        charCont = 0; // Contador de caracteres dibujados.
-        posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
-        posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
     }
     
     public boolean esLetra(char caracter){
@@ -663,6 +284,9 @@ public class Dibujar {
                 break;
             case 'z':
                 tamaño = 19;
+                break;
+            case ' ':
+                tamaño = 30;
                 break;
             case '.':
                 tamaño = 22;
