@@ -13,6 +13,7 @@ public class Dibujar {
     private static final AnchorPane lienzo = new AnchorPane(); // Nodo que guardará las letras dibujadas
     private static final CrearCaracteres llamar = new CrearCaracteres(); // Objeto clase CrearCaracteres
     private static Color colorActual = Color.BLACK; // Valor inicial para el color de las letras
+    private static boolean puntosControl = false;
     
     private static double espacioEnFila;
     private static int charCont;
@@ -107,8 +108,8 @@ public class Dibujar {
                         case 'T':
                             break;
                             */
-                        case ',':
-                            if (cont+1<palabras.size()){
+                        case ','://pendiente
+                            while (" ".equals(palabras.get(cont).getPalabra()) && cont<palabras.size()){
                                 cont++;
                             }
                             break;
@@ -139,14 +140,14 @@ public class Dibujar {
                 posActualX = 0;
                 posActualY = posActualY + 60;
             }
-            dibujarPalabra(p);
+            dibujarPalabra(palabras.get(i));
         }
     }
     
-    public void dibujarPalabra(String palabra){
-        for (int i=0;i<palabra.length();i++){
-            if (posActualX + tamañoCaracter(palabra.charAt(i)) > 1035){
-                lienzo.getChildren().add(llamar.dibujarCaracter('-'));
+    public void dibujarPalabra(Palabra palabra){
+        for (int i=0;i<palabra.getPalabra().length();i++){
+            if (posActualX + tamañoCaracter(palabra.getPalabra().charAt(i)) > 1035){
+                lienzo.getChildren().add(llamar.dibujarCaracter('-', palabra));
                 lienzo.getChildren().get(charCont).setLayoutX(posActualX);
                 lienzo.getChildren().get(charCont).setLayoutY(posActualY);
                 charCont++;
@@ -154,11 +155,11 @@ public class Dibujar {
                 posActualX = 0;
                 posActualY = posActualY + 60;
             }
-            lienzo.getChildren().add(llamar.dibujarCaracter(palabra.charAt(i))); // Se agrega el nodo
+            lienzo.getChildren().add(llamar.dibujarCaracter(palabra.getPalabra().charAt(i), palabra)); // Se agrega el nodo
             lienzo.getChildren().get(charCont).setLayoutX(posActualX); // Posición X para el nodo
             lienzo.getChildren().get(charCont).setLayoutY(posActualY); // Posición Y para el nodo
-            posActualX = posActualX + tamañoCaracter(palabra.charAt(i)); // Aumento de la posición X por el espacio usado
-            espacioEnFila = espacioEnFila - tamañoCaracter(palabra.charAt(i)); // Se resta el espacio usado al disponible
+            posActualX = posActualX + tamañoCaracter(palabra.getPalabra().charAt(i)); // Aumento de la posición X por el espacio usado
+            espacioEnFila = espacioEnFila - tamañoCaracter(palabra.getPalabra().charAt(i)); // Se resta el espacio usado al disponible
             charCont++;
         }
     }
@@ -205,22 +206,22 @@ public class Dibujar {
         // Retorna el tamaño que usarán los caracteres al momento de dibujar
         switch(caracter){
             case 'a':
-                tamaño = 19;
+                tamaño = 16;
                 break;
             case 'b':
-                tamaño = 19;
+                tamaño = 16;
                 break;
             case 'c':
-                tamaño = 19;
+                tamaño = 17;
                 break;
             case 'd':
-                tamaño = 19;
+                tamaño = 16;
                 break;
             case 'e':
-                tamaño = 19;
+                tamaño = 15;
                 break;
             case 'f':
-                tamaño = 19;
+                tamaño = 16;
                 break;
             case 'g':
                 tamaño = 19;
@@ -355,7 +356,7 @@ public class Dibujar {
         return tamaño;
     }
     
-    public AnchorPane getLienzo() { // Getter de lienzo
+    public AnchorPane getLienzo(){ // Getter de lienzo
         return lienzo;
     }
     
@@ -363,8 +364,16 @@ public class Dibujar {
         colorActual = nuevoColor;
     }
     
-    public static Color getColor(){ // Getter del color de las letras
+    public Color getColor(){ // Getter del color de las letras
         return colorActual;
+    }
+    
+    public void setControl(boolean control){
+        puntosControl = control;
+    }
+    
+    public boolean getControl(){
+        return puntosControl;
     }
     
 }
