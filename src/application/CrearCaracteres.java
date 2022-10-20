@@ -2886,7 +2886,7 @@ public class CrearCaracteres {
                 return fondo;
             case 'u':
                 CubicCurve cubicau1= new CubicCurve(-33.79, -16.4, -40, 5.59, -23.8, 16, -23.8, -16.4);
-                CubicCurve cubicau2 = new CubicCurve(); 
+                CubicCurve cubicau2 = new CubicCurve(-31.8, -28.59, -34, -7.95, -26.39, -7.95, -26.39, -15.59); 
                 fondo.setPrefSize(19,60);
                 //cubica 1
                 cubicau1.setLayoutX(36);
@@ -2898,14 +2898,6 @@ public class CrearCaracteres {
                 // cubica 2
                 cubicau2.setLayoutX(44);
                 cubicau2.setLayoutY(57);
-                cubicau2.setStartX(-31.8);
-                cubicau2.setStartY(-28.59);
-                cubicau2.setEndX(-26.39);
-                cubicau2.setEndY(-15.59);
-                cubicau2.setControlX1(-34);
-                cubicau2.setControlY1(-7.95);
-                cubicau2.setControlX2(-26.39);
-                cubicau2.setControlY2(-7.95);
                 cubicau2.setFill(Color.TRANSPARENT);
                 cubicau2.setStroke(dibujar.getColor());
                 cubicau2.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -2920,7 +2912,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subu = new Line();
+                    subu.setStartX(19);
+                    subu.setLayoutX(0);
+                    subu.setLayoutY(55);
+                    fondo.getChildren().add(subu);
                 }
                 
                 if (dibujar.getControl()){
@@ -2989,7 +2985,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subv = new Line();
+                    subv.setStartX(19);
+                    subv.setLayoutX(0);
+                    subv.setLayoutY(55);
+                    fondo.getChildren().add(subv);
                 }
                 
                 if (dibujar.getControl()){
@@ -3074,7 +3074,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subw = new Line();
+                    subw.setStartX(19);
+                    subw.setLayoutX(0);
+                    subw.setLayoutY(55);
+                    fondo.getChildren().add(subw);
                 }
                 
                 if (dibujar.getControl()){
@@ -3127,7 +3131,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subx = new Line();
+                    subx.setStartX(19);
+                    subx.setLayoutX(0);
+                    subx.setLayoutY(55);
+                    fondo.getChildren().add(subx);
                 }
                 
                 if (dibujar.getControl()){
@@ -3212,7 +3220,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line suby = new Line();
+                    suby.setStartX(19);
+                    suby.setLayoutX(0);
+                    suby.setLayoutY(55);
+                    fondo.getChildren().add(suby);
                 }
                 
                 if (dibujar.getControl()){
@@ -3297,7 +3309,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subz = new Line();
+                    subz.setStartX(19);
+                    subz.setLayoutX(0);
+                    subz.setLayoutY(55);
+                    fondo.getChildren().add(subz);
                 }
                 
                 if (dibujar.getControl()){
@@ -3312,6 +3328,8 @@ public class CrearCaracteres {
             case '!':
                 Ellipse elipse = new Ellipse();
                 Circle circulo = new Circle();
+                
+                fondo.setPrefSize(19, 60);
 
                 //Elipse
                 elipse.setRadiusX(1);
@@ -3336,7 +3354,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subExclamacionInicial = new Line();
+                    subExclamacionInicial.setStartX(19);
+                    subExclamacionInicial.setLayoutX(0);
+                    subExclamacionInicial.setLayoutY(55);
+                    fondo.getChildren().add(subExclamacionInicial);
                 }
                 
                 if (dibujar.getControl()){
@@ -3348,6 +3370,9 @@ public class CrearCaracteres {
             case '¡':
                 Ellipse elipse1 = new Ellipse();
                 Circle circulo1 = new Circle();
+                
+                fondo.setPrefSize(19, 60);
+                
                 //Elipse
                 elipse1.setRadiusX(1);
                 elipse1.setRadiusY(20);
@@ -3372,7 +3397,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subExclamacionFinal = new Line();
+                    subExclamacionFinal.setStartX(19);
+                    subExclamacionFinal.setLayoutX(0);
+                    subExclamacionFinal.setLayoutY(55);
+                    fondo.getChildren().add(subExclamacionFinal);
                 }
                 
                 if (dibujar.getControl()){
@@ -3427,7 +3456,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subInterrogacionInicial = new Line();
+                    subInterrogacionInicial.setStartX(34);
+                    subInterrogacionInicial.setLayoutX(0);
+                    subInterrogacionInicial.setLayoutY(55);
+                    fondo.getChildren().add(subInterrogacionInicial);
                 }
                 
                 if (dibujar.getControl()){
@@ -3483,7 +3516,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subInterrogacionFinal = new Line();
+                    subInterrogacionFinal.setStartX(34);
+                    subInterrogacionFinal.setLayoutX(0);
+                    subInterrogacionFinal.setLayoutY(55);
+                    fondo.getChildren().add(subInterrogacionFinal);
                 }
                 
                 if (dibujar.getControl()){
@@ -3512,7 +3549,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subPunto = new Line();
+                    subPunto.setStartX(22);
+                    subPunto.setLayoutX(0);
+                    subPunto.setLayoutY(55);
+                    fondo.getChildren().add(subPunto);
                 }
                 
                 if (dibujar.getControl()){
@@ -3554,7 +3595,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subComa = new Line();
+                    subComa.setStartX(22);
+                    subComa.setLayoutX(0);
+                    subComa.setLayoutY(55);
+                    fondo.getChildren().add(subComa);
                 }
                 
                 if (dibujar.getControl()){
@@ -3603,7 +3648,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subPuntoyComa = new Line();
+                    subPuntoyComa.setStartX(22);
+                    subPuntoyComa.setLayoutX(0);
+                    subPuntoyComa.setLayoutY(55);
+                    fondo.getChildren().add(subPuntoyComa);
                 }
                 
                 if (dibujar.getControl()){
@@ -3638,7 +3687,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subDosPuntos = new Line();
+                    subDosPuntos.setStartX(22);
+                    subDosPuntos.setLayoutX(0);
+                    subDosPuntos.setLayoutY(55);
+                    fondo.getChildren().add(subDosPuntos);
                 }
                 
                 if (dibujar.getControl()){
@@ -3673,7 +3726,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subParentesisInicial = new Line();
+                    subParentesisInicial.setStartX(22);
+                    subParentesisInicial.setLayoutX(0);
+                    subParentesisInicial.setLayoutY(55);
+                    fondo.getChildren().add(subParentesisInicial);
                 }
                 
                 if (dibujar.getControl()){
@@ -3708,7 +3765,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subParentesisFinal = new Line();
+                    subParentesisFinal.setStartX(22);
+                    subParentesisFinal.setLayoutX(0);
+                    subParentesisFinal.setLayoutY(55);
+                    fondo.getChildren().add(subParentesisFinal);
                 }
                 
                 if (dibujar.getControl()){
@@ -3765,7 +3826,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subCorcheteInicial = new Line();
+                    subCorcheteInicial.setStartX(34);
+                    subCorcheteInicial.setLayoutX(0);
+                    subCorcheteInicial.setLayoutY(55);
+                    fondo.getChildren().add(subCorcheteInicial);
                 }
                 
                 if (dibujar.getControl()){
@@ -3822,7 +3887,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subCorcheteFinal = new Line();
+                    subCorcheteFinal.setStartX(34);
+                    subCorcheteFinal.setLayoutX(0);
+                    subCorcheteFinal.setLayoutY(55);
+                    fondo.getChildren().add(subCorcheteFinal);
                 }
                 
                 if (dibujar.getControl()){
@@ -3875,7 +3944,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subLlaveInicial = new Line();
+                    subLlaveInicial.setStartX(34);
+                    subLlaveInicial.setLayoutX(0);
+                    subLlaveInicial.setLayoutY(55);
+                    fondo.getChildren().add(subLlaveInicial);
                 }
                 
                 if (dibujar.getControl()){
@@ -3928,7 +4001,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subLlaveFinal = new Line();
+                    subLlaveFinal.setStartX(34);
+                    subLlaveFinal.setLayoutX(0);
+                    subLlaveFinal.setLayoutY(55);
+                    fondo.getChildren().add(subLlaveFinal);
                 }
                 
                 if (dibujar.getControl()){
@@ -3960,7 +4037,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subGuion = new Line();
+                    subGuion.setStartX(34);
+                    subGuion.setLayoutX(0);
+                    subGuion.setLayoutY(55);
+                    fondo.getChildren().add(subGuion);
                 }
                 
                 if (dibujar.getControl()){
@@ -3992,7 +4073,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subGuionBajo = new Line();
+                    subGuionBajo.setStartX(34);
+                    subGuionBajo.setLayoutX(0);
+                    subGuionBajo.setLayoutY(55);
+                    fondo.getChildren().add(subGuionBajo);
                 }
                 
                 if (dibujar.getControl()){
@@ -4034,7 +4119,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subComillaSimple = new Line();
+                    subComillaSimple.setStartX(22);
+                    subComillaSimple.setLayoutX(0);
+                    subComillaSimple.setLayoutY(55);
+                    fondo.getChildren().add(subComillaSimple);
                 }
                 
                 if (dibujar.getControl()){
@@ -4097,7 +4186,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subComillaDoble = new Line();
+                    subComillaDoble.setStartX(22);
+                    subComillaDoble.setLayoutX(0);
+                    subComillaDoble.setLayoutY(55);
+                    fondo.getChildren().add(subComillaDoble);
                 }
                 
                 if (dibujar.getControl()){
@@ -4166,7 +4259,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subComillaE1 = new Line();
+                    subComillaE1.setStartX(34);
+                    subComillaE1.setLayoutX(0);
+                    subComillaE1.setLayoutY(55);
+                    fondo.getChildren().add(subComillaE1);
                 }
                 
                 if (dibujar.getControl()){
@@ -4235,7 +4332,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    //FALTA IMPLEMENTAR
+                    Line subComillaE2 = new Line();
+                    subComillaE2.setStartX(34);
+                    subComillaE2.setLayoutX(0);
+                    subComillaE2.setLayoutY(55);
+                    fondo.getChildren().add(subComillaE2);
                 }
                 
                 if (dibujar.getControl()){
