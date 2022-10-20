@@ -3190,22 +3190,17 @@ public class CrearCaracteres {
                 
                 return fondo;
             case '!':
-                Ellipse elipse = new Ellipse();
-                Circle circulo = new Circle();
+                Ellipse elipse = new Ellipse(1, 20);
+                Circle circulo = new Circle(3, dibujar.getColor());
                 
                 fondo.setPrefSize(19, 60);
 
                 //Elipse
-                elipse.setRadiusX(1);
-                elipse.setRadiusY(20);
                 elipse.setFill(dibujar.getColor());
                 elipse.setStroke(dibujar.getColor());
                 elipse.setLayoutX(11);
                 elipse.setLayoutY(24);
                 //Circulo
-                circulo.setRadius(2);
-                circulo.setFill(dibujar.getColor());
-                circulo.setStroke(dibujar.getColor());
                 circulo.setLayoutX(11);
                 circulo.setLayoutY(50);
                 
@@ -3232,22 +3227,17 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(elipse, circulo);
                 return fondo;
             case '¡':
-                Ellipse elipse1 = new Ellipse();
-                Circle circulo1 = new Circle();
+                Ellipse elipse1 = new Ellipse(1, 20);
+                Circle circulo1 = new Circle(3, dibujar.getColor());
                 
                 fondo.setPrefSize(19, 60);
                 
                 //Elipse
-                elipse1.setRadiusX(1);
-                elipse1.setRadiusY(20);
                 elipse1.setFill(dibujar.getColor());
                 elipse1.setStroke(dibujar.getColor());
                 elipse1.setLayoutX(11);
                 elipse1.setLayoutY(32);
                 //Circulo
-                circulo1.setRadius(2);
-                circulo1.setFill(dibujar.getColor());
-                circulo1.setStroke(dibujar.getColor());
                 circulo1.setLayoutX(11);
                 circulo1.setLayoutY(5);
                 fondo.getChildren().addAll(elipse1, circulo1);
@@ -3274,21 +3264,13 @@ public class CrearCaracteres {
                 
                 return fondo;
             case '¿':
-                CubicCurve cubica = new CubicCurve();
-                Line linea1 = new Line();
-                Circle circulo2 = new Circle();
+                CubicCurve cubica = new CubicCurve(13.33, -25.19, -18.66, -34.79, -18.66, 2.53, 13.33, -5.46);
+                Line linea1 = new Line(3.8, -13., 3.8, 7.8);
+                Circle circulo2 = new Circle(3, dibujar.getColor());
                 fondo.setPrefSize(34, 60);
                 //Cubica
                 cubica.setLayoutX(12);
                 cubica.setLayoutY(59);
-                cubica.setStartX(13.33);
-                cubica.setStartY(-25.19);
-                cubica.setEndX(13.33);
-                cubica.setEndY(-5.46);
-                cubica.setControlX1(-18.66);
-                cubica.setControlY1(-34.79);
-                cubica.setControlX2(-18.66);
-                cubica.setControlY2(2.53);
                 cubica.setFill(Color.TRANSPARENT);
                 cubica.setStroke(dibujar.getColor());
                 cubica.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3296,18 +3278,11 @@ public class CrearCaracteres {
                 //Linea
                 linea1.setLayoutX(21);
                 linea1.setLayoutY(25);
-                linea1.setStartX(3.8);
-                linea1.setStartY(-13);
-                linea1.setEndX(3.8);
-                linea1.setEndY(7.8);
                 linea1.setFill(Color.TRANSPARENT);
                 linea1.setStroke(dibujar.getColor());
                 linea1.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea1.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //Circulo
-                circulo2.setRadius(3);
-                circulo2.setFill(dibujar.getColor());
-                circulo2.setStroke(dibujar.getColor());
                 circulo2.setLayoutX(25);
                 circulo2.setLayoutY(6);
                 
@@ -3334,21 +3309,13 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(cubica, linea1, circulo2);
                 return fondo;
             case '?':
-                CubicCurve cubica1 = new CubicCurve();
-                Line linea2 = new Line();
-                Circle circulo3 = new Circle();
+                CubicCurve cubica1 = new CubicCurve(13.33, -24.19, 36.19, -35.93, 36.19, 4.59, 13.33, -4.46);
+                Line linea2 = new Line(3.8, -13, 3.8, 7.8);
+                Circle circulo3 = new Circle(3, dibujar.getColor());
                 fondo.setPrefSize(34, 60);
                 //Cubica
                 cubica1.setLayoutX(-7);
                 cubica1.setLayoutY(29);
-                cubica1.setStartX(13.33);
-                cubica1.setStartY(-24.19);
-                cubica1.setEndX(13.33);
-                cubica1.setEndY(-4.46);
-                cubica1.setControlX1(36.19);
-                cubica1.setControlY1(-35.93);
-                cubica1.setControlX2(36.19);
-                cubica1.setControlY2(4.59);
                 cubica1.setFill(Color.TRANSPARENT);
                 cubica1.setStroke(dibujar.getColor());
                 cubica1.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3356,18 +3323,11 @@ public class CrearCaracteres {
                 //Linea
                 linea2.setLayoutX(2);
                 linea2.setLayoutY(37);
-                linea2.setStartX(3.8);
-                linea2.setStartY(-13);
-                linea2.setEndX(3.8);
-                linea2.setEndY(7.8);
                 linea2.setFill(Color.TRANSPARENT);
                 linea2.setStroke(dibujar.getColor());
                 linea2.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //Circulo
-                circulo3.setRadius(3);
-                circulo3.setFill(dibujar.getColor());
-                circulo3.setStroke(dibujar.getColor());
                 circulo3.setLayoutX(6);
                 circulo3.setLayoutY(51);
                 
@@ -3394,13 +3354,10 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(cubica1, linea2, circulo3);
                 return fondo;
             case '.':
-                Circle circulo4 = new Circle();
+                Circle circulo4 = new Circle(3, dibujar.getColor());
                 //Atributos del fondo
                 fondo.setPrefSize(22, 60);
                 //Circulo
-                circulo4.setRadius(3);
-                circulo4.setFill(dibujar.getColor());
-                circulo4.setStroke(dibujar.getColor());
                 circulo4.setLayoutX(9);
                 circulo4.setLayoutY(47);
                 
@@ -3427,24 +3384,15 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo4);
                 return fondo;
             case ',':
-                Circle circulo5 = new Circle();
-                QuadCurve cuadratica = new QuadCurve();
+                Circle circulo5 = new Circle(3, dibujar.getColor());
+                QuadCurve cuadratica = new QuadCurve(-9.39, -20.59, -5.8, -25.4, -7.62, -31);
                 fondo.setPrefSize(22, 60);
                 //Circulo
-                circulo5.setRadius(2);
-                circulo5.setFill(dibujar.getColor());
-                circulo5.setStroke(dibujar.getColor());
                 circulo5.setLayoutX(9);
                 circulo5.setLayoutY(47);
                 //Cuadratica
                 cuadratica.setLayoutX(18);
                 cuadratica.setLayoutY(77);
-                cuadratica.setStartX(-9.39);
-                cuadratica.setStartY(-20.59);
-                cuadratica.setEndX(-7.62);
-                cuadratica.setEndY(-31);
-                cuadratica.setControlX(-5.8);
-                cuadratica.setControlY(-25.4);
                 cuadratica.setFill(Color.TRANSPARENT);
                 cuadratica.setStroke(dibujar.getColor());
                 cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3473,29 +3421,19 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo5, cuadratica);
                 return fondo;
             case ';':
-                Circle circulo6 = new Circle();
-                Circle circulo7 = new Circle();
-                QuadCurve cuadratica1 = new QuadCurve();
+                Circle circulo6 = new Circle(3, dibujar.getColor());
+                Circle circulo7 = new Circle(3, dibujar.getColor());
+                QuadCurve cuadratica1 = new QuadCurve(-9.39, -20.59, -5.8, -25.4, -7.62, -31);
                 fondo.setPrefSize(22, 60);
                 //Circulo
-                circulo6.setRadius(2);
-                circulo6.setFill(dibujar.getColor());
-                circulo6.setStroke(dibujar.getColor());
                 circulo6.setLayoutX(9);
                 circulo6.setLayoutY(34);
                 //Circulo2
-                circulo7.setRadius(2);
-                circulo7.setFill(dibujar.getColor());
-                circulo7.setStroke(dibujar.getColor());
                 circulo7.setLayoutX(9);
                 circulo7.setLayoutY(47);
                 //Cuadratica
                 cuadratica1.setLayoutX(18);
                 cuadratica1.setLayoutY(77);
-                cuadratica1.setStartX(-9.39);
-                cuadratica1.setStartY(-20.59);
-                cuadratica1.setEndX(-7.62);
-                cuadratica1.setEndY(-31);
                 cuadratica1.setControlX(-5.8);
                 cuadratica1.setControlY(-25.4);
                 cuadratica1.setFill(Color.TRANSPARENT);
@@ -3526,19 +3464,13 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo6, cuadratica1, circulo7);
                 return fondo;
             case ':':
-                Circle circulo8 = new Circle();
-                Circle circulo9 = new Circle();
+                Circle circulo8 = new Circle(3, dibujar.getColor());
+                Circle circulo9 = new Circle(3, dibujar.getColor());
                 fondo.setPrefSize(22, 60);
                 //Circulo
-                circulo8.setRadius(2);
-                circulo8.setFill(dibujar.getColor());
-                circulo8.setStroke(dibujar.getColor());
                 circulo8.setLayoutX(9);
                 circulo8.setLayoutY(34);
                 //Circulo2
-                circulo9.setRadius(2);
-                circulo9.setFill(dibujar.getColor());
-                circulo9.setStroke(dibujar.getColor());
                 circulo9.setLayoutX(9);
                 circulo9.setLayoutY(47);
                 
@@ -3565,17 +3497,11 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo8, circulo9);
                 return fondo;
             case '(':
-                QuadCurve cubica2 = new QuadCurve();
+                QuadCurve cubica2 = new QuadCurve(-6.6, 1.8, -29.3, -25.8, -6.6, -51.8);
                 fondo.setPrefSize(22, 60);
                 //Cubica
                 cubica2.setLayoutX(20);
                 cubica2.setLayoutY(55);
-                cubica2.setStartX(-6.6);
-                cubica2.setStartY(1.8);
-                cubica2.setEndX(-6.6);
-                cubica2.setEndY(-51.8);
-                cubica2.setControlX(-29.3);
-                cubica2.setControlY(-25.8);
                 cubica2.setFill(Color.TRANSPARENT);
                 cubica2.setStroke(dibujar.getColor());
                 cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3604,17 +3530,11 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(cubica2);
                 return fondo;
             case ')':
-                QuadCurve cubica3 = new QuadCurve();
+                QuadCurve cubica3 = new QuadCurve(-6.6, 1.8, 14.6, -25, -6.6, -51.8);
                 fondo.setPrefSize(22, 60);
                 //Cubica
                 cubica3.setLayoutX(9);
                 cubica3.setLayoutY(55);
-                cubica3.setStartX(-6.6);
-                cubica3.setStartY(1.8);
-                cubica3.setEndX(-6.6);
-                cubica3.setEndY(-51.8);
-                cubica3.setControlX(14.6);
-                cubica3.setControlY(-25);
                 cubica3.setFill(Color.TRANSPARENT);
                 cubica3.setStroke(dibujar.getColor());
                 cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3643,17 +3563,13 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(cubica3);
                 return fondo;
             case '[':
-                Line linea3 = new Line();
-                Line linea4 = new Line();
-                Line linea5 = new Line();
+                Line linea3 = new Line(-13.6, -27.6, -13.69, 21.39);
+                Line linea4 = new Line(-9.19, -19.6, 8.8, -19.6);
+                Line linea5 = new Line(-9.19, -19.6, 8.8, -19.6);
                 fondo.setPrefSize(34, 60);
                 //Linea Vertical
                 linea3.setLayoutX(18);
                 linea3.setLayoutY(34);
-                linea3.setStartX(-13.6);
-                linea3.setStartY(-27.6);
-                linea3.setEndX(-13.69);
-                linea3.setEndY(21.39);
                 linea3.setFill(Color.TRANSPARENT);
                 linea3.setStroke(dibujar.getColor());
                 linea3.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3661,10 +3577,6 @@ public class CrearCaracteres {
                 //Linea Superior
                 linea4.setLayoutX(14);
                 linea4.setLayoutY(26);
-                linea4.setStartX(-9.19);
-                linea4.setStartY(-19.6);
-                linea4.setEndX(8.8);
-                linea4.setEndY(-19.6);
                 linea4.setFill(Color.TRANSPARENT);
                 linea4.setStroke(dibujar.getColor());
                 linea4.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3672,10 +3584,6 @@ public class CrearCaracteres {
                 //Linea Inferior
                 linea5.setLayoutX(14);
                 linea5.setLayoutY(75);
-                linea5.setStartX(-9.19);
-                linea5.setStartY(-19.6);
-                linea5.setEndX(8.8);
-                linea5.setEndY(-19.6);
                 linea5.setFill(Color.TRANSPARENT);
                 linea5.setStroke(dibujar.getColor());
                 linea5.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3704,17 +3612,13 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(linea3, linea4, linea5);
                 return fondo;
             case ']':
-                Line linea6 = new Line();
-                Line linea7 = new Line();
-                Line linea8 = new Line();
+                Line linea6 = new Line(-13.6, -27.6, -13.69, 21.39);
+                Line linea7 = new Line(-9.19, -19.6, 8.8, -19.6);
+                Line linea8 = new Line(-9.19, -19.6, 8.8, -19.6);
                 fondo.setPrefSize(34, 60);
                 //Linea Vertical
                 linea6.setLayoutX(44);
                 linea6.setLayoutY(34);
-                linea6.setStartX(-13.6);
-                linea6.setStartY(-27.6);
-                linea6.setEndX(-13.69);
-                linea6.setEndY(21.39);
                 linea6.setFill(Color.TRANSPARENT);
                 linea6.setStroke(dibujar.getColor());
                 linea6.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3722,10 +3626,6 @@ public class CrearCaracteres {
                 //Linea Superior
                 linea7.setLayoutX(21);
                 linea7.setLayoutY(26);
-                linea7.setStartX(-9.19);
-                linea7.setStartY(-19.6);
-                linea7.setEndX(8.8);
-                linea7.setEndY(-19.6);
                 linea7.setFill(Color.TRANSPARENT);
                 linea7.setStroke(dibujar.getColor());
                 linea7.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3733,10 +3633,6 @@ public class CrearCaracteres {
                 //Linea Inferior
                 linea8.setLayoutX(21);
                 linea8.setLayoutY(75);
-                linea8.setStartX(-9.19);
-                linea8.setStartY(-19.6);
-                linea8.setEndX(8.8);
-                linea8.setEndY(-19.6);
                 linea8.setFill(Color.TRANSPARENT);
                 linea8.setStroke(dibujar.getColor());
                 linea8.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3765,20 +3661,12 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(linea6, linea7, linea8);
                 return fondo;
             case '{':
-                CubicCurve cubica4 = new CubicCurve();
-                CubicCurve cubica5 = new CubicCurve();
+                CubicCurve cubica4 = new CubicCurve(-0.2, 1, 17, 1, -4.2, -24.6, 17, -24.6);
+                CubicCurve cubica5 = new CubicCurve(13.59, 10.59, -0.79, 10.59, 13.59, -14, -4.2, -14);
                 fondo.setPrefSize(34, 60);
                 //Cubica superior
                 cubica4.setLayoutX(4);
                 cubica4.setLayoutY(29);
-                cubica4.setStartX(-0.2);
-                cubica4.setStartY(1);
-                cubica4.setEndX(17);
-                cubica4.setEndY(-24.6);
-                cubica4.setControlX1(17);
-                cubica4.setControlY1(1);
-                cubica4.setControlX2(-4.2);
-                cubica4.setControlY2(-24.6);
                 cubica4.setFill(Color.TRANSPARENT);
                 cubica4.setStroke(dibujar.getColor());
                 cubica4.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3786,14 +3674,6 @@ public class CrearCaracteres {
                 //Cubica Inferior
                 cubica5.setLayoutX(7);
                 cubica5.setLayoutY(45);
-                cubica5.setStartX(13.59);
-                cubica5.setStartY(10.59);
-                cubica5.setEndX(-4.2);
-                cubica5.setEndY(-14);
-                cubica5.setControlX1(-0.79);
-                cubica5.setControlY1(10.59);
-                cubica5.setControlX2(13.59);
-                cubica5.setControlY2(-14);
                 cubica5.setFill(Color.TRANSPARENT);
                 cubica5.setStroke(dibujar.getColor());
                 cubica5.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3822,20 +3702,12 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(cubica4, cubica5);
                 return fondo;
             case '}':
-                CubicCurve cubica6 = new CubicCurve();
-                CubicCurve cubica7 = new CubicCurve();
+                CubicCurve cubica6 = new CubicCurve(11.08, 15, -8.12, 15, 11.08, -11.4, -9.39, -11.4);
+                CubicCurve cubica7 = new CubicCurve(-11, 20.39, 8.21, 20.39, -11, -4.86, 8.21, -4.86);
                 fondo.setPrefSize(34, 60);
                 //Cubica superior
                 cubica6.setLayoutX(11);
                 cubica6.setLayoutY(15);
-                cubica6.setStartX(11.08);
-                cubica6.setStartY(15);
-                cubica6.setEndX(-9.39);
-                cubica6.setEndY(-11.4);
-                cubica6.setControlX1(-8.12);
-                cubica6.setControlY1(15);
-                cubica6.setControlX2(11.08);
-                cubica6.setControlY2(-11.4);
                 cubica6.setFill(Color.TRANSPARENT);
                 cubica6.setStroke(dibujar.getColor());
                 cubica6.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3843,14 +3715,6 @@ public class CrearCaracteres {
                 //Cubica Inferior
                 cubica7.setLayoutX(15);
                 cubica7.setLayoutY(36);
-                cubica7.setStartX(-11);
-                cubica7.setStartY(20.39);
-                cubica7.setEndX(8.21);
-                cubica7.setEndY(-4.86);
-                cubica7.setControlX1(8.21);
-                cubica7.setControlY1(20.39);
-                cubica7.setControlX2(-11);
-                cubica7.setControlY2(-4.86);
                 cubica7.setFill(Color.TRANSPARENT);
                 cubica7.setStroke(dibujar.getColor());
                 cubica7.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3879,14 +3743,9 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(cubica6, cubica7);
                 return fondo;
             case '-':
-                Line linea9 = new Line();
+                Line linea9 = new Line(-14, 5, 14, 5);
                 fondo.setPrefSize(34, 60);
                 linea9.setLayoutX(17);
-                linea9.setLayoutY(25);
-                linea9.setStartX(-14);
-                linea9.setStartY(5);
-                linea9.setEndX(14);
-                linea9.setEndY(5);
                 linea9.setFill(Color.TRANSPARENT);
                 linea9.setStroke(dibujar.getColor());
                 linea9.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3915,14 +3774,10 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(linea9);
                 return fondo;
             case '_':
-                Line linea10 = new Line();      
+                Line linea10 = new Line(-10, 5, 15.2, 5);      
                 fondo.setPrefSize(34, 60);
                 linea10.setLayoutX(13);
                 linea10.setLayoutY(50);
-                linea10.setStartX(-10);
-                linea10.setStartY(5);
-                linea10.setEndX(15.2);
-                linea10.setEndY(5);
                 linea10.setFill(Color.TRANSPARENT);
                 linea10.setStroke(dibujar.getColor());
                 linea10.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3951,13 +3806,10 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(linea10);
                 return fondo;
             case 39:
-                Circle circulo10 = new Circle();
-                QuadCurve cuadratica2 = new QuadCurve();
+                Circle circulo10 = new Circle(2, dibujar.getColor());
+                QuadCurve cuadratica2 = new QuadCurve(-4.8, -23, -7.62, -26, -7.62, -31);
                 fondo.setPrefSize(22, 60);
                 //Circulo
-                circulo10.setRadius(2);
-                circulo10.setFill(dibujar.getColor());
-                circulo10.setStroke(dibujar.getColor());
                 circulo10.setLayoutX(9);
                 circulo10.setLayoutY(5);
                 //Cuadratica
@@ -3997,32 +3849,20 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo10, cuadratica2);
                 return fondo;
             case '"':
-                Circle circulo11 = new Circle();
-                QuadCurve cuadratica3 = new QuadCurve();
-                Circle circulo12 = new Circle();
-                QuadCurve cuadratica4 = new QuadCurve();
+                Circle circulo11 = new Circle(2, dibujar.getColor());
+                QuadCurve cuadratica3 = new QuadCurve(-4.8, -23, -7.62, -26, -7.62, -31);
+                Circle circulo12 = new Circle(2, dibujar.getColor());
+                QuadCurve cuadratica4 = new QuadCurve(-4.8, -23, -7.62, -26, -7.62, -31);
                 fondo.setPrefSize(22, 60);
                 //Circulo
-                circulo11.setRadius(2);
-                circulo11.setFill(dibujar.getColor());
-                circulo11.setStroke(dibujar.getColor());
                 circulo11.setLayoutX(6);
                 circulo11.setLayoutY(5);
                 //Circulo2
-                circulo12.setRadius(2);
-                circulo12.setFill(dibujar.getColor());
-                circulo12.setStroke(dibujar.getColor());
                 circulo12.setLayoutX(12);
                 circulo12.setLayoutY(5);
                 //Cuadratica
                 cuadratica3.setLayoutX(12);
                 cuadratica3.setLayoutY(36);
-                cuadratica3.setStartX(-4.8);
-                cuadratica3.setStartY(-23);
-                cuadratica3.setEndX(-7.62);
-                cuadratica3.setEndY(-31);
-                cuadratica3.setControlX(-7.62);
-                cuadratica3.setControlY(-26);
                 cuadratica3.setFill(Color.TRANSPARENT);
                 cuadratica3.setStroke(dibujar.getColor());
                 cuadratica3.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -4030,12 +3870,6 @@ public class CrearCaracteres {
                 //Cuadratica2
                 cuadratica4.setLayoutX(18);
                 cuadratica4.setLayoutY(36);
-                cuadratica4.setStartX(-4.8);
-                cuadratica4.setStartY(-23);
-                cuadratica4.setEndX(-7.62);
-                cuadratica4.setEndY(-31);
-                cuadratica4.setControlX(-7.62);
-                cuadratica4.setControlY(-26);
                 cuadratica4.setFill(Color.TRANSPARENT);
                 cuadratica4.setStroke(dibujar.getColor());
                 cuadratica4.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -4064,18 +3898,14 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo11, cuadratica3, circulo12, cuadratica4);
                 return fondo;
             case '«':
-                Line linea11 = new Line();
-                Line linea12 = new Line();
-                Line linea13 = new Line();
-                Line linea14 = new Line();
+                Line linea11 = new Line(-9.19, 0, 4, -9);
+                Line linea12 = new Line(-9.19, 0, 4, 9);
+                Line linea13 = new Line(-9.19, 0, 4, -9);
+                Line linea14 = new Line(-9.19, 0, 4, 9);
                 fondo.setPrefSize(34, 60);
                 //Linea 1
                 linea11.setLayoutX(11);
                 linea11.setLayoutY(31);
-                linea11.setStartX(-9.19);
-                linea11.setStartY(0);
-                linea11.setEndX(4);
-                linea11.setEndY(-9);
                 linea11.setFill(Color.TRANSPARENT);
                 linea11.setStroke(dibujar.getColor());
                 linea11.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -4083,10 +3913,6 @@ public class CrearCaracteres {
                 //Linea 2
                 linea12.setLayoutX(11);
                 linea12.setLayoutY(31);
-                linea12.setStartX(-9.19);
-                linea12.setStartY(0);
-                linea12.setEndX(4);
-                linea12.setEndY(9);
                 linea12.setFill(Color.TRANSPARENT);
                 linea12.setStroke(dibujar.getColor());
                 linea12.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -4094,10 +3920,6 @@ public class CrearCaracteres {
                 //Linea 3
                 linea13.setLayoutX(21);
                 linea13.setLayoutY(31);
-                linea13.setStartX(-9.19);
-                linea13.setStartY(0);
-                linea13.setEndX(4);
-                linea13.setEndY(-9);
                 linea13.setFill(Color.TRANSPARENT);
                 linea13.setStroke(dibujar.getColor());
                 linea13.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -4105,10 +3927,6 @@ public class CrearCaracteres {
                 //Linea 4
                 linea14.setLayoutX(21);
                 linea14.setLayoutY(31);
-                linea14.setStartX(-9.19);
-                linea14.setStartY(0);
-                linea14.setEndX(4);
-                linea14.setEndY(9);
                 linea14.setFill(Color.TRANSPARENT);
                 linea14.setStroke(dibujar.getColor());
                 linea14.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -4137,18 +3955,14 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(linea11, linea12, linea13, linea14);
                 return fondo;
             case '»':
-                Line linea15 = new Line();
-                Line linea16 = new Line();
-                Line linea17 = new Line();
-                Line linea18 = new Line();
+                Line linea15 = new Line(7, 0, -4, -9);
+                Line linea16 = new Line(7, 0, -4, 9);
+                Line linea17 = new Line(7, 0, -4, -9);
+                Line linea18 = new Line(7, 0, -4, 9);
                 fondo.setPrefSize(34, 60);
                 //Linea 1
                 linea15.setLayoutX(9);
                 linea15.setLayoutY(31);
-                linea15.setStartX(7);
-                linea15.setStartY(0);
-                linea15.setEndX(-4);
-                linea15.setEndY(-9);
                 linea15.setFill(Color.TRANSPARENT);
                 linea15.setStroke(dibujar.getColor());
                 linea15.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -4156,10 +3970,6 @@ public class CrearCaracteres {
                 //Linea 2
                 linea16.setLayoutX(9);
                 linea16.setLayoutY(31);
-                linea16.setStartX(7);
-                linea16.setStartY(0);
-                linea16.setEndX(-4);
-                linea16.setEndY(9);
                 linea16.setFill(Color.TRANSPARENT);
                 linea16.setStroke(dibujar.getColor());
                 linea16.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -4167,10 +3977,6 @@ public class CrearCaracteres {
                 //Linea 3
                 linea17.setLayoutX(19);
                 linea17.setLayoutY(31);
-                linea17.setStartX(7);
-                linea17.setStartY(0);
-                linea17.setEndX(-4);
-                linea17.setEndY(-9);
                 linea17.setFill(Color.TRANSPARENT);
                 linea17.setStroke(dibujar.getColor());
                 linea17.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -4178,10 +3984,6 @@ public class CrearCaracteres {
                 //Linea 4
                 linea18.setLayoutX(19);
                 linea18.setLayoutY(31);
-                linea18.setStartX(7);
-                linea18.setStartY(0);
-                linea18.setEndX(-4);
-                linea18.setEndY(9);
                 linea18.setFill(Color.TRANSPARENT);
                 linea18.setStroke(dibujar.getColor());
                 linea18.setStrokeLineCap(StrokeLineCap.ROUND);
