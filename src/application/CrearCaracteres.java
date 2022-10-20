@@ -2885,20 +2885,12 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(cubicat1, cubicat2, lineat1);
                 return fondo;
             case 'u':
-                CubicCurve cubicau1= new CubicCurve();
+                CubicCurve cubicau1= new CubicCurve(-33.79, -16.4, -40, 5.59, -23.8, 16, -23.8, -16.4);
                 CubicCurve cubicau2 = new CubicCurve(); 
                 fondo.setPrefSize(19,60);
                 //cubica 1
                 cubicau1.setLayoutX(36);
                 cubicau1.setLayoutY(42);
-                cubicau1.setStartX(-33.79);
-                cubicau1.setStartY(-16.4);
-                cubicau1.setEndX(-23.8);
-                cubicau1.setEndY(-16.4);
-                cubicau1.setControlX1(-40);
-                cubicau1.setControlY1(5.59);
-                cubicau1.setControlX2(-23.8);
-                cubicau1.setControlY2(16);
                 cubicau1.setFill(Color.TRANSPARENT);
                 cubicau1.setStroke(dibujar.getColor());
                 cubicau1.setStrokeLineCap(StrokeLineCap.ROUND);
