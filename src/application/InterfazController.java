@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -23,6 +24,8 @@ public class InterfazController implements Initializable {
     private TextField textoEntrada;
     @FXML
     private ColorPicker selectColor;
+    @FXML
+    private CheckBox CheckPuntos;
     
     Dibujar dibujar = new Dibujar(); // Objeto de la clase Dibujar
     
@@ -37,9 +40,6 @@ public class InterfazController implements Initializable {
         dibujar.getLienzo().setPrefSize(1070, 450);
         dibujar.getLienzo().setMaxSize(1070, 450);
         fondoInterfaz.getChildren().add(dibujar.getLienzo()); // Se añade el lienzo de dibujo
-        //fondoDibujo.setStyle("-fx-background-color: BLACK");
-        //dibujar.guardarPalabras(", ^malo,  ^N+Kbueno ^S,,Khola, ^N,S+Kmundo");
-        //dibujar.guardarPalabras(", malo,  ^N+Kbueno ^S,,Khola, ^N,S+Kmundo hghsfdsgsdgweeryrtjrtjrthergwegge");
         textoEntrada.setOnKeyTyped((KeyEvent event) -> {
             if (!dibujar.validarEntrada(event.getCharacter())){
                 event.consume();
@@ -58,6 +58,13 @@ public class InterfazController implements Initializable {
     private void cambioColor (ActionEvent event){
         Color nuevoColor = selectColor.getValue(); // Se obtiene el valor de color del color picker de la interfaz
         dibujar.setColor(nuevoColor); // Se llama al setter del color para las letras y se asigna el color seleccionado en la interfaz
+        dibujar.getLienzo().getChildren().clear();
+        dibujar.guardarPalabras(textoEntrada.getText());
+    }
+    
+    @FXML
+    private void puntosControl (ActionEvent event){
+        dibujar.setControl(CheckPuntos.isSelected());
         dibujar.getLienzo().getChildren().clear();
         dibujar.guardarPalabras(textoEntrada.getText());
     }
