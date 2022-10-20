@@ -17,11 +17,11 @@ import javafx.scene.shape.Ellipse;
 public class CrearCaracteres {
     
     Dibujar dibujar = new Dibujar();
-            
+    
     public AnchorPane dibujarCaracter(char caracter, Palabra palabra){
         
         AnchorPane fondo = new AnchorPane();
-        
+        Line sub = new Line();
         switch (caracter){
             case 'A':
                 //Objetos
@@ -3864,10 +3864,8 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(linea15, linea16, linea17, linea18);
                 return fondo;
             case '^':
-                // Se debe hacer diseño de nuevo símbolo
                 return fondo;
             case '+':
-                // Se debe hacer diseño de nuevo símbolo
                 return fondo;
             default:
                 return null;
