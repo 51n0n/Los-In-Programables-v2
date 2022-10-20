@@ -2917,7 +2917,24 @@ public class CrearCaracteres {
                 cubicau2.setFill(Color.TRANSPARENT);
                 cubicau2.setStroke(dibujar.getColor());
                 cubicau2.setStrokeLineCap(StrokeLineCap.ROUND);
-                cubicau2.setStrokeLineJoin(StrokeLineJoin.ROUND);  
+                cubicau2.setStrokeLineJoin(StrokeLineJoin.ROUND); 
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubicau1,cubicau2);
                 return fondo;
             case 'v':
@@ -2970,6 +2987,23 @@ public class CrearCaracteres {
                 cubicav3.setStroke(dibujar.getColor());
                 cubicav3.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicav3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubicav1,cubicav2,cubicav3);
                 return fondo;
             case 'w':
@@ -3038,6 +3072,23 @@ public class CrearCaracteres {
                 cubicaw4.setStroke(dibujar.getColor());
                 cubicaw4.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicaw4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                  fondo.getChildren().addAll(cubicaw1, cubicaw2, cubicaw3, cubicaw4);
                 return fondo;
             case 'x':
@@ -3074,6 +3125,23 @@ public class CrearCaracteres {
                 cubicax2.setStroke(dibujar.getColor());
                 cubicax2.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicax2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubicax1, cubicax2);
                 return fondo;
             case 'y':
@@ -3142,6 +3210,23 @@ public class CrearCaracteres {
                 cubicay4.setStroke(dibujar.getColor());
                 cubicay4.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicay4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubicay1, cubicay2, cubicay3, cubicay4);
                 return fondo;
             case 'z':
@@ -3210,6 +3295,23 @@ public class CrearCaracteres {
                 cubicaz4.setStroke(dibujar.getColor());
                 cubicaz4.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicaz4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubicaz1, cubicaz2, cubicaz3, cubicaz4);
                 return fondo;
             case ' ':
@@ -3232,6 +3334,23 @@ public class CrearCaracteres {
                 circulo.setStroke(dibujar.getColor());
                 circulo.setLayoutX(11);
                 circulo.setLayoutY(50);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(elipse, circulo);
                 return fondo;
             case '¡':
@@ -3251,6 +3370,23 @@ public class CrearCaracteres {
                 circulo1.setLayoutX(11);
                 circulo1.setLayoutY(5);
                 fondo.getChildren().addAll(elipse1, circulo1);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 return fondo;
             case '¿':
                 CubicCurve cubica = new CubicCurve();
@@ -3289,6 +3425,23 @@ public class CrearCaracteres {
                 circulo2.setStroke(dibujar.getColor());
                 circulo2.setLayoutX(25);
                 circulo2.setLayoutY(6);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubica, linea1, circulo2);
                 return fondo;
             case '?':
@@ -3328,6 +3481,23 @@ public class CrearCaracteres {
                 circulo3.setStroke(dibujar.getColor());
                 circulo3.setLayoutX(6);
                 circulo3.setLayoutY(51);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubica1, linea2, circulo3);
                 return fondo;
             case '.':
@@ -3340,6 +3510,23 @@ public class CrearCaracteres {
                 circulo4.setStroke(dibujar.getColor());
                 circulo4.setLayoutX(9);
                 circulo4.setLayoutY(47);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(circulo4);
                 return fondo;
             case ',':
@@ -3365,6 +3552,23 @@ public class CrearCaracteres {
                 cuadratica.setStroke(dibujar.getColor());
                 cuadratica.setStrokeLineCap(StrokeLineCap.ROUND);
                 cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(circulo5, cuadratica);
                 return fondo;
             case ';':
@@ -3397,6 +3601,23 @@ public class CrearCaracteres {
                 cuadratica1.setStroke(dibujar.getColor());
                 cuadratica1.setStrokeLineCap(StrokeLineCap.ROUND);
                 cuadratica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(circulo6, cuadratica1, circulo7);
                 return fondo;
             case ':':
@@ -3415,6 +3636,23 @@ public class CrearCaracteres {
                 circulo9.setStroke(dibujar.getColor());
                 circulo9.setLayoutX(9);
                 circulo9.setLayoutY(47);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(circulo8, circulo9);
                 return fondo;
             case '(':
@@ -3433,6 +3671,23 @@ public class CrearCaracteres {
                 cubica2.setStroke(dibujar.getColor());
                 cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubica2);
                 return fondo;
             case ')':
@@ -3451,6 +3706,23 @@ public class CrearCaracteres {
                 cubica3.setStroke(dibujar.getColor());
                 cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubica3);
                 return fondo;
             case '[':
@@ -3491,6 +3763,23 @@ public class CrearCaracteres {
                 linea5.setStroke(dibujar.getColor());
                 linea5.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea5.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(linea3, linea4, linea5);
                 return fondo;
             case ']':
@@ -3531,6 +3820,23 @@ public class CrearCaracteres {
                 linea8.setStroke(dibujar.getColor());
                 linea8.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea8.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(linea6, linea7, linea8);
                 return fondo;
             case '{':
@@ -3567,6 +3873,23 @@ public class CrearCaracteres {
                 cubica5.setStroke(dibujar.getColor());
                 cubica5.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubica5.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubica4, cubica5);
                 return fondo;
             case '}':
@@ -3603,6 +3926,23 @@ public class CrearCaracteres {
                 cubica7.setStroke(dibujar.getColor());
                 cubica7.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubica7.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(cubica6, cubica7);
                 return fondo;
             case '-':
@@ -3618,6 +3958,23 @@ public class CrearCaracteres {
                 linea9.setStroke(dibujar.getColor());
                 linea9.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea9.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(linea9);
                 return fondo;
             case '_':
@@ -3633,6 +3990,23 @@ public class CrearCaracteres {
                 linea10.setStroke(dibujar.getColor());
                 linea10.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea10.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(linea10);
                 return fondo;
             case 39:
@@ -3658,6 +4032,23 @@ public class CrearCaracteres {
                 cuadratica2.setStroke(dibujar.getColor());
                 cuadratica2.setStrokeLineCap(StrokeLineCap.ROUND);
                 cuadratica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(circulo10, cuadratica2);
                 return fondo;
             case '"':
@@ -3704,6 +4095,23 @@ public class CrearCaracteres {
                 cuadratica4.setStroke(dibujar.getColor());
                 cuadratica4.setStrokeLineCap(StrokeLineCap.ROUND);
                 cuadratica4.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(circulo11, cuadratica3, circulo12, cuadratica4);
                 return fondo;
             case '«':
@@ -3756,6 +4164,23 @@ public class CrearCaracteres {
                 linea14.setStroke(dibujar.getColor());
                 linea14.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea14.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(linea11, linea12, linea13, linea14);
                 return fondo;
             case '»':
@@ -3808,6 +4233,23 @@ public class CrearCaracteres {
                 linea18.setStroke(dibujar.getColor());
                 linea18.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea18.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                
+                if (palabra.isK()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (palabra.isN()){
+                    //
+                }
+                
+                if (palabra.isS()){
+                    //FALTA IMPLEMENTAR
+                }
+                
+                if (dibujar.getControl()){
+                    //Puntos de control
+                }
+                
                 fondo.getChildren().addAll(linea15, linea16, linea17, linea18);
                 return fondo;
             case '^':
