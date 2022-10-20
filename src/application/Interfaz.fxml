@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="fondoInterfaz" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterfazController">
+<AnchorPane fx:id="fondoInterfaz" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="20.0" minWidth="20.0" prefHeight="670.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterfazController">
    <children>
       <TextField fx:id="textoEntrada" layoutX="30.0" layoutY="560.0" prefHeight="40.0" prefWidth="1035.0" promptText="Escriba aquí">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <ColorPicker fx:id="selectColor" layoutX="1132.0" layoutY="60.0" onAction="#cambioColor">
+      <ColorPicker fx:id="selectColor" layoutX="1205.0" layoutY="568.0" onAction="#cambioColor" prefHeight="25.0" prefWidth="39.0">
          <value>
             <Color />
          </value></ColorPicker>
+      <CheckBox fx:id="CheckPuntos" layoutX="1087.0" layoutY="572.0" mnemonicParsing="false" onAction="#puntosControl" text="Mostrar Puntos" />
    </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
 </AnchorPane>
