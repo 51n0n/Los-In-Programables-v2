@@ -21,7 +21,7 @@ public class CrearCaracteres {
     public AnchorPane dibujarCaracter(char caracter, Palabra palabra){
         
         AnchorPane fondo = new AnchorPane();
-        Line sub = new Line();
+        
         switch (caracter){
             case 'A':
                 //Objetos
@@ -122,7 +122,11 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
-                    
+                    Line subA = new Line();
+                    subA.setStartX(45); //tamaño A es 45
+                    subA.setLayoutX(0);
+                    subA.setLayoutY(55);
+                    fondo.getChildren().add(subA);
                 }
                 
                 if (dibujar.getControl()){
