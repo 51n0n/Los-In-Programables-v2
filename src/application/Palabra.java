@@ -22,31 +22,31 @@ public class Palabra {
     public String getPalabra() {
         return palabra;
     }
-
+    
     public void setPalabra(String palabra) {
         this.palabra = palabra;
     }
-
+    
     public boolean isN() {
         return n;
     }
-
+    
     public void setN(boolean n) {
         this.n = n;
     }
-
+    
     public boolean isK() {
         return k;
     }
-
+    
     public void setK(boolean k) {
         this.k = k;
     }
-
+    
     public boolean isS() {
         return s;
     }
-
+    
     public void setS(boolean s) {
         this.s = s;
     }
