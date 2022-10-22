@@ -35,7 +35,7 @@ public class Dibujar {
         return validar;
     }
     
-    public void guardarPalabras(String entrada){
+    public void guardarPalabras(String entrada, AnchorPane lienzo){
         
         espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
         charCont = 0; // Contador de caracteres dibujados.
@@ -140,11 +140,11 @@ public class Dibujar {
                 posActualX = 0;
                 posActualY = posActualY + 60;
             }
-            dibujarPalabra(palabras.get(i));
+            dibujarPalabra(palabras.get(i),lienzo);
         }
     }
     
-    public void dibujarPalabra(Palabra palabra){
+    public void dibujarPalabra(Palabra palabra, AnchorPane lienzo){
         for (int i=0;i<palabra.getPalabra().length();i++){
             if (posActualX + tamañoCaracter(palabra.getPalabra().charAt(i)) > 1035){
                 lienzo.getChildren().add(llamar.dibujarCaracter('-', palabra));
