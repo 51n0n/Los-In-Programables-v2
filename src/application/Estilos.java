@@ -83,15 +83,6 @@ public class Estilos {
         fondo.getChildren().addAll(ancho1,ancho2);
     }
     
-    public void subrayado(char c, AnchorPane fondo){
-        Line sub = new Line();
-        sub.setStartX(dibujar.tamañoCaracter(c));
-        sub.setLayoutX(0);
-        sub.setLayoutY(55);
-        sub.setStroke(dibujar.getColor());
-        fondo.getChildren().add(sub);
-    }
-    
     public void lineaControl(Line linea, AnchorPane fondo){
         Circle p1 = new Circle(linea.getStartX(),linea.getStartY(),2,Color.RED);
         p1.setLayoutX(linea.getLayoutX());
@@ -132,6 +123,15 @@ public class Estilos {
         p4.setLayoutY(cubica.getLayoutY());
         
         fondo.getChildren().addAll(p1,p2,p3,p4);
+    }
+    
+    public void subrayado(char c, AnchorPane fondo){
+        Line sub = new Line();
+        sub.setStartX(dibujar.tamañoCaracter(c));
+        sub.setLayoutX(0);
+        sub.setLayoutY(55);
+        sub.setStroke(dibujar.getColor());
+        fondo.getChildren().add(sub);
     }
     
 }
