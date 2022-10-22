@@ -16,6 +16,7 @@ import javafx.scene.shape.Ellipse;
 
 public class CrearCaracteres {
     
+    Estilos estilos = new Estilos();
     Dibujar dibujar = new Dibujar();
     
     public AnchorPane dibujarCaracter(char caracter, Palabra palabra){
@@ -62,107 +63,19 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isN()){
-                    
-                    CubicCurve anchoA1 = new CubicCurve(cubicaA1.getStartX(),cubicaA1.getStartY(),cubicaA1.getControlX1(),cubicaA1.getControlY1(),cubicaA1.getControlX2(),cubicaA1.getControlY2(),cubicaA1.getEndX(),cubicaA1.getEndY());
-                    anchoA1.setLayoutX(41);
-                    anchoA1.setLayoutY(44);
-                    anchoA1.setFill(Color.TRANSPARENT);
-                    anchoA1.setStroke(dibujar.getColor());
-                    anchoA1.setStrokeLineCap(StrokeLineCap.ROUND);
-                    anchoA1.setStrokeLineJoin(StrokeLineJoin.ROUND);
-                    anchoA1.setTranslateX(1);
-                    
-                    CubicCurve anchoA2 = new CubicCurve(cubicaA1.getStartX(),cubicaA1.getStartY(),cubicaA1.getControlX1(),cubicaA1.getControlY1(),cubicaA1.getControlX2(),cubicaA1.getControlY2(),cubicaA1.getEndX(),cubicaA1.getEndY());
-                    anchoA2.setLayoutX(41);
-                    anchoA2.setLayoutY(44);
-                    anchoA2.setFill(Color.TRANSPARENT);
-                    anchoA2.setStroke(dibujar.getColor());
-                    anchoA2.setStrokeLineCap(StrokeLineCap.ROUND);
-                    anchoA2.setStrokeLineJoin(StrokeLineJoin.ROUND);
-                    anchoA2.setTranslateY(1);
-                    
-                    CubicCurve anchoA3 = new CubicCurve(cubicaA2.getStartX(),cubicaA2.getStartY(),cubicaA2.getControlX1(),cubicaA2.getControlY1(),cubicaA2.getControlX2(),cubicaA2.getControlY2(),cubicaA2.getEndX(),cubicaA2.getEndY());
-                    anchoA3.setLayoutX(33);
-                    anchoA3.setLayoutY(29);
-                    anchoA3.setFill(Color.TRANSPARENT);
-                    anchoA3.setStroke(dibujar.getColor());
-                    anchoA3.setStrokeLineCap(StrokeLineCap.ROUND);
-                    anchoA3.setStrokeLineJoin(StrokeLineJoin.ROUND);
-                    anchoA3.setTranslateX(1);
-                    
-                    CubicCurve anchoA4 = new CubicCurve(cubicaA2.getStartX(),cubicaA2.getStartY(),cubicaA2.getControlX1(),cubicaA2.getControlY1(),cubicaA2.getControlX2(),cubicaA2.getControlY2(),cubicaA2.getEndX(),cubicaA2.getEndY());
-                    anchoA4.setLayoutX(33);
-                    anchoA4.setLayoutY(29);
-                    anchoA4.setFill(Color.TRANSPARENT);
-                    anchoA4.setStroke(dibujar.getColor());
-                    anchoA4.setStrokeLineCap(StrokeLineCap.ROUND);
-                    anchoA4.setStrokeLineJoin(StrokeLineJoin.ROUND);
-                    anchoA4.setTranslateY(1);
-                    
-                    Line anchoA5 = new Line(lineaA.getStartX(),lineaA.getStartY(),lineaA.getEndX(),lineaA.getEndY());
-                    anchoA5.setLayoutX(29);
-                    anchoA5.setLayoutY(27);
-                    anchoA5.setFill(Color.TRANSPARENT);
-                    anchoA5.setStroke(dibujar.getColor());
-                    anchoA5.setStrokeLineCap(StrokeLineCap.ROUND);
-                    anchoA5.setStrokeLineJoin(StrokeLineJoin.ROUND);
-                    anchoA5.setTranslateX(1);
-                    
-                    Line anchoA6 = new Line(lineaA.getStartX(),lineaA.getStartY(),lineaA.getEndX(),lineaA.getEndY());
-                    anchoA6.setLayoutX(29);
-                    anchoA6.setLayoutY(27);
-                    anchoA6.setFill(Color.TRANSPARENT);
-                    anchoA6.setStroke(dibujar.getColor());
-                    anchoA6.setStrokeLineCap(StrokeLineCap.ROUND);
-                    anchoA6.setStrokeLineJoin(StrokeLineJoin.ROUND);
-                    anchoA6.setTranslateY(1);
-                    
-                    fondo.getChildren().addAll(anchoA1,anchoA2,anchoA3,anchoA4,anchoA5,anchoA6);
-                    
+                    estilos.cubicaNegrita(cubicaA1, fondo);
+                    estilos.cubicaNegrita(cubicaA2, fondo);
+                    estilos.lineaNegrita(lineaA, fondo);
                 }
                 
                 if (palabra.isS()){
-                    Line subA = new Line();
-                    subA.setStartX(45); //tamaño A es 45
-                    subA.setLayoutX(0);
-                    subA.setLayoutY(55);
-                    subA.setStroke(dibujar.getColor());
-                    fondo.getChildren().add(subA);
+                    estilos.subrayado(caracter, fondo);
                 }
                 
                 if (dibujar.getControl()){
-                    Circle pA1 = new Circle(cubicaA1.getStartX(),cubicaA1.getStartY(),2,Color.RED);
-                    pA1.setLayoutX(41);
-                    pA1.setLayoutY(44);
-                    Circle pA2 = new Circle(cubicaA1.getControlX1(),cubicaA1.getControlY1(),2,Color.RED);
-                    pA2.setLayoutX(41);
-                    pA2.setLayoutY(44);
-                    Circle pA3 = new Circle(cubicaA1.getControlX2(),cubicaA1.getControlY2(),2,Color.RED);
-                    pA3.setLayoutX(41);
-                    pA3.setLayoutY(44);
-                    Circle pA4 = new Circle(cubicaA1.getEndX(),cubicaA1.getEndY(),2,Color.RED);
-                    pA4.setLayoutX(41);
-                    pA4.setLayoutY(44);
-                    Circle pA5 = new Circle(cubicaA2.getStartX(),cubicaA2.getStartY(),2,Color.RED);
-                    pA5.setLayoutX(33);
-                    pA5.setLayoutY(29);
-                    Circle pA6 = new Circle(cubicaA2.getControlX1(),cubicaA2.getControlY1(),2,Color.RED);
-                    pA6.setLayoutX(33);
-                    pA6.setLayoutY(29);
-                    Circle pA7 = new Circle(cubicaA2.getControlX2(),cubicaA2.getControlY2(),2,Color.RED);
-                    pA7.setLayoutX(33);
-                    pA7.setLayoutY(29);
-                    Circle pA8 = new Circle(cubicaA2.getEndX(),cubicaA2.getEndY(),2,Color.RED);
-                    pA8.setLayoutX(33);
-                    pA8.setLayoutY(29);
-                    Circle pA9 = new Circle(lineaA.getStartX(),lineaA.getStartY(),2,Color.RED);
-                    pA9.setLayoutX(29);
-                    pA9.setLayoutY(27);
-                    Circle pA10 = new Circle(lineaA.getEndX(),lineaA.getEndY(),2,Color.RED);
-                    pA10.setLayoutX(29);
-                    pA10.setLayoutY(27);
-                    
-                    fondo.getChildren().addAll(pA1,pA2,pA3,pA4,pA5,pA6,pA7,pA8,pA9,pA10);
+                    estilos.cubicaControl(cubicaA1, fondo);
+                    estilos.cubicaControl(cubicaA2, fondo);
+                    estilos.lineaControl(lineaA, fondo);
                 }
                 
                 fondo.getChildren().addAll(cubicaA1,cubicaA2,lineaA);
