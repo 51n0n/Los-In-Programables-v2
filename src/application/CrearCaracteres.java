@@ -3146,8 +3146,8 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(elipse, circulo);
                 
                 if (palabra.isN()){
-                    //elipse
-                    //circulo
+                    estilos.elipseNegrita(elipse, fondo);
+                    estilos.circuloNegrita(circulo, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -3155,8 +3155,8 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //elipse
-                    //circulo
+                    estilos.elipseControl(elipse, fondo);
+                    estilos.circuloControl(circulo, fondo);
                 }
                 
                 return fondo;
@@ -3231,7 +3231,7 @@ public class CrearCaracteres {
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubica, fondo);
                     estilos.lineaNegrita(linea1, fondo);
-                    //circulo2
+                    estilos.circuloNegrita(circulo2, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -3241,7 +3241,7 @@ public class CrearCaracteres {
                 if (dibujar.getControl()){
                     estilos.cubicaControl(cubica, fondo);
                     estilos.lineaControl(linea1, fondo);
-                    //circulo2
+                    estilos.circuloControl(circulo2, fondo);
                 }
                 
                 return fondo;
@@ -3279,7 +3279,7 @@ public class CrearCaracteres {
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubica1, fondo);
                     estilos.lineaNegrita(linea2, fondo);
-                    //circulo3
+                    estilos.circuloNegrita(circulo3, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -3289,7 +3289,7 @@ public class CrearCaracteres {
                 if (dibujar.getControl()){
                     estilos.cubicaControl(cubica1, fondo);
                     estilos.lineaControl(linea2, fondo);
-                    //circulo3
+                    estilos.circuloControl(circulo3, fondo);
                 }
                 
                 return fondo;
@@ -3308,7 +3308,7 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo4);
                 
                 if (palabra.isN()){
-                    //circulo4
+                    estilos.circuloNegrita(circulo4, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -3316,7 +3316,7 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //circulo4
+                    estilos.circuloControl(circulo4, fondo);
                 }
                 
                 return fondo;
@@ -3343,7 +3343,7 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo5, cuadratica);
                 
                 if (palabra.isN()){
-                    //circulo5
+                    estilos.circuloNegrita(circulo5, fondo);
                     estilos.cuadraticaNegrita(cuadratica, fondo);
                 }
                 
@@ -3352,7 +3352,7 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //circulo5
+                    estilos.circuloControl(circulo5, fondo);
                     estilos.cuadraticaControl(cuadratica, fondo);
                 }
                 
@@ -3387,8 +3387,8 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo6, cuadratica1, circulo7);
                 
                 if (palabra.isN()){
-                    //circulo6
-                    //circulo7
+                    estilos.circuloNegrita(circulo6, fondo);
+                    estilos.circuloNegrita(circulo7, fondo);
                     estilos.cuadraticaNegrita(cuadratica1, fondo);
                 }
                 
@@ -3397,8 +3397,8 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //circulo6
-                    //circulo7
+                    estilos.circuloControl(circulo6, fondo);
+                    estilos.circuloControl(circulo7, fondo);
                     estilos.cuadraticaControl(cuadratica1, fondo);
                 }
                 
@@ -3422,8 +3422,8 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo8, circulo9);
                 
                 if (palabra.isN()){
-                    //circulo8
-                    //circulo9
+                    estilos.circuloNegrita(circulo8, fondo);
+                    estilos.circuloNegrita(circulo9, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -3431,8 +3431,8 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //circulo8
-                    //circulo9
+                    estilos.circuloControl(circulo8, fondo);
+                    estilos.circuloControl(circulo9, fondo);
                 }
                 
                 return fondo;
@@ -3769,7 +3769,7 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo10, cuadratica2);
                 
                 if (palabra.isN()){
-                    //circulo10
+                    estilos.circuloNegrita(circulo10, fondo);
                     estilos.cuadraticaNegrita(cuadratica2, fondo);
                 }
                 
@@ -3778,7 +3778,7 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //circulo10
+                    estilos.circuloControl(circulo10, fondo);
                     estilos.cuadraticaControl(cuadratica2, fondo);
                 }
                 
@@ -3820,9 +3820,9 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo11, cuadratica3, circulo12, cuadratica4);
                 
                 if (palabra.isN()){
-                    //circulo11
+                    estilos.circuloNegrita(circulo11, fondo);
                     estilos.cuadraticaNegrita(cuadratica3, fondo);
-                    //circulo12
+                    estilos.circuloNegrita(circulo12, fondo);
                     estilos.cuadraticaNegrita(cuadratica4, fondo);
                 }
                 
@@ -3831,9 +3831,9 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //circulo11
+                    estilos.circuloControl(circulo11, fondo);
                     estilos.cuadraticaControl(cuadratica3, fondo);
-                    //circulo12
+                    estilos.circuloControl(circulo12, fondo);
                     estilos.cuadraticaControl(cuadratica4, fondo);
                 }
                 
