@@ -2901,14 +2901,58 @@ public class CrearCaracteres {
                 cubicau2.setFill(Color.TRANSPARENT);
                 cubicau2.setStroke(dibujar.getColor());
                 cubicau2.setStrokeLineCap(StrokeLineCap.ROUND);
-                cubicau2.setStrokeLineJoin(StrokeLineJoin.ROUND); 
+                cubicau2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
                     //FALTA IMPLEMENTAR
                 }
                 
                 if (palabra.isN()){
-                    //
+                    CubicCurve negritau1 = new CubicCurve(cubicau1.getStartX(), cubicau1.getStartY(), cubicau1.getControlX1(), cubicau1.getControlY1()
+                            ,cubicau1.getControlX2(), cubicau1.getControlY2(), cubicau1.getEndX(), cubicau1.getEndY());
+                    
+                    negritau1.setLayoutX(36);
+                    negritau1.setLayoutY(42);
+                    negritau1.setFill(Color.TRANSPARENT);
+                    negritau1.setStroke(dibujar.getColor());
+                    negritau1.setStrokeLineCap(StrokeLineCap.ROUND);
+                    negritau1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                    negritau1.setTranslateX(1);
+                    
+                    CubicCurve negritau1_2 = new CubicCurve(cubicau1.getStartX(), cubicau1.getStartY(), cubicau1.getControlX1(), cubicau1.getControlY1()
+                            ,cubicau1.getControlX2(), cubicau1.getControlY2(), cubicau1.getEndX(), cubicau1.getEndY());
+                    
+                    negritau1_2.setLayoutX(36);
+                    negritau1_2.setLayoutY(42);
+                    negritau1_2.setFill(Color.TRANSPARENT);
+                    negritau1_2.setStroke(dibujar.getColor());
+                    negritau1_2.setStrokeLineCap(StrokeLineCap.ROUND);
+                    negritau1_2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                    negritau1_2.setTranslateY(1);
+                    
+                    CubicCurve negritau2 = new CubicCurve(cubicau2.getStartX(), cubicau2.getStartY(), cubicau2.getControlX1(), cubicau2.getControlY1()
+                            ,cubicau2.getControlX2(), cubicau2.getControlY2(), cubicau2.getEndX(), cubicau2.getEndY());
+                    
+                    negritau2.setLayoutX(44);
+                    negritau2.setLayoutY(57);
+                    negritau2.setFill(Color.TRANSPARENT);
+                    negritau2.setStroke(dibujar.getColor());
+                    negritau2.setStrokeLineCap(StrokeLineCap.ROUND);
+                    negritau2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                    negritau2.setTranslateX(1);
+                    
+                    CubicCurve negritau2_2 = new CubicCurve(cubicau2.getStartX(), cubicau2.getStartY(), cubicau2.getControlX1(), cubicau2.getControlY1()
+                            ,cubicau2.getControlX2(), cubicau2.getControlY2(), cubicau2.getEndX(), cubicau2.getEndY());
+                    
+                    negritau2_2.setLayoutX(44);
+                    negritau2_2.setLayoutY(57);
+                    negritau2_2.setFill(Color.TRANSPARENT);
+                    negritau2_2.setStroke(dibujar.getColor());
+                    negritau2_2.setStrokeLineCap(StrokeLineCap.ROUND);
+                    negritau2_2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                    negritau2_2.setTranslateY(1);
+                    
+                    fondo.getChildren().addAll(negritau1, negritau1_2, negritau2, negritau2_2);
                 }
                 
                 if (palabra.isS()){
@@ -2957,7 +3001,73 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isN()){
-                    //
+                    CubicCurve negritav1 = new CubicCurve(cubicav1.getStartX(), cubicav1.getStartY(), cubicav1.getControlX1(), cubicav1.getControlY1()
+                            ,cubicav1.getControlX2(), cubicav1.getControlY2(), cubicav1.getEndX(), cubicav1.getEndY());
+                    
+                    negritav1.setLayoutX(12.89);
+                    negritav1.setLayoutY(22.5);
+                    negritav1.setFill(Color.TRANSPARENT);
+                    negritav1.setStroke(dibujar.getColor());
+                    negritav1.setStrokeLineCap(StrokeLineCap.ROUND);
+                    negritav1.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                    negritav1.setTranslateX(1);
+                    
+                    CubicCurve negritav1_2 = new CubicCurve(cubicav1.getStartX(), cubicav1.getStartY(), cubicav1.getControlX1(), cubicav1.getControlY1()
+                            ,cubicav1.getControlX2(), cubicav1.getControlY2(), cubicav1.getEndX(), cubicav1.getEndY());
+                    
+                    negritav1_2.setLayoutX(12.89);
+                    negritav1_2.setLayoutY(22.5);
+                    negritav1_2.setFill(Color.TRANSPARENT);
+                    negritav1_2.setStroke(dibujar.getColor());
+                    negritav1_2.setStrokeLineCap(StrokeLineCap.ROUND);
+                    negritav1_2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                    negritav1_2.setTranslateY(1);
+                    
+                    CubicCurve negritav2 = new CubicCurve(cubicav2.getStartX(), cubicav2.getStartY(), cubicav2.getControlX1(), cubicav2.getControlY1()
+                            ,cubicav2.getControlX2(), cubicav2.getControlY2(), cubicav2.getEndX(), cubicav2.getEndY());
+                    
+                    negritav2.setLayoutX(65);
+                    negritav2.setLayoutY(63.5);
+                    negritav2.setFill(Color.TRANSPARENT);
+                    negritav2.setStroke(dibujar.getColor());
+                    negritav2.setStrokeLineCap(StrokeLineCap.ROUND);
+                    negritav2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                    negritav2.setTranslateX(1);
+                    
+                    CubicCurve negritav2_2 = new CubicCurve(cubicav2.getStartX(), cubicav2.getStartY(), cubicav2.getControlX1(), cubicav2.getControlY1()
+                            ,cubicav2.getControlX2(), cubicav2.getControlY2(), cubicav2.getEndX(), cubicav2.getEndY());
+                    
+                    negritav2_2.setLayoutX(65);
+                    negritav2_2.setLayoutY(63.5);
+                    negritav2_2.setFill(Color.TRANSPARENT);
+                    negritav2_2.setStroke(dibujar.getColor());
+                    negritav2_2.setStrokeLineCap(StrokeLineCap.ROUND);
+                    negritav2_2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                    negritav2_2.setTranslateY(1);
+                    
+                    CubicCurve negritav3 = new CubicCurve(cubicav3.getStartX(), cubicav3.getStartY(), cubicav3.getControlX1(), cubicav3.getControlY1()
+                            ,cubicav3.getControlX2(), cubicav3.getControlY2(), cubicav3.getEndX(), cubicav3.getEndY());
+                    
+                    negritav3.setLayoutX(80.2);
+                    negritav3.setLayoutY(62);
+                    negritav3.setFill(Color.TRANSPARENT);
+                    negritav3.setStroke(dibujar.getColor());
+                    negritav3.setStrokeLineCap(StrokeLineCap.ROUND);
+                    negritav3.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                    negritav3.setTranslateX(1);
+                    
+                    CubicCurve negritav3_2 = new CubicCurve(cubicav3.getStartX(), cubicav3.getStartY(), cubicav3.getControlX1(), cubicav3.getControlY1()
+                            ,cubicav3.getControlX2(), cubicav3.getControlY2(), cubicav3.getEndX(), cubicav3.getEndY());
+                    
+                    negritav3_2.setLayoutX(80.2);
+                    negritav3_2.setLayoutY(62);
+                    negritav3_2.setFill(Color.TRANSPARENT);
+                    negritav3_2.setStroke(dibujar.getColor());
+                    negritav3_2.setStrokeLineCap(StrokeLineCap.ROUND);
+                    negritav3_2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                    negritav3_2.setTranslateY(1);
+                    
+                    fondo.getChildren().addAll(negritav1, negritav1_2, negritav2, negritav2_2, negritav3, negritav3_2);
                 }
                 
                 if (palabra.isS()){
@@ -3214,7 +3324,7 @@ public class CrearCaracteres {
                 
                 if (palabra.isS()){
                     Line subExclamacionInicial = new Line();
-                    subExclamacionInicial.setStartX(19);
+                    subExclamacionInicial.setStartX(34);
                     subExclamacionInicial.setLayoutX(0);
                     subExclamacionInicial.setLayoutY(55);
                     fondo.getChildren().add(subExclamacionInicial);
@@ -3252,7 +3362,7 @@ public class CrearCaracteres {
                 
                 if (palabra.isS()){
                     Line subExclamacionFinal = new Line();
-                    subExclamacionFinal.setStartX(19);
+                    subExclamacionFinal.setStartX(34);
                     subExclamacionFinal.setLayoutX(0);
                     subExclamacionFinal.setLayoutY(55);
                     fondo.getChildren().add(subExclamacionFinal);
@@ -3264,7 +3374,7 @@ public class CrearCaracteres {
                 
                 return fondo;
             case '¿':
-                CubicCurve cubica = new CubicCurve(13.33, -25.19, -18.66, -34.79, -18.66, 2.53, 13.33, -5.46);
+                CubicCurve cubica = new CubicCurve(13.33, -25.19, -18.66, -36.79, -18.66, -0.47, 13.33, -7.46);
                 Line linea1 = new Line(3.8, -13., 3.8, 7.8);
                 Circle circulo2 = new Circle(3, dibujar.getColor());
                 fondo.setPrefSize(34, 60);
@@ -3497,11 +3607,11 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(circulo8, circulo9);
                 return fondo;
             case '(':
-                QuadCurve cubica2 = new QuadCurve(-6.6, 1.8, -29.3, -25.8, -6.6, -51.8);
+                QuadCurve cubica2 = new QuadCurve(-6.6, 1.8, -29.3, -25.8, -6.59, -50);
                 fondo.setPrefSize(22, 60);
                 //Cubica
                 cubica2.setLayoutX(20);
-                cubica2.setLayoutY(55);
+                cubica2.setLayoutY(51);
                 cubica2.setFill(Color.TRANSPARENT);
                 cubica2.setStroke(dibujar.getColor());
                 cubica2.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3530,11 +3640,11 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(cubica2);
                 return fondo;
             case ')':
-                QuadCurve cubica3 = new QuadCurve(-6.6, 1.8, 14.6, -25, -6.6, -51.8);
+                QuadCurve cubica3 = new QuadCurve(-6.6, 1.8, 14.6, -25, -6.59, -50);
                 fondo.setPrefSize(22, 60);
                 //Cubica
                 cubica3.setLayoutX(9);
-                cubica3.setLayoutY(55);
+                cubica3.setLayoutY(51);
                 cubica3.setFill(Color.TRANSPARENT);
                 cubica3.setStroke(dibujar.getColor());
                 cubica3.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3563,27 +3673,27 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(cubica3);
                 return fondo;
             case '[':
-                Line linea3 = new Line(-13.6, -27.6, -13.69, 21.39);
+                Line linea3 = new Line(-13.69, -24.59, -13.69, 21.39);
                 Line linea4 = new Line(-9.19, -19.6, 8.8, -19.6);
                 Line linea5 = new Line(-9.19, -19.6, 8.8, -19.6);
                 fondo.setPrefSize(34, 60);
                 //Linea Vertical
                 linea3.setLayoutX(18);
-                linea3.setLayoutY(34);
+                linea3.setLayoutY(29);
                 linea3.setFill(Color.TRANSPARENT);
                 linea3.setStroke(dibujar.getColor());
                 linea3.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //Linea Superior
                 linea4.setLayoutX(14);
-                linea4.setLayoutY(26);
+                linea4.setLayoutY(24);
                 linea4.setFill(Color.TRANSPARENT);
                 linea4.setStroke(dibujar.getColor());
                 linea4.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //Linea Inferior
                 linea5.setLayoutX(14);
-                linea5.setLayoutY(75);
+                linea5.setLayoutY(70);
                 linea5.setFill(Color.TRANSPARENT);
                 linea5.setStroke(dibujar.getColor());
                 linea5.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3612,27 +3722,27 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(linea3, linea4, linea5);
                 return fondo;
             case ']':
-                Line linea6 = new Line(-13.6, -27.6, -13.69, 21.39);
+                Line linea6 = new Line(-13.7, -24.59, -13.69, 21.39);
                 Line linea7 = new Line(-9.19, -19.6, 8.8, -19.6);
                 Line linea8 = new Line(-9.19, -19.6, 8.8, -19.6);
                 fondo.setPrefSize(34, 60);
                 //Linea Vertical
                 linea6.setLayoutX(44);
-                linea6.setLayoutY(34);
+                linea6.setLayoutY(29);
                 linea6.setFill(Color.TRANSPARENT);
                 linea6.setStroke(dibujar.getColor());
                 linea6.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea6.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //Linea Superior
                 linea7.setLayoutX(21);
-                linea7.setLayoutY(26);
+                linea7.setLayoutY(24);
                 linea7.setFill(Color.TRANSPARENT);
                 linea7.setStroke(dibujar.getColor());
                 linea7.setStrokeLineCap(StrokeLineCap.ROUND);
                 linea7.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //Linea Inferior
                 linea8.setLayoutX(21);
-                linea8.setLayoutY(75);
+                linea8.setLayoutY(70);
                 linea8.setFill(Color.TRANSPARENT);
                 linea8.setStroke(dibujar.getColor());
                 linea8.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3661,19 +3771,19 @@ public class CrearCaracteres {
                 fondo.getChildren().addAll(linea6, linea7, linea8);
                 return fondo;
             case '{':
-                CubicCurve cubica4 = new CubicCurve(-0.2, 1, 17, 1, -4.2, -24.6, 17, -24.6);
-                CubicCurve cubica5 = new CubicCurve(13.59, 10.59, -0.79, 10.59, 13.59, -14, -4.2, -14);
+                CubicCurve cubica4 = new CubicCurve(-0.2, 2, 17, 1, -0.2, -24.6, 17, -24.6);
+                CubicCurve cubica5 = new CubicCurve(13.59, 10.59, -4.2, 10.58, 13.59, -14, -4.2, -14);
                 fondo.setPrefSize(34, 60);
                 //Cubica superior
                 cubica4.setLayoutX(4);
-                cubica4.setLayoutY(29);
+                cubica4.setLayoutY(26);
                 cubica4.setFill(Color.TRANSPARENT);
                 cubica4.setStroke(dibujar.getColor());
                 cubica4.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubica4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //Cubica Inferior
                 cubica5.setLayoutX(7);
-                cubica5.setLayoutY(45);
+                cubica5.setLayoutY(42);
                 cubica5.setFill(Color.TRANSPARENT);
                 cubica5.setStroke(dibujar.getColor());
                 cubica5.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3707,14 +3817,14 @@ public class CrearCaracteres {
                 fondo.setPrefSize(34, 60);
                 //Cubica superior
                 cubica6.setLayoutX(11);
-                cubica6.setLayoutY(15);
+                cubica6.setLayoutY(13);
                 cubica6.setFill(Color.TRANSPARENT);
                 cubica6.setStroke(dibujar.getColor());
                 cubica6.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubica6.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //Cubica Inferior
-                cubica7.setLayoutX(15);
-                cubica7.setLayoutY(36);
+                cubica7.setLayoutX(14);
+                cubica7.setLayoutY(33);
                 cubica7.setFill(Color.TRANSPARENT);
                 cubica7.setStroke(dibujar.getColor());
                 cubica7.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3746,6 +3856,7 @@ public class CrearCaracteres {
                 Line linea9 = new Line(-14, 5, 14, 5);
                 fondo.setPrefSize(34, 60);
                 linea9.setLayoutX(17);
+                linea9.setLayoutY(24);
                 linea9.setFill(Color.TRANSPARENT);
                 linea9.setStroke(dibujar.getColor());
                 linea9.setStrokeLineCap(StrokeLineCap.ROUND);
@@ -3777,7 +3888,7 @@ public class CrearCaracteres {
                 Line linea10 = new Line(-10, 5, 15.2, 5);      
                 fondo.setPrefSize(34, 60);
                 linea10.setLayoutX(13);
-                linea10.setLayoutY(50);
+                linea10.setLayoutY(44);
                 linea10.setFill(Color.TRANSPARENT);
                 linea10.setStroke(dibujar.getColor());
                 linea10.setStrokeLineCap(StrokeLineCap.ROUND);
