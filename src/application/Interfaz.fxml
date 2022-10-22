@@ -18,12 +18,12 @@
                   <Font size="18.0" />
                </font>
             </TextField>
-            <ColorPicker fx:id="selectColor" layoutX="1027.0" layoutY="488.0" onAction="#cambioColor" prefHeight="25.0" prefWidth="39.0">
+            <ColorPicker fx:id="selectColor" layoutX="1031.0" layoutY="488.0" onAction="#cambioColor" prefHeight="25.0" prefWidth="39.0">
                <value>
                   <Color />
                </value>
             </ColorPicker>
-            <CheckBox fx:id="CheckPuntos" layoutX="890.0" layoutY="492.0" mnemonicParsing="false" onAction="#puntosControl" text="Mostrar Puntos" />
+            <CheckBox fx:id="CheckPuntos" layoutX="897.0" layoutY="492.0" mnemonicParsing="false" onAction="#puntosControl" text="Mostrar Puntos" />
          </children>
          <BorderPane.margin>
             <Insets />
@@ -31,9 +31,9 @@
       </AnchorPane>
    </center>
    <top>
-      <BorderPane prefHeight="110.0" prefWidth="1350.0" BorderPane.alignment="TOP_CENTER">
+      <BorderPane fx:id="encabezado" prefHeight="110.0" prefWidth="1350.0" BorderPane.alignment="CENTER">
          <center>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="1070.0" BorderPane.alignment="CENTER" />
+            <AnchorPane fx:id="titulo" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="60.0" prefWidth="829.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
    </top>
