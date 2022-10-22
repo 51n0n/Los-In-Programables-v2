@@ -9,26 +9,32 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane minHeight="520.0" minWidth="1070.0" prefHeight="670.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterfazController">
    <center>
-      <AnchorPane fx:id="fondoInterfaz" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="1070.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="fondoInterfaz" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="520.0" prefWidth="1070.0" BorderPane.alignment="TOP_CENTER">
          <children>
             <TextField fx:id="textoEntrada" layoutY="480.0" prefHeight="40.0" prefWidth="875.0" promptText="Escriba aquí">
                <font>
                   <Font size="18.0" />
                </font>
             </TextField>
-            <ColorPicker fx:id="selectColor" layoutX="1031.0" layoutY="488.0" onAction="#cambioColor" prefHeight="25.0" prefWidth="39.0">
+            <ColorPicker fx:id="selectColor" layoutX="1027.0" layoutY="488.0" onAction="#cambioColor" prefHeight="25.0" prefWidth="39.0">
                <value>
                   <Color />
                </value>
             </ColorPicker>
-            <CheckBox fx:id="CheckPuntos" layoutX="897.0" layoutY="492.0" mnemonicParsing="false" onAction="#puntosControl" text="Mostrar Puntos" />
+            <CheckBox fx:id="CheckPuntos" layoutX="890.0" layoutY="492.0" mnemonicParsing="false" onAction="#puntosControl" text="Mostrar Puntos" />
          </children>
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
       </AnchorPane>
    </center>
+   <top>
+      <BorderPane prefHeight="110.0" prefWidth="1350.0" BorderPane.alignment="TOP_CENTER">
+         <center>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="1070.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </top>
 </BorderPane>
