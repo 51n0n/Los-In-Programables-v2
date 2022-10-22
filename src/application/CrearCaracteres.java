@@ -2904,10 +2904,11 @@ public class CrearCaracteres {
                 cubicau2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    //FALTA IMPLEMENTAR Cursiva de manera correcta
                 }
                 
                 if (palabra.isN()){
+                    //Negrita
                     CubicCurve negritau1 = new CubicCurve(cubicau1.getStartX(), cubicau1.getStartY(), cubicau1.getControlX1(), cubicau1.getControlY1()
                             ,cubicau1.getControlX2(), cubicau1.getControlY2(), cubicau1.getEndX(), cubicau1.getEndY());
                     
@@ -2956,6 +2957,7 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isS()){
+                    //Subrayado
                     Line subu = new Line();
                     subu.setStartX(19);
                     subu.setLayoutX(0);
@@ -2966,6 +2968,33 @@ public class CrearCaracteres {
                 
                 if (dibujar.getControl()){
                     //Puntos de control
+                    Circle pu1_1 = new Circle(cubicau1.getStartX(), cubicau1.getStartY(), 2, Color.RED);
+                    pu1_1.setLayoutX(36);
+                    pu1_1.setLayoutY(42);
+                    Circle pu1_2 = new Circle(cubicau1.getControlX1(), cubicau1.getControlY1(), 2, Color.RED);
+                    pu1_2.setLayoutX(36);
+                    pu1_2.setLayoutY(42);
+                    Circle pu1_3 = new Circle(cubicau1.getControlX2(), cubicau1.getControlY2(), 2, Color.RED);
+                    pu1_3.setLayoutX(36);
+                    pu1_3.setLayoutY(42);
+                    Circle pu1_4 = new Circle(cubicau1.getEndX(), cubicau1.getEndY(), 2, Color.RED);
+                    pu1_4.setLayoutX(36);
+                    pu1_4.setLayoutY(42);
+                    
+                    Circle pu2_1 = new Circle(cubicau2.getStartX(), cubicau2.getStartY(), 2, Color.RED);
+                    pu2_1.setLayoutX(44);
+                    pu2_1.setLayoutY(57);
+                    Circle pu2_2 = new Circle(cubicau2.getControlX1(), cubicau2.getControlY1(), 2, Color.RED);
+                    pu2_2.setLayoutX(44);
+                    pu2_2.setLayoutY(57);
+                    Circle pu2_3 = new Circle(cubicau2.getControlX2(), cubicau2.getControlY2(), 2, Color.RED);
+                    pu2_3.setLayoutX(44);
+                    pu2_3.setLayoutY(57);
+                    Circle pu2_4 = new Circle(cubicau2.getEndX(), cubicau2.getEndY(), 2, Color.RED);
+                    pu2_4.setLayoutX(44);
+                    pu2_4.setLayoutY(57);
+                    
+                    fondo.getChildren().addAll(pu1_1, pu1_2, pu1_3, pu1_4, pu2_1, pu2_2, pu2_3, pu2_4);
                 }
                 
                 fondo.getChildren().addAll(cubicau1,cubicau2);
@@ -3082,6 +3111,46 @@ public class CrearCaracteres {
                 
                 if (dibujar.getControl()){
                     //Puntos de control
+                    Circle pv1_1 = new Circle(cubicav1.getStartX(), cubicav1.getStartY(), 2, Color.RED);
+                    pv1_1.setLayoutX(12.89);
+                    pv1_1.setLayoutY(22.5);
+                    Circle pv1_2 = new Circle(cubicav1.getControlX1(), cubicav1.getControlY1(), 2, Color.RED);
+                    pv1_2.setLayoutX(12.89);
+                    pv1_2.setLayoutY(22.5);
+                    Circle pv1_3 = new Circle(cubicav1.getControlX2(), cubicav1.getControlY2(), 2, Color.RED);
+                    pv1_3.setLayoutX(12.89);
+                    pv1_3.setLayoutY(22.5);
+                    Circle pv1_4 = new Circle(cubicav1.getEndX(), cubicav1.getEndY(), 2, Color.RED);
+                    pv1_4.setLayoutX(12.89);
+                    pv1_4.setLayoutY(22.5);
+                    
+                    Circle pv2_1 = new Circle(cubicav2.getStartX(), cubicav2.getStartY(), 2, Color.RED);
+                    pv2_1.setLayoutX(65);
+                    pv2_1.setLayoutY(63.5);
+                    Circle pv2_2 = new Circle(cubicav2.getControlX1(), cubicav2.getControlY1(), 2, Color.RED);
+                    pv2_2.setLayoutX(65);
+                    pv2_2.setLayoutY(63.5);
+                    Circle pv2_3 = new Circle(cubicav2.getControlX2(), cubicav2.getControlY2(), 2, Color.RED);
+                    pv2_3.setLayoutX(65);
+                    pv2_3.setLayoutY(63.5);
+                    Circle pv2_4 = new Circle(cubicav2.getEndX(), cubicav2.getEndY(), 2, Color.RED);
+                    pv2_4.setLayoutX(65);
+                    pv2_4.setLayoutY(63.5);
+                    
+                    Circle pv3_1 = new Circle(cubicav3.getStartX(), cubicav3.getStartY(), 2, Color.RED);
+                    pv3_1.setLayoutX(80.2);
+                    pv3_1.setLayoutY(62);
+                    Circle pv3_2 = new Circle(cubicav3.getControlX1(), cubicav3.getControlY1(), 2, Color.RED);
+                    pv3_2.setLayoutX(80.2);
+                    pv3_2.setLayoutY(62);
+                    Circle pv3_3 = new Circle(cubicav3.getControlX2(), cubicav3.getControlY2(), 2, Color.RED);
+                    pv3_3.setLayoutX(80.2);
+                    pv3_3.setLayoutY(62);
+                    Circle pv3_4 = new Circle(cubicav3.getEndX(), cubicav3.getEndY(), 2, Color.RED);
+                    pv3_4.setLayoutX(80.2);
+                    pv3_4.setLayoutY(62);
+                    
+                    fondo.getChildren().addAll(pv1_1, pv1_2, pv1_3, pv1_4, pv2_1, pv2_2, pv2_3, pv2_4, pv3_1, pv3_2, pv3_3, pv3_4);
                 }
                 
                 fondo.getChildren().addAll(cubicav1,cubicav2,cubicav3);
@@ -3228,6 +3297,59 @@ public class CrearCaracteres {
                 
                 if (dibujar.getControl()){
                     //Puntos de control
+                    Circle pw1_1 = new Circle(cubicaw1.getStartX(), cubicaw1.getStartY(), 2, Color.RED);
+                    pw1_1.setLayoutX(88.2);
+                    pw1_1.setLayoutY(60);
+                    Circle pw1_2 = new Circle(cubicaw1.getControlX1(), cubicaw1.getControlY1(), 2, Color.RED);
+                    pw1_2.setLayoutX(88.2);
+                    pw1_2.setLayoutY(60);
+                    Circle pw1_3 = new Circle(cubicaw1.getControlX2(), cubicaw1.getControlY2(), 2, Color.RED);
+                    pw1_3.setLayoutX(88.2);
+                    pw1_3.setLayoutY(60);
+                    Circle pw1_4 = new Circle(cubicaw1.getEndX(), cubicaw1.getEndY(), 2, Color.RED);
+                    pw1_4.setLayoutX(88.2);
+                    pw1_4.setLayoutY(60);
+                    
+                    Circle pw2_1 = new Circle(cubicaw2.getStartX(), cubicaw2.getStartY(), 2, Color.RED);
+                    pw2_1.setLayoutX(8.5);
+                    pw2_1.setLayoutY(23);
+                    Circle pw2_2 = new Circle(cubicaw2.getControlX1(), cubicaw2.getControlY1(), 2, Color.RED);
+                    pw2_2.setLayoutX(8.5);
+                    pw2_2.setLayoutY(23);
+                    Circle pw2_3 = new Circle(cubicaw2.getControlX2(), cubicaw2.getControlY2(), 2, Color.RED);
+                    pw2_3.setLayoutX(8.5);
+                    pw2_3.setLayoutY(23);
+                    Circle pw2_4 = new Circle(cubicaw2.getEndX(), cubicaw2.getEndY(), 2, Color.RED);
+                    pw2_4.setLayoutX(8.5);
+                    pw2_4.setLayoutY(23);
+                    
+                    Circle pw3_1 = new Circle(cubicaw3.getStartX(), cubicaw3.getStartY(), 2, Color.RED);
+                    pw3_1.setLayoutX(64);
+                    pw3_1.setLayoutY(63);
+                    Circle pw3_2 = new Circle(cubicaw3.getControlX1(), cubicaw3.getControlY1(), 2, Color.RED);
+                    pw3_2.setLayoutX(64);
+                    pw3_2.setLayoutY(63);
+                    Circle pw3_3 = new Circle(cubicaw3.getControlX2(), cubicaw3.getControlY2(), 2, Color.RED);
+                    pw3_3.setLayoutX(64);
+                    pw3_3.setLayoutY(63);
+                    Circle pw3_4 = new Circle(cubicaw3.getEndX(), cubicaw3.getEndY(), 2, Color.RED);
+                    pw3_4.setLayoutX(64);
+                    pw3_4.setLayoutY(63);
+                    
+                    Circle pw4_1 = new Circle(cubicaw4.getStartX(), cubicaw4.getStartY(), 2, Color.RED);
+                    pw4_1.setLayoutX(13.89);
+                    pw4_1.setLayoutY(23);
+                    Circle pw4_2 = new Circle(cubicaw4.getControlX1(), cubicaw4.getControlY1(), 2, Color.RED);
+                    pw4_2.setLayoutX(13.89);
+                    pw4_2.setLayoutY(23);
+                    Circle pw4_3 = new Circle(cubicaw4.getControlX2(), cubicaw4.getControlY2(), 2, Color.RED);
+                    pw4_3.setLayoutX(13.89);
+                    pw4_3.setLayoutY(23);
+                    Circle pw4_4 = new Circle(cubicaw4.getEndX(), cubicaw4.getEndY(), 2, Color.RED);
+                    pw4_4.setLayoutX(13.89);
+                    pw4_4.setLayoutY(23);
+                    
+                    fondo.getChildren().addAll(pw1_1, pw1_2, pw1_3, pw1_4, pw2_1, pw2_2, pw2_3, pw2_4, pw3_1, pw3_2, pw3_3, pw3_4, pw4_1, pw4_2, pw4_3, pw4_4);
                 }
                 
                  fondo.getChildren().addAll(cubicaw1, cubicaw2, cubicaw3, cubicaw4);
@@ -3314,6 +3436,33 @@ public class CrearCaracteres {
                 
                 if (dibujar.getControl()){
                     //Puntos de control
+                    Circle px1_1 = new Circle(cubicax1.getStartX(), cubicax1.getStartY(), 2, Color.RED);
+                    px1_1.setLayoutX(8.5);
+                    px1_1.setLayoutY(23);
+                    Circle px1_2 = new Circle(cubicax1.getControlX1(), cubicax1.getControlY1(), 2, Color.RED);
+                    px1_2.setLayoutX(8.5);
+                    px1_2.setLayoutY(23);
+                    Circle px1_3 = new Circle(cubicax1.getControlX2(), cubicax1.getControlY2(), 2, Color.RED);
+                    px1_3.setLayoutX(8.5);
+                    px1_3.setLayoutY(23);
+                    Circle px1_4 = new Circle(cubicax1.getEndX(), cubicax1.getEndY(), 2, Color.RED);
+                    px1_4.setLayoutX(8.5);
+                    px1_4.setLayoutY(23);
+                    
+                    Circle px2_1 = new Circle(cubicax2.getStartX(), cubicax2.getStartY(), 2, Color.RED);
+                    px2_1.setLayoutX(13.89);
+                    px2_1.setLayoutY(23.5);
+                    Circle px2_2 = new Circle(cubicax2.getControlX1(), cubicax2.getControlY1(), 2, Color.RED);
+                    px2_2.setLayoutX(13.89);
+                    px2_2.setLayoutY(23.5);
+                    Circle px2_3 = new Circle(cubicax2.getControlX2(), cubicax2.getControlY2(), 2, Color.RED);
+                    px2_3.setLayoutX(13.89);
+                    px2_3.setLayoutY(23.5);
+                    Circle px2_4 = new Circle(cubicax2.getEndX(), cubicax2.getEndY(), 2, Color.RED);
+                    px2_4.setLayoutX(13.89);
+                    px2_4.setLayoutY(23.5);
+                    
+                    fondo.getChildren().addAll(px1_1, px1_2, px1_3, px1_4, px2_1, px2_2, px2_3, px2_4);
                 }
                 
                 fondo.getChildren().addAll(cubicax1, cubicax2);
@@ -3460,6 +3609,59 @@ public class CrearCaracteres {
                 
                 if (dibujar.getControl()){
                     //Puntos de control
+                    Circle py1_1 = new Circle(cubicay1.getStartX(), cubicay1.getStartY(), 2, Color.RED);
+                    py1_1.setLayoutX(10.5);
+                    py1_1.setLayoutY(19);
+                    Circle py1_2 = new Circle(cubicay1.getControlX1(), cubicay1.getControlY1(), 2, Color.RED);
+                    py1_2.setLayoutX(10.5);
+                    py1_2.setLayoutY(19);
+                    Circle py1_3 = new Circle(cubicay1.getControlX2(), cubicay1.getControlY2(), 2, Color.RED);
+                    py1_3.setLayoutX(10.5);
+                    py1_3.setLayoutY(19);
+                    Circle py1_4 = new Circle(cubicay1.getEndX(), cubicay1.getEndY(), 2, Color.RED);
+                    py1_4.setLayoutX(10.5);
+                    py1_4.setLayoutY(19);
+                    
+                    Circle py2_1 = new Circle(cubicay2.getStartX(), cubicay2.getStartY(), 2, Color.RED);
+                    py2_1.setLayoutX(55);
+                    py2_1.setLayoutY(55);
+                    Circle py2_2 = new Circle(cubicay2.getControlX1(), cubicay2.getControlY1(), 2, Color.RED);
+                    py2_2.setLayoutX(55);
+                    py2_2.setLayoutY(55);
+                    Circle py2_3 = new Circle(cubicay2.getControlX2(), cubicay2.getControlY2(), 2, Color.RED);
+                    py2_3.setLayoutX(55);
+                    py2_3.setLayoutY(55);
+                    Circle py2_4 = new Circle(cubicay2.getEndX(), cubicay2.getEndY(), 2, Color.RED);
+                    py2_4.setLayoutX(55);
+                    py2_4.setLayoutY(55);
+                    
+                    Circle py3_1 = new Circle(cubicay3.getStartX(), cubicay3.getStartY(), 2, Color.RED);
+                    py3_1.setLayoutX(59);
+                    py3_1.setLayoutY(69);
+                    Circle py3_2 = new Circle(cubicay3.getControlX1(), cubicay3.getControlY1(), 2, Color.RED);
+                    py3_2.setLayoutX(59);
+                    py3_2.setLayoutY(69);
+                    Circle py3_3 = new Circle(cubicay3.getControlX2(), cubicay3.getControlY2(), 2, Color.RED);
+                    py3_3.setLayoutX(59);
+                    py3_3.setLayoutY(69);
+                    Circle py3_4 = new Circle(cubicay3.getEndX(), cubicay3.getEndY(), 2, Color.RED);
+                    py3_4.setLayoutX(59);
+                    py3_4.setLayoutY(69);
+                    
+                    Circle py4_1 = new Circle(cubicay4.getStartX(), cubicay4.getStartY(), 2, Color.RED);
+                    py4_1.setLayoutX(66.2);
+                    py4_1.setLayoutY(63);
+                    Circle py4_2 = new Circle(cubicay4.getControlX1(), cubicay4.getControlY1(), 2, Color.RED);
+                    py4_2.setLayoutX(66.2);
+                    py4_2.setLayoutY(63);
+                    Circle py4_3 = new Circle(cubicay4.getControlX2(), cubicay4.getControlY2(), 2, Color.RED);
+                    py4_3.setLayoutX(66.2);
+                    py4_3.setLayoutY(63);
+                    Circle py4_4 = new Circle(cubicay4.getEndX(), cubicay4.getEndY(), 2, Color.RED);
+                    py4_4.setLayoutX(66.2);
+                    py4_4.setLayoutY(66);
+                    
+                    fondo.getChildren().addAll(py1_1, py1_2, py1_3, py1_4, py2_1, py2_2, py2_3, py2_4, py3_1, py3_2, py3_3, py3_4, py4_1, py4_2, py4_3, py4_4);
                 }
                 
                 fondo.getChildren().addAll(cubicay1, cubicay2, cubicay3, cubicay4);
@@ -3606,6 +3808,59 @@ public class CrearCaracteres {
                 
                 if (dibujar.getControl()){
                     //Puntos de control
+                    Circle pz1_1 = new Circle(cubicaz1.getStartX(), cubicaz1.getStartY(), 2, Color.RED);
+                    pz1_1.setLayoutX(8.5);
+                    pz1_1.setLayoutY(28);
+                    Circle pz1_2 = new Circle(cubicaz1.getControlX1(), cubicaz1.getControlY1(), 2, Color.RED);
+                    pz1_2.setLayoutX(8.5);
+                    pz1_2.setLayoutY(28);
+                    Circle pz1_3 = new Circle(cubicaz1.getControlX2(), cubicaz1.getControlY2(), 2, Color.RED);
+                    pz1_3.setLayoutX(8.5);
+                    pz1_3.setLayoutY(28);
+                    Circle pz1_4 = new Circle(cubicaz1.getEndX(), cubicaz1.getEndY(), 2, Color.RED);
+                    pz1_4.setLayoutX(8.5);
+                    pz1_4.setLayoutY(28);
+                    
+                    Circle pz2_1 = new Circle(cubicaz2.getStartX(), cubicaz2.getStartY(), 2, Color.RED);
+                    pz2_1.setLayoutX(54);
+                    pz2_1.setLayoutY(55);
+                    Circle pz2_2 = new Circle(cubicaz2.getControlX1(), cubicaz2.getControlY1(), 2, Color.RED);
+                    pz2_2.setLayoutX(54);
+                    pz2_2.setLayoutY(55);
+                    Circle pz2_3 = new Circle(cubicaz2.getControlX2(), cubicaz2.getControlY2(), 2, Color.RED);
+                    pz2_3.setLayoutX(54);
+                    pz2_3.setLayoutY(55);
+                    Circle pz2_4 = new Circle(cubicaz2.getEndX(), cubicaz2.getEndY(), 2, Color.RED);
+                    pz2_4.setLayoutX(54);
+                    pz2_4.setLayoutY(55);
+                    
+                    Circle pz3_1 = new Circle(cubicaz3.getStartX(), cubicaz3.getStartY(), 2, Color.RED);
+                    pz3_1.setLayoutX(58);
+                    pz3_1.setLayoutY(69);
+                    Circle pz3_2 = new Circle(cubicaz3.getControlX1(), cubicaz3.getControlY1(), 2, Color.RED);
+                    pz3_2.setLayoutX(58);
+                    pz3_2.setLayoutY(69);
+                    Circle pz3_3 = new Circle(cubicaz3.getControlX2(), cubicaz3.getControlY2(), 2, Color.RED);
+                    pz3_3.setLayoutX(58);
+                    pz3_3.setLayoutY(69);
+                    Circle pz3_4 = new Circle(cubicaz3.getEndX(), cubicaz3.getEndY(), 2, Color.RED);
+                    pz3_4.setLayoutX(58);
+                    pz3_4.setLayoutY(69);
+                    
+                    Circle pz4_1 = new Circle(cubicaz4.getStartX(), cubicaz4.getStartY(), 2, Color.RED);
+                    pz4_1.setLayoutX(15.5);
+                    pz4_1.setLayoutY(30);
+                    Circle pz4_2 = new Circle(cubicaz4.getControlX1(), cubicaz4.getControlY1(), 2, Color.RED);
+                    pz4_2.setLayoutX(15.5);
+                    pz4_2.setLayoutY(30);
+                    Circle pz4_3 = new Circle(cubicaz4.getControlX2(), cubicaz4.getControlY2(), 2, Color.RED);
+                    pz4_3.setLayoutX(15.5);
+                    pz4_3.setLayoutY(30);
+                    Circle pz4_4 = new Circle(cubicaz4.getEndX(), cubicaz4.getEndY(), 2, Color.RED);
+                    pz4_4.setLayoutX(15.5);
+                    pz4_4.setLayoutY(30);
+                    
+                    fondo.getChildren().addAll(pz1_1, pz1_2, pz1_3, pz1_4, pz2_1, pz2_2, pz2_3, pz2_4, pz3_1, pz3_2, pz3_3, pz3_4, pz4_1, pz4_2, pz4_3, pz4_4);
                 }
                 
                 fondo.getChildren().addAll(cubicaz1, cubicaz2, cubicaz3, cubicaz4);
