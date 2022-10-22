@@ -34,7 +34,8 @@ public class InterfazController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        dibujar.getLienzo().setStyle("-fx-background-color: LIGHTGRAY");
+        dibujar.getLienzo().setStyle("-fx-background-color: LIGHTGRAY;-fx-border-color: BLACK");
+        //dibujar.getLienzo().setStyle("-fx-border-width: 2");
         dibujar.getLienzo().setLayoutX(0);
         dibujar.getLienzo().setLayoutY(0);
         dibujar.getLienzo().setPrefSize(1070, 450);
