@@ -35,8 +35,8 @@ public class InterfazController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         dibujar.getLienzo().setStyle("-fx-background-color: LIGHTGRAY");
-        dibujar.getLienzo().setLayoutX(30);
-        dibujar.getLienzo().setLayoutY(60);
+        dibujar.getLienzo().setLayoutX(0);
+        dibujar.getLienzo().setLayoutY(0);
         dibujar.getLienzo().setPrefSize(1070, 450);
         dibujar.getLienzo().setMaxSize(1070, 450);
         fondoInterfaz.getChildren().add(dibujar.getLienzo()); // Se añade el lienzo de dibujo
