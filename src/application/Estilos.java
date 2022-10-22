@@ -8,6 +8,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.CubicCurve;
+import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.QuadCurve;
 import javafx.scene.shape.StrokeLineCap;
@@ -83,15 +84,6 @@ public class Estilos {
         fondo.getChildren().addAll(ancho1,ancho2);
     }
     
-    public void subrayado(char c, AnchorPane fondo){
-        Line sub = new Line();
-        sub.setStartX(dibujar.tamañoCaracter(c));
-        sub.setLayoutX(0);
-        sub.setLayoutY(55);
-        sub.setStroke(dibujar.getColor());
-        fondo.getChildren().add(sub);
-    }
-    
     public void lineaControl(Line linea, AnchorPane fondo){
         Circle p1 = new Circle(linea.getStartX(),linea.getStartY(),2,Color.RED);
         p1.setLayoutX(linea.getLayoutX());
@@ -132,6 +124,72 @@ public class Estilos {
         p4.setLayoutY(cubica.getLayoutY());
         
         fondo.getChildren().addAll(p1,p2,p3,p4);
+    }
+    
+    public void subrayado(char c, AnchorPane fondo){
+        Line sub = new Line();
+        sub.setStartX(dibujar.tamañoCaracter(c));
+        sub.setLayoutX(0);
+        sub.setLayoutY(55);
+        sub.setStroke(dibujar.getColor());
+        fondo.getChildren().add(sub);
+    }
+    
+    public void elipseNegrita(Ellipse elipse, AnchorPane fondo){
+        Ellipse ancho1 = new Ellipse(elipse.getRadiusX(),elipse.getRadiusY());
+        ancho1.setLayoutX(elipse.getLayoutX());
+        ancho1.setLayoutY(elipse.getLayoutY());
+        ancho1.setFill(dibujar.getColor());
+        ancho1.setStroke(dibujar.getColor());
+        ancho1.setTranslateX(1);
+                    
+        Ellipse ancho2 = new Ellipse(elipse.getRadiusX(),elipse.getRadiusY());
+        ancho2.setLayoutX(elipse.getLayoutX());
+        ancho2.setLayoutY(elipse.getLayoutY());
+        ancho2.setFill(dibujar.getColor());
+        ancho2.setStroke(dibujar.getColor());
+        ancho2.setTranslateY(1);
+        
+        fondo.getChildren().addAll(ancho1,ancho2);
+    }
+    
+    public void elipseControl(Ellipse elipse, AnchorPane fondo){
+        Circle p1 = new Circle(elipse.getRadiusX(),elipse.getRadiusY(),2,Color.RED);
+        p1.setLayoutX(elipse.getLayoutX());
+        p1.setLayoutY(elipse.getLayoutY());
+        Circle p2 = new Circle(elipse.getCenterX(),elipse.getCenterY(),2,Color.RED);
+        p2.setLayoutX(elipse.getLayoutX());
+        p2.setLayoutY(elipse.getLayoutY());
+        
+        fondo.getChildren().addAll(p1,p2);
+    }
+    
+    public void circuloNegrita(Circle circulo, AnchorPane fondo){
+        Circle ancho1 = new Circle(circulo.getRadius());
+        ancho1.setLayoutX(circulo.getLayoutX());
+        ancho1.setLayoutY(circulo.getLayoutY());
+        ancho1.setFill(dibujar.getColor());
+        ancho1.setStroke(dibujar.getColor());
+        ancho1.setTranslateX(1);
+                    
+        Circle ancho2 = new Circle(circulo.getRadius());
+        ancho2.setLayoutX(circulo.getLayoutX());
+        ancho2.setLayoutY(circulo.getLayoutY());
+        ancho2.setFill(dibujar.getColor());
+        ancho2.setStroke(dibujar.getColor());
+        ancho2.setTranslateY(1);
+        
+        fondo.getChildren().addAll(ancho1,ancho2);
+    }
+    
+    public void circuloControl(Circle circulo, AnchorPane fondo){
+        Circle p = new Circle();
+        p.setRadius(2);
+        p.setFill(Color.RED);
+        p.setLayoutX(circulo.getLayoutX());
+        p.setLayoutY(circulo.getLayoutY());
+        
+        fondo.getChildren().add(p);
     }
     
 }
