@@ -2960,6 +2960,7 @@ public class CrearCaracteres {
                     subu.setStartX(19);
                     subu.setLayoutX(0);
                     subu.setLayoutY(55);
+                    subu.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subu);
                 }
                 
@@ -3075,6 +3076,7 @@ public class CrearCaracteres {
                     subv.setStartX(19);
                     subv.setLayoutX(0);
                     subv.setLayoutY(55);
+                    subv.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subv);
                 }
                 
@@ -3132,6 +3134,7 @@ public class CrearCaracteres {
                     subw.setStartX(19);
                     subw.setLayoutX(0);
                     subw.setLayoutY(55);
+                    subw.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subw);
                 }
                 
@@ -3173,6 +3176,7 @@ public class CrearCaracteres {
                     subx.setStartX(19);
                     subx.setLayoutX(0);
                     subx.setLayoutY(55);
+                    subx.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subx);
                 }
                 
@@ -3230,6 +3234,7 @@ public class CrearCaracteres {
                     suby.setStartX(19);
                     suby.setLayoutX(0);
                     suby.setLayoutY(55);
+                    suby.setStroke(dibujar.getColor());
                     fondo.getChildren().add(suby);
                 }
                 
@@ -3287,6 +3292,7 @@ public class CrearCaracteres {
                     subz.setStartX(19);
                     subz.setLayoutX(0);
                     subz.setLayoutY(55);
+                    subz.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subz);
                 }
                 
@@ -3327,6 +3333,7 @@ public class CrearCaracteres {
                     subExclamacionInicial.setStartX(34);
                     subExclamacionInicial.setLayoutX(0);
                     subExclamacionInicial.setLayoutY(55);
+                    subExclamacionInicial.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subExclamacionInicial);
                 }
                 
@@ -3365,6 +3372,7 @@ public class CrearCaracteres {
                     subExclamacionFinal.setStartX(34);
                     subExclamacionFinal.setLayoutX(0);
                     subExclamacionFinal.setLayoutY(55);
+                    subExclamacionFinal.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subExclamacionFinal);
                 }
                 
@@ -3409,6 +3417,7 @@ public class CrearCaracteres {
                     subInterrogacionInicial.setStartX(34);
                     subInterrogacionInicial.setLayoutX(0);
                     subInterrogacionInicial.setLayoutY(55);
+                    subInterrogacionInicial.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subInterrogacionInicial);
                 }
                 
@@ -3454,6 +3463,7 @@ public class CrearCaracteres {
                     subInterrogacionFinal.setStartX(34);
                     subInterrogacionFinal.setLayoutX(0);
                     subInterrogacionFinal.setLayoutY(55);
+                    subInterrogacionFinal.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subInterrogacionFinal);
                 }
                 
@@ -3484,6 +3494,7 @@ public class CrearCaracteres {
                     subPunto.setStartX(22);
                     subPunto.setLayoutX(0);
                     subPunto.setLayoutY(55);
+                    subPunto.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subPunto);
                 }
                 
@@ -3521,6 +3532,7 @@ public class CrearCaracteres {
                     subComa.setStartX(22);
                     subComa.setLayoutX(0);
                     subComa.setLayoutY(55);
+                    subComa.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subComa);
                 }
                 
@@ -3564,6 +3576,7 @@ public class CrearCaracteres {
                     subPuntoyComa.setStartX(22);
                     subPuntoyComa.setLayoutX(0);
                     subPuntoyComa.setLayoutY(55);
+                    subPuntoyComa.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subPuntoyComa);
                 }
                 
@@ -3597,6 +3610,7 @@ public class CrearCaracteres {
                     subDosPuntos.setStartX(22);
                     subDosPuntos.setLayoutX(0);
                     subDosPuntos.setLayoutY(55);
+                    subDosPuntos.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subDosPuntos);
                 }
                 
@@ -3630,6 +3644,7 @@ public class CrearCaracteres {
                     subParentesisInicial.setStartX(22);
                     subParentesisInicial.setLayoutX(0);
                     subParentesisInicial.setLayoutY(55);
+                    subParentesisInicial.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subParentesisInicial);
                 }
                 
@@ -3663,6 +3678,7 @@ public class CrearCaracteres {
                     subParentesisFinal.setStartX(22);
                     subParentesisFinal.setLayoutX(0);
                     subParentesisFinal.setLayoutY(55);
+                    subParentesisFinal.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subParentesisFinal);
                 }
                 
@@ -3712,6 +3728,7 @@ public class CrearCaracteres {
                     subCorcheteInicial.setStartX(34);
                     subCorcheteInicial.setLayoutX(0);
                     subCorcheteInicial.setLayoutY(55);
+                    subCorcheteInicial.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subCorcheteInicial);
                 }
                 
@@ -3761,6 +3778,7 @@ public class CrearCaracteres {
                     subCorcheteFinal.setStartX(34);
                     subCorcheteFinal.setLayoutX(0);
                     subCorcheteFinal.setLayoutY(55);
+                    subCorcheteFinal.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subCorcheteFinal);
                 }
                 
@@ -3802,6 +3820,7 @@ public class CrearCaracteres {
                     subLlaveInicial.setStartX(34);
                     subLlaveInicial.setLayoutX(0);
                     subLlaveInicial.setLayoutY(55);
+                    subLlaveInicial.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subLlaveInicial);
                 }
                 
@@ -3843,6 +3862,7 @@ public class CrearCaracteres {
                     subLlaveFinal.setStartX(34);
                     subLlaveFinal.setLayoutX(0);
                     subLlaveFinal.setLayoutY(55);
+                    subLlaveFinal.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subLlaveFinal);
                 }
                 
@@ -3875,6 +3895,7 @@ public class CrearCaracteres {
                     subGuion.setStartX(34);
                     subGuion.setLayoutX(0);
                     subGuion.setLayoutY(55);
+                    subGuion.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subGuion);
                 }
                 
@@ -3907,6 +3928,7 @@ public class CrearCaracteres {
                     subGuionBajo.setStartX(34);
                     subGuionBajo.setLayoutX(0);
                     subGuionBajo.setLayoutY(55);
+                    subGuionBajo.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subGuionBajo);
                 }
                 
@@ -3950,6 +3972,7 @@ public class CrearCaracteres {
                     subComillaSimple.setStartX(22);
                     subComillaSimple.setLayoutX(0);
                     subComillaSimple.setLayoutY(55);
+                    subComillaSimple.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subComillaSimple);
                 }
                 
@@ -3999,6 +4022,7 @@ public class CrearCaracteres {
                     subComillaDoble.setStartX(22);
                     subComillaDoble.setLayoutX(0);
                     subComillaDoble.setLayoutY(55);
+                    subComillaDoble.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subComillaDoble);
                 }
                 
@@ -4056,6 +4080,7 @@ public class CrearCaracteres {
                     subComillaE1.setStartX(34);
                     subComillaE1.setLayoutX(0);
                     subComillaE1.setLayoutY(55);
+                    subComillaE1.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subComillaE1);
                 }
                 
@@ -4113,6 +4138,7 @@ public class CrearCaracteres {
                     subComillaE2.setStartX(34);
                     subComillaE2.setLayoutX(0);
                     subComillaE2.setLayoutY(55);
+                    subComillaE2.setStroke(dibujar.getColor());
                     fondo.getChildren().add(subComillaE2);
                 }
                 
