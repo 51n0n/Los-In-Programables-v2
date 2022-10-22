@@ -5307,29 +5307,26 @@ public class CrearCaracteres {
                 cubicau2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR Cursiva de manera correcta
                     cubicau1.setRotate(7);
                     cubicau2.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(cubicau1,cubicau2);
+                
                 if (palabra.isN()){
-                    //Negrita
                     estilos.cubicaNegrita(cubicau1, fondo);
                     estilos.cubicaNegrita(cubicau2, fondo);
                 }
                 
                 if (palabra.isS()){
-                    //Subrayado
                     estilos.subrayado(caracter, fondo);
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
                     estilos.cubicaControl(cubicau1, fondo);
                     estilos.cubicaControl(cubicau2, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicau1,cubicau2);
                 return fondo;
             case 'v':
                 CubicCurve cubicav1 = new CubicCurve(-10.19, 3.8, -8.1, 45.1, 1.34, 13.29, -0.89, 7.49);
@@ -5359,11 +5356,12 @@ public class CrearCaracteres {
                 cubicav3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
                     cubicav1.setRotate(7);
                     cubicav2.setRotate(7);
                     cubicav3.setRotate(7);
                 }
+                
+                fondo.getChildren().addAll(cubicav1,cubicav2,cubicav3);
                 
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicav1, fondo);
@@ -5376,13 +5374,11 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
                     estilos.cubicaControl(cubicav1, fondo);
                     estilos.cubicaControl(cubicav2, fondo);
                     estilos.cubicaControl(cubicav3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicav1,cubicav2,cubicav3);
                 return fondo;
             case 'w':
                 CubicCurve cubicaw1 = new CubicCurve(-71.19, -32.29, -83.97, -30.19, -78.39, -36.5, -75.59, -32.29);
@@ -5420,12 +5416,13 @@ public class CrearCaracteres {
                 cubicaw4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
                     cubicaw1.setRotate(7);
                     cubicaw2.setRotate(7);
                     cubicaw3.setRotate(7);
                     cubicaw4.setRotate(7);
                 }
+                
+                fondo.getChildren().addAll(cubicaw1, cubicaw2, cubicaw3, cubicaw4);
                 
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaw1, fondo);
@@ -5439,14 +5436,12 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
                     estilos.cubicaControl(cubicaw1, fondo);
                     estilos.cubicaControl(cubicaw2, fondo);
                     estilos.cubicaControl(cubicaw3, fondo);
                     estilos.cubicaControl(cubicaw4, fondo);
                 }
                 
-                 fondo.getChildren().addAll(cubicaw1, cubicaw2, cubicaw3, cubicaw4);
                 return fondo;
             case 'x':
                 CubicCurve cubicax1 = new CubicCurve(-8.5, 22.4, -4.29, 30, 1.52, 2.30, 5.7, 2.67);
@@ -5468,10 +5463,11 @@ public class CrearCaracteres {
                 cubicax2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
                     cubicax1.setRotate(7);
                     cubicax2.setRotate(7);
                 }
+                
+                fondo.getChildren().addAll(cubicax1, cubicax2);
                 
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicax1, fondo);
@@ -5483,12 +5479,10 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
                     estilos.cubicaControl(cubicax1, fondo);
                     estilos.cubicaControl(cubicax2, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicax1, cubicax2);
                 return fondo;
             case 'y':
                 CubicCurve cubicay1 = new CubicCurve(-6.5, 6.19, -10.5, 28, 4.9, 28, 1.5, 6.19);
@@ -5526,12 +5520,13 @@ public class CrearCaracteres {
                 cubicay4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
                     cubicay1.setRotate(7);
                     cubicay2.setRotate(7);
                     cubicay3.setRotate(7);
                     cubicay4.setRotate(7);
                 }
+                
+                fondo.getChildren().addAll(cubicay1, cubicay2, cubicay3, cubicay4);
                 
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicay1, fondo);
@@ -5545,14 +5540,12 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
                     estilos.cubicaControl(cubicay1, fondo);
                     estilos.cubicaControl(cubicay2, fondo);
                     estilos.cubicaControl(cubicay3, fondo);
                     estilos.cubicaControl(cubicay4, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicay1, cubicay2, cubicay3, cubicay4);
                 return fondo;
             case 'z':
                 CubicCurve cubicaz1 = new CubicCurve(-6.9, 6, -0.9, -5.99, 14.5, -2, -0.9, 9);
@@ -5590,12 +5583,13 @@ public class CrearCaracteres {
                 cubicaz4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR de mejor manera
                     cubicaz1.setRotate(7);
                     cubicaz2.setRotate(7);
                     cubicaz3.setRotate(7);
                     cubicaz4.setRotate(7);
                 }
+                
+                fondo.getChildren().addAll(cubicaz1, cubicaz2, cubicaz3, cubicaz4);
                 
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaz1, fondo);
@@ -5609,14 +5603,12 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
                     estilos.cubicaControl(cubicaz1, fondo);
                     estilos.cubicaControl(cubicaz2, fondo);
                     estilos.cubicaControl(cubicaz3, fondo);
                     estilos.cubicaControl(cubicaz4, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaz1, cubicaz2, cubicaz3, cubicaz4);
                 return fondo;
             case ' ':
                 
@@ -5637,11 +5629,15 @@ public class CrearCaracteres {
                 circulo.setLayoutY(50);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    elipse.setRotate(7);
+                    circulo.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(elipse, circulo);
+                
                 if (palabra.isN()){
-                    //
+                    //elipse
+                    //circulo
                 }
                 
                 if (palabra.isS()){
@@ -5649,10 +5645,10 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    //elipse
+                    //circulo
                 }
                 
-                fondo.getChildren().addAll(elipse, circulo);
                 return fondo;
             case '¡':
                 Ellipse elipse1 = new Ellipse(1, 20);
@@ -5668,14 +5664,17 @@ public class CrearCaracteres {
                 //Circulo
                 circulo1.setLayoutX(11);
                 circulo1.setLayoutY(5);
-                fondo.getChildren().addAll(elipse1, circulo1);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    elipse1.setRotate(7);
+                    circulo1.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(elipse1, circulo1);
+                
                 if (palabra.isN()){
-                    //
+                    //elipse1
+                    //circulo1
                 }
                 
                 if (palabra.isS()){
@@ -5683,7 +5682,8 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    //elipse1
+                    //circulo1
                 }
                 
                 return fondo;
@@ -5711,11 +5711,17 @@ public class CrearCaracteres {
                 circulo2.setLayoutY(6);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    cubica.setRotate(7);
+                    linea1.setRotate(7);
+                    circulo2.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(cubica, linea1, circulo2);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.cubicaNegrita(cubica, fondo);
+                    estilos.lineaNegrita(linea1, fondo);
+                    //circulo2
                 }
                 
                 if (palabra.isS()){
@@ -5723,10 +5729,11 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.cubicaControl(cubica, fondo);
+                    estilos.lineaControl(linea1, fondo);
+                    //circulo2
                 }
                 
-                fondo.getChildren().addAll(cubica, linea1, circulo2);
                 return fondo;
             case '?':
                 CubicCurve cubica1 = new CubicCurve(13.33, -24.19, 36.19, -35.93, 36.19, 4.59, 13.33, -4.46);
@@ -5752,11 +5759,17 @@ public class CrearCaracteres {
                 circulo3.setLayoutY(51);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    cubica1.setRotate(7);
+                    linea2.setRotate(7);
+                    circulo3.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(cubica1, linea2, circulo3);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.cubicaNegrita(cubica1, fondo);
+                    estilos.lineaNegrita(linea2, fondo);
+                    //circulo3
                 }
                 
                 if (palabra.isS()){
@@ -5764,10 +5777,11 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.cubicaControl(cubica1, fondo);
+                    estilos.lineaControl(linea2, fondo);
+                    //circulo3
                 }
                 
-                fondo.getChildren().addAll(cubica1, linea2, circulo3);
                 return fondo;
             case '.':
                 Circle circulo4 = new Circle(3, dibujar.getColor());
@@ -5778,11 +5792,13 @@ public class CrearCaracteres {
                 circulo4.setLayoutY(47);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    circulo4.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(circulo4);
+                
                 if (palabra.isN()){
-                    //
+                    //circulo4
                 }
                 
                 if (palabra.isS()){
@@ -5790,10 +5806,9 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    //circulo4
                 }
                 
-                fondo.getChildren().addAll(circulo4);
                 return fondo;
             case ',':
                 Circle circulo5 = new Circle(3, dibujar.getColor());
@@ -5811,11 +5826,15 @@ public class CrearCaracteres {
                 cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    circulo5.setRotate(7);
+                    cuadratica.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(circulo5, cuadratica);
+                
                 if (palabra.isN()){
-                    //
+                    //circulo5
+                    estilos.cuadraticaNegrita(cuadratica, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -5823,10 +5842,10 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    //circulo5
+                    estilos.cuadraticaControl(cuadratica, fondo);
                 }
                 
-                fondo.getChildren().addAll(circulo5, cuadratica);
                 return fondo;
             case ';':
                 Circle circulo6 = new Circle(3, dibujar.getColor());
@@ -5850,11 +5869,17 @@ public class CrearCaracteres {
                 cuadratica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    circulo6.setRotate(7);
+                    circulo7.setRotate(7);
+                    cuadratica1.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(circulo6, cuadratica1, circulo7);
+                
                 if (palabra.isN()){
-                    //
+                    //circulo6
+                    //circulo7
+                    estilos.cuadraticaNegrita(cuadratica1, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -5862,10 +5887,11 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    //circulo6
+                    //circulo7
+                    estilos.cuadraticaControl(cuadratica1, fondo);
                 }
                 
-                fondo.getChildren().addAll(circulo6, cuadratica1, circulo7);
                 return fondo;
             case ':':
                 Circle circulo8 = new Circle(3, dibujar.getColor());
@@ -5879,11 +5905,15 @@ public class CrearCaracteres {
                 circulo9.setLayoutY(47);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    circulo8.setRotate(7);
+                    circulo9.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(circulo8, circulo9);
+                
                 if (palabra.isN()){
-                    //
+                    //circulo8
+                    //circulo9
                 }
                 
                 if (palabra.isS()){
@@ -5891,15 +5921,15 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    //circulo8
+                    //circulo9
                 }
                 
-                fondo.getChildren().addAll(circulo8, circulo9);
                 return fondo;
             case '(':
                 QuadCurve cubica2 = new QuadCurve(-6.6, 1.8, -29.3, -25.8, -6.59, -50);
                 fondo.setPrefSize(22, 60);
-                //Cubica
+                //Cubica *Me equivoque en el nombre, es una cuadratica -F.S
                 cubica2.setLayoutX(20);
                 cubica2.setLayoutY(51);
                 cubica2.setFill(Color.TRANSPARENT);
@@ -5908,11 +5938,13 @@ public class CrearCaracteres {
                 cubica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    cubica2.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(cubica2);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.cuadraticaNegrita(cubica2, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -5920,15 +5952,14 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.cuadraticaControl(cubica2, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubica2);
                 return fondo;
             case ')':
                 QuadCurve cubica3 = new QuadCurve(-6.6, 1.8, 14.6, -25, -6.59, -50);
                 fondo.setPrefSize(22, 60);
-                //Cubica
+                //Cubica *Lo mismo, es cuadratica -F.S
                 cubica3.setLayoutX(9);
                 cubica3.setLayoutY(51);
                 cubica3.setFill(Color.TRANSPARENT);
@@ -5937,11 +5968,13 @@ public class CrearCaracteres {
                 cubica3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    cubica3.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(cubica3);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.cuadraticaNegrita(cubica3, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -5949,10 +5982,9 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.cuadraticaControl(cubica3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubica3);
                 return fondo;
             case '[':
                 Line linea3 = new Line(-13.69, -24.59, -13.69, 21.39);
@@ -5982,11 +6014,17 @@ public class CrearCaracteres {
                 linea5.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    linea3.setRotate(7);
+                    linea4.setRotate(7);
+                    linea5.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(linea3, linea4, linea5);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.lineaNegrita(linea3, fondo);
+                    estilos.lineaNegrita(linea4, fondo);
+                    estilos.lineaNegrita(linea5, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -5994,10 +6032,11 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.lineaControl(linea3, fondo);
+                    estilos.lineaControl(linea4, fondo);
+                    estilos.lineaControl(linea5, fondo);
                 }
                 
-                fondo.getChildren().addAll(linea3, linea4, linea5);
                 return fondo;
             case ']':
                 Line linea6 = new Line(-13.7, -24.59, -13.69, 21.39);
@@ -6027,11 +6066,17 @@ public class CrearCaracteres {
                 linea8.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    linea6.setRotate(7);
+                    linea7.setRotate(7);
+                    linea8.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(linea6, linea7, linea8);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.lineaNegrita(linea6, fondo);
+                    estilos.lineaNegrita(linea7, fondo);
+                    estilos.lineaNegrita(linea8, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -6039,10 +6084,11 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.lineaControl(linea6, fondo);
+                    estilos.lineaControl(linea7, fondo);
+                    estilos.lineaControl(linea8, fondo);
                 }
                 
-                fondo.getChildren().addAll(linea6, linea7, linea8);
                 return fondo;
             case '{':
                 CubicCurve cubica4 = new CubicCurve(-0.2, 2, 17, 1, -0.2, -24.6, 17, -24.6);
@@ -6064,11 +6110,15 @@ public class CrearCaracteres {
                 cubica5.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    cubica4.setRotate(7);
+                    cubica5.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(cubica4, cubica5);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.cubicaNegrita(cubica4, fondo);
+                    estilos.cubicaNegrita(cubica5, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -6076,10 +6126,10 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.cubicaControl(cubica4, fondo);
+                    estilos.cubicaControl(cubica5, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubica4, cubica5);
                 return fondo;
             case '}':
                 CubicCurve cubica6 = new CubicCurve(11.08, 15, -8.12, 15, 11.08, -11.4, -9.39, -11.4);
@@ -6101,11 +6151,15 @@ public class CrearCaracteres {
                 cubica7.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    cubica6.setRotate(7);
+                    cubica7.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(cubica6, cubica7);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.cubicaNegrita(cubica6, fondo);
+                    estilos.cubicaNegrita(cubica7, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -6113,10 +6167,10 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.cubicaControl(cubica6, fondo);
+                    estilos.cubicaControl(cubica7, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubica6, cubica7);
                 return fondo;
             case '-':
                 Line linea9 = new Line(-14, 5, 14, 5);
@@ -6129,11 +6183,13 @@ public class CrearCaracteres {
                 linea9.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    linea9.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(linea9);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.lineaNegrita(linea9, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -6141,10 +6197,9 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.lineaControl(linea9, fondo);
                 }
                 
-                fondo.getChildren().addAll(linea9);
                 return fondo;
             case '_':
                 Line linea10 = new Line(-10, 5, 15.2, 5);      
@@ -6157,11 +6212,13 @@ public class CrearCaracteres {
                 linea10.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    linea10.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(linea10);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.lineaNegrita(linea10, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -6169,10 +6226,9 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.lineaControl(linea10, fondo);
                 }
                 
-                fondo.getChildren().addAll(linea10);
                 return fondo;
             case 39:
                 Circle circulo10 = new Circle(2, dibujar.getColor());
@@ -6196,11 +6252,15 @@ public class CrearCaracteres {
                 cuadratica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    circulo10.setRotate(7);
+                    cuadratica2.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(circulo10, cuadratica2);
+                
                 if (palabra.isN()){
-                    //
+                    //circulo10
+                    estilos.cuadraticaNegrita(cuadratica2, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -6208,10 +6268,10 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    //circulo10
+                    estilos.cuadraticaControl(cuadratica2, fondo);
                 }
                 
-                fondo.getChildren().addAll(circulo10, cuadratica2);
                 return fondo;
             case '"':
                 Circle circulo11 = new Circle(2, dibujar.getColor());
@@ -6241,11 +6301,19 @@ public class CrearCaracteres {
                 cuadratica4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    circulo11.setRotate(7);
+                    cuadratica3.setRotate(7);
+                    circulo12.setRotate(7);
+                    cuadratica4.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(circulo11, cuadratica3, circulo12, cuadratica4);
+                
                 if (palabra.isN()){
-                    //
+                    //circulo11
+                    estilos.cuadraticaNegrita(cuadratica3, fondo);
+                    //circulo12
+                    estilos.cuadraticaNegrita(cuadratica4, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -6253,10 +6321,12 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    //circulo11
+                    estilos.cuadraticaControl(cuadratica3, fondo);
+                    //circulo12
+                    estilos.cuadraticaControl(cuadratica4, fondo);
                 }
                 
-                fondo.getChildren().addAll(circulo11, cuadratica3, circulo12, cuadratica4);
                 return fondo;
             case '«':
                 Line linea11 = new Line(-9.19, 0, 4, -9);
@@ -6294,11 +6364,19 @@ public class CrearCaracteres {
                 linea14.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    linea11.setRotate(7);
+                    linea12.setRotate(7);
+                    linea13.setRotate(7);
+                    linea14.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(linea11, linea12, linea13, linea14);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.lineaNegrita(linea11, fondo);
+                    estilos.lineaNegrita(linea12, fondo);
+                    estilos.lineaNegrita(linea13, fondo);
+                    estilos.lineaNegrita(linea14, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -6306,10 +6384,12 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.lineaControl(linea11, fondo);
+                    estilos.lineaControl(linea12, fondo);
+                    estilos.lineaControl(linea13, fondo);
+                    estilos.lineaControl(linea13, fondo);
                 }
                 
-                fondo.getChildren().addAll(linea11, linea12, linea13, linea14);
                 return fondo;
             case '»':
                 Line linea15 = new Line(7, 0, -4, -9);
@@ -6347,11 +6427,19 @@ public class CrearCaracteres {
                 linea18.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    //FALTA IMPLEMENTAR
+                    linea15.setRotate(7);
+                    linea16.setRotate(7);
+                    linea17.setRotate(7);
+                    linea18.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(linea15, linea16, linea17, linea18);
+                
                 if (palabra.isN()){
-                    //
+                    estilos.lineaNegrita(linea15, fondo);
+                    estilos.lineaNegrita(linea16, fondo);
+                    estilos.lineaNegrita(linea17, fondo);
+                    estilos.lineaNegrita(linea18, fondo);
                 }
                 
                 if (palabra.isS()){
@@ -6359,10 +6447,12 @@ public class CrearCaracteres {
                 }
                 
                 if (dibujar.getControl()){
-                    //Puntos de control
+                    estilos.lineaControl(linea15, fondo);
+                    estilos.lineaControl(linea16, fondo);
+                    estilos.lineaControl(linea17, fondo);
+                    estilos.lineaControl(linea18, fondo);
                 }
                 
-                fondo.getChildren().addAll(linea15, linea16, linea17, linea18);
                 return fondo;
             case '^':
                 return fondo;
