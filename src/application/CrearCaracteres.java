@@ -62,6 +62,8 @@ public class CrearCaracteres {
                     lineaA.setRotate(7);
                 }
                 
+                fondo.getChildren().addAll(cubicaA1,cubicaA2,lineaA);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaA1, fondo);
                     estilos.cubicaNegrita(cubicaA2, fondo);
@@ -78,7 +80,6 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaA, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaA1,cubicaA2,lineaA);
                 return fondo;
             case 'B':
                 CubicCurve cubicaB1 = new CubicCurve(-16.6,17,0.19,23.4,-6.8,-33,11.19,-24.8);
@@ -123,6 +124,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaB1,cubicaB2,cubicaB3,cubicaB4);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaB1, fondo);
                     estilos.cubicaNegrita(cubicaB2, fondo);
@@ -141,7 +144,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaB4, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaB1,cubicaB2,cubicaB3,cubicaB4);
                 return fondo;
             case 'C':
                 CubicCurve cubicaC1 = new CubicCurve(6,-69.59,-13.39,-73.19,-26.39,-10.19,6.33,-30.79);
@@ -176,6 +178,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaC1,cubicaC2,cubicaC3);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaC1, fondo);
                     estilos.cubicaNegrita(cubicaC2, fondo);
@@ -192,7 +196,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaC3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaC1,cubicaC2,cubicaC3);
                 return fondo;
             case 'D':
                 CubicCurve cubicaD1 = new CubicCurve(3.2,-25.8,-6.8,-29.8,-6.8,14.59,-20.19,14.59);
@@ -235,6 +238,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaD1,cubicaD2,cubicaD3,cubicaD4);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaD1, fondo);
                     estilos.cubicaNegrita(cubicaD2, fondo);
@@ -253,7 +258,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaD4, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaD1,cubicaD2,cubicaD3,cubicaD4);
                 return fondo;
             case 'E':
                 CubicCurve cubicaE1 = new CubicCurve(6.2,19.2,-14.79,39.59,-30.6,11.59,-11.4,2.23);
@@ -296,6 +300,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaE1,cubicaE2,cubicaE3,cubicaE4);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaE1, fondo);
                     estilos.cubicaNegrita(cubicaE2, fondo);
@@ -314,7 +320,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaE4, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaE1,cubicaE2,cubicaE3,cubicaE4);
                 return fondo;
             case 'F':
                 Line lineaF1 = new Line(42.8,-2.4,50.39,-2.4);
@@ -365,6 +370,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaF1,cubicaF2,cubicaF3,lineaF1,lineaF2);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaF1, fondo);
                     estilos.cubicaNegrita(cubicaF2, fondo);
@@ -384,7 +391,6 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaF2, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaF1,cubicaF2,cubicaF3,lineaF1,lineaF2);
                 return fondo;
             case 'G':
                 CubicCurve cubicaG1 = new CubicCurve(-22,25.4,-31.19,37.40,8.20,49.79,3.39,9.49);
@@ -419,6 +425,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaG1,cubicaG2,cubicaG3);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaG1, fondo);
                     estilos.cubicaNegrita(cubicaG2, fondo);
@@ -434,7 +442,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaG3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaG1,cubicaG2,cubicaG3);
                 return fondo;
             case 'H':
                 Line lineaH = new Line(-13.39,-1.8,-0.6,-1.8);
@@ -477,6 +484,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaH1,cubicaH2,cubicaH3,lineaH);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaH1, fondo);
                     estilos.cubicaNegrita(cubicaH2, fondo);
@@ -494,7 +503,6 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaH, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaH1,cubicaH2,cubicaH3,lineaH);
                 return fondo;
             case 'I':
                 CubicCurve cubicaI1 = new CubicCurve(-12.59,9.4,-16.4,19.19,-42.4,1.9,8.59,-0.02);
@@ -529,6 +537,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaI1,cubicaI2,cubicaI3);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaI1, fondo);
                     estilos.cubicaNegrita(cubicaI2, fondo);
@@ -544,7 +554,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaI3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaI1,cubicaI2,cubicaI3);
                 return fondo;
             case 'J':
                 CubicCurve cubicaJ1 = new CubicCurve(-29.59,35.8,-24.2,57,-27.7,6.2,-0.7,-11.68);
@@ -579,6 +588,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaJ1,cubicaJ2,cubicaJ3);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaJ1, fondo);
                     estilos.cubicaNegrita(cubicaJ2, fondo);
@@ -594,7 +605,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaJ3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaJ1,cubicaJ2,cubicaJ3);
                 return fondo;
             case 'K':
                 CubicCurve cubicaK1 = new CubicCurve(-33,32.79,-14.59,53.19,-27.8,-6,-10.59,-6);
@@ -639,6 +649,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaK1,cubicaK2,cubicaK3,cubicaK4);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaK1, fondo);
                     estilos.cubicaNegrita(cubicaK2, fondo);
@@ -656,7 +668,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaK4, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaK1,cubicaK2,cubicaK3,cubicaK4);
                 return fondo;
             case 'L':
                 CubicCurve cubicaL1 = new CubicCurve(-31.19,37.6,1.19,41.4,-29,-5.59,-4,-7.18);
@@ -691,6 +702,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaL1,cubicaL2,cubicaL3);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaL1, fondo);
                     estilos.cubicaNegrita(cubicaL2, fondo);
@@ -706,7 +719,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaL3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaL1,cubicaL2,cubicaL3);
                 return fondo;
             case 'M':
                 CubicCurve cubicaM1 = new CubicCurve(-33,35,-13.8,48,-31.39,-6,-10.59,-6);   
@@ -757,6 +769,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaM1,cubicaM2,cubicaM3,cubicaM4,cuadraticaM);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaM1, fondo);
                     estilos.cubicaNegrita(cubicaM2, fondo);
@@ -776,7 +790,6 @@ public class CrearCaracteres {
                     estilos.cuadraticaControl(cuadraticaM, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaM1,cubicaM2,cubicaM3,cubicaM4,cuadraticaM);
                 return fondo;
             case 'N':
                 CubicCurve cubicaN1 = new CubicCurve(-31.39,37.4,-22.4,41,-16.99,9.59,-22.4,-5.4);
@@ -819,6 +832,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaN1,cubicaN2,cubicaN3,cubicaN4);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaN1, fondo);
                     estilos.cubicaNegrita(cubicaN2, fondo);
@@ -836,7 +851,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaN4, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaN1,cubicaN2,cubicaN3,cubicaN4);
                 return fondo;
             case 'Ñ':
                 CubicCurve cubicaÑ1 = new CubicCurve(-31.39,37.4,-22.4,41,-16.99,9.59,-22.4,-5.4);
@@ -887,6 +901,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaÑ1,cubicaÑ2,cubicaÑ3,cubicaÑ4,cubicaÑ5);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaÑ1, fondo);
                     estilos.cubicaNegrita(cubicaÑ2, fondo);
@@ -906,7 +922,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaÑ5, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaÑ1,cubicaÑ2,cubicaÑ3,cubicaÑ4,cubicaÑ5);
                 return fondo;
             case 'O':
                 CubicCurve cubicaO1 = new CubicCurve(-19.6,37.6,-39,39.6,-37,-6,-17.2,-2.59);
@@ -941,6 +956,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaO1,cubicaO2,cubicaO3);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaO1, fondo);
                     estilos.cubicaNegrita(cubicaO2, fondo);
@@ -956,7 +973,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaO3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaO1,cubicaO2,cubicaO3);
                 return fondo;
             case 'P':
                 CubicCurve cubicaP1 = new CubicCurve(-31.8,34.4,-22.4,41,-16.44,11.48,-13.8,-2.4);
@@ -991,6 +1007,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaP1,cubicaP2,cubicaP3);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaP1, fondo);
                     estilos.cubicaNegrita(cubicaP2, fondo);
@@ -1006,7 +1024,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaP3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaP1,cubicaP2,cubicaP3);
                 return fondo;
             case 'Q':
                 CubicCurve cubicaQ1 = new CubicCurve(-19.6,37.6,-39,39.6,-37,-6,-19.6,-4.2);
@@ -1050,6 +1067,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaQ1,cubicaQ2,cubicaQ3,cubicaQ4);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaQ1, fondo);
                     estilos.cubicaNegrita(cubicaQ2, fondo);
@@ -1067,7 +1086,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaQ4, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaQ1,cubicaQ2,cubicaQ3,cubicaQ4);
                 return fondo;
             case 'R':
                 CubicCurve cubicaR1 = new CubicCurve(-32.6,33.6,-19.19,42.2,-16.39,-10.11,0.6,-12.8);
@@ -1110,6 +1128,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaR1,cubicaR2,cubicaR3,cubicaR4);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaR1, fondo);
                     estilos.cubicaNegrita(cubicaR2, fondo);
@@ -1127,7 +1147,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaR4, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaR1,cubicaR2,cubicaR3,cubicaR4);
                 return fondo;
             case 'S':
                 CubicCurve cubicaS1 = new CubicCurve(-47.6,44.2,-35.39,48.08,-11.79,30.79,-42.2,13.8);
@@ -1162,6 +1181,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaS1,cubicaS2,cubicaS3);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaS1, fondo);
                     estilos.cubicaNegrita(cubicaS2, fondo);
@@ -1177,7 +1198,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaS3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaS1,cubicaS2,cubicaS3);
                 return fondo;
             case 'T':
                 CubicCurve cubicaT1 = new CubicCurve(-24.4,26.79,-3,36.39,-37.2,-20.59,0.27,-12.79);
@@ -1212,6 +1232,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaT1,cubicaT2,cubicaT3);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaT1, fondo);
                     estilos.cubicaNegrita(cubicaT2, fondo);
@@ -1227,7 +1249,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaT3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaT1,cubicaT2,cubicaT3);
                 return fondo;
             case 'U':
                 QuadCurve cuadraticaU = new QuadCurve(-1,-15.6,-12.2,-13.74,-10,-31.8);
@@ -1262,6 +1283,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaU1,cubicaU2,cuadraticaU);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaU1, fondo);
                     estilos.cubicaNegrita(cubicaU2, fondo);
@@ -1277,7 +1300,6 @@ public class CrearCaracteres {
                     estilos.cuadraticaControl(cuadraticaU, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaU1,cubicaU2,cuadraticaU);
                 return fondo;
             case 'V':
                 CubicCurve cubicaV1 = new CubicCurve(-7.59,26.4,-25.44,3.99,-15,-14.19,-19.59,-14.19);
@@ -1312,6 +1334,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaV1,cubicaV2,cubicaV3);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaV1, fondo);
                     estilos.cubicaNegrita(cubicaV2, fondo);
@@ -1327,7 +1351,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaV3, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaV1,cubicaV2,cubicaV3);
                 return fondo;
             case 'W':
                 CubicCurve cubicaW1 = new CubicCurve(-9.95,25.4,-25.19,14.6,-13.19,-14.19,-19.59,-14.19);
@@ -1378,6 +1401,8 @@ public class CrearCaracteres {
                     
                 }
                 
+                fondo.getChildren().addAll(cubicaW1,cubicaW2,cubicaW3,cubicaW4,cubicaW5);
+                
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicaW1, fondo);
                     estilos.cubicaNegrita(cubicaW2, fondo);
@@ -1397,7 +1422,6 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaW5, fondo);
                 }
                 
-                fondo.getChildren().addAll(cubicaW1,cubicaW2,cubicaW3,cubicaW4,cubicaW5);
                 return fondo;
             case 'X':
                 CubicCurve cubicasX = new CubicCurve();
@@ -3051,7 +3075,23 @@ public class CrearCaracteres {
                 circulo1.setStroke(dibujar.getColor());
                 circulo1.setLayoutX(11);
                 circulo1.setLayoutY(5);
+                
                 fondo.getChildren().addAll(elipse1, circulo1);
+                
+                if (palabra.isN()){
+                    estilos.elipseNegrita(elipse1, fondo);
+                    estilos.circuloNegrita(circulo1, fondo);
+                }
+                
+                if (palabra.isS()){
+                    
+                }
+                
+                if (dibujar.getControl()){
+                    estilos.elipseControl(elipse1, fondo);
+                    estilos.circuloControl(circulo1, fondo);
+                }
+                
                 return fondo;
             case '¿':
                 CubicCurve cubica = new CubicCurve();
