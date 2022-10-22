@@ -349,6 +349,12 @@ public class Dibujar {
             case '!':
                 tamaño = 34;
                 break;
+            case '^':
+                tamaño = 0;
+                break;
+            case '+':
+                tamaño = 0;
+                break;
             default:
                 tamaño = 45;
                 break;
