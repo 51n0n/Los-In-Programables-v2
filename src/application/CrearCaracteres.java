@@ -2038,7 +2038,7 @@ public class CrearCaracteres {
                 circuloi.setLayoutY(19);
                 if (palabra.isK()){
                     cubicai.setRotate(7);
-                    circuloi.setRotate(7);
+                    circuloi.setTranslateX(3);
                 }
                 fondo.getChildren().addAll(cubicai,circuloi);
                 if (palabra.isN()){
@@ -2078,7 +2078,7 @@ public class CrearCaracteres {
                 if (palabra.isK()){
                     cubicaj.setRotate(7);
                     cubicaj1.setRotate(7);
-                    circuloj.setRotate(7);
+                    circuloj.setTranslateX(3);
                 }
                 fondo.getChildren().addAll(cubicaj,cubicaj1,circuloj);
                 if (palabra.isN()){
