@@ -78,6 +78,20 @@ public class Dibujar {
                 for (j=1;j<p.length() && !salir && cont<palabras.size();j++){
                     switch (p.charAt(j)){
                         case 'N':
+                            if (j+1 < p.length() && cont > 0){
+                                if ((p.charAt(j+1) == ',' || p.charAt(j-1) == ',') && !palabras.get(cont-1).isN()){
+                                    do{
+                                        cont--;
+                                    }while (" ".equals(palabras.get(cont).getPalabra()) && !palabras.get(cont).isN());
+                                }
+                            }
+                            else if(j-1 > 0 && cont > 0){
+                                if (p.charAt(j-1) == ',' && !palabras.get(cont-1).isN()){
+                                    do{
+                                        cont--;
+                                    }while (" ".equals(palabras.get(cont).getPalabra()) && !palabras.get(cont).isN());
+                                }
+                            }
                             if (p.charAt(j-1) == 'N' || p.charAt(j-1) == 'K' || p.charAt(j-1) == 'S'){
                                 j--;
                                 salir = true;
@@ -87,6 +101,20 @@ public class Dibujar {
                             }
                             break;
                         case 'K':
+                            if (j+1 < p.length() && cont > 0){
+                                if ((p.charAt(j+1) == ',' || p.charAt(j-1) == ',') && !palabras.get(cont-1).isK()){
+                                    do{
+                                        cont--;
+                                    }while (" ".equals(palabras.get(cont).getPalabra()) && !palabras.get(cont).isK());
+                                }
+                            }
+                            else if(j-1 > 0 && cont > 0){
+                                if (p.charAt(j-1) == ',' && !palabras.get(cont-1).isK()){
+                                    do{
+                                        cont--;
+                                    }while (" ".equals(palabras.get(cont).getPalabra()) && !palabras.get(cont).isK());
+                                }
+                            }
                             if (p.charAt(j-1) == 'N' || p.charAt(j-1) == 'K' || p.charAt(j-1) == 'S'){
                                 j--;
                                 salir = true;
@@ -96,6 +124,20 @@ public class Dibujar {
                             }
                             break;
                         case 'S':
+                            if (j+1 < p.length() && cont > 0){
+                                if ((p.charAt(j+1) == ',' || p.charAt(j-1) == ',') && !palabras.get(cont-1).isS()){
+                                    do{
+                                        cont--;
+                                    }while (" ".equals(palabras.get(cont).getPalabra()) && !palabras.get(cont).isS());
+                                }
+                            }
+                            else if(j-1 > 0 && cont > 0){
+                                if (p.charAt(j-1) == ',' && !palabras.get(cont-1).isS()){
+                                    do{
+                                        cont--;
+                                    }while (" ".equals(palabras.get(cont).getPalabra()) && !palabras.get(cont).isS());
+                                }
+                            }
                             if (p.charAt(j-1) == 'N' || p.charAt(j-1) == 'K' || p.charAt(j-1) == 'S'){
                                 j--;
                                 salir = true;
@@ -108,10 +150,7 @@ public class Dibujar {
                         case 'T':
                             break;
                             */
-                        case ','://pendiente
-                            while (" ".equals(palabras.get(cont).getPalabra()) && cont<palabras.size()){
-                                cont++;
-                            }
+                        case ',':
                             break;
                         case '+':
                             break;
