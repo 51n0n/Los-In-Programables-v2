@@ -2116,7 +2116,7 @@ public class CrearCaracteres {
                 return fondo;
             case 'm':
                 CubicCurve cubicam1 = new CubicCurve(-8.2,30.4,-3.2,4.39,-13.6,6,-13.6,19.2);
-                CubicCurve cubicam2 = new CubicCurve(-7,23.4,-11.9,17.79,-1.8,6.79,-11.9,3.19);
+                CubicCurve cubicam2 = new CubicCurve(-7,23.4,-1.8,6.79,-11.9,3.19,-11.9,17.79);
                 CubicCurve cubicam3 = new CubicCurve(-60.89,-12.5,-63.5,-5.7,-68.19,-5.7,-65.4,-14.58);
                 CubicCurve cubicam4 = new CubicCurve( -7.93,21.91,-3.79,-9.8,-11.6,0.19,-11.6,11.4);
                 fondo.setPrefSize(19, 60);
@@ -2369,7 +2369,7 @@ public class CrearCaracteres {
             case 'q':
                 CubicCurve cubicaq1 = new CubicCurve(-6,29.59,-6,-48.59,-8.6,40,0.19,6.4);
                 CubicCurve cubicaq2 = new CubicCurve(2.19,11,6,5.19 ,-5.2,19,-8.7,11);
-                CubicCurve cubicaq3 = new CubicCurve(8,-1,-9.39,-9.99,-3.2 ,1.79,9.6,10 );
+                CubicCurve cubicaq3 = new CubicCurve(8,-1,-9.39,-9.99,-3.2 ,21.79,9.6,10);
                 fondo.setPrefSize(19, 60);
                 //Cubica
                 cubicaq1.setLayoutX(20);
