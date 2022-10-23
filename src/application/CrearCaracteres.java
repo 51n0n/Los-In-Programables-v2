@@ -2966,7 +2966,7 @@ public class CrearCaracteres {
                 
                 if (palabra.isK()){
                     elipse.setRotate(7);
-                    circulo.setRotate(7);
+                    circulo.setTranslateX(-3);
                 }
                 
                 fondo.getChildren().addAll(elipse, circulo);
@@ -3003,7 +3003,7 @@ public class CrearCaracteres {
                 
                 if (palabra.isK()){
                     elipse1.setRotate(7);
-                    circulo1.setRotate(7);
+                    circulo1.setTranslateX(-3);
                 }
                 
                 fondo.getChildren().addAll(elipse1, circulo1);
@@ -3049,7 +3049,7 @@ public class CrearCaracteres {
                 if (palabra.isK()){
                     cubica.setRotate(7);
                     linea1.setRotate(7);
-                    circulo2.setRotate(7);
+                    circulo2.setTranslateX(-3);
                 }
                 
                 fondo.getChildren().addAll(cubica, linea1, circulo2);
@@ -3097,7 +3097,7 @@ public class CrearCaracteres {
                 if (palabra.isK()){
                     cubica1.setRotate(7);
                     linea2.setRotate(7);
-                    circulo3.setRotate(7);
+                    circulo3.setTranslateX(-3);
                 }
                 
                 fondo.getChildren().addAll(cubica1, linea2, circulo3);
@@ -3128,7 +3128,7 @@ public class CrearCaracteres {
                 circulo4.setLayoutY(47);
                 
                 if (palabra.isK()){
-                    circulo4.setRotate(7);
+                    //No cambia
                 }
                 
                 fondo.getChildren().addAll(circulo4);
@@ -3162,7 +3162,7 @@ public class CrearCaracteres {
                 cuadratica.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    circulo5.setRotate(7);
+                    //circulo5 no cambia
                     cuadratica.setRotate(7);
                 }
                 
@@ -3205,8 +3205,7 @@ public class CrearCaracteres {
                 cuadratica1.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    circulo6.setRotate(7);
-                    circulo7.setRotate(7);
+                    circulo6.setTranslateX(3);
                     cuadratica1.setRotate(7);
                 }
                 
@@ -3241,8 +3240,8 @@ public class CrearCaracteres {
                 circulo9.setLayoutY(47);
                 
                 if (palabra.isK()){
-                    circulo8.setRotate(7);
-                    circulo9.setRotate(7);
+                    circulo8.setTranslateX(1);
+                    //circulo9 no cambia
                 }
                 
                 fondo.getChildren().addAll(circulo8, circulo9);
@@ -3588,7 +3587,7 @@ public class CrearCaracteres {
                 cuadratica2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    circulo10.setRotate(7);
+                    //circulo10 no cambia
                     cuadratica2.setRotate(7);
                 }
                 
@@ -3637,9 +3636,9 @@ public class CrearCaracteres {
                 cuadratica4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    circulo11.setRotate(7);
+                    //circulo11 no cambia
                     cuadratica3.setRotate(7);
-                    circulo12.setRotate(7);
+                    //circulo12 no cambia
                     cuadratica4.setRotate(7);
                 }
                 
