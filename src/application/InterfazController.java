@@ -14,13 +14,12 @@ import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 
 public class InterfazController implements Initializable {
     
     @FXML
-    private AnchorPane fondoInterfaz;
+    private AnchorPane ventana;
     @FXML
     private TextField textoEntrada;
     @FXML
@@ -28,25 +27,21 @@ public class InterfazController implements Initializable {
     @FXML
     private CheckBox CheckPuntos;
     @FXML
-    private BorderPane encabezado;
-    @FXML
     private AnchorPane titulo;
+    @FXML
+    private AnchorPane lienzo;
     
     Dibujar dibujar = new Dibujar(); // Objeto de la clase Dibujar
     
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        dibujar.guardarPalabras("^NLOS ^NIN-PROGRAMABLES",titulo);
         
-        dibujar.getLienzo().setStyle("-fx-background-color: LIGHTGRAY;-fx-border-color: BLACK");
-        dibujar.getLienzo().setLayoutX(0);
-        dibujar.getLienzo().setLayoutY(0);
-        dibujar.getLienzo().setPrefSize(1070, 450);
-        dibujar.getLienzo().setMaxSize(1070, 450);
-        fondoInterfaz.getChildren().add(dibujar.getLienzo()); // Se añade el lienzo de dibujo
+        dibujar.setLienzo(lienzo);
         
         textoEntrada.setOnKeyTyped((KeyEvent event) -> {
             if (!dibujar.validarEntrada(event.getCharacter())){
@@ -56,7 +51,9 @@ public class InterfazController implements Initializable {
         
         textoEntrada.setOnKeyReleased((KeyEvent event) -> {
             dibujar.getLienzo().getChildren().clear();
+            titulo.getChildren().clear();
             dibujar.guardarPalabras(textoEntrada.getText(),dibujar.getLienzo());
+            dibujar.guardarPalabras("^NLOS ^NIN-PROGRAMABLES",titulo);
         });
     }
     

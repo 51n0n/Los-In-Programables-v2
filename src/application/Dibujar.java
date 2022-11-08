@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 
 public class Dibujar {
     
-    private static final AnchorPane lienzo = new AnchorPane(); // Nodo que guardará las letras dibujadas
+    private static AnchorPane lienzo = new AnchorPane(); // Nodo que guardará las letras dibujadas
     private static final CrearCaracteres llamar = new CrearCaracteres(); // Objeto clase CrearCaracteres
     private static Color colorActual = Color.BLACK; // Valor inicial para el color de las letras
     private static boolean puntosControl = false;
@@ -37,7 +37,9 @@ public class Dibujar {
     
     public void guardarPalabras(String entrada, AnchorPane lienzo){
         
-        espacioEnFila = 1035; // Guarda cuanto espacio queda en una fila.
+        double fila = lienzo.getWidth() - 34;
+        
+        espacioEnFila = fila; // Guarda cuanto espacio queda en una fila.
         charCont = 0; // Contador de caracteres dibujados.
         posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
         posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
@@ -174,8 +176,8 @@ public class Dibujar {
         // Además cada palabra tiene sus estilos asignados por los comandos anteriores
         for (int i=0;i<palabras.size();i++){
             String p = palabras.get(i).getPalabra();
-            if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < 1035){ // espacioEnFila < tamañoPalabra < 1035
-                espacioEnFila = 1035;
+            if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < fila){ // espacioEnFila < tamañoPalabra < 1035
+                espacioEnFila = fila;
                 posActualX = 0;
                 posActualY = posActualY + 60;
             }
@@ -184,13 +186,16 @@ public class Dibujar {
     }
     
     public void dibujarPalabra(Palabra palabra, AnchorPane lienzo){
+        
+        double fila = lienzo.getWidth() - 34;
+        
         for (int i=0;i<palabra.getPalabra().length();i++){
-            if (posActualX + tamañoCaracter(palabra.getPalabra().charAt(i)) > 1035){
+            if (posActualX + tamañoCaracter(palabra.getPalabra().charAt(i)) > fila){
                 lienzo.getChildren().add(llamar.dibujarCaracter('-', palabra));
                 lienzo.getChildren().get(charCont).setLayoutX(posActualX);
                 lienzo.getChildren().get(charCont).setLayoutY(posActualY);
                 charCont++;
-                espacioEnFila = 1035;
+                espacioEnFila = fila;
                 posActualX = 0;
                 posActualY = posActualY + 60;
             }
@@ -399,6 +404,10 @@ public class Dibujar {
                 break;
         }
         return tamaño;
+    }
+    
+    public void setLienzo(AnchorPane newLienzo){ // Getter de lienzo
+        lienzo = newLienzo;
     }
     
     public AnchorPane getLienzo(){ // Getter de lienzo
