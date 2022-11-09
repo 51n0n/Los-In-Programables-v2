@@ -13,6 +13,7 @@ public class Dibujar {
     private static AnchorPane lienzo = new AnchorPane(); // Nodo que guardará las letras dibujadas
     private static final CrearCaracteres llamar = new CrearCaracteres(); // Objeto clase CrearCaracteres
     private static Color colorActual = Color.BLACK; // Valor inicial para el color de las letras
+    private static Color colorControl = Color.RED;
     private static boolean puntosControl = false;
     
     private static double espacioEnFila;
@@ -428,6 +429,14 @@ public class Dibujar {
     
     public boolean getControl(){
         return puntosControl;
+    }
+
+    public void setColorControl(Color colorControl) {
+        Dibujar.colorControl = colorControl;
+    }
+
+    public Color getColorControl() {
+        return colorControl;
     }
     
 }
