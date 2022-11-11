@@ -751,7 +751,7 @@ public class CrearCaracteres {
                 return fondo;
             case 'M':
                 CubicCurve cubicaM1 = new CubicCurve(-33,35,-13.8,48,-31.39,-6,-10.59,-6);   
-                CubicCurve cubicaM2 = new CubicCurve(-11.19,20.79,-7.29,6.99,-26,-1.59,-11.19,-10);
+                CubicCurve cubicaM2 = new CubicCurve(-11.2,20.8,-7.3,7,-23,-1.6,-11.2,-10);
                 CubicCurve cubicaM3 = new CubicCurve(-22.16,11.94,-13.39,2.59,-15.59,-20.16,-1.4,-20.16);
                 CubicCurve cubicaM4 = new CubicCurve(-29.64,36,0.4,44,-29.64,-2.4,-11.8,-6.59);
                 QuadCurve cuadraticaM = new QuadCurve(-33.16,-4.9,-19,2.5,-10.39,-14.59);
@@ -965,8 +965,8 @@ public class CrearCaracteres {
                 return fondo;
             case 'O':
                 CubicCurve cubicaO1 = new CubicCurve(-19.6,37.6,-39,39.6,-37,-6,-17.2,-2.59);
-                CubicCurve cubicaO2 = new CubicCurve(-33.6,-12.59,-39.8,1.59,-21.8,-9.4,-8.39,6.99);
-                CubicCurve cubicaO3 = new CubicCurve(-18.55,37.66,-3.39,35,3.6,-4.2,-19.6,-4.2);
+                CubicCurve cubicaO2 = new CubicCurve(-33.6,-12.59,-39.8,1.59,-21.8,9.4,-8.39,6.99);
+                CubicCurve cubicaO3 = new CubicCurve(-18.55,37.66,-3.39,35,3.6,-4.2,-19.6,-3);
                 //Atributos del Fondo
                 fondo.setPrefHeight(60);//y
                 fondo.setPrefWidth(45);//x
@@ -1018,7 +1018,7 @@ public class CrearCaracteres {
                 return fondo;
             case 'P':
                 CubicCurve cubicaP1 = new CubicCurve(-31.8,34.4,-22.4,41,-16.44,11.48,-13.8,-2.4);
-                CubicCurve cubicaP2 = new CubicCurve(-8.6,15,-13.39,27.59,-32.39,9.59,-8.6,4);
+                CubicCurve cubicaP2 = new CubicCurve(-8.6,15.4,-15.2,25.4,-26.2,8.8,-8.6,4);
                 CubicCurve cubicaP3 = new CubicCurve(-21.6,-10.59,21.39,-28.8,8.6,28.2,-12.91,9.7);
                 //Atributos del Fondo
                 fondo.setPrefHeight(60);//y
@@ -1031,7 +1031,7 @@ public class CrearCaracteres {
                 cubicaP1.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicaP1.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //cachito
-                cubicaP2.setLayoutX(25);
+                cubicaP2.setLayoutX(26);
                 cubicaP2.setLayoutY(3);
                 cubicaP2.setFill(Color.TRANSPARENT);
                 cubicaP2.setStroke(dibujar.getColor());
@@ -1138,7 +1138,7 @@ public class CrearCaracteres {
                 CubicCurve cubicaR1 = new CubicCurve(-32.6,33.6,-19.19,42.2,-16.39,-10.11,0.6,-12.8);
                 CubicCurve cubicaR2 = new CubicCurve(-19.39,-14.11,16.8,-25.2,9.6,14.59,-11.19,7.9);
                 CubicCurve cubicaR3 = new CubicCurve(-21,46.6,-35.39,48.08,-14.39,25.99,-38.6,25.99);
-                CubicCurve cubicaR4 = new CubicCurve(-8.6,15.4,-15.19,25.4,-26.19,8.79,-8.6,4);
+                CubicCurve cubicaR4 = new CubicCurve(-8.6,15.4,-15.2,25.4,-26.2,8.8,-8.6,4);
                 //Atributos del Fondo
                 fondo.setPrefHeight(60);//y
                 fondo.setPrefWidth(45);//x 
