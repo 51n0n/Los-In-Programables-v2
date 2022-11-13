@@ -42,8 +42,8 @@ public class Dibujar {
         
         espacioEnFila = fila; // Guarda cuanto espacio queda en una fila.
         charCont = 0; // Contador de caracteres dibujados.
-        posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
-        posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
+        posActualX = 20; // Guardará la posición X a usar al momento de dibujar.
+        posActualY = 20; // Guardará la posición Y a usar al momento de dibujar.
         
         int cont = 0;
         
@@ -172,14 +172,15 @@ public class Dibujar {
                 }
             }
         }
-
+        
         // Al terminar este ciclo tenemos un arreglo de palabras sin caracteres de comando, listo para dibujar
         // Además cada palabra tiene sus estilos asignados por los comandos anteriores
-        for (int i=0;i<palabras.size();i++){
+        
+        for (int i=0;i<palabras.size();i++){ //for (int i=palabras.size()-1;i>=0;i--)
             String p = palabras.get(i).getPalabra();
             if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < fila){ // espacioEnFila < tamañoPalabra < 1035
                 espacioEnFila = fila;
-                posActualX = 0;
+                posActualX = 20;
                 posActualY = posActualY + 60;
             }
             dibujarPalabra(palabras.get(i),lienzo);
@@ -197,7 +198,7 @@ public class Dibujar {
                 lienzo.getChildren().get(charCont).setLayoutY(posActualY);
                 charCont++;
                 espacioEnFila = fila;
-                posActualX = 0;
+                posActualX = 20;
                 posActualY = posActualY + 60;
             }
             lienzo.getChildren().add(llamar.dibujarCaracter(palabra.getPalabra().charAt(i), palabra)); // Se agrega el nodo
