@@ -66,13 +66,7 @@
                                           <CubicCurve controlY1="-13.4" controlY2="-23.6" endX="7.2" endY="-23.6" fill="#1f93ff00" layoutX="9.0" layoutY="65.0" startX="11.6" startY="-13.4" stroke="BLACK" translateY="1.0" />
                                        </children>
                                     </AnchorPane>
-                                    <AnchorPane layoutX="392.0" layoutY="10.0" prefHeight="60.0" prefWidth="34.0">
-                                       <children>
-                                          <Line endX="14.0" endY="5.0" layoutX="17.0" layoutY="24.0" startX="-14.0" startY="5.0" />
-                                          <Line endX="14.0" endY="5.0" layoutX="17.0" layoutY="24.0" startX="-14.0" startY="5.0" translateX="1.0" />
-                                          <Line endX="14.0" endY="5.0" layoutX="17.0" layoutY="24.0" startX="-14.0" startY="5.0" translateY="1.0" />
-                                       </children>
-                                    </AnchorPane>
+                                    <AnchorPane prefHeight="60.0" prefWidth="30.0" />
                                     <AnchorPane prefHeight="60.0" prefWidth="45.0">
                                        <children>
                                           <CubicCurve controlX1="-14.6" controlX2="-27.8" controlY1="31.6" controlY2="-8.0" endX="-2.4" endY="-10.0" fill="#1f93ff00" layoutX="44.0" layoutY="19.0" startX="-31.4" startY="31.6" stroke="BLACK" />
@@ -100,6 +94,13 @@
                                           <CubicCurve controlX1="-22.4" controlX2="-19.2" controlY1="13.4" controlY2="-9.4" endX="-31.8" endY="-16.53" fill="#1f93ff00" layoutX="42.0" layoutY="24.0" startX="-7.6" startY="26.4" stroke="BLACK" translateY="1.0" />
                                           <CubicCurve controlX1="-11.2" controlX2="2.8" controlY1="2.8" controlY2="0.4" endX="-5.6" endY="-7.2" fill="#1f93ff00" layoutX="46.0" layoutY="15.0" startX="-8.4" startY="-3.4" stroke="BLACK" translateX="1.0" />
                                           <CubicCurve controlX1="-11.2" controlX2="2.8" controlY1="2.8" controlY2="0.4" endX="-5.6" endY="-7.2" fill="#1f93ff00" layoutX="46.0" layoutY="15.0" startX="-8.4" startY="-3.4" stroke="BLACK" translateY="1.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="392.0" layoutY="10.0" prefHeight="60.0" prefWidth="34.0">
+                                       <children>
+                                          <Line endX="14.0" endY="5.0" layoutX="17.0" layoutY="24.0" startX="-14.0" startY="5.0" />
+                                          <Line endX="14.0" endY="5.0" layoutX="17.0" layoutY="24.0" startX="-14.0" startY="5.0" translateX="1.0" />
+                                          <Line endX="14.0" endY="5.0" layoutX="17.0" layoutY="24.0" startX="-14.0" startY="5.0" translateY="1.0" />
                                        </children>
                                     </AnchorPane>
                                     <AnchorPane prefHeight="60.0" prefWidth="45.0">
