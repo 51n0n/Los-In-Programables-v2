@@ -71,6 +71,7 @@ public class Dibujar {
             cont++;
         }
         
+        boolean r = false;
         // Comprobaremos los comandos de cada palabra
         for (int i=0;i<palabras.size();i++){
             String p = palabras.get(i).getPalabra();
@@ -154,7 +155,7 @@ public class Dibujar {
                             break;
                             */
                         case 'R':
-                            //Buscando otra forma, la actual no me funciono
+                            r = true;
                             break;
                         case ',':
                             break;
@@ -178,14 +179,27 @@ public class Dibujar {
 
         // Al terminar este ciclo tenemos un arreglo de palabras sin caracteres de comando, listo para dibujar
         // Además cada palabra tiene sus estilos asignados por los comandos anteriores
-        for (int i=0;i<palabras.size();i++){
-            String p = palabras.get(i).getPalabra();
-            if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < fila){ // espacioEnFila < tamañoPalabra < 1035
-                espacioEnFila = fila;
-                posActualX = 0;
-                posActualY = posActualY + 60;
+        if (!r){
+            for (int i=0;i<palabras.size();i++){
+                String p = palabras.get(i).getPalabra();
+                if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < fila){ // espacioEnFila < tamañoPalabra < 1035
+                    espacioEnFila = fila;
+                    posActualX = 0;
+                    posActualY = posActualY + 60;
+                }
+                dibujarPalabra(palabras.get(i),lienzo);
             }
-            dibujarPalabra(palabras.get(i),lienzo);
+        }
+        else{
+            for (int i=palabras.size()-1;i>=0;i--){
+                String p = palabras.get(i).getPalabra();
+                if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < fila){ // espacioEnFila < tamañoPalabra < 1035
+                    espacioEnFila = fila;
+                    posActualX = 0;
+                    posActualY = posActualY + 60;
+                }
+                dibujarPalabra(palabras.get(i),lienzo);
+            }
         }
     }
     
