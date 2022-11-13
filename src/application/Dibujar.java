@@ -153,6 +153,9 @@ public class Dibujar {
                         case 'T':
                             break;
                             */
+                        case 'R':
+                            //Buscando otra forma, la actual no me funciono
+                            break;
                         case ',':
                             break;
                         case '+':
