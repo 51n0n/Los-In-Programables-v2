@@ -1666,18 +1666,18 @@ public class CrearCaracteres {
                 return fondo;
             case 'a':
                 CubicCurve cubicaa= new CubicCurve(-36,-6.54,-33.59,-19.0,-23.76,-21.0,-23.76,-6.54);
-                CubicCurve cubicaa1 = new CubicCurve(-34.8,-7.8,-37.0,5.17,-22.76,5.17,-22.76,-7.8);
-                CubicCurve cubicaa2 = new CubicCurve(-31.76,-15.4,-35.2,7.0,-29.79,7.0,-26.79,-3.59);
+                CubicCurve cubicaa1 = new CubicCurve(-34.8,-5.9,-37.0,5.17,-22.76,5.17,-22.76,-7.8);
+                CubicCurve cubicaa2 = new CubicCurve(-31.76,-14.64,-35.2,7.0,-29.79,7.0,-27.59,-2);
                 fondo.setPrefSize(19,60);
                 //primerabase
                 cubicaa.setLayoutX(36);
-                cubicaa.setLayoutY(42);
+                cubicaa.setLayoutY(45);
                 cubicaa.setFill(Color.TRANSPARENT);
                 cubicaa.setStroke(dibujar.getColor());
                 cubicaa.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicaa.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //curva 
-                cubicaa1.setLayoutX(35);
+                cubicaa1.setLayoutX(34.8);
                 cubicaa1.setLayoutY(44);
                 cubicaa1.setFill(Color.TRANSPARENT);
                 cubicaa1.setStroke(dibujar.getColor());
@@ -1711,41 +1711,51 @@ public class CrearCaracteres {
                 }
                 return fondo; 
            case 'b':
-                CubicCurve cubicab= new CubicCurve(-29.79,-33.8,-40.59,2.4,-39.0,10.79,-27.19,6.0);
-                CubicCurve cubicab1 = new CubicCurve(-45.39,-25.3,-38.07,-27.03,-31.20,-20.95,-38.07,-12.9);
-                CubicCurve cubicab2 = new CubicCurve(-35.0,-26.5,-39.04,-24.08,-30.37,-20.68,-22.19,-26.5);
+                 CubicCurve cubicab= new CubicCurve(-57.59,-20.20,-55.19,-74.59,-43.98,-55,-61.99,-20.20);
+                CubicCurve cubicab1 = new CubicCurve(-37.9,-3.59,-39.49,8.56,-31.09,8.59,-31.09,-2.19);
+                CubicCurve cubicab2 = new CubicCurve(-35.0,-26.5,-39.04,-24.08,-30.37,-20.68,-24,-24.8);
+                CubicCurve cubicab3 = new CubicCurve();
                 fondo.setPrefSize(19,60);
                 //primerabase
-                cubicab.setLayoutX(39.0);
-                cubicab.setLayoutY(38.0);
+                cubicab.setLayoutX(62.0);
+                cubicab.setLayoutY(57.0);
                 cubicab.setFill(Color.TRANSPARENT);
                 cubicab.setStroke(dibujar.getColor());
                 cubicab.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicab.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //curvba 
-                cubicab1.setLayoutX(50);
-                cubicab1.setLayoutY(56.5);
+                cubicab1.setLayoutX(42.5);
+                cubicab1.setLayoutY(40);
                 cubicab1.setFill(Color.TRANSPARENT);
                 cubicab1.setStroke(dibujar.getColor());
                 cubicab1.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicab1.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //uniobn
-                cubicab2.setLayoutX(40.0);
-                cubicab2.setLayoutY(58.0);
+                cubicab2.setLayoutX(44.0);
+                cubicab2.setLayoutY(59.0);
                 cubicab2.setFill(Color.TRANSPARENT);
                 cubicab2.setStroke(dibujar.getColor());
                 cubicab2.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicab2.setStrokeLineJoin(StrokeLineJoin.ROUND);
+                // recta pendienteePENDIENTE
+                cubicab3.setLayoutX(0);
+                cubicab3.setLayoutY(0);
+                cubicab3.setFill(Color.TRANSPARENT);
+                cubicab.setStroke(dibujar.getColor());
+                cubicab3.setStrokeLineCap(StrokeLineCap.ROUND);
+                cubicab3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 if (palabra.isK()){
                     cubicab.setRotate(7);
                     cubicab1.setRotate(7);
                     cubicab2.setRotate(7);
+                    cubicab3.setRotate(7);
                 }
-                fondo.getChildren().addAll(cubicab,cubicab1,cubicab2);  
+                fondo.getChildren().addAll(cubicab,cubicab1,cubicab2,cubicab3);  
                 if (palabra.isN()){
                     estilos.cubicaNegrita(cubicab, fondo);
                     estilos.cubicaNegrita(cubicab1, fondo);
-                    estilos.cubicaNegrita(cubicab2, fondo);   
+                    estilos.cubicaNegrita(cubicab2, fondo);
+                    estilos.cubicaNegrita(cubicab3, fondo);
                 }
                 if (palabra.isS()){
                     estilos.subrayado(caracter, fondo);
@@ -1754,6 +1764,7 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicab, fondo);
                     estilos.cubicaControl(cubicab1, fondo);
                     estilos.cubicaControl(cubicab2, fondo);
+                    estilos.cubicaControl(cubicab3, fondo);
                 }              
                 return fondo;
             case 'c':
