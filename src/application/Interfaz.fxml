@@ -320,7 +320,7 @@
                                       <items>
                                         <MenuItem mnemonicParsing="false" text="Color Letras">
                                              <graphic>
-                                                <ColorPicker fx:id="LetrasColor" onAction="#cambioColor">
+                                                <ColorPicker fx:id="letrasColor" onAction="#cambioColor">
                                                    <value>
                                                       <Color />
                                                    </value>
@@ -329,7 +329,7 @@
                                           </MenuItem>
                                         <MenuItem mnemonicParsing="false" text="Color Puntos">
                                              <graphic>
-                                                <ColorPicker fx:id="PuntosColor" onAction="#colorControl">
+                                                <ColorPicker fx:id="puntosColor" onAction="#colorControl">
                                                    <value>
                                                       <Color red="1.0" />
                                                    </value>
@@ -338,7 +338,7 @@
                                           </MenuItem>
                                           <MenuItem mnemonicParsing="false">
                                              <graphic>
-                                                <ToggleButton fx:id="BotonPuntos" mnemonicParsing="false" onAction="#puntosControl" text="Puntos Control" />
+                                                <ToggleButton fx:id="botonPuntos" mnemonicParsing="false" onAction="#puntosControl" text="Puntos Control" />
                                              </graphic>
                                           </MenuItem>
                                       </items>
