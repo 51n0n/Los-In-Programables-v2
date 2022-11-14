@@ -9,12 +9,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.input.DragEvent;
-import javafx.scene.input.InputMethodEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -29,11 +26,11 @@ public class InterfazController implements Initializable {
     @FXML
     private AnchorPane lienzo;
     @FXML
-    private ColorPicker LetrasColor;
+    private ColorPicker letrasColor;
     @FXML
-    private ColorPicker PuntosColor;
+    private ColorPicker puntosColor;
     @FXML
-    private ToggleButton BotonPuntos;
+    private ToggleButton botonPuntos;
     
     Dibujar dibujar = new Dibujar(); // Objeto de la clase Dibujar
     /**
@@ -67,7 +64,7 @@ public class InterfazController implements Initializable {
     
     @FXML
     private void cambioColor(ActionEvent event){
-        Color nuevoColor = LetrasColor.getValue(); // Se obtiene el valor de color del color picker de la interfaz
+        Color nuevoColor = letrasColor.getValue(); // Se obtiene el valor de color del color picker de la interfaz
         dibujar.setColor(nuevoColor); // Se llama al setter del color para las letras y se asigna el color seleccionado en la interfaz
         dibujar.getLienzo().getChildren().clear();
         dibujar.guardarPalabras(textoEntrada.getText(),dibujar.getLienzo());
@@ -75,7 +72,7 @@ public class InterfazController implements Initializable {
     
     @FXML
     private void colorControl(ActionEvent event){
-        Color nuevoColor = PuntosColor.getValue();
+        Color nuevoColor = puntosColor.getValue();
         dibujar.setColorControl(nuevoColor);
         dibujar.getLienzo().getChildren().clear();
         dibujar.guardarPalabras(textoEntrada.getText(),dibujar.getLienzo());
@@ -83,8 +80,8 @@ public class InterfazController implements Initializable {
     
     @FXML
     private void puntosControl(ActionEvent event){
-        dibujar.setControl(BotonPuntos.isSelected());
-        dibujar.setColorControl(PuntosColor.getValue());
+        dibujar.setControl(botonPuntos.isSelected());
+        dibujar.setColorControl(puntosColor.getValue());
         dibujar.getLienzo().getChildren().clear();
         dibujar.guardarPalabras(textoEntrada.getText(),dibujar.getLienzo());
     }
