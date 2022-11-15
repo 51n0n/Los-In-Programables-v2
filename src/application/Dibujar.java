@@ -36,6 +36,46 @@ public class Dibujar {
         return validar;
     }
     
+    public void nuevoMetodoDibujo(String entrada, AnchorPane lienzo){
+        
+        ArrayList<Palabra> palabras = new ArrayList<>(); // Array en el que se guardan palabras y espacios
+        ArrayList<Palabra> comodin = new ArrayList<>(); // Array sin espacios
+        
+        // IDEA : Crear método esPalabra (o esEspacio) en clase Palabra, al recorrer el array solo se deberá
+        //        validar esPalabra para trabajar los comandos, entonces no hay necesidad de comodin.
+        
+        // Guardar Entrada | Final: Array de Objetos Palabra
+        int cont = 0; // Contador de Palabras
+        for (int i=0;i<entrada.length();i++){ // Se recorre la entrada
+            
+            palabras.add(new Palabra(false,false,false)); // Nuevo objeto Palabra
+            
+            if (entrada.charAt(i) != ' '){ // i es inicio de Palabra
+                int j = i;
+                while (j<entrada.length()){
+                    if (entrada.charAt(j) != ' '){
+                        j++;
+                    }
+                    else{
+                        break;
+                    }
+                }
+                // Al salir, j es final de Palabra
+                palabras.get(cont).setPalabra(entrada.substring(i, j)); // Se guarda la Palabra
+                i = j-1;
+            }
+            else{
+                palabras.get(cont).setPalabra(" "); // Se guarda Espacio
+            }
+            cont++; // Siguiente Palabra
+        }
+        // Rellenar array comodin sin espacios | Al Final: Array sin Objetos Palabra de espacios
+        // Validar y guardar comandos (parseo) | Al Final: Comandos validados y guardados como String en Objetos Palabra
+        // Recorrer comandos y asignar valores booleanos | Al Final: Objetos Palabra con estilos asignados
+        // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
+        // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
+    }
+    
     public void guardarPalabras(String entrada, AnchorPane lienzo){
         
         double fila = lienzo.getWidth() - 34;

@@ -8,46 +8,59 @@ public class Palabra {
     
     // Atributos
     public String palabra = new String();
+    public String comando = new String();
     public boolean n;
     public boolean k;
     public boolean s;
     
     // Métodos
-    public Palabra(boolean n, boolean k, boolean s) {
+    public Palabra(boolean n, boolean k, boolean s){
         this.n = n;
         this.k = k;
         this.s = s;
     }
     
-    public String getPalabra() {
+    public boolean esEspacio(){
+        return " ".equals(palabra);
+    }
+    
+    public String getPalabra(){
         return palabra;
     }
     
-    public void setPalabra(String palabra) {
+    public void setPalabra(String palabra){
         this.palabra = palabra;
     }
+
+    public String getComando(){
+        return comando;
+    }
+
+    public void setComando(String comando){
+        this.comando = comando;
+    }
     
-    public boolean isN() {
+    public boolean isN(){
         return n;
     }
     
-    public void setN(boolean n) {
+    public void setN(boolean n){
         this.n = n;
     }
     
-    public boolean isK() {
+    public boolean isK(){
         return k;
     }
     
-    public void setK(boolean k) {
+    public void setK(boolean k){
         this.k = k;
     }
     
-    public boolean isS() {
+    public boolean isS(){
         return s;
     }
     
-    public void setS(boolean s) {
+    public void setS(boolean s){
         this.s = s;
     }
     
