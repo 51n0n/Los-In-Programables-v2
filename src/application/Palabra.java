@@ -20,6 +20,10 @@ public class Palabra {
         this.s = s;
     }
     
+    public boolean esEspacio(){
+        return " ".equals(palabra);
+    }
+    
     public String getPalabra(){
         return palabra;
     }
