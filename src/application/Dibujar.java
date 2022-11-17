@@ -69,8 +69,77 @@ public class Dibujar {
             }
             cont++; // Siguiente Palabra
         }
+        
         // Rellenar array comodin sin espacios | Al Final: Array sin Objetos Palabra de espacios
+        for (int i=0;i<palabras.size();i++){
+            if(!" ".equals(palabras.get(i).getPalabra())){
+                comodin.add(palabras.get(i));
+            }
+        }
+        
         // Validar y guardar comandos (parseo) | Al Final: Comandos validados y guardados como String en Objetos Palabra
+        for (int i=0;i<comodin.size();i++){
+            String p = comodin.get(i).getPalabra(); //p es cada objeto del arreglo
+            if (p.charAt(i) == '^'){ // Si el primer caracter es ^
+                boolean cComa = false; // booleano si contiene coma
+                boolean salir = false; // booleano para poder cerrar ciclos
+                int j = 0;
+                if (p.length() > 1){ // cualquier comando valido debe medir almenos 2 posiciones (^N)
+                    for (j=i+1;j<p.length() && !salir;j++){ // ^
+                        if(escoman2(p.charAt(j-1)) &&  escoman1(p.charAt(j))){ // coman2 coman1
+                            if(j+1<p.length()){
+                                if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
+                                    salir = true;
+                                }
+                            }
+                            else{
+                                //fin de comando
+                                salir = true;
+                            }
+                        }
+                        else if(escoman1(p.charAt(j-1)) &&  escoman2(p.charAt(j))){
+                            //continuar
+                            if(j+1<p.length()){
+                                if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
+                                    salir = true;
+                                    j--;
+                                }
+                            }
+                            if (p.charAt(j) == ','){
+                                cComa = true;
+                            }
+                        }
+                        else{
+                            salir = true;
+                        }
+                    }
+                }
+                if (j>i){
+                    if (cComa){ // Comando con comas
+                        comodin.get(i).setComando2(p.substring(i, j));
+                        if (i>0){ // Hay palabra antes
+                            comodin.get(i).setPalabra(p.substring(0, i-1));
+                        }
+                        else{
+                            comodin.get(i).setPalabra("");
+                        }
+                    }
+                    else{ // Comando sin comas
+                        comodin.get(i).setComando(p.substring(i, j));
+                        System.out.println(i);
+                        System.out.println(j);
+                        comodin.get(i).setPalabra(p.substring(j+1));// ^Nfdsg ^
+                        i=-1;
+                    }
+                }
+            }
+            System.out.println(i);
+            System.out.println(comodin.size());
+            System.out.println(comodin.get(i).getPalabra());
+            System.out.println(comodin.get(i).getComando());
+            System.out.println(comodin.get(i).getComando2());
+        }
+        
         // Recorrer comandos y asignar valores booleanos | Al Final: Objetos Palabra con estilos asignados
         // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
@@ -451,6 +520,35 @@ public class Dibujar {
         }
         return esSimbolo;
     }
+    
+    public boolean escoman1(char caracter){
+        
+        char[] ver = {'N','K','S'};
+        
+        boolean esver = false;
+        for (int i=0;i<ver.length;i++){
+            if (caracter == ver[i]){
+                esver = true;
+                break;
+            }
+        }
+        return esver;
+    }
+    
+    public boolean escoman2(char caracter){
+        
+        char[] ver2 = {'^','+',','};
+        
+        boolean esver2 = false;
+        for (int i=0;i<ver2.length;i++){
+            if (caracter == ver2[i]){
+                esver2 = true;
+                break;
+            }
+        }
+        return esver2;
+    }
+    
     public double tamañoPalabra(String cadena){
         double cont = 0;
         for (int i=0;i<cadena.length();i++){
@@ -458,6 +556,7 @@ public class Dibujar {
         }
         return cont;
     }
+    
     public double tamañoCaracter(char caracter){
         double tamaño;
         // Retorna el tamaño que usarán los caracteres al momento de dibujar
@@ -642,39 +741,13 @@ public class Dibujar {
     public boolean getControl(){
         return puntosControl;
     }
-
+    
     public void setColorControl(Color colorControl) {
         Dibujar.colorControl = colorControl;
     }
-
+    
     public Color getColorControl() {
         return colorControl;
     }
- 
-    public boolean escoman1(char caracter){
-        
-        char[] ver = {'N','K','S'};
-        // Se usa el código ascii 39 para la comilla simple, ya que el compilador no permite poner el caracter entre comillas simples
-        boolean esver = false; // Se inicializa el retorno en false hasta encontrar el símbolo
-        for (int i=0;i<ver.length;i++){ // Se recorre el arreglo
-            if (caracter == ver[i]){ // Si el caracter es igual a un caracter de la lista entonces es símbolo
-                esver = true;
-                break;
-            }
-        }
-        return esver;
-    }
-    public boolean escoman2(char caracter){
-        
-        char[] ver2 = {'^','+',','};
-        // Se usa el código ascii 39 para la comilla simple, ya que el compilador no permite poner el caracter entre comillas simples
-        boolean esver2 = false; // Se inicializa el retorno en false hasta encontrar el símbolo
-        for (int i=0;i<ver2.length;i++){ // Se recorre el arreglo
-            if (caracter == ver2[i]){ // Si el caracter es igual a un caracter de la lista entonces es símbolo
-                esver2 = true;
-                break;
-            }
-        }
-        return esver2;
-    }
+    
 }

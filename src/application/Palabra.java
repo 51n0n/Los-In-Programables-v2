@@ -9,6 +9,7 @@ public class Palabra {
     // Atributos
     public String palabra = new String();
     public String comando = new String();
+    public String comando2 = new String();
     public boolean n;
     public boolean k;
     public boolean s;
@@ -18,6 +19,9 @@ public class Palabra {
         this.n = n;
         this.k = k;
         this.s = s;
+        this.palabra = "";
+        this.comando = "";
+        this.comando2 = "";
     }
     
     public boolean esEspacio(){
@@ -32,6 +36,14 @@ public class Palabra {
         this.palabra = palabra;
     }
 
+    public String getComando2() {
+        return comando2;
+    }
+
+    public void setComando2(String comando2) {
+        this.comando2 = comando2;
+    }
+    
     public String getComando(){
         return comando;
     }
