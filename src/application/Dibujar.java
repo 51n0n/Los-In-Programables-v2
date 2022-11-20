@@ -36,14 +36,147 @@ public class Dibujar {
         return validar;
     }
     
+    public void nuevoMetodoDibujo(String entrada, AnchorPane lienzo){
+        
+        ArrayList<Palabra> palabras = new ArrayList<>(); // Array en el que se guardan palabras y espacios
+        ArrayList<Palabra> comodin = new ArrayList<>(); // Array sin espacios
+        
+        // IDEA : Crear método esPalabra (o esEspacio) en clase Palabra, al recorrer el array solo se deberá
+        //        validar esPalabra para trabajar los comandos, entonces no hay necesidad de comodin.
+        
+        // Guardar Entrada | Final: Array de Objetos Palabra
+        int cont = 0; // Contador de Palabras
+        for (int i=0;i<entrada.length();i++){ // Se recorre la entrada
+            
+            palabras.add(new Palabra(false,false,false)); // Nuevo objeto Palabra
+            
+            if (entrada.charAt(i) != ' '){ // i es inicio de Palabra
+                int j = i;
+                while (j<entrada.length()){
+                    if (entrada.charAt(j) != ' '){
+                        j++;
+                    }
+                    else{
+                        break;
+                    }
+                }
+                // Al salir, j es final de Palabra
+                palabras.get(cont).setPalabra(entrada.substring(i, j)); // Se guarda la Palabra
+                i = j-1;
+            }
+            else{
+                palabras.get(cont).setPalabra(" "); // Se guarda Espacio
+            }
+            cont++; // Siguiente Palabra
+        }
+        
+        // Rellenar array comodin sin espacios | Al Final: Array sin Objetos Palabra de espacios
+        for (int i=0;i<palabras.size();i++){
+            if(!" ".equals(palabras.get(i).getPalabra())){
+                comodin.add(palabras.get(i));
+            }
+        }
+        
+        // Validar y guardar comandos (parseo) | Al Final: Comandos validados y guardados como String en Objetos Palabra
+        for (int i=0;i<comodin.size();i++){
+            String p = comodin.get(i).getPalabra(); //p es cada objeto del arreglo
+            for (int k=0;k<p.length();k++){
+                if (p.charAt(k) == '^'){ // Si el primer caracter es ^
+                    boolean cComa = false; // booleano si contiene coma
+                    boolean salir = false; // booleano para poder cerrar ciclos
+                    int j = k;
+                    if (k+1 < p.length()){ // cualquier comando valido debe medir almenos 2 posiciones (^N)
+                        for (j=k+1;j<p.length() && !salir;j++){ // ^N+S+Kabc
+                            if(escoman2(p.charAt(j-1)) &&  escoman1(p.charAt(j))){ // j-1coman2 jcoman1
+                                if(j+1<p.length()){
+                                    if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
+                                        salir = true;
+                                    }
+                                }
+                                else{
+                                    //fin de comando
+                                    salir = true;
+                                }
+                            }
+                            else if(escoman1(p.charAt(j-1)) &&  escoman2(p.charAt(j))){ // j-1coman1 jcoman2
+                                //continuar
+                                if(j+1<p.length()){
+                                    if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
+                                        salir = true;
+                                        j--;
+                                    }
+                                }
+                                if (p.charAt(j) == ','){
+                                    cComa = true;
+                                }
+                            }
+                            else if (escoman2(p.charAt(j-1)) &&  escoman2(p.charAt(j))){ // j-1coman2 jcoman2
+                                if (p.charAt(j-1) == ',' && p.charAt(j) == ','){
+                                    //continuar
+                                }
+                                else{
+                                    salir = true;
+                                    j--;
+                                }
+                            }
+                            else{
+                                salir = true;
+                                j--;
+                            }
+                        }
+                        j--;
+                    }
+                    if (j>k){
+                        if (cComa){ // Comando con comas abc^N,K
+                            if (j+1 == p.length()){ // La posición j es la última de la palabra
+                                System.out.println("k = "+k);
+                                System.out.println("j = "+j);
+                                if (!escoman2(p.charAt(j))){
+                                    j++;
+                                }
+                                comodin.get(i).setComando2(p.substring(k, j));
+                                if (k>0){ // Hay palabra antes
+                                    comodin.get(i).setPalabra(p.substring(0, k));
+                                    p = comodin.get(i).getPalabra();
+                                }
+                                else{
+                                    comodin.get(i).setPalabra("");
+                                }
+                            }
+                        }
+                        else{ // Comando sin comas ^N+Sabc
+                            if (k == 0 && j+1<p.length()){ // El comando comienza en la primera posición y hay palabra después del comando
+                                System.out.println("k = "+k);
+                                System.out.println("j = "+j);
+                                comodin.get(i).setComando(p.substring(k, j+1));
+                                comodin.get(i).setPalabra(p.substring(j+1));// ^Nabc^N,K
+                                p = comodin.get(i).getPalabra();
+                                k=-1;
+                            }
+                        }
+                    }
+                }
+            }
+            System.out.println("posPalabra = "+i);
+            System.out.println("cantPalabras = "+comodin.size());
+            System.out.println("Palabra = "+comodin.get(i).getPalabra());
+            System.out.println("Comando+ = "+comodin.get(i).getComando());
+            System.out.println("Comando, = "+comodin.get(i).getComando2());
+        }
+        
+        // Recorrer comandos y asignar valores booleanos | Al Final: Objetos Palabra con estilos asignados
+        // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
+        // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
+    }
+    
     public void guardarPalabras(String entrada, AnchorPane lienzo){
         
         double fila = lienzo.getWidth() - 34;
         
         espacioEnFila = fila; // Guarda cuanto espacio queda en una fila.
         charCont = 0; // Contador de caracteres dibujados.
-        posActualX = 0; // Guardará la posición X a usar al momento de dibujar.
-        posActualY = 0; // Guardará la posición Y a usar al momento de dibujar.
+        posActualX = 20; // Guardará la posición X a usar al momento de dibujar.
+        posActualY = 20; // Guardará la posición Y a usar al momento de dibujar.
         
         int cont = 0;
         
@@ -71,6 +204,7 @@ public class Dibujar {
             cont++;
         }
         
+        boolean r = false;
         // Comprobaremos los comandos de cada palabra
         for (int i=0;i<palabras.size();i++){
             String p = palabras.get(i).getPalabra();
@@ -153,6 +287,9 @@ public class Dibujar {
                         case 'T':
                             break;
                             */
+                        case 'R':
+                            r = true;
+                            break;
                         case ',':
                             break;
                         case '+':
@@ -172,17 +309,30 @@ public class Dibujar {
                 }
             }
         }
-
+        
         // Al terminar este ciclo tenemos un arreglo de palabras sin caracteres de comando, listo para dibujar
         // Además cada palabra tiene sus estilos asignados por los comandos anteriores
-        for (int i=0;i<palabras.size();i++){
-            String p = palabras.get(i).getPalabra();
-            if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < fila){ // espacioEnFila < tamañoPalabra < 1035
-                espacioEnFila = fila;
-                posActualX = 0;
-                posActualY = posActualY + 60;
+        if (!r){
+            for (int i=0;i<palabras.size();i++){
+                String p = palabras.get(i).getPalabra();
+                if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < fila){ // espacioEnFila < tamañoPalabra < 1035
+                    espacioEnFila = fila;
+                    posActualX = 0;
+                    posActualY = posActualY + 60;
+                }
+                dibujarPalabra(palabras.get(i),lienzo);
             }
-            dibujarPalabra(palabras.get(i),lienzo);
+        }
+        else{
+            for (int i=palabras.size()-1;i>=0;i--){
+                String p = palabras.get(i).getPalabra();
+                if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < fila){ // espacioEnFila < tamañoPalabra < 1035
+                    espacioEnFila = fila;
+                    posActualX = 0;
+                    posActualY = posActualY + 60;
+                }
+                dibujarPalabra(palabras.get(i),lienzo);
+            }
         }
     }
     
@@ -352,7 +502,7 @@ public class Dibujar {
                 lienzo.getChildren().get(charCont).setLayoutY(posActualY);
                 charCont++;
                 espacioEnFila = fila;
-                posActualX = 0;
+                posActualX = 20;
                 posActualY = posActualY + 60;
             }
             lienzo.getChildren().add(llamar.dibujarCaracter(palabra.getPalabra().charAt(i), palabra)); // Se agrega el nodo
@@ -394,6 +544,35 @@ public class Dibujar {
         }
         return esSimbolo;
     }
+    
+    public boolean escoman1(char caracter){
+        
+        char[] ver = {'N','K','S'};
+        
+        boolean esver = false;
+        for (int i=0;i<ver.length;i++){
+            if (caracter == ver[i]){
+                esver = true;
+                break;
+            }
+        }
+        return esver;
+    }
+    
+    public boolean escoman2(char caracter){
+        
+        char[] ver2 = {'^','+',','};
+        
+        boolean esver2 = false;
+        for (int i=0;i<ver2.length;i++){
+            if (caracter == ver2[i]){
+                esver2 = true;
+                break;
+            }
+        }
+        return esver2;
+    }
+    
     public double tamañoPalabra(String cadena){
         double cont = 0;
         for (int i=0;i<cadena.length();i++){
@@ -401,6 +580,7 @@ public class Dibujar {
         }
         return cont;
     }
+    
     public double tamañoCaracter(char caracter){
         double tamaño;
         // Retorna el tamaño que usarán los caracteres al momento de dibujar
@@ -585,39 +765,13 @@ public class Dibujar {
     public boolean getControl(){
         return puntosControl;
     }
-
+    
     public void setColorControl(Color colorControl) {
         Dibujar.colorControl = colorControl;
     }
-
+    
     public Color getColorControl() {
         return colorControl;
     }
- 
-    public boolean escoman1(char caracter){
-        
-        char[] ver = {'N','K','S'};
-        // Se usa el código ascii 39 para la comilla simple, ya que el compilador no permite poner el caracter entre comillas simples
-        boolean esver = false; // Se inicializa el retorno en false hasta encontrar el símbolo
-        for (int i=0;i<ver.length;i++){ // Se recorre el arreglo
-            if (caracter == ver[i]){ // Si el caracter es igual a un caracter de la lista entonces es símbolo
-                esver = true;
-                break;
-            }
-        }
-        return esver;
-    }
-    public boolean escoman2(char caracter){
-        
-        char[] ver2 = {'^','+',','};
-        // Se usa el código ascii 39 para la comilla simple, ya que el compilador no permite poner el caracter entre comillas simples
-        boolean esver2 = false; // Se inicializa el retorno en false hasta encontrar el símbolo
-        for (int i=0;i<ver2.length;i++){ // Se recorre el arreglo
-            if (caracter == ver2[i]){ // Si el caracter es igual a un caracter de la lista entonces es símbolo
-                esver2 = true;
-                break;
-            }
-        }
-        return esver2;
-    }
+    
 }
