@@ -80,64 +80,88 @@ public class Dibujar {
         // Validar y guardar comandos (parseo) | Al Final: Comandos validados y guardados como String en Objetos Palabra
         for (int i=0;i<comodin.size();i++){
             String p = comodin.get(i).getPalabra(); //p es cada objeto del arreglo
-            if (p.charAt(i) == '^'){ // Si el primer caracter es ^
-                boolean cComa = false; // booleano si contiene coma
-                boolean salir = false; // booleano para poder cerrar ciclos
-                int j = 0;
-                if (p.length() > 1){ // cualquier comando valido debe medir almenos 2 posiciones (^N)
-                    for (j=i+1;j<p.length() && !salir;j++){ // ^
-                        if(escoman2(p.charAt(j-1)) &&  escoman1(p.charAt(j))){ // coman2 coman1
-                            if(j+1<p.length()){
-                                if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
+            for (int k=0;k<p.length();k++){
+                if (p.charAt(k) == '^'){ // Si el primer caracter es ^
+                    boolean cComa = false; // booleano si contiene coma
+                    boolean salir = false; // booleano para poder cerrar ciclos
+                    int j = k;
+                    if (k+1 < p.length()){ // cualquier comando valido debe medir almenos 2 posiciones (^N)
+                        for (j=k+1;j<p.length() && !salir;j++){ // ^N+S+Kabc
+                            if(escoman2(p.charAt(j-1)) &&  escoman1(p.charAt(j))){ // j-1coman2 jcoman1
+                                if(j+1<p.length()){
+                                    if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
+                                        salir = true;
+                                    }
+                                }
+                                else{
+                                    //fin de comando
                                     salir = true;
                                 }
                             }
-                            else{
-                                //fin de comando
-                                salir = true;
+                            else if(escoman1(p.charAt(j-1)) &&  escoman2(p.charAt(j))){ // j-1coman1 jcoman2
+                                //continuar
+                                if(j+1<p.length()){
+                                    if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
+                                        salir = true;
+                                        j--;
+                                    }
+                                }
+                                if (p.charAt(j) == ','){
+                                    cComa = true;
+                                }
                             }
-                        }
-                        else if(escoman1(p.charAt(j-1)) &&  escoman2(p.charAt(j))){
-                            //continuar
-                            if(j+1<p.length()){
-                                if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
+                            else if (escoman2(p.charAt(j-1)) &&  escoman2(p.charAt(j))){ // j-1coman2 jcoman2
+                                if (p.charAt(j-1) == ',' && p.charAt(j) == ','){
+                                    //continuar
+                                }
+                                else{
                                     salir = true;
                                     j--;
                                 }
                             }
-                            if (p.charAt(j) == ','){
-                                cComa = true;
+                            else{
+                                salir = true;
+                                j--;
                             }
                         }
-                        else{
-                            salir = true;
-                        }
+                        j--;
                     }
-                }
-                if (j>i){
-                    if (cComa){ // Comando con comas
-                        comodin.get(i).setComando2(p.substring(i, j));
-                        if (i>0){ // Hay palabra antes
-                            comodin.get(i).setPalabra(p.substring(0, i-1));
+                    if (j>k){
+                        if (cComa){ // Comando con comas abc^N,K
+                            if (j+1 == p.length()){ // La posición j es la última de la palabra
+                                System.out.println("k = "+k);
+                                System.out.println("j = "+j);
+                                if (!escoman2(p.charAt(j))){
+                                    j++;
+                                }
+                                comodin.get(i).setComando2(p.substring(k, j));
+                                if (k>0){ // Hay palabra antes
+                                    comodin.get(i).setPalabra(p.substring(0, k));
+                                    p = comodin.get(i).getPalabra();
+                                }
+                                else{
+                                    comodin.get(i).setPalabra("");
+                                }
+                            }
                         }
-                        else{
-                            comodin.get(i).setPalabra("");
+                        else{ // Comando sin comas ^N+Sabc
+                            if (k == 0 && j+1<p.length()){ // El comando comienza en la primera posición y hay palabra después del comando
+                                System.out.println("k = "+k);
+                                System.out.println("j = "+j);
+                                comodin.get(i).setComando(p.substring(k, j+1));
+                                comodin.get(i).setPalabra(p.substring(j+1));// ^Nabc^N,K
+                                p = comodin.get(i).getPalabra();
+                                k=-1;
+                            }
                         }
-                    }
-                    else{ // Comando sin comas
-                        comodin.get(i).setComando(p.substring(i, j));
-                        System.out.println(i);
-                        System.out.println(j);
-                        comodin.get(i).setPalabra(p.substring(j+1));// ^Nfdsg ^
-                        i=-1;
                     }
                 }
             }
-            System.out.println(i);
-            System.out.println(comodin.size());
-            System.out.println(comodin.get(i).getPalabra());
-            System.out.println(comodin.get(i).getComando());
-            System.out.println(comodin.get(i).getComando2());
+            System.out.println("posPalabra = "+i);
+            System.out.println("cantPalabras = "+comodin.size());
+            System.out.println("Palabra = "+comodin.get(i).getPalabra());
+            System.out.println("Comando+ = "+comodin.get(i).getComando());
+            System.out.println("Comando, = "+comodin.get(i).getComando2());
         }
         
         // Recorrer comandos y asignar valores booleanos | Al Final: Objetos Palabra con estilos asignados
