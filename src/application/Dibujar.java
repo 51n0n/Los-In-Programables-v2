@@ -78,6 +78,7 @@ public class Dibujar {
         }
         
         // Validar y guardar comandos (parseo) | Al Final: Comandos validados y guardados como String en Objetos Palabra
+        int contComa = 0;
         for (int i=0;i<comodin.size();i++){
             String p = comodin.get(i).getPalabra(); //p es cada objeto del arreglo
             for (int k=0;k<p.length();k++){
@@ -107,6 +108,7 @@ public class Dibujar {
                                     }
                                 }
                                 if (p.charAt(j) == ','){
+                                    contComa++;
                                     cComa = true;
                                 }
                             }
@@ -165,6 +167,74 @@ public class Dibujar {
         }
         
         // Recorrer comandos y asignar valores booleanos | Al Final: Objetos Palabra con estilos asignados
+        for (int i=0;i<comodin.size();i++){
+            for (int j=0;j<palabras.size();j++){
+                if (!palabras.get(j).esEspacio()){ // Si la palabra no es un espacio
+                    palabras.get(j).setPalabra(comodin.get(i).getPalabra()); // Se actualiza la palabra eliminando comandos
+                    if (!"".equals(comodin.get(i).getComando())){ // Si hay comando sin comas
+                        String com = comodin.get(i).getComando();
+                        for (int k=0;k<com.length();k++){
+                            switch (com.charAt(k)){
+                                case 'N':
+                                    palabras.get(j).setN(true);
+                                    break;
+                                case 'K':
+                                    palabras.get(j).setK(true);
+                                    break;
+                                case 'S':
+                                    palabras.get(j).setS(true);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+                    if (!"".equals(comodin.get(i).getComando2())){ // Si hay comando con comas
+                        String com = comodin.get(i).getComando2();
+                        boolean salir = false;
+                        int k = com.length()-1; // Guarda la posición final del comando
+                        for (int p=j;p>0 && !salir;p--){ // Recorre hacia atras las palabras desde la posición j
+                            if (!"".equals(palabras.get(p).getPalabra()) && !" ".equals(palabras.get(p).getPalabra())){
+                                // Si existe palabra y no es espacio
+                                while (k>0){ // Recorre hacia atras el comando
+                                    if (com.charAt(k) != ','){ // sada asd ^N+sadas
+                                        switch (com.charAt(k)){
+                                            case 'N':
+                                                System.out.println(p);
+                                                palabras.get(p).setN(true);
+                                                break;
+                                            case 'K':
+                                                palabras.get(p).setK(true);
+                                                break;
+                                            case 'S':
+                                                palabras.get(p).setS(true);
+                                                break;
+                                            case '^':
+                                                salir = true;
+                                                break;
+                                            default:
+                                                break;
+                                        }
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                    k--;
+                                }
+                                k--;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        for (int i=0;i<palabras.size();i++){
+            if (!palabras.get(i).esEspacio()){
+                System.out.println("Negrita: "+palabras.get(i).isN());
+                System.out.println("Cursiva: "+palabras.get(i).isK());
+                System.out.println("Subrayado: "+palabras.get(i).isS());
+            }
+        }
         // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
     }
