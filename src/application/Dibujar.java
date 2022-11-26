@@ -232,7 +232,7 @@ public class Dibujar {
            en orden de mayor frecuencia de uso (según google).*/        
         char[] letras = {'e','a','o','s','r','n','i','d','l','c','t','u','m','p','b','g','v','y','q','h','f','z','j','ñ','x','k','w'
                         ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','Q','H','F','Z','J','Ñ','X','K','W'
-                        ,'á','é','í','ó','ú'};
+                        ,'á','é','í','ó','ú','Á','É','Í','Ó','Ú'};
         
         boolean esLetra = false; // Se inicializa el retorno en false hasta encontrar la letra
         for (int i=0;i<letras.length;i++){ // Se recorre el arreglo
