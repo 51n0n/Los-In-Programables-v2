@@ -589,7 +589,8 @@ public class Dibujar {
         /* Se crea un arreglo que contiene las 27 letras del abecedario español, minúsculas y mayúsculas,
            en orden de mayor frecuencia de uso (según google).*/        
         char[] letras = {'e','a','o','s','r','n','i','d','l','c','t','u','m','p','b','g','v','y','q','h','f','z','j','ñ','x','k','w'
-                        ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','Q','H','F','Z','J','Ñ','X','K','W'};
+                        ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','Q','H','F','Z','J','Ñ','X','K','W'
+                        ,'á','é','í','ó','ú','Á','É','Í','Ó','Ú'};
         
         boolean esLetra = false; // Se inicializa el retorno en false hasta encontrar la letra
         for (int i=0;i<letras.length;i++){ // Se recorre el arreglo
@@ -658,6 +659,9 @@ public class Dibujar {
             case 'a':
                 tamaño = 16;
                 break;
+            case 'á':
+                tamaño = 16;
+                break;
             case 'b':
                 tamaño = 16;
                 break;
@@ -670,6 +674,9 @@ public class Dibujar {
             case 'e':
                 tamaño = 15;
                 break;
+            case 'é':
+                tamaño = 15;
+                break;
             case 'f':
                 tamaño = 16;
                 break;
@@ -680,6 +687,9 @@ public class Dibujar {
                 tamaño = 19;
                 break;
             case 'i':
+                tamaño = 19;
+                break;
+            case 'í':
                 tamaño = 19;
                 break;
             case 'j':
@@ -703,6 +713,9 @@ public class Dibujar {
             case 'o':
                 tamaño = 19;
                 break;
+            case 'ó':
+                tamaño = 19;
+                break;
             case 'p':
                 tamaño = 19;
                 break;
@@ -719,6 +732,9 @@ public class Dibujar {
                 tamaño = 19;
                 break;
             case 'u':
+                tamaño = 19;
+                break;
+            case 'ú':
                 tamaño = 19;
                 break;
             case 'v':
