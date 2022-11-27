@@ -4,9 +4,12 @@
  */
 package application;
 
+import javafx.scene.layout.AnchorPane;
+
 public class Palabra {
     
     // Atributos
+    public AnchorPane fondo = new AnchorPane();
     public String palabra = new String();
     public String comando = new String();
     public String comando2 = new String();
@@ -28,6 +31,14 @@ public class Palabra {
         return " ".equals(palabra);
     }
     
+    public AnchorPane getFondo() {
+        return fondo;
+    }
+    
+    public void setFondo(AnchorPane fondo) {
+        this.fondo = fondo;
+    }
+    
     public String getPalabra(){
         return palabra;
     }
@@ -35,11 +46,11 @@ public class Palabra {
     public void setPalabra(String palabra){
         this.palabra = palabra;
     }
-
+    
     public String getComando2() {
         return comando2;
     }
-
+    
     public void setComando2(String comando2) {
         this.comando2 = comando2;
     }
@@ -47,7 +58,7 @@ public class Palabra {
     public String getComando(){
         return comando;
     }
-
+    
     public void setComando(String comando){
         this.comando = comando;
     }
