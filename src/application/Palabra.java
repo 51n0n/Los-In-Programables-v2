@@ -13,6 +13,7 @@ public class Palabra {
     public String palabra = new String();
     public String comando = new String();
     public String comando2 = new String();
+    public double width;
     public boolean n;
     public boolean k;
     public boolean s;
@@ -61,6 +62,14 @@ public class Palabra {
     
     public void setComando(String comando){
         this.comando = comando;
+    }
+    
+    public double getWidth() {
+        return width;
+    }
+    
+    public void setWidth(double width) {
+        this.width = width;
     }
     
     public boolean isN(){
