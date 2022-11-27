@@ -73,8 +73,9 @@ public class Dibujar {
         // Rellenar array comodin sin espacios | Al Final: Array sin Objetos Palabra de espacios
         for (int i=0;i<palabras.size();i++){
             if(!" ".equals(palabras.get(i).getPalabra())){
-                comodin.add(palabras.get(i));
+                comodin.add(palabras.get(i));        
             }
+        
         }
         
         // Validar y guardar comandos (parseo) | Al Final: Comandos validados y guardados como String en Objetos Palabra
@@ -165,14 +166,22 @@ public class Dibujar {
             System.out.println("Comando+ = "+comodin.get(i).getComando());
             System.out.println("Comando, = "+comodin.get(i).getComando2());
         }
-        
-        // Recorrer comandos y asignar valores booleanos | Al Final: Objetos Palabra con estilos asignados
+        // guardar palabra sin comando  en el arreglo palabras | Al final 
+        int j=0;
         for (int i=0;i<comodin.size();i++){
-            for (int j=0;j<palabras.size();j++){
-                if (!palabras.get(j).esEspacio()){ // Si la palabra no es un espacio
-                    palabras.get(j).setPalabra(comodin.get(i).getPalabra()); // Se actualiza la palabra eliminando comandos
-                    if (!"".equals(comodin.get(i).getComando())){ // Si hay comando sin comas
-                        String com = comodin.get(i).getComando();
+            while(palabras.get(j).esEspacio()){
+                j++;
+            }
+            palabras.get(j).setPalabra(comodin.get(i).getPalabra());
+            palabras.get(j).setComando(comodin.get(i).getComando());
+            palabras.get(j).setComando2(comodin.get(i).getComando2());
+            j++;
+        }     
+        // Recorrer comandos y asignar valores booleanos | Al Final: Objetos Palabra con estilos asignados
+        for (int i=0;i<comodin.size();i++){          
+                if (!palabras.get(i).esEspacio()){ // Si la palabra no es un espacio
+                    if (!"".equals(palabras.get(i).getComando())){ // Si hay comando sin comas
+                        String com = palabras.get(i).getComando();
                         for (int k=0;k<com.length();k++){
                             switch (com.charAt(k)){
                                 case 'N':
@@ -193,7 +202,7 @@ public class Dibujar {
                         String com = comodin.get(i).getComando2();
                         boolean salir = false;
                         int k = com.length()-1; // Guarda la posición final del comando
-                        for (int p=j;p>0 && !salir;p--){ // Recorre hacia atras las palabras desde la posición j
+                        for (int p=i;p>=0 && !salir;p--){ // Recorre hacia atras las palabras desde la posición j
                             if (!"".equals(palabras.get(p).getPalabra()) && !" ".equals(palabras.get(p).getPalabra())){
                                 // Si existe palabra y no es espacio
                                 while (k>0){ // Recorre hacia atras el comando
@@ -217,7 +226,7 @@ public class Dibujar {
                                         }
                                     }
                                     else{
-                                        break;
+                                        k--;
                                     }
                                     k--;
                                 }
@@ -228,16 +237,11 @@ public class Dibujar {
                 }
             }
         }
-        for (int i=0;i<palabras.size();i++){
-            if (!palabras.get(i).esEspacio()){
-                System.out.println("Negrita: "+palabras.get(i).isN());
-                System.out.println("Cursiva: "+palabras.get(i).isK());
-                System.out.println("Subrayado: "+palabras.get(i).isS());
-            }
-        }
+        
+    
         // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
-    }
+
     
     public void guardarPalabras(String entrada, AnchorPane lienzo){
         
