@@ -132,8 +132,6 @@ public class Dibujar {
                     if (j>k){
                         if (cComa){ // Comando con comas abc^N,K
                             if (j+1 == p.length()){ // La posición j es la última de la palabra
-                                System.out.println("k = "+k);
-                                System.out.println("j = "+j);
                                 if (!escoman2(p.charAt(j))){
                                     j++;
                                 }
@@ -149,8 +147,6 @@ public class Dibujar {
                         }
                         else{ // Comando sin comas ^N+Sabc
                             if (k == 0 && j+1<p.length()){ // El comando comienza en la primera posición y hay palabra después del comando
-                                System.out.println("k = "+k);
-                                System.out.println("j = "+j);
                                 comodin.get(i).setComando(p.substring(k, j+1));
                                 comodin.get(i).setPalabra(p.substring(j+1));// ^Nabc^N,K
                                 p = comodin.get(i).getPalabra();
@@ -160,14 +156,10 @@ public class Dibujar {
                     }
                 }
             }
-            System.out.println("posPalabra = "+i);
-            System.out.println("cantPalabras = "+comodin.size());
-            System.out.println("Palabra = "+comodin.get(i).getPalabra());
-            System.out.println("Comando+ = "+comodin.get(i).getComando());
-            System.out.println("Comando, = "+comodin.get(i).getComando2());
         }
-        // guardar palabra sin comando  en el arreglo palabras | Al final 
-        int j=0;
+        
+        // Guardar palabras y comandos en el arreglo palabras | Al Final: Arreglo palabras con palabra y comandos separados
+        int j = 0;
         for (int i=0;i<comodin.size();i++){
             while(palabras.get(j).esEspacio()){
                 j++;
@@ -176,72 +168,79 @@ public class Dibujar {
             palabras.get(j).setComando(comodin.get(i).getComando());
             palabras.get(j).setComando2(comodin.get(i).getComando2());
             j++;
-        }     
+        }
+        
         // Recorrer comandos y asignar valores booleanos | Al Final: Objetos Palabra con estilos asignados
-        for (int i=0;i<comodin.size();i++){          
-                if (!palabras.get(i).esEspacio()){ // Si la palabra no es un espacio
-                    if (!"".equals(palabras.get(i).getComando())){ // Si hay comando sin comas
-                        String com = palabras.get(i).getComando();
-                        for (int k=0;k<com.length();k++){
-                            switch (com.charAt(k)){
-                                case 'N':
-                                    palabras.get(j).setN(true);
-                                    break;
-                                case 'K':
-                                    palabras.get(j).setK(true);
-                                    break;
-                                case 'S':
-                                    palabras.get(j).setS(true);
-                                    break;
-                                default:
-                                    break;
-                            }
+        for (int i=0;i<palabras.size();i++){
+            if (!palabras.get(i).esEspacio()){ // Si la palabra no es un espacio
+                if (!"".equals(palabras.get(i).getComando())){ // Si hay comando sin comas
+                    String com = palabras.get(i).getComando();
+                    for (int k=0;k<com.length();k++){
+                        switch (com.charAt(k)){
+                            case 'N':
+                                palabras.get(i).setN(true);
+                                break;
+                            case 'K':
+                                palabras.get(i).setK(true);
+                                break;
+                            case 'S':
+                                palabras.get(i).setS(true);
+                                break;
+                            default:
+                                break;
                         }
                     }
-                    if (!"".equals(comodin.get(i).getComando2())){ // Si hay comando con comas
-                        String com = comodin.get(i).getComando2();
-                        boolean salir = false;
-                        int k = com.length()-1; // Guarda la posición final del comando
-                        for (int p=i;p>=0 && !salir;p--){ // Recorre hacia atras las palabras desde la posición j
-                            if (!"".equals(palabras.get(p).getPalabra()) && !" ".equals(palabras.get(p).getPalabra())){
-                                // Si existe palabra y no es espacio
-                                while (k>0){ // Recorre hacia atras el comando
-                                    if (com.charAt(k) != ','){ // sada asd ^N+sadas
-                                        switch (com.charAt(k)){
-                                            case 'N':
-                                                System.out.println(p);
-                                                palabras.get(p).setN(true);
-                                                break;
-                                            case 'K':
-                                                palabras.get(p).setK(true);
-                                                break;
-                                            case 'S':
-                                                palabras.get(p).setS(true);
-                                                break;
-                                            case '^':
-                                                salir = true;
-                                                break;
-                                            default:
-                                                break;
-                                        }
+                }
+                if (!"".equals(palabras.get(i).getComando2())){ // Si hay comando con comas
+                    String com = palabras.get(i).getComando2();
+                    boolean salir = false;
+                    int k = com.length()-1; // Guarda la posición final del comando
+                    for (int p=i;p>=0 && !salir;p--){ // Recorre hacia atras las palabras desde la posición i
+                        if (!"".equals(palabras.get(p).getPalabra()) && !" ".equals(palabras.get(p).getPalabra())){
+                            // Si existe palabra y no es espacio
+                            while (k>0){ // Recorre hacia atras el comando
+                                if (com.charAt(k) != ','){ // ^N,K,S k=5
+                                    switch (com.charAt(k)){
+                                        case 'N':
+                                            palabras.get(p).setN(true);
+                                            break;
+                                        case 'K':
+                                            palabras.get(p).setK(true);
+                                            break;
+                                        case 'S':
+                                            palabras.get(p).setS(true);
+                                            break;
+                                        case '^':
+                                            salir = true;
+                                            break;
+                                        default:
+                                            break;
                                     }
-                                    else{
-                                        k--;
-                                    }
-                                    k--;
+                                }
+                                else{
+                                    break;
                                 }
                                 k--;
                             }
+                            k--;
                         }
                     }
                 }
             }
         }
         
-    
+        for(int i=0;i<palabras.size();i++){
+            System.out.println(i);
+            System.out.println("N: "+palabras.get(i).isN());
+            System.out.println("K: "+palabras.get(i).isK());
+            System.out.println("S: "+palabras.get(i).isS());
+            System.out.println("");
+        }
+        
         // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
+        
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
-
+    }
     
     public void guardarPalabras(String entrada, AnchorPane lienzo){
         
@@ -409,161 +408,6 @@ public class Dibujar {
             }
         }
     }
-    
-   /* ArrayList<Palabra> comodin = new ArrayList<>();
-        for (int i=0;i<palabras.size();i++){
-            if(!" ".equals(palabras.get(i).getPalabra())){
-                comodin.add(palabras.get(i));
-                }
-            }
-        for (int i=0;i<comodin.size();i++){     
-            String p = comodin.get(i).getPalabra(); //p es cada objeto del arreglo
-            cont = i;  
-            if (p.charAt(0) == '^'){
-            int com =0;
-            for(int k=0; k<p.length();k++){
-                if(",".equals(p.charAt(k))){
-                    com=1;
-                    break;
-                } 
-            }
-            if(com==0){
-                
-            }             
-            }
-            if (p.charAt(0) == '^'){ // Si el primer caracter es ^ 
-                boolean salir = false; //condicion para poder cerra ciclos
-                int j;// recorre caracteres
-                for (j=1;j<p.length() && !salir && cont<comodin.size();j++){                   
-                    if(escoman2(p.charAt(j-1)) &&  escoman1(p.charAt(j))){
-                        
-                        if(j+1<p.length()){
-                            if(!escoman2(p.charAt(j+1))&& !escoman1(p.charAt(j+1))){ 
-                                
-                                //deberia poner estilos a lo que sigue 
-                                
-                      }
-                    }
-                        
-                   }
-                        
-                        switch (p.charAt(j)){
-                        case 'N':
-                            if (j+1 < p.length() && cont > 0){//comprueba el siguiente despues de N haya coma
-                                if ((p.charAt(j+1) == ',' || p.charAt(j-1) == ',') && !comodin.get(cont-1).isN()){
-                                    do{
-                                        cont--;
-                                    }while (" ".equals(comodin.get(cont).getPalabra()) && !comodin.get(cont).isN());
-                                }
-                            }
-                            else if(j-1 > 0 && cont > 0){// hay una coma antes
-                                if (p.charAt(j-1) == ',' && !palabras.get(cont-1).isN()){
-                                    do{
-                                        cont--;//entero recorre palabras
-                                    }while (" ".equals(comodin.get(cont).getPalabra()) && !comodin.get(cont).isN());
-                                }      //  palabra= ''   seguire hacienco el ciclo         hasta que encuentre palabras posiciona en la palabra anterior
-                                     
-                            }
-                            if (p.charAt(j-1) == 'N' || p.charAt(j-1) == 'K' || p.charAt(j-1) == 'S'){//verifica si el comando esta mal
-                                j--;//para que no tome el comando
-                                salir = true;// lo saca y no toma el comando
-                               
-                            }
-                            else{// si no hay error lo asigna
-                                comodin.get(cont).setN(true);
-                            }
-                            break;
-                        case 'K':
-                            if (j+1 < p.length() && cont > 0){
-                                if ((p.charAt(j+1) == ',' || p.charAt(j-1) == ',') && !palabras.get(cont-1).isK()){
-                                    do{
-                                        cont--;
-                                    }while (" ".equals(palabras.get(cont).getPalabra()) && !palabras.get(cont).isK());
-                                }
-                            }
-                            else if(j-1 > 0 && cont > 0){
-                                if (p.charAt(j-1) == ',' && !palabras.get(cont-1).isK()){
-                                    do{
-                                        cont--;
-                                    }while (" ".equals(palabras.get(cont).getPalabra()) && !palabras.get(cont).isK());
-                                }
-                            }
-                            System.out.println(j);
-                            if (p.charAt(j-1) == 'N' || p.charAt(j-1) == 'K' || p.charAt(j-1) == 'S'){
-                                j--;
-                                salir = true;
-                            }
-                            else{
-                                palabras.get(cont).setK(true);
-                            }
-                            break;
-                        case 'S':
-                            if (j+1 < p.length() && cont > 0){
-                                if ((p.charAt(j+1) == ',' || p.charAt(j-1) == ',') && !palabras.get(cont-1).isS()){
-                                    do{
-                                        cont--;
-                                    }while (" ".equals(palabras.get(cont).getPalabra()) && !palabras.get(cont).isS());
-                                }
-                            }
-                            else if(j-1 > 0 && cont > 0){
-                                if (p.charAt(j-1) == ',' && !palabras.get(cont-1).isS()){
-                                    do{
-                                        cont--;
-                                    }while (" ".equals(palabras.get(cont).getPalabra()) && !palabras.get(cont).isS());
-                                }
-                            }
-                            if (p.charAt(j-1) == 'N' || p.charAt(j-1) == 'K' || p.charAt(j-1) == 'S'){
-                                j--;
-                                salir = true;
-                                System.out.println(j);
-                            }
-                            
-                            
-                            else{
-                                palabras.get(cont).setS(true);
-                            }
-                            break;
-                            /*
-                        case 'T':
-                            break;
-                           
-                        case ',':
-                            break;
-                        case '+':
-                            break;
-                        default:
-                            while(p.charAt(j-1) == ',' || p.charAt(j-1) == '+'){
-                                j--;
-                            }
-                            salir = true;
-                            j--;
-                            break;
-                    }
-                }
-                
-              /*
-                if (p.charAt(2) == '+'){  
-                    for (j=1;j<p.length() && !salir && cont<palabras.size();j++){
-                }
-                    }
-                if (j > 1){
-                    palabras.get(i).setPalabra(p.substring(j)); // Se elimina la cadena de comando de la palabra
-                    // Elimina desde 0 hasta j-1 reemplazando por la cadena desde j hasta el final
-                }
-            }
-        } Además cada palabra tiene sus estilos asignados por los comandos anteriores
-        for (int i=0;i<palabras.size();i++){
-            String p = palabras.get(i).getPalabra();
-            if (tamañoPalabra(p) > espacioEnFila && tamañoPalabra(p) < fila){ // espacioEnFila < tamañoPalabra < 1035
-                espacioEnFila = fila;
-                posActualX = 0;
-                posActualY = posActualY + 60;
-            }
-            dibujarPalabra(palabras.get(i),lienzo);//manda palabra y anchor pane
-        }
-*/
-
-    
     
     public void dibujarPalabra(Palabra palabra, AnchorPane lienzo){
         
