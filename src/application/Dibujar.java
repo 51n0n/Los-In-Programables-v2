@@ -229,8 +229,43 @@ public class Dibujar {
         }
         
         // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
+        for (int i=0;i<palabras.size();i++){
+            newDibujarPalabra(palabras.get(i));
+            System.out.println(palabras.get(i).getWidth());
+        }
+        
         
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
+        double fila = lienzo.getWidth() - 34;
+        espacioEnFila = fila; // Guarda cuanto espacio queda en una fila
+        posActualX = 20; // Guardará la posición X a usar al momento de dibujar
+        posActualY = 20; // Guardará la posición Y a usar al momento de dibujar
+        
+        for (int i=0;i<palabras.size();i++){
+            if (palabras.get(i).getWidth() > espacioEnFila){ // espacioEnFila < tamañoPalabra < 1035
+                espacioEnFila = fila;
+                posActualX = 20;
+                posActualY = posActualY + 60;
+            }
+            palabras.get(i).getFondo().setLayoutX(posActualX);
+            palabras.get(i).getFondo().setLayoutY(posActualY);
+            posActualX = posActualX + palabras.get(i).getWidth(); // Aumento de la posición X por el espacio usado
+            espacioEnFila = espacioEnFila - palabras.get(i).getWidth(); // Se resta el espacio usado al disponible
+        }
+    }
+    
+    public void newDibujarPalabra(Palabra palabra){
+        String p = palabra.getPalabra();
+        AnchorPane fondo = palabra.getFondo();
+        double pos = 0;
+        for (int i=0;i<p.length();i++){
+            AnchorPane aux = llamar.dibujarCaracter(p.charAt(i), palabra);
+            aux.setLayoutX(pos);
+            fondo.getChildren().add(aux); // Se agregan los caracteres
+            pos = pos + tamañoCaracter(p.charAt(i)); // Posición de los caracteres respecto a la palabra
+        }
+        palabra.setWidth(pos);
+        lienzo.getChildren().add(fondo); // Se agrega la palabra a la interfaz
     }
     
     public void guardarPalabras(String entrada, AnchorPane lienzo){
