@@ -229,10 +229,18 @@ public class Dibujar {
             }
         }
         
+        for(int i=0;i<palabras.size();i++){
+            System.out.println(i);
+            System.out.println("N: "+palabras.get(i).isN());
+            System.out.println("K: "+palabras.get(i).isK());
+            System.out.println("S: "+palabras.get(i).isS());
+            System.out.println("");
+        }
+        
         // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
         
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
-
+    }
     
     public void guardarPalabras(String entrada, AnchorPane lienzo){
         
