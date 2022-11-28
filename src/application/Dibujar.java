@@ -15,6 +15,7 @@ public class Dibujar {
     private static Color colorActual = Color.BLACK; // Valor inicial para el color de las letras
     private static Color colorControl = Color.RED;
     private static boolean puntosControl = false;
+    private static final Estilos estilos = new Estilos();
     
     private static double espacioEnFila;
     private static int charCont;
@@ -121,6 +122,9 @@ public class Dibujar {
                                     salir = true;
                                     j--;
                                 }
+                            }else if(escoman2(p.charAt(j-1)) &&){
+                                
+                            
                             }
                             else{
                                 salir = true;
@@ -186,6 +190,38 @@ public class Dibujar {
                             case 'S':
                                 palabras.get(i).setS(true);
                                 break;
+                            case 'A':
+                                String ver="";
+                                int w=k+1;
+                                while(true){
+                                    try{
+                                        Integer.parseInt(com.charAt(w)+"");//encuentra 1 solo numero
+                                         ver = ver.concat(com.charAt(w)+"");// a si mismo se concatena con los njumeros de arriba
+                                        w++;
+                                    }
+                                    catch(NumberFormatException e){
+                                        break;
+                                    }
+                                }
+                                palabras.get(i).setAngulo(Integer.parseInt(ver));//manda todos los numeros
+                                palabras.get(i).setA(true);
+                                break;
+                            case 'a':
+                                String ser="";
+                                int c=k+1;
+                                while(true){
+                                    try{
+                                        Integer.parseInt(com.charAt(c)+"");//encuentra 1 solo numero
+                                        ser = ser.concat(com.charAt(c)+"");// a si mismo se concatena con los njumeros de arriba
+                                        c++;
+                                    }
+                                    catch(NumberFormatException e){
+                                        break;
+                                    }
+                                }
+                                palabras.get(i).setAngulo(Integer.parseInt(ser));//manda todos los numeros
+                                palabras.get(i).setA(true);
+                                break;
                             default:
                                 break;
                         }
@@ -209,6 +245,38 @@ public class Dibujar {
                                             break;
                                         case 'S':
                                             palabras.get(p).setS(true);
+                                            break;
+                                        case 'A':
+                                            String ver="";
+                                            int w=k+1;
+                                            while(true){
+                                                try{
+                                                    Integer.parseInt(com.charAt(w)+"");//encuentra 1 solo numero
+                                                     ver = ver.concat(com.charAt(w)+"");// a si mismo se concatena con los njumeros de arriba
+                                                    w++;
+                                                }
+                                                catch(NumberFormatException e){
+                                                    break;
+                                                }
+                                            }
+                                            palabras.get(p).setAngulo(Integer.parseInt(ver));//manda todos los numeros
+                                            palabras.get(p).setA(true);
+                                            break;
+                                        case 'a':
+                                            String ser="";
+                                            int c=k+1;
+                                            while(true){
+                                                try{
+                                                    Integer.parseInt(com.charAt(c)+"");//encuentra 1 solo numero
+                                                    ser = ser.concat(com.charAt(c)+"");// a si mismo se concatena con los njumeros de arriba
+                                                    c++;
+                                                }
+                                                catch(NumberFormatException e){
+                                                    break;
+                                                }
+                                            }
+                                            palabras.get(p).setAngulo(Integer.parseInt(ser));//manda todos los numeros
+                                            palabras.get(p).setA(true);
                                             break;
                                         case '^':
                                             salir = true;
@@ -242,7 +310,9 @@ public class Dibujar {
             newDibujarPalabra(palabras.get(i));
             System.out.println(palabras.get(i).getWidth());
         }
-        
+        for (int i=0;i<palabras.size();i++){
+            estilos.rotarPalabra(palabras.get(i));
+        }
         
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
         double fila = lienzo.getWidth() - 34;
@@ -526,6 +596,7 @@ public class Dibujar {
         }
         return esver2;
     }
+
     
     public double tamañoPalabra(String cadena){
         double cont = 0;
