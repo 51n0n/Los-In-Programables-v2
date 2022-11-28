@@ -49,7 +49,7 @@ public class Dibujar {
         int cont = 0; // Contador de Palabras
         for (int i=0;i<entrada.length();i++){ // Se recorre la entrada
             
-            palabras.add(new Palabra(false,false,false)); // Nuevo objeto Palabra
+            palabras.add(new Palabra()); // Nuevo objeto Palabra
             
             if (entrada.charAt(i) != ' '){ // i es inicio de Palabra
                 int j = i;
@@ -194,6 +194,12 @@ public class Dibujar {
                                 break;
                             case 'S':
                                 palabras.get(i).setS(true);
+                                break;
+                            case 'V':
+                                palabras.get(i).setV(true);
+                                break;
+                            case 'H':
+                                palabras.get(i).setH(true);
                                 break;
                             case 'A':
                                 String ver="";
@@ -367,7 +373,7 @@ public class Dibujar {
         
         // Se guardan palabras y espacios
         for (int i=0;i<entrada.length();i++){
-            palabras.add(new Palabra(false,false,false));
+            palabras.add(new Palabra());
             if (entrada.charAt(i) != ' '){
                 int j = i;
                 while (j<entrada.length()){

@@ -4,6 +4,7 @@
  */
 package application;
 
+import javafx.geometry.Point3D;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -80,6 +81,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaA, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'Á':
                 //Objetos
@@ -146,6 +157,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaÁ2, fondo);
                     estilos.lineaControl(lineaÁ, fondo);
                     estilos.lineaControl(lineaÁ1, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -215,6 +236,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaB4, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'C':
                 CubicCurve cubicaC1 = new CubicCurve(6,-69.59,-13.39,-73.19,-26.39,-10.19,6.33,-30.79);
@@ -267,6 +298,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaC1, fondo);
                     estilos.cubicaControl(cubicaC2, fondo);
                     estilos.cubicaControl(cubicaC3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -334,6 +375,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaD4, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'E':
                 CubicCurve cubicaE1 = new CubicCurve(6.2,19.2,-14.79,39.59,-30.6,11.59,-11.4,2.23);
@@ -397,6 +448,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaE2, fondo);
                     estilos.cubicaControl(cubicaE3, fondo);
                     estilos.cubicaControl(cubicaE4, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -475,6 +536,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaÉ, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'F':
                 Line lineaF1 = new Line(42.8,-2.4,50.39,-2.4);
@@ -550,6 +621,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaF2, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'G':
                 CubicCurve cubicaG1 = new CubicCurve(-22,25.4,-31.19,37.40,8.20,49.79,3.39,9.49);
@@ -601,6 +682,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaG1, fondo);
                     estilos.cubicaControl(cubicaG2, fondo);
                     estilos.cubicaControl(cubicaG3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -667,6 +758,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaH, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'I':
                 CubicCurve cubicaI1 = new CubicCurve(-12.59,9.4,-16.4,19.19,-42.4,1.9,8.59,-0.02);
@@ -718,6 +819,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaI1, fondo);
                     estilos.cubicaControl(cubicaI2, fondo);
                     estilos.cubicaControl(cubicaI3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -784,6 +895,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaÍ, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'J':
                 CubicCurve cubicaJ1 = new CubicCurve(-29.59,35.8,-24.2,57,-27.7,6.2,-0.7,-11.68);
@@ -835,6 +956,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaJ1, fondo);
                     estilos.cubicaControl(cubicaJ2, fondo);
                     estilos.cubicaControl(cubicaJ3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -903,6 +1034,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaK4, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'L':
                 CubicCurve cubicaL1 = new CubicCurve(-31.19,37.6,1.19,41.4,-29,-5.59,-4,-7.18);
@@ -954,6 +1095,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaL1, fondo);
                     estilos.cubicaControl(cubicaL2, fondo);
                     estilos.cubicaControl(cubicaL3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -1031,6 +1182,16 @@ public class CrearCaracteres {
                     estilos.cuadraticaControl(cuadraticaM, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'N':
                 CubicCurve cubicaN1 = new CubicCurve(-31.39,37.4,-22.4,41,-16.99,9.59,-22.4,-5.4);
@@ -1093,6 +1254,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaN2, fondo);
                     estilos.cubicaControl(cubicaN3, fondo);
                     estilos.cubicaControl(cubicaN4, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -1170,6 +1341,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaÑ5, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'O':
                 CubicCurve cubicaO1 = new CubicCurve(-19.6,37.6,-39,39.6,-37,-6,-17.2,-2.59);
@@ -1221,6 +1402,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaO1, fondo);
                     estilos.cubicaControl(cubicaO2, fondo);
                     estilos.cubicaControl(cubicaO3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -1287,6 +1478,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaÓ, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'P':
                 CubicCurve cubicaP1 = new CubicCurve(-31.8,34.4,-22.4,41,-16.44,11.48,-13.8,-2.4);
@@ -1338,6 +1539,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaP1, fondo);
                     estilos.cubicaControl(cubicaP2, fondo);
                     estilos.cubicaControl(cubicaP3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -1405,6 +1616,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaQ4, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'R':
                 CubicCurve cubicaR1 = new CubicCurve(-32.6,33.6,-19.19,42.2,-16.39,-10.11,0.6,-12.8);
@@ -1469,6 +1690,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaR4, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'S':
                 CubicCurve cubicaS1 = new CubicCurve(-47.6,44.2,-35.39,48.08,-11.79,30.79,-42.2,13.8);
@@ -1520,6 +1751,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaS1, fondo);
                     estilos.cubicaControl(cubicaS2, fondo);
                     estilos.cubicaControl(cubicaS3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -1575,6 +1816,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaT3, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'U':
                 QuadCurve cuadraticaU = new QuadCurve(-1,-15.6,-12.2,-13.74,-10,-31.8);
@@ -1626,6 +1877,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaU1, fondo);
                     estilos.cubicaControl(cubicaU2, fondo);
                     estilos.cuadraticaControl(cuadraticaU, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -1692,6 +1953,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaÚ, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'V':
                 CubicCurve cubicaV1 = new CubicCurve(-7.59,26.4,-25.44,3.99,-15,-14.19,-19.59,-14.19);
@@ -1743,6 +2014,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaV1, fondo);
                     estilos.cubicaControl(cubicaV2, fondo);
                     estilos.cubicaControl(cubicaV3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -1820,6 +2101,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaW5, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'X':
                 CubicCurve cubicasX = new CubicCurve(-34.0,24.19,-13.8,22.4,-6.19,-5.8,-29.6,-14.0);
@@ -1869,8 +2160,18 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubica1X, fondo);
                     estilos.cubicaControl(cubica2X, fondo);
                 }               
-            
-            return fondo;
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
+                return fondo;
             case 'Y':
                 CubicCurve cubicasY = new CubicCurve(-15.6,-3.39,-14.12,20.0,-20.79,31.39,-29.6,23.39);
                 CubicCurve cubica1Y = new CubicCurve(-25.5,27.8,-36.39,16.8,-27.8,9.39,-29.39,3.8);
@@ -1939,7 +2240,18 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubica2Y, fondo);
                     estilos.cubicaControl(cubica3Y, fondo);
                     estilos.cubicaControl(cubica4Y, fondo);
-                }   
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'Z':
                 CubicCurve cubicasZ = new CubicCurve(-22.0,26.6,-13.39,18.0,-7.2,-5.19,2.39,-12.6);
@@ -1999,6 +2311,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubica2Z, fondo);
                     estilos.cubicaControl(cubica3Z, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'a':
                 CubicCurve cubicaa= new CubicCurve(-36,-6.54,-33.59,-19.0,-23.76,-21.0,-23.76,-6.54);
@@ -2045,6 +2368,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaa1, fondo);
                     estilos.cubicaControl(cubicaa2, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'á':
                 CubicCurve cubicaá= new CubicCurve(-36,-6.54,-33.59,-19.0,-23.76,-21.0,-23.76,-6.54);
@@ -2101,6 +2435,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaá2, fondo);
                     estilos.lineaControl(lineaá, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'b':
                 CubicCurve cubicab= new CubicCurve(-57.59,-20.20,-55.19,-74.59,-43.98,-55,-61.99,-20.20);
@@ -2157,7 +2502,18 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicab1, fondo);
                     estilos.cubicaControl(cubicab2, fondo);
                     estilos.cubicaControl(cubicab3, fondo);
-                }              
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'c':
                 CubicCurve cubicac= new CubicCurve(-43.60,-5.8,-38.39,-0.8,-32,-5.8,-32,-11.69);
@@ -2193,6 +2549,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicac, fondo);
                     estilos.cubicaControl(cubicac1, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'd':
                 CubicCurve cubicad = new CubicCurve(-35.8,-6.54,-32.39,-20.8,-22,-20.8,-23.76,-6.54);
@@ -2239,6 +2606,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicad1, fondo);
                     estilos.cubicaControl(cubicad2, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'e':
                 CubicCurve cubicae= new CubicCurve(-39.19,-8,-36.39,-24.59,-21,-14.59,-39.19,-2.8);
@@ -2274,6 +2652,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicae, fondo);
                     estilos.cubicaControl(cubicae1, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'é':
                 CubicCurve cubicaé= new CubicCurve(-39.19,-8,-36.39,-24.59,-21,-14.59,-39.19,-2.8);
@@ -2319,6 +2708,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaé1, fondo);
                     estilos.lineaControl(lineaé, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'f':
                 CubicCurve cubicaf= new CubicCurve(-60.78,-14.8,-66.18,-79,-50.99,-53.59,-60.78,-23.0);
@@ -2366,6 +2766,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaf1, fondo);
                     estilos.cubicaControl(cubicaf2, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'g':
                 CubicCurve cubicag= new CubicCurve(-33.95,-7.8,-37.5,3,-24.2,7,-22.0,-7.8);
@@ -2423,6 +2834,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicag2, fondo);
                     estilos.cubicaControl(cubicag3, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'h':
                 CubicCurve cubicah= new CubicCurve(-67,-4.4,-70.79,-63.0,-54.2,-57.4,-70,-8.59);
@@ -2469,6 +2891,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicah1, fondo);
                     estilos.cubicaControl(cubicah2, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'i':
                 CubicCurve cubicai= new CubicCurve(-28.39,-17,-35,3.19,-23.8,8.79,-18.19,-7.2);
@@ -2500,6 +2933,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicai, fondo);
                     estilos.circuloControl(circuloi, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'í':
                 CubicCurve cubicaí= new CubicCurve(-28.39,-17,-35,3.19,-23.8,8.79,-18.19,-7.2);
@@ -2534,6 +2978,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaí, fondo);
                     estilos.lineaControl(lineaí, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'j':
                 CubicCurve cubicaj= new CubicCurve(-65.7,-52.9,-58.3,-36.5,-77.5,-5.09,-72.89,-29.09);
@@ -2576,6 +3031,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaj1, fondo);
                     estilos.circuloControl(circuloj, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'k':
                 CubicCurve cubicak= new CubicCurve(-66.39,-3.59,-70.79,-63.0,-54.2,-57.4,-70.79,-7.8);
@@ -2622,6 +3088,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicak1, fondo);
                     estilos.cubicaControl(cubicak2, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'l':
                 CubicCurve cubical1 = new CubicCurve(-1.99,19.2,13.79,-31.8,-13.39,-29.8,1.2,19.2);
@@ -2657,6 +3134,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubical1, fondo);
                     estilos.cubicaControl(cubical2, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'm':
                 CubicCurve cubicam1 = new CubicCurve(-8.2,30.4,-3.2,4.39,-13.6,6,-13.6,19.2);
@@ -2714,6 +3202,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicam3, fondo);
                     estilos.cubicaControl(cubicam4, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'n':
                 CubicCurve cubican1 = new CubicCurve( 1.19,11.4,3.69,-4.8,11.1,7,6.19,18.79);
@@ -2760,6 +3259,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubican2, fondo);
                     estilos.cubicaControl(cubican3, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'ñ':
                 CubicCurve cubicañ1 = new CubicCurve(1.19,11.4,3.69,-4.8,11.1,7,6.19,18.79);
@@ -2817,6 +3327,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicañ3, fondo);
                     estilos.cubicaControl(cubicañ4, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'o':
                 CubicCurve cubicao1 = new CubicCurve(-36.7,-8.21,-33.4,-20.4,-24,-20.4,-24,-8.21);
@@ -2863,6 +3384,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicao2, fondo);
                     estilos.cubicaControl(cubicao3, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'ó':
                 CubicCurve cubicaó1 = new CubicCurve(-36.7,-8.21,-33.4,-20.4,-24,-20.4,-24,-8.21);
@@ -2919,6 +3451,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaó3, fondo);
                     estilos.lineaControl(lineaó, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'p':
                 CubicCurve cubicap1 = new CubicCurve(-8.39,29.79,-10.19,-27.99,-5.19,6.79,-13.19,14.4);
@@ -2965,6 +3508,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicap2, fondo);
                     estilos.cubicaControl(cubicap3, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'q':
                 CubicCurve cubicaq1 = new CubicCurve(-6,29.59,-6,-48.59,-8.6,40,0.19,6.4);
@@ -3011,6 +3565,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaq2, fondo);
                     estilos.cubicaControl(cubicaq3, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'r':
                 CubicCurve cubicar1 = new CubicCurve(8.39,-0.59,11,13.59,6.79,16.19,5,18);
@@ -3057,6 +3622,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicar2, fondo);
                     estilos.cubicaControl(cubicar3, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 's':
                 CubicCurve cubicas1 = new CubicCurve(7.79,13.79,16.19,1,-3.6,1,-6,-4.55 );
@@ -3114,6 +3690,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicas3, fondo);
                     estilos.cubicaControl(cubicas4, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 't':
                 CubicCurve cubicat1 = new CubicCurve(-1.99,19.22,3.6,-35,-5,-35,1.2,19.22 );
@@ -3160,6 +3747,17 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicat2, fondo);
                     estilos.lineaControl(lineat1, fondo);
                 }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'u':
                 CubicCurve cubicau1= new CubicCurve(-33.79, -16.4, -40, 5.59, -23.8, 16, -23.8, -16.4);
@@ -3199,6 +3797,16 @@ public class CrearCaracteres {
                 if (dibujar.getControl()){
                     estilos.cubicaControl(cubicau1, fondo);
                     estilos.cubicaControl(cubicau2, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -3251,6 +3859,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(lineaú, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'v':
                 CubicCurve cubicav1 = new CubicCurve(-10.19, 3.8, -8.1, 45.1, 1.34, 13.29, -0.89, 7.49);
@@ -3301,6 +3919,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicav1, fondo);
                     estilos.cubicaControl(cubicav2, fondo);
                     estilos.cubicaControl(cubicav3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -3366,6 +3994,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaw4, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'x':
                 CubicCurve cubicax1 = new CubicCurve(-8.5, 22.4, -4.29, 30, 1.52, 2.30, 5.7, 2.67);
@@ -3405,6 +4043,16 @@ public class CrearCaracteres {
                 if (dibujar.getControl()){
                     estilos.cubicaControl(cubicax1, fondo);
                     estilos.cubicaControl(cubicax2, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -3470,6 +4118,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicay4, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case 'z':
                 CubicCurve cubicaz1 = new CubicCurve(-6.9, 6, -0.9, -5.99, 14.5, -2, -0.9, 9);
@@ -3533,6 +4191,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubicaz4, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case ' ':
                 
@@ -3573,6 +4241,16 @@ public class CrearCaracteres {
                     estilos.circuloControl(circulo, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case '¡':
                 Ellipse elipse1 = new Ellipse(1, 20);
@@ -3608,6 +4286,16 @@ public class CrearCaracteres {
                 if (dibujar.getControl()){
                     estilos.elipseControl(elipse1, fondo);
                     estilos.circuloControl(circulo1, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -3658,6 +4346,16 @@ public class CrearCaracteres {
                     estilos.circuloControl(circulo2, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case '?':
                 CubicCurve cubica1 = new CubicCurve(13.33, -24.19, 36.19, -35.93, 36.19, 4.59, 13.33, -4.46);
@@ -3706,6 +4404,16 @@ public class CrearCaracteres {
                     estilos.circuloControl(circulo3, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case '.':
                 Circle circulo4 = new Circle(3, dibujar.getColor());
@@ -3731,6 +4439,16 @@ public class CrearCaracteres {
                 
                 if (dibujar.getControl()){
                     estilos.circuloControl(circulo4, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -3768,6 +4486,16 @@ public class CrearCaracteres {
                 if (dibujar.getControl()){
                     estilos.circuloControl(circulo5, fondo);
                     estilos.cuadraticaControl(cuadratica, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -3815,6 +4543,16 @@ public class CrearCaracteres {
                     estilos.cuadraticaControl(cuadratica1, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case ':':
                 Circle circulo8 = new Circle(3, dibujar.getColor());
@@ -3848,6 +4586,16 @@ public class CrearCaracteres {
                     estilos.circuloControl(circulo9, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case '(':
                 QuadCurve cubica2 = new QuadCurve(-6.6, 1.8, -29.3, -25.8, -6.59, -50);
@@ -3878,6 +4626,16 @@ public class CrearCaracteres {
                     estilos.cuadraticaControl(cubica2, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case ')':
                 QuadCurve cubica3 = new QuadCurve(-6.6, 1.8, 14.6, -25, -6.59, -50);
@@ -3906,6 +4664,16 @@ public class CrearCaracteres {
                 
                 if (dibujar.getControl()){
                     estilos.cuadraticaControl(cubica3, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -3960,6 +4728,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(linea5, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case ']':
                 Line linea6 = new Line(-13.7, -24.59, -13.69, 21.39);
@@ -4012,6 +4790,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(linea8, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case '{':
                 CubicCurve cubica4 = new CubicCurve(-0.2, 2, 17, 1, -0.2, -24.6, 17, -24.6);
@@ -4051,6 +4839,16 @@ public class CrearCaracteres {
                 if (dibujar.getControl()){
                     estilos.cubicaControl(cubica4, fondo);
                     estilos.cubicaControl(cubica5, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -4094,6 +4892,16 @@ public class CrearCaracteres {
                     estilos.cubicaControl(cubica7, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case '-':
                 Line linea9 = new Line(-14, 5, 14, 5);
@@ -4123,6 +4931,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(linea9, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case '_':
                 Line linea10 = new Line(-10, 5, 15.2, 5);      
@@ -4150,6 +4968,16 @@ public class CrearCaracteres {
                 
                 if (dibujar.getControl()){
                     estilos.lineaControl(linea10, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -4193,6 +5021,16 @@ public class CrearCaracteres {
                 if (dibujar.getControl()){
                     estilos.circuloControl(circulo10, fondo);
                     estilos.cuadraticaControl(cuadratica2, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -4248,6 +5086,16 @@ public class CrearCaracteres {
                     estilos.cuadraticaControl(cuadratica3, fondo);
                     estilos.circuloControl(circulo12, fondo);
                     estilos.cuadraticaControl(cuadratica4, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
@@ -4313,6 +5161,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(linea13, fondo);
                 }
                 
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
+                }
+                
                 return fondo;
             case '»':
                 Line linea15 = new Line(7, 0, -4, -9);
@@ -4374,6 +5232,16 @@ public class CrearCaracteres {
                     estilos.lineaControl(linea16, fondo);
                     estilos.lineaControl(linea17, fondo);
                     estilos.lineaControl(linea18, fondo);
+                }
+                
+                if (palabra.isV()){
+                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotate(180);
                 }
                 
                 return fondo;
