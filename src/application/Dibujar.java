@@ -591,7 +591,7 @@ public class Dibujar {
     
     public boolean escoman1(char caracter){
         
-        char[] ver = {'N','K','S'};
+        char[] ver = {'N','K','S','R','V','H'};
         
         boolean esver = false;
         for (int i=0;i<ver.length;i++){
@@ -619,7 +619,7 @@ public class Dibujar {
     
     public boolean escoman3(char caracter){
         
-        char[] ver = {'a','A'};
+        char[] ver = {'a','A','X','Y'};
         
         boolean esver = false;
         for (int i=0;i<ver.length;i++){
