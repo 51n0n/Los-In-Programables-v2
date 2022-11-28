@@ -89,8 +89,8 @@ public class Dibujar {
                     boolean salir = false; // booleano para poder cerrar ciclos
                     int j = k;
                     if (k+1 < p.length()){ // cualquier comando valido debe medir almenos 2 posiciones (^N)
-                        for (j=k+1;j<p.length() && !salir;j++){ // ^N+S+Kabc
-                            if(escoman2(p.charAt(j-1)) &&  escoman1(p.charAt(j))){ // j-1coman2 jcoman1
+                        for (j=k+1;j<p.length() && !salir;j++){
+                            if(escoman2(p.charAt(j-1)) && escoman1(p.charAt(j))){ // j-1coman2 jcoman1
                                 if(j+1<p.length()){
                                     if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
                                         salir = true;
@@ -101,7 +101,7 @@ public class Dibujar {
                                     salir = true;
                                 }
                             }
-                            else if(escoman1(p.charAt(j-1)) &&  escoman2(p.charAt(j))){ // j-1coman1 jcoman2
+                            else if(escoman1(p.charAt(j-1)) && escoman2(p.charAt(j))){ // j-1coman1 jcoman2
                                 //continuar
                                 if(j+1<p.length()){
                                     if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
@@ -115,16 +115,24 @@ public class Dibujar {
                                 }
                             }
                             else if (escoman2(p.charAt(j-1)) &&  escoman2(p.charAt(j))){ // j-1coman2 jcoman2
-                                if (p.charAt(j-1) == ',' && p.charAt(j) == ','){
-                                    //continuar
-                                }
-                                else{
+                                if (!(p.charAt(j-1) == ',' && p.charAt(j) == ',')){
                                     salir = true;
                                     j--;
                                 }
                             }else if(escoman2(p.charAt(j-1)) &&){
                                 
                             
+                            }
+                            else if (escoman2(p.charAt(j-1)) && escoman3(p.charAt(j))){ // j-1coman2 jcoman3
+                                while(j+1<p.length()){ // ^a234asf
+                                    try{
+                                        Integer.parseInt(p.charAt(j+1)+"");
+                                        j++;
+                                    }
+                                    catch(NumberFormatException e){
+                                        break;
+                                    }
+                                }
                             }
                             else{
                                 salir = true;
@@ -321,7 +329,7 @@ public class Dibujar {
         posActualY = 20; // Guardará la posición Y a usar al momento de dibujar
         
         for (int i=0;i<palabras.size();i++){
-            if (palabras.get(i).getWidth() > espacioEnFila){ // espacioEnFila < tamañoPalabra < 1035
+            if (palabras.get(i).getWidth() > espacioEnFila){
                 espacioEnFila = fila;
                 posActualX = 20;
                 posActualY = posActualY + 60;
@@ -585,16 +593,30 @@ public class Dibujar {
     
     public boolean escoman2(char caracter){
         
-        char[] ver2 = {'^','+',','};
+        char[] ver = {'^','+',','};
         
-        boolean esver2 = false;
-        for (int i=0;i<ver2.length;i++){
-            if (caracter == ver2[i]){
-                esver2 = true;
+        boolean esver = false;
+        for (int i=0;i<ver.length;i++){
+            if (caracter == ver[i]){
+                esver = true;
                 break;
             }
         }
-        return esver2;
+        return esver;
+    }
+    
+    public boolean escoman3(char caracter){
+        
+        char[] ver = {'a','A'};
+        
+        boolean esver = false;
+        for (int i=0;i<ver.length;i++){
+            if (caracter == ver[i]){
+                esver = true;
+                break;
+            }
+        }
+        return esver;
     }
 
     
