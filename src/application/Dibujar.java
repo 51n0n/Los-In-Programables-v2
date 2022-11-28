@@ -27,7 +27,7 @@ public class Dibujar {
         int size = entrada.length(); // Se guarda el tamaño de la cadena ingresada
         
         for (int i=0;i<size;i++){ // Se recorre el arreglo buscando entradas no validas
-            if ((esLetra(entrada.charAt(i)))||(esSimbolo(entrada.charAt(i)))||(entrada.charAt(i) == ' ')){
+            if ((esLetra(entrada.charAt(i)))||(esSimbolo(entrada.charAt(i)))||(entrada.charAt(i) == ' ')||esNumero(entrada.charAt(i))){
             } // Las entradas deben ser letras, simbolos, o un espacio
             else{ // Si se encuentra algo distinto entonces el retorno será false y se terminará el ciclo
                 validar = false;
@@ -101,7 +101,7 @@ public class Dibujar {
                                     salir = true;
                                 }
                             }
-                            else if(escoman1(p.charAt(j-1)) && escoman2(p.charAt(j))){ // j-1coman1 jcoman2
+                            else if((escoman1(p.charAt(j-1)) && escoman2(p.charAt(j)))||(escoman2(p.charAt(j))&&esNumero(p.charAt(j-1)))){ // j-1coman1 jcoman2
                                 //continuar
                                 if(j+1<p.length()){
                                     if(!escoman2(p.charAt(j+1)) && !escoman1(p.charAt(j+1))){
@@ -119,12 +119,9 @@ public class Dibujar {
                                     salir = true;
                                     j--;
                                 }
-                            }else if(escoman2(p.charAt(j-1)) &&){
-                                
-                            
                             }
                             else if (escoman2(p.charAt(j-1)) && escoman3(p.charAt(j))){ // j-1coman2 jcoman3
-                                while(j+1<p.length()){ // ^a234asf
+                                while(j+1<p.length()){ // ^a234,Nasf
                                     try{
                                         Integer.parseInt(p.charAt(j+1)+"");
                                         j++;
@@ -201,7 +198,7 @@ public class Dibujar {
                             case 'A':
                                 String ver="";
                                 int w=k+1;
-                                while(true){
+                                while(w<com.length()){
                                     try{
                                         Integer.parseInt(com.charAt(w)+"");//encuentra 1 solo numero
                                          ver = ver.concat(com.charAt(w)+"");// a si mismo se concatena con los njumeros de arriba
@@ -217,7 +214,7 @@ public class Dibujar {
                             case 'a':
                                 String ser="";
                                 int c=k+1;
-                                while(true){
+                                while(c<com.length()){
                                     try{
                                         Integer.parseInt(com.charAt(c)+"");//encuentra 1 solo numero
                                         ser = ser.concat(com.charAt(c)+"");// a si mismo se concatena con los njumeros de arriba
@@ -562,7 +559,22 @@ public class Dibujar {
         }
         return esLetra;
     }
-    
+    public boolean esNumero(char caracter){
+        
+        /* Se crea un arreglo que contiene las 27 letras del abecedario español, minúsculas y mayúsculas,
+           en orden de mayor frecuencia de uso (según google).*/        
+
+        boolean esNumero = false; // Se inicializa el retorno en false hasta encontrar la letra
+        try { // Si el caracter es igual a un caracter de la lista entonces es letra
+            Integer.parseInt(caracter+"");
+                esNumero = true;
+           
+        }
+        catch(NumberFormatException e){
+        }
+
+        return esNumero;
+    }
     public boolean esSimbolo(char caracter){
         
         char[] simbolos = {'!','¡','¿','?','.',',',';',':','(',')','[',']','{','}','-','_',39,'"','«','»','^','+'};
