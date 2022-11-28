@@ -15,18 +15,22 @@ public class Palabra {
     public String comando2 = new String();
     public double width;
     public double height;
+    public int angulo;
     public boolean n;
     public boolean k;
     public boolean s;
+    public boolean v;
+    public boolean h;
     public boolean A =false;
     public boolean a =false;
-    public int angulo;
     
     // Métodos
-    public Palabra(boolean n, boolean k, boolean s){
-        this.n = n;
-        this.k = k;
-        this.s = s;
+    public Palabra(){
+        this.n = false;
+        this.k = false;
+        this.s = false;
+        this.v = false;
+        this.h = false;
         this.palabra = "";
         this.comando = "";
         this.comando2 = "";
@@ -114,6 +118,22 @@ public class Palabra {
     
     public void setS(boolean s){
         this.s = s;
+    }
+    
+    public boolean isV() {
+        return v;
+    }
+    
+    public void setV(boolean v) {
+        this.v = v;
+    }
+    
+    public boolean isH() {
+        return h;
+    }
+    
+    public void setH(boolean h) {
+        this.h = h;
     }
     
     public boolean isA(){
