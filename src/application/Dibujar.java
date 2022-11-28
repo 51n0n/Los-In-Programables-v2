@@ -15,6 +15,7 @@ public class Dibujar {
     private static Color colorActual = Color.BLACK; // Valor inicial para el color de las letras
     private static Color colorControl = Color.RED;
     private static boolean puntosControl = false;
+    private static final Estilos estilos = new Estilos();
     
     private static double espacioEnFila;
     private static int charCont;
@@ -73,8 +74,9 @@ public class Dibujar {
         // Rellenar array comodin sin espacios | Al Final: Array sin Objetos Palabra de espacios
         for (int i=0;i<palabras.size();i++){
             if(!" ".equals(palabras.get(i).getPalabra())){
-                comodin.add(palabras.get(i));
+                comodin.add(palabras.get(i));        
             }
+        
         }
         
         // Validar y guardar comandos (parseo) | Al Final: Comandos validados y guardados como String en Objetos Palabra
@@ -117,6 +119,9 @@ public class Dibujar {
                                     salir = true;
                                     j--;
                                 }
+                            }else if(escoman2(p.charAt(j-1)) &&){
+                                
+                            
                             }
                             else if (escoman2(p.charAt(j-1)) && escoman3(p.charAt(j))){ // j-1coman2 jcoman3
                                 while(j+1<p.length()){ // ^a234asf
@@ -193,6 +198,38 @@ public class Dibujar {
                             case 'S':
                                 palabras.get(i).setS(true);
                                 break;
+                            case 'A':
+                                String ver="";
+                                int w=k+1;
+                                while(true){
+                                    try{
+                                        Integer.parseInt(com.charAt(w)+"");//encuentra 1 solo numero
+                                         ver = ver.concat(com.charAt(w)+"");// a si mismo se concatena con los njumeros de arriba
+                                        w++;
+                                    }
+                                    catch(NumberFormatException e){
+                                        break;
+                                    }
+                                }
+                                palabras.get(i).setAngulo(Integer.parseInt(ver));//manda todos los numeros
+                                palabras.get(i).setA(true);
+                                break;
+                            case 'a':
+                                String ser="";
+                                int c=k+1;
+                                while(true){
+                                    try{
+                                        Integer.parseInt(com.charAt(c)+"");//encuentra 1 solo numero
+                                        ser = ser.concat(com.charAt(c)+"");// a si mismo se concatena con los njumeros de arriba
+                                        c++;
+                                    }
+                                    catch(NumberFormatException e){
+                                        break;
+                                    }
+                                }
+                                palabras.get(i).setAngulo(Integer.parseInt(ser));//manda todos los numeros
+                                palabras.get(i).setA(true);
+                                break;
                             default:
                                 break;
                         }
@@ -217,6 +254,38 @@ public class Dibujar {
                                         case 'S':
                                             palabras.get(p).setS(true);
                                             break;
+                                        case 'A':
+                                            String ver="";
+                                            int w=k+1;
+                                            while(true){
+                                                try{
+                                                    Integer.parseInt(com.charAt(w)+"");//encuentra 1 solo numero
+                                                     ver = ver.concat(com.charAt(w)+"");// a si mismo se concatena con los njumeros de arriba
+                                                    w++;
+                                                }
+                                                catch(NumberFormatException e){
+                                                    break;
+                                                }
+                                            }
+                                            palabras.get(p).setAngulo(Integer.parseInt(ver));//manda todos los numeros
+                                            palabras.get(p).setA(true);
+                                            break;
+                                        case 'a':
+                                            String ser="";
+                                            int c=k+1;
+                                            while(true){
+                                                try{
+                                                    Integer.parseInt(com.charAt(c)+"");//encuentra 1 solo numero
+                                                    ser = ser.concat(com.charAt(c)+"");// a si mismo se concatena con los njumeros de arriba
+                                                    c++;
+                                                }
+                                                catch(NumberFormatException e){
+                                                    break;
+                                                }
+                                            }
+                                            palabras.get(p).setAngulo(Integer.parseInt(ser));//manda todos los numeros
+                                            palabras.get(p).setA(true);
+                                            break;
                                         case '^':
                                             salir = true;
                                             break;
@@ -236,12 +305,22 @@ public class Dibujar {
             }
         }
         
+        for(int i=0;i<palabras.size();i++){
+            System.out.println(i);
+            System.out.println("N: "+palabras.get(i).isN());
+            System.out.println("K: "+palabras.get(i).isK());
+            System.out.println("S: "+palabras.get(i).isS());
+            System.out.println("");
+        }
+        
         // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
         for (int i=0;i<palabras.size();i++){
             newDibujarPalabra(palabras.get(i));
             System.out.println(palabras.get(i).getWidth());
         }
-        
+        for (int i=0;i<palabras.size();i++){
+            estilos.rotarPalabra(palabras.get(i));
+        }
         
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
         double fila = lienzo.getWidth() - 34;
@@ -471,7 +550,8 @@ public class Dibujar {
         /* Se crea un arreglo que contiene las 27 letras del abecedario español, minúsculas y mayúsculas,
            en orden de mayor frecuencia de uso (según google).*/        
         char[] letras = {'e','a','o','s','r','n','i','d','l','c','t','u','m','p','b','g','v','y','q','h','f','z','j','ñ','x','k','w'
-                        ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','Q','H','F','Z','J','Ñ','X','K','W'};
+                        ,'E','A','O','S','R','N','I','D','L','C','T','U','M','P','B','G','V','Y','Q','H','F','Z','J','Ñ','X','K','W'
+                        ,'á','é','í','ó','ú','Á','É','Í','Ó','Ú'};
         
         boolean esLetra = false; // Se inicializa el retorno en false hasta encontrar la letra
         for (int i=0;i<letras.length;i++){ // Se recorre el arreglo
@@ -538,6 +618,7 @@ public class Dibujar {
         }
         return esver;
     }
+
     
     public double tamañoPalabra(String cadena){
         double cont = 0;
@@ -554,6 +635,9 @@ public class Dibujar {
             case 'a':
                 tamaño = 16;
                 break;
+            case 'á':
+                tamaño = 16;
+                break;
             case 'b':
                 tamaño = 16;
                 break;
@@ -566,6 +650,9 @@ public class Dibujar {
             case 'e':
                 tamaño = 15;
                 break;
+            case 'é':
+                tamaño = 15;
+                break;
             case 'f':
                 tamaño = 16;
                 break;
@@ -576,6 +663,9 @@ public class Dibujar {
                 tamaño = 19;
                 break;
             case 'i':
+                tamaño = 19;
+                break;
+            case 'í':
                 tamaño = 19;
                 break;
             case 'j':
@@ -599,6 +689,9 @@ public class Dibujar {
             case 'o':
                 tamaño = 19;
                 break;
+            case 'ó':
+                tamaño = 19;
+                break;
             case 'p':
                 tamaño = 19;
                 break;
@@ -615,6 +708,9 @@ public class Dibujar {
                 tamaño = 19;
                 break;
             case 'u':
+                tamaño = 19;
+                break;
+            case 'ú':
                 tamaño = 19;
                 break;
             case 'v':
