@@ -67,7 +67,7 @@ public class Palabra {
     public void setComando(String comando){
         this.comando = comando;
     }
-    
+
     public double getWidth() {
         return width;
     }
