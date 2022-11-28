@@ -204,4 +204,8 @@ public class Estilos {
         
     }
     
+    public void invertirOrden(int i, int j){
+        //^R
+    }
+    
 }
