@@ -68,14 +68,6 @@ public class Palabra {
         this.comando = comando;
     }
 
-    public String getComando3() {
-        return comando3;
-    }
-
-    public void setComando3(String comando3) {
-        this.comando3 = comando3;
-    }
-
     public double getWidth() {
         return width;
     }

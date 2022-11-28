@@ -196,6 +196,8 @@ public class Estilos {
         double y = palabra.getHeight();
         double x =palabra.getWidth();
         double h = sqrt((x*x)+(y*y));
+        int a= palabra.getAngulo();
+        palabra.getFondo().setRotate(a);
         //double cos = ;// recibo valor de #
         //h;// longitud = distancia
         
