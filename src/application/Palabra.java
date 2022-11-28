@@ -13,6 +13,7 @@ public class Palabra {
     public String palabra = new String();
     public String comando = new String();
     public String comando2 = new String();
+    public double height;
     public double width;
     public boolean n;
     public boolean k;
