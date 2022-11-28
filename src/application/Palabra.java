@@ -13,10 +13,15 @@ public class Palabra {
     public String palabra = new String();
     public String comando = new String();
     public String comando2 = new String();
+    public String comando3= new String();
     public double width;
+    public double height;
     public boolean n;
     public boolean k;
     public boolean s;
+    public boolean A =false;
+    public boolean a =false;
+    public int angulo;
     
     // Métodos
     public Palabra(boolean n, boolean k, boolean s){
@@ -63,7 +68,15 @@ public class Palabra {
     public void setComando(String comando){
         this.comando = comando;
     }
-    
+
+    public String getComando3() {
+        return comando3;
+    }
+
+    public void setComando3(String comando3) {
+        this.comando3 = comando3;
+    }
+
     public double getWidth() {
         return width;
     }
@@ -71,7 +84,22 @@ public class Palabra {
     public void setWidth(double width) {
         this.width = width;
     }
+    public double getHeight() {
+        return height;
+    }
     
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public int getAngulo() {
+        return angulo;
+    }
+
+    public void setAngulo(int angulo) {
+        this.angulo = angulo;
+    }
+        
     public boolean isN(){
         return n;
     }
@@ -96,4 +124,18 @@ public class Palabra {
         this.s = s;
     }
     
+    public boolean isA(){
+        return A;
+    }
+    
+    public void setA(boolean A){
+        this.A = A;
+    }
+    public boolean isa(){
+        return a;
+    }
+    
+    public void seta(boolean a){
+        this.a = a;
+    }
 }
