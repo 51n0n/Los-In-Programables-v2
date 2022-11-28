@@ -67,15 +67,7 @@ public class Palabra {
     public void setComando(String comando){
         this.comando = comando;
     }
-
-    public String getComando3() {
-        return comando3;
-    }
-
-    public void setComando3(String comando3) {
-        this.comando3 = comando3;
-    }
-
+    
     public double getWidth() {
         return width;
     }
@@ -83,6 +75,7 @@ public class Palabra {
     public void setWidth(double width) {
         this.width = width;
     }
+    
     public double getHeight() {
         return height;
     }
@@ -90,15 +83,15 @@ public class Palabra {
     public void setHeight(double height) {
         this.height = height;
     }
-
+    
     public int getAngulo() {
         return angulo;
     }
-
+    
     public void setAngulo(int angulo) {
         this.angulo = angulo;
     }
-        
+    
     public boolean isN(){
         return n;
     }
@@ -130,6 +123,7 @@ public class Palabra {
     public void setA(boolean A){
         this.A = A;
     }
+    
     public boolean isa(){
         return a;
     }
