@@ -4,6 +4,7 @@
  */
 package application;
 
+import static java.lang.Math.sqrt;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -190,6 +191,17 @@ public class Estilos {
         p.setLayoutY(circulo.getLayoutY());
         
         fondo.getChildren().add(p);
+    }
+    
+    public void rotarPalabra(Palabra palabra){
+        double y = palabra.getHeight();
+        double x =palabra.getWidth();
+        double h = sqrt((x*x)+(y*y));
+        int a= palabra.getAngulo();
+        palabra.getFondo().setRotate(a);
+        //double cos = ;// recibo valor de #
+        //h;// longitud = distancia
+        
     }
     
 }
