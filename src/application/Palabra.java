@@ -75,6 +75,7 @@ public class Palabra {
     public void setWidth(double width) {
         this.width = width;
     }
+    
     public double getHeight() {
         return height;
     }
@@ -82,15 +83,15 @@ public class Palabra {
     public void setHeight(double height) {
         this.height = height;
     }
-
+    
     public int getAngulo() {
         return angulo;
     }
-
+    
     public void setAngulo(int angulo) {
         this.angulo = angulo;
     }
-        
+    
     public boolean isN(){
         return n;
     }
@@ -122,6 +123,7 @@ public class Palabra {
     public void setA(boolean A){
         this.A = A;
     }
+    
     public boolean isa(){
         return a;
     }

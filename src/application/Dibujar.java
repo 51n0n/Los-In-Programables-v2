@@ -121,7 +121,7 @@ public class Dibujar {
                                 }
                             }
                             else if (escoman2(p.charAt(j-1)) && escoman3(p.charAt(j))){ // j-1coman2 jcoman3
-                                while(j+1<p.length()){ // ^a234,Nasf
+                                while(j+1<p.length()){ // ^a234+N
                                     try{
                                         Integer.parseInt(p.charAt(j+1)+"");
                                         j++;
