@@ -192,6 +192,7 @@ public class Estilos {
         
         fondo.getChildren().add(p);
     }
+    
     public void rotarPalabra(Palabra palabra){
         double y = palabra.getHeight();
         double x =palabra.getWidth();
@@ -202,4 +203,5 @@ public class Estilos {
         //h;// longitud = distancia
         
     }
+    
 }

@@ -49,7 +49,7 @@ public class Dibujar {
         int cont = 0; // Contador de Palabras
         for (int i=0;i<entrada.length();i++){ // Se recorre la entrada
             
-            palabras.add(new Palabra(false,false,false)); // Nuevo objeto Palabra
+            palabras.add(new Palabra()); // Nuevo objeto Palabra
             
             if (entrada.charAt(i) != ' '){ // i es inicio de Palabra
                 int j = i;
@@ -121,12 +121,11 @@ public class Dibujar {
                                 }
                             }
                             else if (escoman2(p.charAt(j-1)) && escoman3(p.charAt(j))){ // j-1coman2 jcoman3
-                                while(j+1<p.length()){ // ^a234,Nasf
-                                    try{
-                                        Integer.parseInt(p.charAt(j+1)+"");
+                                while(j+1<p.length()){ // ^a234+N
+                                    if (esNumero(p.charAt(j+1))){
                                         j++;
                                     }
-                                    catch(NumberFormatException e){
+                                    else{
                                         break;
                                     }
                                 }
@@ -195,37 +194,45 @@ public class Dibujar {
                             case 'S':
                                 palabras.get(i).setS(true);
                                 break;
+                            case 'V':
+                                palabras.get(i).setV(true);
+                                break;
+                            case 'H':
+                                palabras.get(i).setH(true);
+                                break;
                             case 'A':
                                 String ver="";
                                 int w=k+1;
                                 while(w<com.length()){
-                                    try{
-                                        Integer.parseInt(com.charAt(w)+"");//encuentra 1 solo numero
-                                         ver = ver.concat(com.charAt(w)+"");// a si mismo se concatena con los njumeros de arriba
+                                    if (esNumero(com.charAt(w))){
+                                        ver = ver.concat(com.charAt(w)+"");
                                         w++;
                                     }
-                                    catch(NumberFormatException e){
+                                    else{
                                         break;
                                     }
                                 }
-                                palabras.get(i).setAngulo(Integer.parseInt(ver));//manda todos los numeros
-                                palabras.get(i).setA(true);
+                                if (esNumero(ver)){
+                                    palabras.get(i).setAngulo(Integer.parseInt(ver));//manda todos los numeros
+                                    palabras.get(i).setA(true);
+                                }
                                 break;
                             case 'a':
                                 String ser="";
                                 int c=k+1;
                                 while(c<com.length()){
-                                    try{
-                                        Integer.parseInt(com.charAt(c)+"");//encuentra 1 solo numero
-                                        ser = ser.concat(com.charAt(c)+"");// a si mismo se concatena con los njumeros de arriba
+                                    if (esNumero(com.charAt(c))){
+                                        ser = ser.concat(com.charAt(c)+""); // a si mismo se concatena con los numeros de arriba
                                         c++;
                                     }
-                                    catch(NumberFormatException e){
+                                    else{
                                         break;
                                     }
                                 }
-                                palabras.get(i).setAngulo(Integer.parseInt(ser));//manda todos los numeros
-                                palabras.get(i).setA(true);
+                                if (esNumero(ser)){
+                                    palabras.get(i).setAngulo(Integer.parseInt(ser)); //manda todos los numeros
+                                    palabras.get(i).setA(true);
+                                }
                                 break;
                             default:
                                 break;
@@ -255,33 +262,35 @@ public class Dibujar {
                                             String ver="";
                                             int w=k+1;
                                             while(true){
-                                                try{
-                                                    Integer.parseInt(com.charAt(w)+"");//encuentra 1 solo numero
-                                                     ver = ver.concat(com.charAt(w)+"");// a si mismo se concatena con los njumeros de arriba
+                                                if (esNumero(com.charAt(w))){
+                                                    ver = ver.concat(com.charAt(w)+""); // a si mismo se concatena con los numeros de arriba
                                                     w++;
                                                 }
-                                                catch(NumberFormatException e){
+                                                else{
                                                     break;
                                                 }
                                             }
-                                            palabras.get(p).setAngulo(Integer.parseInt(ver));//manda todos los numeros
-                                            palabras.get(p).setA(true);
+                                            if (esNumero(ver)){
+                                                palabras.get(p).setAngulo(Integer.parseInt(ver));//manda todos los numeros
+                                                palabras.get(p).setA(true);
+                                            }
                                             break;
                                         case 'a':
                                             String ser="";
                                             int c=k+1;
                                             while(true){
-                                                try{
-                                                    Integer.parseInt(com.charAt(c)+"");//encuentra 1 solo numero
-                                                    ser = ser.concat(com.charAt(c)+"");// a si mismo se concatena con los njumeros de arriba
+                                                if (esNumero(com.charAt(c))){
+                                                    ser = ser.concat(com.charAt(c)+"");// a si mismo se concatena con los numeros de arriba
                                                     c++;
                                                 }
-                                                catch(NumberFormatException e){
+                                                else{
                                                     break;
                                                 }
                                             }
-                                            palabras.get(p).setAngulo(Integer.parseInt(ser));//manda todos los numeros
-                                            palabras.get(p).setA(true);
+                                            if (esNumero(ser)){
+                                                palabras.get(p).setAngulo(Integer.parseInt(ser));//manda todos los numeros
+                                                palabras.get(p).setA(true);
+                                            }
                                             break;
                                         case '^':
                                             salir = true;
@@ -367,7 +376,7 @@ public class Dibujar {
         
         // Se guardan palabras y espacios
         for (int i=0;i<entrada.length();i++){
-            palabras.add(new Palabra(false,false,false));
+            palabras.add(new Palabra());
             if (entrada.charAt(i) != ' '){
                 int j = i;
                 while (j<entrada.length()){
@@ -559,22 +568,33 @@ public class Dibujar {
         }
         return esLetra;
     }
-    public boolean esNumero(char caracter){
-        
-        /* Se crea un arreglo que contiene las 27 letras del abecedario español, minúsculas y mayúsculas,
-           en orden de mayor frecuencia de uso (según google).*/        
+    
+    public boolean esNumero(char caracter){  
 
-        boolean esNumero = false; // Se inicializa el retorno en false hasta encontrar la letra
-        try { // Si el caracter es igual a un caracter de la lista entonces es letra
+        boolean esNumero; // Se inicializa el retorno en false
+        try {
             Integer.parseInt(caracter+"");
-                esNumero = true;
-           
+            esNumero = true;
         }
         catch(NumberFormatException e){
+            esNumero = false;
         }
-
         return esNumero;
     }
+    
+    public boolean esNumero(String cadena){  
+
+        boolean esNumero; // Se inicializa el retorno en false
+        try {
+            Integer.parseInt(cadena);
+            esNumero = true;
+        }
+        catch(NumberFormatException e){
+            esNumero = false;
+        }
+        return esNumero;
+    }
+    
     public boolean esSimbolo(char caracter){
         
         char[] simbolos = {'!','¡','¿','?','.',',',';',':','(',')','[',']','{','}','-','_',39,'"','«','»','^','+'};
@@ -591,7 +611,7 @@ public class Dibujar {
     
     public boolean escoman1(char caracter){
         
-        char[] ver = {'N','K','S'};
+        char[] ver = {'N','K','S','R','V','H'};
         
         boolean esver = false;
         for (int i=0;i<ver.length;i++){
@@ -619,7 +639,7 @@ public class Dibujar {
     
     public boolean escoman3(char caracter){
         
-        char[] ver = {'a','A'};
+        char[] ver = {'a','A','X','Y'};
         
         boolean esver = false;
         for (int i=0;i<ver.length;i++){
