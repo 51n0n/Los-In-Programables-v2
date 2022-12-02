@@ -196,12 +196,34 @@ public class Estilos {
     public void rotarPalabra(Palabra palabra){
         double y = palabra.getHeight();
         double x =palabra.getWidth();
-        double h = sqrt((x*x)+(y*y));
-        int a= palabra.getAngulo();
-        palabra.getFondo().setRotate(a);
-        //double cos = ;// recibo valor de #
-        //h;// longitud = distancia
-        
+        double newx=0;
+        double newy=0;
+        //double h = sqrt((x*x)+(y*y));
+        int a= palabra.getAngulo()*-1;
+        double rad=Math.toRadians(a);
+        double sin=Math.sin(rad);
+        double cos=Math.cos(rad);     
+            if(a>360){
+                while(a>360){
+                    a=a-360;
+                }
+            }
+            if(0<a && a<=90){ //primer cuadrante
+                cos=cos*1;
+                sin=sin*1;
+            }if(90<a && a<=180){//segundo cuadrante
+                cos=cos*-1;
+                sin=sin*1;
+            }if(180<a && a<=270){//tercer cuadrante
+                cos=cos*-1;
+                sin=sin*-1;
+            }if(270<a && a<=360){
+                cos=cos*1;
+                sin=sin*-1;
+            }
+            newx=(x*cos)+(y*cos);
+            newy=(x*sin)+(y*sin);
+      
     }
     
 }
