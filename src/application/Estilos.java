@@ -196,8 +196,6 @@ public class Estilos {
     public void rotarPalabra(Palabra palabra){
         double y = palabra.getHeight();
         double x =palabra.getWidth();
-        double newx=0;
-        double newy=0;
         //double h = sqrt((x*x)+(y*y));
         int a= palabra.getAngulo()*-1;
         double rad=Math.toRadians(a);
@@ -221,8 +219,9 @@ public class Estilos {
                 cos=cos*1;
                 sin=sin*-1;
             }
-            newx=(x*cos)+(y*cos);
-            newy=(x*sin)+(y*sin);
+        palabra.setWidth((x*cos)+(y*cos));
+        palabra.setHeight((x*sin)+(y*sin));
+        palabra.getFondo().setRotate(a);
       
     }
     

@@ -5250,7 +5250,7 @@ public class CrearCaracteres {
             case '+':
                 return fondo;
             default:
-                return null;
+                return fondo;
         }
     }
     

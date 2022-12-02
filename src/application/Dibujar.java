@@ -290,7 +290,9 @@ public class Dibujar {
                                             if (esNumero(ser)){
                                                 palabras.get(p).setAngulo(Integer.parseInt(ser));//manda todos los numeros
                                                 palabras.get(p).setA(true);
+                                            
                                             }
+                                            
                                             break;
                                         case '^':
                                             salir = true;
@@ -350,6 +352,7 @@ public class Dibujar {
     public void newDibujarPalabra(Palabra palabra){
         String p = palabra.getPalabra();
         AnchorPane fondo = palabra.getFondo();
+        if(!"".equals(p)){
         double pos = 0;
         for (int i=0;i<p.length();i++){
             AnchorPane aux = llamar.dibujarCaracter(p.charAt(i), palabra);
@@ -359,6 +362,7 @@ public class Dibujar {
         }
         palabra.setWidth(pos);
         lienzo.getChildren().add(fondo); // Se agrega la palabra a la interfaz
+        }
     }
     
     public void guardarPalabras(String entrada, AnchorPane lienzo){
