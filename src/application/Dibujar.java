@@ -194,6 +194,9 @@ public class Dibujar {
                             case 'S':
                                 palabras.get(i).setS(true);
                                 break;
+                            case 'R':
+                                estilos.invertirOrden(palabras,i, palabras.size()-1);
+                                break;
                             case 'V':
                                 palabras.get(i).setV(true);
                                 break;
@@ -261,6 +264,9 @@ public class Dibujar {
                                             break;
                                         case 'S':
                                             palabras.get(p).setS(true);
+                                            break;
+                                        case 'R':
+                                            estilos.invertirOrden(palabras,i, palabras.size()-1);
                                             break;
                                         case 'A':
                                             String ver="";

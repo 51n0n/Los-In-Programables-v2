@@ -5,6 +5,7 @@
 package application;
 
 import static java.lang.Math.sqrt;
+import java.util.ArrayList;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -223,6 +224,16 @@ public class Estilos {
         palabra.setHeight((x*sin)+(y*sin));
         palabra.getFondo().setRotate(a);
       
+    }
+    
+    public void invertirOrden(ArrayList<Palabra> palabras,int i, int j){
+        while (i<j){
+            Palabra aux = palabras.get(i);
+            palabras.set(i, palabras.get(j));
+            palabras.set(j, aux);
+            i++;
+            j--;
+        }
     }
     
 }
