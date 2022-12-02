@@ -213,8 +213,12 @@ public class Dibujar {
                                     }
                                 }
                                 if (esNumero(ver)){
-                                    palabras.get(i).setAngulo(Integer.parseInt(ver));//manda todos los numeros
-                                    palabras.get(i).setA(true);
+                                    int f=i;
+                                    while(f<palabras.size()){
+                                        palabras.get(f).setAngulo(Integer.parseInt(ver));//manda todos los numeros
+                                        palabras.get(f).setA(true);
+                                        f++;
+                                    }
                                 }
                                 break;
                             case 'a':
@@ -271,8 +275,12 @@ public class Dibujar {
                                                 }
                                             }
                                             if (esNumero(ver)){
-                                                palabras.get(p).setAngulo(Integer.parseInt(ver));//manda todos los numeros
-                                                palabras.get(p).setA(true);
+                                                int g=i;
+                                                while(g<palabras.size()){
+                                                    palabras.get(g).setAngulo(Integer.parseInt(ver));//manda todos los numeros
+                                                    palabras.get(g).setA(true);
+                                                    g++;
+                                                }
                                             }
                                             break;
                                         case 'a':
