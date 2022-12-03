@@ -4,7 +4,6 @@
  */
 package application;
 
-import static java.lang.Math.sqrt;
 import java.util.ArrayList;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -196,34 +195,41 @@ public class Estilos {
     
     public void rotarPalabra(Palabra palabra){
         double y = palabra.getHeight();
-        double x =palabra.getWidth();
-        //double h = sqrt((x*x)+(y*y));
-        int a= palabra.getAngulo()*-1;
-        double rad=Math.toRadians(a);
-        double sin=Math.sin(rad);
-        double cos=Math.cos(rad);     
-            if(a>360){
-                while(a>360){
-                    a=a-360;
-                }
+        double x = palabra.getWidth();
+        int a = palabra.getAngulo()*-1;
+        double rad = Math.toRadians(a);
+        double sin = Math.sin(rad);
+        double cos = Math.cos(rad);     
+        
+        if(a>360){
+            while(a>360){
+                a=a-360;
             }
-            if(0<a && a<=90){ //primer cuadrante
-                cos=cos*1;
-                sin=sin*1;
-            }if(90<a && a<=180){//segundo cuadrante
-                cos=cos*-1;
-                sin=sin*1;
-            }if(180<a && a<=270){//tercer cuadrante
-                cos=cos*-1;
-                sin=sin*-1;
-            }if(270<a && a<=360){
-                cos=cos*1;
-                sin=sin*-1;
-            }
+        }
+        
+        if(0<a && a<=90){ //primer cuadrante
+            cos=cos*1;
+            sin=sin*1;
+        }
+        
+        if(90<a && a<=180){ //segundo cuadrante
+            cos=cos*-1;
+            sin=sin*1;
+        }
+        
+        if(180<a && a<=270){ //tercer cuadrante
+            cos=cos*-1;
+            sin=sin*-1;
+        }
+        
+        if(270<a && a<=360){ //cuarto cuadrante
+            cos=cos*1;
+            sin=sin*-1;
+        }
+        
         palabra.setWidth((x*cos)+(y*cos));
         palabra.setHeight((x*sin)+(y*sin));
         palabra.getFondo().setRotate(a);
-      
     }
     
     public void invertirOrden(ArrayList<Palabra> palabras,int i, int j){
@@ -234,6 +240,11 @@ public class Estilos {
             i++;
             j--;
         }
+    }
+    
+    public void traslación(Palabra palabra){
+        palabra.getFondo().setTranslateX(palabra.gettX());
+        palabra.getFondo().setTranslateY(palabra.gettY());
     }
     
 }

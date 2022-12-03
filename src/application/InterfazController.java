@@ -48,15 +48,15 @@ public class InterfazController implements Initializable {
                 event.consume();
             }
         });
-        /*
+        
         ventana.setOnMouseMoved((MouseEvent event) -> { //SOLUCIÓN CHANCHA
             dibujar.getLienzo().getChildren().clear();
-            dibujar.nuevoMetodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
+            dibujar.metodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
         });
-        */
+        
         textoEntrada.setOnKeyReleased((KeyEvent event) -> {
             dibujar.getLienzo().getChildren().clear();
-            dibujar.nuevoMetodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
+            dibujar.metodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
             //dibujar.guardarPalabras("^NLOS ^NIN-PROGRAMABLES",titulo);
         });
     }
@@ -67,7 +67,7 @@ public class InterfazController implements Initializable {
         Color nuevoColor = letrasColor.getValue(); // Se obtiene el valor de color del color picker de la interfaz
         dibujar.setColor(nuevoColor); // Se llama al setter del color para las letras y se asigna el color seleccionado en la interfaz
         dibujar.getLienzo().getChildren().clear();
-        dibujar.nuevoMetodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
+        dibujar.metodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
     }
     
     @FXML
@@ -75,7 +75,7 @@ public class InterfazController implements Initializable {
         Color nuevoColor = puntosColor.getValue();
         dibujar.setColorControl(nuevoColor);
         dibujar.getLienzo().getChildren().clear();
-        dibujar.nuevoMetodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
+        dibujar.metodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
     }
     
     @FXML
@@ -83,7 +83,7 @@ public class InterfazController implements Initializable {
         dibujar.setControl(botonPuntos.isSelected());
         dibujar.setColorControl(puntosColor.getValue());
         dibujar.getLienzo().getChildren().clear();
-        dibujar.nuevoMetodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
+        dibujar.metodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
     }
     
 }
