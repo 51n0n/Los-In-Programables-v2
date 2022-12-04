@@ -196,7 +196,7 @@ public class Estilos {
     public void rotarPalabra(Palabra palabra){
         double y = palabra.getHeight();
         double x = palabra.getWidth();
-        int a = palabra.getAngulo()*-1;
+        int a = palabra.getAngulo();
         double rad = Math.toRadians(a);
         double sin = Math.sin(rad);
         double cos = Math.cos(rad);     
@@ -229,7 +229,7 @@ public class Estilos {
         
         palabra.setWidth((x*cos)+(y*cos));
         palabra.setHeight((x*sin)+(y*sin));
-        palabra.getFondo().setRotate(a);
+        palabra.getFondo().setRotate(a*(-1));
     }
     
     public void invertirOrden(ArrayList<Palabra> palabras,int i, int j){

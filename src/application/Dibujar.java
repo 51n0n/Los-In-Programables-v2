@@ -384,21 +384,13 @@ public class Dibujar {
             }
         }
         
-        for(int i=0;i<palabras.size();i++){
-            System.out.println(i);
-            System.out.println("N: "+palabras.get(i).isN());
-            System.out.println("K: "+palabras.get(i).isK());
-            System.out.println("S: "+palabras.get(i).isS());
-            System.out.println("");
-        }
-        
         // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
         for (int i=0;i<palabras.size();i++){
             dibujarPalabra(palabras.get(i));
             estilos.rotarPalabra(palabras.get(i));
             estilos.traslación(palabras.get(i));
         }
-        
+        /*
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
         double fila = lienzo.getWidth() - 34;
         espacioEnFila = fila; // Guarda cuanto espacio queda en una fila
@@ -416,7 +408,7 @@ public class Dibujar {
             posActualX = posActualX + palabras.get(i).getWidth(); // Aumento de la posición X por el espacio usado
             espacioEnFila = espacioEnFila - palabras.get(i).getWidth(); // Se resta el espacio usado al disponible
         }
-        /*
+        */
         // Nuevo Posicionamiento
         double fila = lienzo.getWidth() - 34;
         posActualY = 20;
@@ -431,6 +423,7 @@ public class Dibujar {
             
             while (i < palabras.size()){
                 if (palabras.get(i).getWidth() < espacioEnFila){ // Se obtiene el MAX Y de la fila
+                    System.out.println(palabras.get(i).getHeight());
                     if (palabras.get(i).getHeight() > max){
                         max = palabras.get(i).getHeight();
                     }
@@ -453,7 +446,7 @@ public class Dibujar {
                 ini++;
             }
         }
-        */
+        
     }
     
     public void dibujarPalabra(Palabra palabra){
@@ -468,6 +461,7 @@ public class Dibujar {
             pos = pos + tamañoCaracter(p.charAt(i)); // Posición de los caracteres respecto a la palabra
         }
         palabra.setWidth(pos);
+        palabra.setHeight(60);
         lienzo.getChildren().add(fondo); // Se agrega la palabra a la interfaz
         }
     }
