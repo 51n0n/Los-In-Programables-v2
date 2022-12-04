@@ -32,6 +32,8 @@ public class Palabra {
     public boolean v;
     public boolean h;
     public int aucont;
+    public boolean a;
+    public boolean A;
     
     // Métodos
     public Palabra(){
@@ -165,6 +167,22 @@ public class Palabra {
     
     public void setH(boolean h) {
         this.h = h;
+    }
+    
+    public boolean is_a() {
+        return a;
+    }
+    
+    public void set_a(boolean a) {
+        this.a = a;
+    }
+    
+    public boolean isA() {
+        return A;
+    }
+    
+    public void setA(boolean A) {
+        this.A = A;
     }
     
 }

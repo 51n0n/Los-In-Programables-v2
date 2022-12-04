@@ -91,7 +91,7 @@ public class Dibujar {
                         for (j=k+1;j<p.length() && !salir;j++){
                             if(esComan2(p.charAt(j-1)) && esComan1(p.charAt(j))){ // j-1coman2 jcoman1
                                 if(j+1<p.length()){
-                                    if(!esComan2(p.charAt(j+1))){
+                                    if(!esComan2(p.charAt(j+1)) && !esComan1(p.charAt(j+1))){
                                         salir = true;
                                     }
                                 }
@@ -100,10 +100,10 @@ public class Dibujar {
                                     salir = true;
                                 }
                             }
-                            else if((esComan2(p.charAt(j))) && (esComan1(p.charAt(j-1)) || esNumero(p.charAt(j-1)))){ // j-1coman1 jcoman2
+                            else if((esComan1(p.charAt(j-1)) && esComan2(p.charAt(j)))||(esComan2(p.charAt(j))&&esNumero(p.charAt(j-1)))){ // j-1coman1 jcoman2
                                 //continuar
                                 if(j+1<p.length()){
-                                    if(!esComan2(p.charAt(j+1)) && !esComan1(p.charAt(j+1)) && !esComan3(p.charAt(j+1))){
+                                    if(!esComan2(p.charAt(j+1)) && !esComan1(p.charAt(j+1))){
                                         salir = true;
                                         j--;
                                     }
@@ -120,14 +120,12 @@ public class Dibujar {
                                 }
                             }
                             else if (esComan2(p.charAt(j-1)) && esComan3(p.charAt(j))){ // j-1coman2 jcoman3
-                                boolean salir2 = false;
-                                while(j+1<p.length() && !salir2){ // ^a234+N
+                                while(j+1<p.length()){ // ^a234+N
                                     if (esNumero(p.charAt(j+1))){
                                         j++;
                                     }
                                     else{
-                                        j--;
-                                        salir2 = true;
+                                        break;
                                     }
                                 }
                             }
@@ -186,28 +184,28 @@ public class Dibujar {
                     String com = palabras.get(i).getComando();
                     for (int k=0;k<com.length();k++){
                         switch (com.charAt(k)){
-                            case 'N': // Negrita
+                            case 'N':
                                 palabras.get(i).setN(true);
                                 break;
-                            case 'K': // Cursiva
+                            case 'K':
                                 palabras.get(i).setK(true);
                                 break;
-                            case 'S': // Subrayado
+                            case 'S':
                                 palabras.get(i).setS(true);
                                 break;
-                            case 'R': // Invertir Orden
-                                estilos.invertirOrden(palabras,i,palabras.size()-1);
+                            case 'R':
+                                estilos.invertirOrden(palabras,i, palabras.size()-1);
                                 break;
-                            case 'V': // Espejo Vertical
+                            case 'V':
                                 palabras.get(i).setV(true);
                                 break;
-                            case 'H': // Espejo Horizontal
+                            case 'H':
                                 palabras.get(i).setH(true);
                                 break;
-                            case 'A': // Rotación de Palabras
+                            case 'A':
                                 String ver = "";
                                 int w = k+1;
-                                while(w<com.length()){
+                                while(w < com.length()){
                                     if (esNumero(com.charAt(w))){
                                         ver = ver.concat(com.charAt(w)+"");
                                         w++;
@@ -217,17 +215,18 @@ public class Dibujar {
                                     }
                                 }
                                 if (esNumero(ver)){
-                                    int f=i;
-                                    while(f<palabras.size()){
+                                    int f = i;
+                                    while(f < palabras.size()){
                                         palabras.get(f).setAngulo(Integer.parseInt(ver));//manda todos los numeros
+                                        palabras.get(f).setA(true);
                                         f++;
                                     }
                                 }
                                 break;
-                            case 'a': // Rotación de una Palabra
+                            case 'a':
                                 String ser = "";
                                 int c = k+1;
-                                while(c<com.length()){
+                                while(c < com.length()){
                                     if (esNumero(com.charAt(c))){
                                         ser = ser.concat(com.charAt(c)+""); // a si mismo se concatena con los numeros de arriba
                                         c++;
@@ -238,12 +237,13 @@ public class Dibujar {
                                 }
                                 if (esNumero(ser)){
                                     palabras.get(i).setAngulo(Integer.parseInt(ser)); //manda todos los numeros
+                                    palabras.get(i).set_a(true);
                                 }
                                 break;
                             case 'X':
                                 String der = "";
                                 int d = k+1;
-                                while(d<com.length()){
+                                while(d < com.length()){
                                     if (esNumero(com.charAt(d))){
                                         der = der.concat(com.charAt(d)+""); // a si mismo se concatena con los numeros de arriba
                                         d++;
@@ -259,7 +259,7 @@ public class Dibujar {
                             case 'Y':
                                 String fer = "";
                                 int f = k+1;
-                                while(f<com.length()){
+                                while(f < com.length()){
                                     if (esNumero(com.charAt(f))){
                                         fer = fer.concat(com.charAt(f)+""); // a si mismo se concatena con los numeros de arriba
                                         f++;
@@ -287,22 +287,22 @@ public class Dibujar {
                             while (k>0){ // Recorre hacia atras el comando
                                 if (com.charAt(k) != ','){ // ^N,K,S k=5
                                     switch (com.charAt(k)){
-                                        case 'N': // Negrita
+                                        case 'N':
                                             palabras.get(p).setN(true);
                                             break;
-                                        case 'K': // Cursiva
+                                        case 'K':
                                             palabras.get(p).setK(true);
                                             break;
-                                        case 'S': // Subrayado
+                                        case 'S':
                                             palabras.get(p).setS(true);
                                             break;
-                                        case 'R': // Invertir Orden
-                                            estilos.invertirOrden(palabras,p, palabras.size()-1);
+                                        case 'R':
+                                            estilos.invertirOrden(palabras,i, palabras.size()-1);
                                             break;
-                                        case 'A': // Rotación de Palabras
+                                        case 'A':
                                             String ver = "";
                                             int w = k+1;
-                                            while(true){
+                                            while(w < com.length()){
                                                 if (esNumero(com.charAt(w))){
                                                     ver = ver.concat(com.charAt(w)+""); // a si mismo se concatena con los numeros de arriba
                                                     w++;
@@ -313,16 +313,17 @@ public class Dibujar {
                                             }
                                             if (esNumero(ver)){
                                                 int g = p;
-                                                while(g<palabras.size()){
+                                                while(g < palabras.size()){
                                                     palabras.get(g).setAngulo(Integer.parseInt(ver));//manda todos los numeros
+                                                    palabras.get(g).setA(true);
                                                     g++;
                                                 }
                                             }
                                             break;
-                                        case 'a': // Rotación de una Palabra
+                                        case 'a':
                                             String ser = "";
                                             int c = k+1;
-                                            while(true){
+                                            while(c < com.length()){
                                                 if (esNumero(com.charAt(c))){
                                                     ser = ser.concat(com.charAt(c)+"");// a si mismo se concatena con los numeros de arriba
                                                     c++;
@@ -333,12 +334,13 @@ public class Dibujar {
                                             }
                                             if (esNumero(ser)){
                                                 palabras.get(p).setAngulo(Integer.parseInt(ser));//manda todos los numeros
+                                                palabras.get(p).set_a(true);
                                             }
                                             break;
                                         case 'X':
                                             String der = "";
                                             int d = k+1;
-                                            while(d<com.length()){
+                                            while(d < com.length()){
                                                 if (esNumero(com.charAt(d))){
                                                     der = der.concat(com.charAt(d)+""); // a si mismo se concatena con los numeros de arriba
                                                     d++;
@@ -354,7 +356,7 @@ public class Dibujar {
                                         case 'Y':
                                             String fer = "";
                                             int f = k+1;
-                                            while(f<com.length()){
+                                            while(f < com.length()){
                                                 if (esNumero(com.charAt(f))){
                                                     fer = fer.concat(com.charAt(f)+""); // a si mismo se concatena con los numeros de arriba
                                                     f++;
@@ -400,6 +402,7 @@ public class Dibujar {
         posActualY = 20; // Guardará la posición Y a usar al momento de dibujar
         
         for (int i=0;i<palabras.size();i++){
+            System.out.println(palabras.get(i).getWidth());
             if (palabras.get(i).getWidth() > espacioEnFila){
                 espacioEnFila = fila;
                 posActualX = 20;
@@ -410,6 +413,45 @@ public class Dibujar {
             posActualX = posActualX + palabras.get(i).getWidth(); // Aumento de la posición X por el espacio usado
             espacioEnFila = espacioEnFila - palabras.get(i).getWidth(); // Se resta el espacio usado al disponible
         }
+        /*
+        // Nuevo Posicionamiento
+        double fila = lienzo.getWidth() - 34;
+        posActualY = 20;
+        int i = 0;
+        
+        while (i < palabras.size()){
+            
+            espacioEnFila = fila;
+            double max = palabras.get(i).getHeight();
+            
+            int ini = i;
+            
+            while (i < palabras.size()){
+                if (palabras.get(i).getWidth() < espacioEnFila){ // Se obtiene el MAX Y de la fila
+                    System.out.println(palabras.get(i).getHeight());
+                    if (palabras.get(i).getHeight() > max){
+                        max = palabras.get(i).getHeight();
+                    }
+                    espacioEnFila = espacioEnFila - palabras.get(i).getWidth();
+                    i++;
+                }
+            }
+            
+            int fin = i;
+            
+            espacioEnFila = fila; // Guarda cuanto espacio queda en una fila
+            posActualX = 20; // Guardará la posición X a usar al momento de dibujar
+            posActualY = posActualY + (max/2); // Guardará la posición Y a usar al momento de dibujar
+            
+            while (ini < fin){
+                palabras.get(ini).getFondo().setLayoutX(posActualX);
+                palabras.get(ini).getFondo().setLayoutY(posActualY);
+                posActualX = posActualX + palabras.get(ini).getWidth(); // Aumento de la posición X por el espacio usado
+                espacioEnFila = espacioEnFila - palabras.get(ini).getWidth(); // Se resta el espacio usado al disponible
+                ini++;
+            }
+        }
+        */
     }
     
     public void dibujarPalabra(Palabra palabra){
@@ -425,6 +467,7 @@ public class Dibujar {
             palabra.setAucont(palabra.getAucont()+1);
         }
         palabra.setWidth(pos);
+        palabra.setHeight(60);
         lienzo.getChildren().add(fondo); // Se agrega la palabra a la interfaz
         }
     }
