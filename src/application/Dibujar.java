@@ -422,6 +422,7 @@ public class Dibujar {
             aux.setLayoutX(pos);
             fondo.getChildren().add(aux); // Se agregan los caracteres
             pos = pos + tamañoCaracter(p.charAt(i)); // Posición de los caracteres respecto a la palabra
+            palabra.setAucont(palabra.getAucont()+1);
         }
         palabra.setWidth(pos);
         lienzo.getChildren().add(fondo); // Se agrega la palabra a la interfaz

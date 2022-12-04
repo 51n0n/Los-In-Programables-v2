@@ -20,9 +20,18 @@ public class Palabra {
     public int tY;
     public boolean n;
     public boolean k;
+
+    public int getAucont() {
+        return aucont;
+    }
+
+    public void setAucont(int aucont) {
+        this.aucont = aucont;
+    }
     public boolean s;
     public boolean v;
     public boolean h;
+    public int aucont;
     
     // Métodos
     public Palabra(){
