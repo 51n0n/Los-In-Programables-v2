@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.QuadCurve?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ventana" minHeight="340.0" minWidth="650.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterfazController">
+<AnchorPane fx:id="ventana" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InterfazController">
    <children>
       <BorderPane minHeight="340.0" minWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
@@ -338,7 +338,7 @@
                                           </MenuItem>
                                           <MenuItem mnemonicParsing="false">
                                              <graphic>
-                                                <ToggleButton fx:id="botonPuntos" mnemonicParsing="false" onAction="#puntosControl" text="Puntos Control" />
+                                                <ToggleButton fx:id="botonPuntos" mnemonicParsing="false" onAction="#puntosControl" text="Puntos de Control" />
                                              </graphic>
                                           </MenuItem>
                                       </items>
