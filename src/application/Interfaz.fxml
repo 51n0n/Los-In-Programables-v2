@@ -299,7 +299,7 @@
                      <center>
                         <AnchorPane minHeight="90.0" minWidth="214.0" prefHeight="450.0" prefWidth="1070.0">
                            <children>
-                              <AnchorPane fx:id="lienzo" minHeight="90.0" minWidth="214.0" prefHeight="450.0" prefWidth="1070.0" style="-fx-background-color: lightgray; -fx-border-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <AnchorPane fx:id="lienzo" minHeight="90.0" minWidth="214.0" prefHeight="450.0" prefWidth="1070.0" style="-fx-background-color: lightgray; -fx-border-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </center>
