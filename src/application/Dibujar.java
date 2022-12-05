@@ -297,7 +297,7 @@ public class Dibujar {
                                             palabras.get(p).setS(true);
                                             break;
                                         case 'R':
-                                            estilos.invertirOrden(palabras,i, palabras.size()-1);
+                                            estilos.invertirOrden(palabras,p, palabras.size()-1);
                                             break;
                                         case 'V':
                                             palabras.get(p).setV(true);
