@@ -313,7 +313,7 @@
                                  <children>
                                     <TextField fx:id="textoEntrada" minHeight="8.0" minWidth="214.0" prefHeight="40.0" prefWidth="930.0" promptText="Escriba aquí" style="-fx-background-color: #B03570;">
                                        <font>
-                                          <Font size="25.0" />
+                                          <Font size="20.0" />
                                        </font>
                                     </TextField>
                                     <MenuButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="120.0" style="-fx-background-color: #B00055;" text="Opciones" textFill="WHITE">
