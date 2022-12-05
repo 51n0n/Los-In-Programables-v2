@@ -408,7 +408,6 @@ public class Dibujar {
         posActualY = 20; // Guardará la posición Y a usar al momento de dibujar
         
         for (int i=0;i<palabras.size();i++){
-            System.out.println(palabras.get(i).getWidth());
             if (palabras.get(i).getWidth() > espacioEnFila){
                 espacioEnFila = fila;
                 posActualX = 20;
