@@ -4,6 +4,8 @@
  */
 package application;
 
+import java.util.ArrayList;
+import javafx.geometry.Point3D;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -16,7 +18,7 @@ import javafx.scene.shape.StrokeLineJoin;
 
 public class Estilos {
     
-    Dibujar dibujar = new Dibujar();
+    private static final Dibujar dibujar = new Dibujar();
     
     public void lineaNegrita(Line linea, AnchorPane fondo){
         Line ancho1 = new Line(linea.getStartX(),linea.getStartY(),linea.getEndX(),linea.getEndY());
@@ -85,10 +87,10 @@ public class Estilos {
     }
     
     public void lineaControl(Line linea, AnchorPane fondo){
-        Circle p1 = new Circle(linea.getStartX(),linea.getStartY(),2,Color.RED);
+        Circle p1 = new Circle(linea.getStartX(),linea.getStartY(),2,dibujar.getColorControl());
         p1.setLayoutX(linea.getLayoutX());
         p1.setLayoutY(linea.getLayoutY());
-        Circle p2 = new Circle(linea.getEndX(),linea.getEndY(),2,Color.RED);
+        Circle p2 = new Circle(linea.getEndX(),linea.getEndY(),2,dibujar.getColorControl());
         p2.setLayoutX(linea.getLayoutX());
         p2.setLayoutY(linea.getLayoutY());
         
@@ -96,13 +98,13 @@ public class Estilos {
     }
     
     public void cuadraticaControl(QuadCurve cuadratica, AnchorPane fondo){
-        Circle p1 = new Circle(cuadratica.getStartX(),cuadratica.getStartY(),2,Color.RED);
+        Circle p1 = new Circle(cuadratica.getStartX(),cuadratica.getStartY(),2,dibujar.getColorControl());
         p1.setLayoutX(cuadratica.getLayoutX());
         p1.setLayoutY(cuadratica.getLayoutY());
-        Circle p2 = new Circle(cuadratica.getControlX(),cuadratica.getControlY(),2,Color.RED);
+        Circle p2 = new Circle(cuadratica.getControlX(),cuadratica.getControlY(),2,dibujar.getColorControl());
         p2.setLayoutX(cuadratica.getLayoutX());
         p2.setLayoutY(cuadratica.getLayoutY());
-        Circle p3 = new Circle(cuadratica.getEndX(),cuadratica.getEndY(),2,Color.RED);
+        Circle p3 = new Circle(cuadratica.getEndX(),cuadratica.getEndY(),2,dibujar.getColorControl());
         p3.setLayoutX(cuadratica.getLayoutX());
         p3.setLayoutY(cuadratica.getLayoutY());
         
@@ -110,16 +112,16 @@ public class Estilos {
     }
     
     public void cubicaControl(CubicCurve cubica, AnchorPane fondo){
-        Circle p1 = new Circle(cubica.getStartX(),cubica.getStartY(),2,Color.RED);
+        Circle p1 = new Circle(cubica.getStartX(),cubica.getStartY(),2,dibujar.getColorControl());
         p1.setLayoutX(cubica.getLayoutX());
         p1.setLayoutY(cubica.getLayoutY());
-        Circle p2 = new Circle(cubica.getControlX1(),cubica.getControlY1(),2,Color.RED);
+        Circle p2 = new Circle(cubica.getControlX1(),cubica.getControlY1(),2,dibujar.getColorControl());
         p2.setLayoutX(cubica.getLayoutX());
         p2.setLayoutY(cubica.getLayoutY());
-        Circle p3 = new Circle(cubica.getControlX2(),cubica.getControlY2(),2,Color.RED);
+        Circle p3 = new Circle(cubica.getControlX2(),cubica.getControlY2(),2,dibujar.getColorControl());
         p3.setLayoutX(cubica.getLayoutX());
         p3.setLayoutY(cubica.getLayoutY());
-        Circle p4 = new Circle(cubica.getEndX(),cubica.getEndY(),2,Color.RED);
+        Circle p4 = new Circle(cubica.getEndX(),cubica.getEndY(),2,dibujar.getColorControl());
         p4.setLayoutX(cubica.getLayoutX());
         p4.setLayoutY(cubica.getLayoutY());
         
@@ -154,10 +156,10 @@ public class Estilos {
     }
     
     public void elipseControl(Ellipse elipse, AnchorPane fondo){
-        Circle p1 = new Circle(elipse.getRadiusX(),elipse.getRadiusY(),2,Color.RED);
+        Circle p1 = new Circle(elipse.getRadiusX(),elipse.getRadiusY(),2,dibujar.getColorControl());
         p1.setLayoutX(elipse.getLayoutX());
         p1.setLayoutY(elipse.getLayoutY());
-        Circle p2 = new Circle(elipse.getCenterX(),elipse.getCenterY(),2,Color.RED);
+        Circle p2 = new Circle(elipse.getCenterX(),elipse.getCenterY(),2,dibujar.getColorControl());
         p2.setLayoutX(elipse.getLayoutX());
         p2.setLayoutY(elipse.getLayoutY());
         
@@ -185,11 +187,68 @@ public class Estilos {
     public void circuloControl(Circle circulo, AnchorPane fondo){
         Circle p = new Circle();
         p.setRadius(2);
-        p.setFill(Color.RED);
+        p.setFill(dibujar.getColorControl());
         p.setLayoutX(circulo.getLayoutX());
         p.setLayoutY(circulo.getLayoutY());
         
         fondo.getChildren().add(p);
+    }
+    
+    public void rotarPalabra(Palabra palabra){
+        if (palabra.is_a() || palabra.isA()){
+            double y = palabra.getHeight();
+            double x = palabra.getWidth();
+            int a = palabra.getAngulo();
+            double rad = Math.toRadians(a);
+            double sin = Math.sin(rad);
+            double cos = Math.cos(rad);     
+
+            if(a>360){
+                while(a>360){
+                    a=a-360;
+                }
+            }
+
+            if(0<a && a<=90){ //primer cuadrante
+                cos=cos*1;
+                sin=sin*1;
+            }
+
+            if(90<a && a<=180){ //segundo cuadrante
+                cos=cos*-1;
+                sin=sin*1;
+            }
+
+            if(180<a && a<=270){ //tercer cuadrante
+                cos=cos*-1;
+                sin=sin*-1;
+            }
+
+            if(270<a && a<=360){ //cuarto cuadrante
+                cos=cos*1;
+                sin=sin*-1;
+            }
+
+            palabra.setWidth((x*cos)+(y*sin));
+            palabra.setHeight((x*sin)+(y*cos));
+            palabra.getFondo().setRotationAxis(new Point3D(0,0,1));
+            palabra.getFondo().setRotate(a*(-1));
+        }
+    }
+    
+    public void invertirOrden(ArrayList<Palabra> palabras,int i, int j){
+        while (i<j){
+            Palabra aux = palabras.get(i);
+            palabras.set(i, palabras.get(j));
+            palabras.set(j, aux);
+            i++;
+            j--;
+        }
+    }
+    
+    public void traslación(Palabra palabra){
+        palabra.getFondo().setTranslateX(palabra.gettX());
+        palabra.getFondo().setTranslateY(palabra.gettY());
     }
     
 }
