@@ -57,7 +57,6 @@ public class InterfazController implements Initializable {
         textoEntrada.setOnKeyReleased((KeyEvent event) -> {
             dibujar.getLienzo().getChildren().clear();
             dibujar.metodoDibujo(textoEntrada.getText(),dibujar.getLienzo());
-            //dibujar.guardarPalabras("^NLOS ^NIN-PROGRAMABLES",titulo);
         });
     }
     

@@ -9,31 +9,22 @@ import javafx.scene.layout.AnchorPane;
 public class Palabra {
     
     // Atributos
-    public AnchorPane fondo;
-    public String palabra;
-    public String comando;
-    public String comando2;
-    public double width;
-    public double height;
-    public int angulo;
-    public int tX;
-    public int tY;
-    public boolean n;
-    public boolean k;
-
-    public int getAucont() {
-        return aucont;
-    }
-
-    public void setAucont(int aucont) {
-        this.aucont = aucont;
-    }
-    public boolean s;
-    public boolean v;
-    public boolean h;
-    public int aucont;
-    public boolean a;
-    public boolean A;
+    private AnchorPane fondo;
+    private String palabra;
+    private String comando;
+    private String comando2;
+    private double width;
+    private double height;
+    private int angulo;
+    private int tX;
+    private int tY;
+    private boolean n;
+    private boolean k;
+    private boolean s;
+    private boolean v;
+    private boolean h;
+    private boolean a;
+    private boolean A;
     
     // Métodos
     public Palabra(){

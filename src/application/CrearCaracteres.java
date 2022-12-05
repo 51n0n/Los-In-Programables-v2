@@ -17,8 +17,8 @@ import javafx.scene.shape.Ellipse;
 
 public class CrearCaracteres {
     
-    Estilos estilos = new Estilos();
-    Dibujar dibujar = new Dibujar();
+    private static final Estilos estilos = new Estilos();
+    private static final Dibujar dibujar = new Dibujar();
     
     public AnchorPane dibujarCaracter(char caracter, Palabra palabra){
         

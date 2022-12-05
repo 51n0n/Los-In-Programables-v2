@@ -297,7 +297,13 @@ public class Dibujar {
                                             palabras.get(p).setS(true);
                                             break;
                                         case 'R':
-                                            estilos.invertirOrden(palabras,i, palabras.size()-1);
+                                            estilos.invertirOrden(palabras,p, palabras.size()-1);
+                                            break;
+                                        case 'V':
+                                            palabras.get(p).setV(true);
+                                            break;
+                                        case 'H':
+                                            palabras.get(p).setH(true);
                                             break;
                                         case 'A':
                                             String ver = "";
@@ -402,7 +408,6 @@ public class Dibujar {
         posActualY = 20; // Guardará la posición Y a usar al momento de dibujar
         
         for (int i=0;i<palabras.size();i++){
-            System.out.println(palabras.get(i).getWidth());
             if (palabras.get(i).getWidth() > espacioEnFila){
                 espacioEnFila = fila;
                 posActualX = 20;

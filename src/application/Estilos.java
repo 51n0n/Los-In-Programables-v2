@@ -18,7 +18,7 @@ import javafx.scene.shape.StrokeLineJoin;
 
 public class Estilos {
     
-    Dibujar dibujar = new Dibujar();
+    private static final Dibujar dibujar = new Dibujar();
     
     public void lineaNegrita(Line linea, AnchorPane fondo){
         Line ancho1 = new Line(linea.getStartX(),linea.getStartY(),linea.getEndX(),linea.getEndY());
