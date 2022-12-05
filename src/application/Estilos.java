@@ -4,8 +4,8 @@
  */
 package application;
 
-import static java.lang.Math.sqrt;
 import java.util.ArrayList;
+import javafx.geometry.Point3D;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -18,7 +18,7 @@ import javafx.scene.shape.StrokeLineJoin;
 
 public class Estilos {
     
-    Dibujar dibujar = new Dibujar();
+    private static final Dibujar dibujar = new Dibujar();
     
     public void lineaNegrita(Line linea, AnchorPane fondo){
         Line ancho1 = new Line(linea.getStartX(),linea.getStartY(),linea.getEndX(),linea.getEndY());
@@ -195,35 +195,45 @@ public class Estilos {
     }
     
     public void rotarPalabra(Palabra palabra){
-        double y = palabra.getHeight();
-        double x =palabra.getWidth();
-        //double h = sqrt((x*x)+(y*y));
-        int a= palabra.getAngulo()*-1;
-        double rad=Math.toRadians(a);
-        double sin=Math.sin(rad);
-        double cos=Math.cos(rad);     
+        if (palabra.is_a() || palabra.isA()){
+            double y = palabra.getHeight();
+            double x = palabra.getWidth();
+            int a = palabra.getAngulo();
+            double rad = Math.toRadians(a);
+            double sin = Math.sin(rad);
+            double cos = Math.cos(rad);     
+
             if(a>360){
                 while(a>360){
                     a=a-360;
                 }
             }
+
             if(0<a && a<=90){ //primer cuadrante
                 cos=cos*1;
                 sin=sin*1;
-            }if(90<a && a<=180){//segundo cuadrante
+            }
+
+            if(90<a && a<=180){ //segundo cuadrante
                 cos=cos*-1;
                 sin=sin*1;
-            }if(180<a && a<=270){//tercer cuadrante
+            }
+
+            if(180<a && a<=270){ //tercer cuadrante
                 cos=cos*-1;
                 sin=sin*-1;
-            }if(270<a && a<=360){
+            }
+
+            if(270<a && a<=360){ //cuarto cuadrante
                 cos=cos*1;
                 sin=sin*-1;
             }
-        palabra.setWidth((x*cos)+(y*cos));
-        palabra.setHeight((x*sin)+(y*sin));
-        palabra.getFondo().setRotate(a);
-      
+
+            palabra.setWidth((x*cos)+(y*sin));
+            palabra.setHeight((x*sin)+(y*cos));
+            palabra.getFondo().setRotationAxis(new Point3D(0,0,1));
+            palabra.getFondo().setRotate(a*(-1));
+        }
     }
     
     public void invertirOrden(ArrayList<Palabra> palabras,int i, int j){
@@ -234,6 +244,11 @@ public class Estilos {
             i++;
             j--;
         }
+    }
+    
+    public void traslación(Palabra palabra){
+        palabra.getFondo().setTranslateX(palabra.gettX());
+        palabra.getFondo().setTranslateY(palabra.gettY());
     }
     
 }

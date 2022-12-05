@@ -17,8 +17,8 @@ import javafx.scene.shape.Ellipse;
 
 public class CrearCaracteres {
     
-    Estilos estilos = new Estilos();
-    Dibujar dibujar = new Dibujar();
+    private static final Estilos estilos = new Estilos();
+    private static final Dibujar dibujar = new Dibujar();
     
     public AnchorPane dibujarCaracter(char caracter, Palabra palabra){
         
@@ -82,12 +82,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -160,12 +165,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -237,12 +247,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -301,12 +316,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -376,12 +396,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -451,12 +476,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -537,12 +567,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -622,12 +657,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -685,12 +725,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -759,12 +804,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -822,12 +872,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -896,12 +951,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -959,12 +1019,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1035,12 +1100,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1098,12 +1168,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1183,12 +1258,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1257,12 +1337,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1342,12 +1427,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1405,12 +1495,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1479,12 +1574,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1542,12 +1642,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1617,12 +1722,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1691,12 +1801,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1754,12 +1869,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1817,12 +1937,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1880,12 +2005,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -1954,12 +2084,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2017,12 +2152,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2102,12 +2242,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2162,12 +2307,17 @@ public class CrearCaracteres {
                 }               
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2243,12 +2393,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2313,12 +2468,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2370,12 +2530,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2437,12 +2602,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2505,12 +2675,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2551,12 +2726,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2608,12 +2788,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2654,12 +2839,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2710,12 +2900,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2768,12 +2963,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2836,12 +3036,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2893,12 +3098,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2935,12 +3145,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -2980,12 +3195,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3033,12 +3253,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3090,12 +3315,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3136,12 +3366,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3204,12 +3439,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3261,12 +3501,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3329,12 +3574,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3386,12 +3636,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3453,12 +3708,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3510,12 +3770,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3567,12 +3832,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3624,12 +3894,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3692,12 +3967,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3749,12 +4029,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3800,12 +4085,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3860,12 +4150,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3922,12 +4217,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -3995,12 +4295,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4046,12 +4351,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4119,12 +4429,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4192,12 +4507,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4242,12 +4562,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4289,12 +4614,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4347,12 +4677,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4405,12 +4740,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4442,12 +4782,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4489,12 +4834,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4544,12 +4894,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4587,12 +4942,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4627,12 +4987,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4667,12 +5032,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4729,12 +5099,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4791,12 +5166,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4842,12 +5222,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4893,12 +5278,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4932,12 +5322,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -4971,12 +5366,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -5024,12 +5424,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -5089,12 +5494,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -5162,12 +5572,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
@@ -5235,12 +5650,17 @@ public class CrearCaracteres {
                 }
                 
                 if (palabra.isV()){
-                    fondo.setRotationAxis(new Point3D(0,fondo.getPrefHeight(),0));
+                    fondo.setRotationAxis(new Point3D(1,0,0));
                     fondo.setRotate(180);
                 }
                 
                 if (palabra.isH()){
-                    fondo.setRotationAxis(new Point3D(fondo.getPrefWidth(),0,0));
+                    fondo.setRotationAxis(new Point3D(0,1,0));
+                    fondo.setRotate(180);
+                }
+                
+                if (palabra.isV() && palabra.isH()){
+                    fondo.setRotationAxis(new Point3D(0,0,1));
                     fondo.setRotate(180);
                 }
                 
