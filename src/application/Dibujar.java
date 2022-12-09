@@ -280,12 +280,12 @@ public class Dibujar {
                 if (!"".equals(palabras.get(i).getComando2())){ // Si hay comando con comas
                     String com = palabras.get(i).getComando2();
                     boolean salir = false;
-                    int k = com.length()-1; // Guarda la posición final del comando
-                    for (int p=i;p>=0 && !salir;p--){ // Recorre hacia atras las palabras desde la posición i
+                    int k = 1; // Guarda la posición siguiente al ^ del comando con comas
+                    for (int p=0;p<=i && !salir;p++){ // Recorre las palabras desde la primera posición hasta la actual
                         if (!"".equals(palabras.get(p).getPalabra()) && !" ".equals(palabras.get(p).getPalabra())){
                             // Si existe palabra y no es espacio
-                            while (k>0){ // Recorre hacia atras el comando
-                                if (com.charAt(k) != ','){ // ^N,K,S k=5
+                            while (k<com.length()){ // Recorre hacia atras el comando
+                                if (com.charAt(k) != ','){ // com.length=6
                                     switch (com.charAt(k)){
                                         case 'N':
                                             palabras.get(p).setN(true);
@@ -385,9 +385,9 @@ public class Dibujar {
                                 else{
                                     break;
                                 }
-                                k--;
+                                k++;
                             }
-                            k--;
+                            k++;
                         }
                     }
                 }
