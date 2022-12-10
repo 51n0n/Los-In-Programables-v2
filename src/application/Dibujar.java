@@ -89,6 +89,56 @@ public class Dibujar {
                     int j = k;
                     if (k+1 < p.length()){ // cualquier comando valido debe medir almenos 2 posiciones (^N)
                         for (j=k+1;j<p.length() && !salir;j++){
+                            if(esComan2(p.charAt(j-1)) && ( esComan1(p.charAt(j)) || esComan3(p.charAt(j)) )){ // Si el anterior es coman2 y el actual coman1 o coman3
+                                if(esComan1(p.charAt(j))){
+                                    if(j+1<p.length()){ // Si hay un siguiente
+                                        if(!esComan2(p.charAt(j+1))){ // Y no es , o +
+                                            salir = true;
+                                        }
+                                    }
+                                    else{ // Fin de comando
+                                        salir = true;
+                                    }
+                                }
+                                else if (esComan3(p.charAt(j))){
+                                    while(j+1<p.length()){ // Mientras exista un siguiente
+                                        if (esNumero(p.charAt(j+1))){ // Y sea número
+                                            j++;
+                                        }
+                                        else if(!esComan2(p.charAt(j+1))){
+                                            salir = true;
+                                            break;
+                                        }
+                                        else{
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            else if( (esComan1(p.charAt(j-1)) || esNumero(p.charAt(j-1)) ) && esComan2(p.charAt(j)) ){ // Si el anterior es coman1 o número y el actual coman2
+                                // Se continua el parseo
+                                if(j+1<p.length()){
+                                    if(!esComan3(p.charAt(j+1)) && !esComan1(p.charAt(j+1))){
+                                        salir = true;
+                                        j--;
+                                    }
+                                }
+                                if (p.charAt(j) == ','){
+                                    contComa++;
+                                    cComa = true;
+                                }
+                            }
+                            else if (esComan2(p.charAt(j-1)) &&  esComan2(p.charAt(j))){ // Si el anterior y el actual son coman2
+                                if (!(p.charAt(j-1) == ',' && p.charAt(j) == ',')){ // Para continuar, ambos deben ser ,
+                                    salir = true;
+                                    j--;
+                                }
+                            }
+                            else{
+                                salir = true;
+                                j--;
+                            }
+                            /*
                             if(esComan2(p.charAt(j-1)) && esComan1(p.charAt(j))){ // j-1coman2 jcoman1
                                 if(j+1<p.length()){
                                     if(!esComan2(p.charAt(j+1)) && !esComan1(p.charAt(j+1))){
@@ -133,6 +183,7 @@ public class Dibujar {
                                 salir = true;
                                 j--;
                             }
+                            */
                         }
                         j--;
                     }
