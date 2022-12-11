@@ -323,6 +323,23 @@ public class Dibujar {
                                     palabras.get(i).settY(Integer.parseInt(fer)); //manda todos los numeros
                                 }
                                 break;
+                            case 'T':
+                                String capt="";
+                                int l = k+1;
+                                while(l < com.length()){
+                                    if (esNumero(com.charAt(l))){
+                                        capt = capt.concat(com.charAt(l)+""); // a si mismo se concatena con los numeros de arriba
+                                        l++;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }
+                                if (esNumero(capt)){
+                                    palabras.get(i).setTr(Integer.parseInt(capt));//manda todos los numeros
+                                    palabras.get(i).setT(true);
+                                }
+                                break; 
                             default:
                                 break;
                         }
@@ -426,6 +443,23 @@ public class Dibujar {
                                                 palabras.get(p).settY(Integer.parseInt(fer)); //manda todos los numeros
                                             }
                                             break;
+                                        case 'T':
+                                            String cap="";
+                                            int s = k+1;
+                                            while(s < com.length()){
+                                                if (esNumero(com.charAt(s))){
+                                                    cap = cap.concat(com.charAt(s)+""); // a si mismo se concatena con los numeros de arriba
+                                                    s++;
+                                                }
+                                                else{
+                                                    break;
+                                                }
+                                            }
+                                            if (esNumero(cap)){
+                                                palabras.get(p).setTr(Integer.parseInt(cap)); //manda todos los numeros
+                                                palabras.get(p).setT(true);
+                                            }
+                                            break;    
                                         case '^':
                                             salir = true;
                                             break;
@@ -450,6 +484,7 @@ public class Dibujar {
             dibujarPalabra(palabras.get(i));
             estilos.rotarPalabra(palabras.get(i));
             estilos.traslación(palabras.get(i));
+            estilos.tamaño(palabras.get(i));
         }
         
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
@@ -457,12 +492,21 @@ public class Dibujar {
         espacioEnFila = fila; // Guarda cuanto espacio queda en una fila
         posActualX = 20; // Guardará la posición X a usar al momento de dibujar
         posActualY = 20; // Guardará la posición Y a usar al momento de dibujar
-        
+        int v =0;
+        double maxy= palabras.get(v).getHeight();
         for (int i=0;i<palabras.size();i++){
             if (palabras.get(i).getWidth() > espacioEnFila){
+                for(int s=i-1;s>=v;s--){
+                    palabras.get(s).getFondo().setLayoutY(maxy);
+                }
                 espacioEnFila = fila;
                 posActualX = 20;
                 posActualY = posActualY + 60;
+                v=i;
+                maxy=palabras.get(i).getHeight();
+            }
+            if(palabras.get(i).getHeight()>maxy){
+                maxy= palabras.get(i).getHeight();
             }
             palabras.get(i).getFondo().setLayoutX(posActualX);
             palabras.get(i).getFondo().setLayoutY(posActualY);
@@ -520,7 +564,7 @@ public class Dibujar {
             aux.setLayoutX(pos);
             fondo.getChildren().add(aux); // Se agregan los caracteres
             pos = pos + tamañoCaracter(p.charAt(i)); // Posición de los caracteres respecto a la palabra
-            palabra.setAucont(palabra.getAucont()+1);
+           
         }
         palabra.setWidth(pos);
         palabra.setHeight(60);
@@ -616,7 +660,7 @@ public class Dibujar {
     
     public boolean esComan3(char caracter){
         
-        char[] ver = {'a','A','X','Y'};
+        char[] ver = {'a','A','X','Y','T'};
         
         boolean esver = false;
         for (int i=0;i<ver.length;i++){
