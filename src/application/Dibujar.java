@@ -458,17 +458,6 @@ public class Dibujar {
         posActualX = 20; // Guardará la posición X a usar al momento de dibujar
         posActualY = 20; // Guardará la posición Y a usar al momento de dibujar
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        /*
         for (int i=0;i<palabras.size();i++){
             if (palabras.get(i).getWidth() > espacioEnFila){
                 espacioEnFila = fila;
@@ -480,47 +469,7 @@ public class Dibujar {
             posActualX = posActualX + palabras.get(i).getWidth(); // Aumento de la posición X por el espacio usado
             espacioEnFila = espacioEnFila - palabras.get(i).getWidth(); // Se resta el espacio usado al disponible
         }
-        */
         
-        /*
-        // Nuevo Posicionamiento
-        double fila = lienzo.getWidth() - 34;
-        posActualY = 20;
-        int i = 0;
-        
-        while (i < palabras.size()){
-            
-            espacioEnFila = fila;
-            double max = palabras.get(i).getHeight();
-            
-            int ini = i;
-            
-            while (i < palabras.size()){
-                if (palabras.get(i).getWidth() < espacioEnFila){ // Se obtiene el MAX Y de la fila
-                    System.out.println(palabras.get(i).getHeight());
-                    if (palabras.get(i).getHeight() > max){
-                        max = palabras.get(i).getHeight();
-                    }
-                    espacioEnFila = espacioEnFila - palabras.get(i).getWidth();
-                    i++;
-                }
-            }
-            
-            int fin = i;
-            
-            espacioEnFila = fila; // Guarda cuanto espacio queda en una fila
-            posActualX = 20; // Guardará la posición X a usar al momento de dibujar
-            posActualY = posActualY + (max/2); // Guardará la posición Y a usar al momento de dibujar
-            
-            while (ini < fin){
-                palabras.get(ini).getFondo().setLayoutX(posActualX);
-                palabras.get(ini).getFondo().setLayoutY(posActualY);
-                posActualX = posActualX + palabras.get(ini).getWidth(); // Aumento de la posición X por el espacio usado
-                espacioEnFila = espacioEnFila - palabras.get(ini).getWidth(); // Se resta el espacio usado al disponible
-                ini++;
-            }
-        }
-        */
     }
     
     public void dibujarPalabra(Palabra palabra){
