@@ -89,6 +89,56 @@ public class Dibujar {
                     int j = k;
                     if (k+1 < p.length()){ // cualquier comando valido debe medir almenos 2 posiciones (^N)
                         for (j=k+1;j<p.length() && !salir;j++){
+                            if(esComan2(p.charAt(j-1)) && ( esComan1(p.charAt(j)) || esComan3(p.charAt(j)) )){ // Si el anterior es coman2 y el actual coman1 o coman3
+                                if(esComan1(p.charAt(j))){
+                                    if(j+1<p.length()){ // Si hay un siguiente
+                                        if(!esComan2(p.charAt(j+1))){ // Y no es , o +
+                                            salir = true;
+                                        }
+                                    }
+                                    else{ // Fin de comando
+                                        salir = true;
+                                    }
+                                }
+                                else if (esComan3(p.charAt(j))){
+                                    while(j+1<p.length()){ // Mientras exista un siguiente
+                                        if (esNumero(p.charAt(j+1))){ // Y sea número
+                                            j++;
+                                        }
+                                        else if(!esComan2(p.charAt(j+1))){
+                                            salir = true;
+                                            break;
+                                        }
+                                        else{
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            else if( (esComan1(p.charAt(j-1)) || esNumero(p.charAt(j-1)) ) && esComan2(p.charAt(j)) ){ // Si el anterior es coman1 o número y el actual coman2
+                                // Se continua el parseo
+                                if(j+1<p.length()){
+                                    if(!esComan3(p.charAt(j+1)) && !esComan1(p.charAt(j+1))){
+                                        salir = true;
+                                        j--;
+                                    }
+                                }
+                                if (p.charAt(j) == ','){
+                                    contComa++;
+                                    cComa = true;
+                                }
+                            }
+                            else if (esComan2(p.charAt(j-1)) &&  esComan2(p.charAt(j))){ // Si el anterior y el actual son coman2
+                                if (!(p.charAt(j-1) == ',' && p.charAt(j) == ',')){ // Para continuar, ambos deben ser ,
+                                    salir = true;
+                                    j--;
+                                }
+                            }
+                            else{
+                                salir = true;
+                                j--;
+                            }
+                            /*
                             if(esComan2(p.charAt(j-1)) && esComan1(p.charAt(j))){ // j-1coman2 jcoman1
                                 if(j+1<p.length()){
                                     if(!esComan2(p.charAt(j+1)) && !esComan1(p.charAt(j+1))){
@@ -133,6 +183,7 @@ public class Dibujar {
                                 salir = true;
                                 j--;
                             }
+                            */
                         }
                         j--;
                     }
@@ -280,12 +331,12 @@ public class Dibujar {
                 if (!"".equals(palabras.get(i).getComando2())){ // Si hay comando con comas
                     String com = palabras.get(i).getComando2();
                     boolean salir = false;
-                    int k = com.length()-1; // Guarda la posición final del comando
-                    for (int p=i;p>=0 && !salir;p--){ // Recorre hacia atras las palabras desde la posición i
+                    int k = 1; // Guarda la posición siguiente al ^ del comando con comas
+                    for (int p=0;p<=i && !salir;p++){ // Recorre las palabras desde la primera posición hasta la actual
                         if (!"".equals(palabras.get(p).getPalabra()) && !" ".equals(palabras.get(p).getPalabra())){
                             // Si existe palabra y no es espacio
-                            while (k>0){ // Recorre hacia atras el comando
-                                if (com.charAt(k) != ','){ // ^N,K,S k=5
+                            while (k<com.length()){ // Recorre hacia atras el comando
+                                if (com.charAt(k) != ','){ // com.length=6
                                     switch (com.charAt(k)){
                                         case 'N':
                                             palabras.get(p).setN(true);
@@ -385,9 +436,9 @@ public class Dibujar {
                                 else{
                                     break;
                                 }
-                                k--;
+                                k++;
                             }
-                            k--;
+                            k++;
                         }
                     }
                 }
