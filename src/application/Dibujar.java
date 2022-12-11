@@ -458,6 +458,17 @@ public class Dibujar {
         posActualX = 20; // Guardará la posición X a usar al momento de dibujar
         posActualY = 20; // Guardará la posición Y a usar al momento de dibujar
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
         for (int i=0;i<palabras.size();i++){
             if (palabras.get(i).getWidth() > espacioEnFila){
                 espacioEnFila = fila;
@@ -469,6 +480,8 @@ public class Dibujar {
             posActualX = posActualX + palabras.get(i).getWidth(); // Aumento de la posición X por el espacio usado
             espacioEnFila = espacioEnFila - palabras.get(i).getWidth(); // Se resta el espacio usado al disponible
         }
+        */
+        
         /*
         // Nuevo Posicionamiento
         double fila = lienzo.getWidth() - 34;
