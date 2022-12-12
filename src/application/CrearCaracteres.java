@@ -58,9 +58,9 @@ public class CrearCaracteres {
                 cubicaA2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaA1.setRotate(7);
-                    cubicaA2.setRotate(7);
-                    lineaA.setRotate(7);
+                    cubicaA1.setRotate(9);
+                    cubicaA2.setRotate(9);
+                    lineaA.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaA1,cubicaA2,lineaA);

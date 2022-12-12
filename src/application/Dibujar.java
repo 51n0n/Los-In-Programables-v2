@@ -490,6 +490,18 @@ public class Dibujar {
             estilos.rotarPalabra(palabras.get(i));
             estilos.traslación(palabras.get(i));
             estilos.tamaño(palabras.get(i));
+            if(palabras.get(i).esEspacio()&& i+1<palabras.size() && i>0){
+                if(palabras.get(i+1).isS()&& palabras.get(i-1).isS()){
+                    if((!palabras.get(i-1).isA() &&!palabras.get(i-1).is_a())&& !palabras.get(i-1).isX()&&!palabras.get(i+1).isY()&&!palabras.get(i-1).isT()){
+                        if((!palabras.get(i+1).isA() &&!palabras.get(i+1).is_a())&& !palabras.get(i+1).isX()&&!palabras.get(i+1).isY()&&!palabras.get(i+1).isT()){
+                            palabras.get(i).setS(true);
+                        }
+                    }
+                    //comprobar que la palabra i+1 && palabra i-1 == isS
+                    //ADEMAS no puede tener rotacion && traslacion y tamaño
+                    //si se cumple a palabras.get(i).setS();
+                }
+            }
         }
         
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas

@@ -203,7 +203,7 @@ public class Estilos {
             double sin = Math.sin(rad);
             double cos = Math.cos(rad);     
 
-            if(a>360){
+            if(a>360){//10000 -360  88000<360
                 while(a>360){
                     a=a-360;
                 }
