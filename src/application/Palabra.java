@@ -16,6 +16,7 @@ public class Palabra {
     private double width;
     private double height;
     private int angulo;
+    private int Tr;
     private int tX;
     private int tY;
     private boolean n;
@@ -25,6 +26,9 @@ public class Palabra {
     private boolean h;
     private boolean a;
     private boolean A;
+    private boolean x;
+    private boolean y;
+    private boolean t;
     
     // Métodos
     public Palabra(){
@@ -35,6 +39,7 @@ public class Palabra {
         this.width = 0;
         this.height = 0;
         this.angulo = 0;
+        this.Tr=0;
         this.tX = 0;
         this.tY = 0;
         this.n = false;
@@ -42,8 +47,32 @@ public class Palabra {
         this.s = false;
         this.v = false;
         this.h = false;
+        this.x = false;
+        this.y = false;
+        this.t=false;
     }
     
+    public Palabra(String palabra){
+        this.fondo = new AnchorPane();
+        this.palabra = palabra;
+        this.comando = "";
+        this.comando2 = "";
+        this.width = 0;
+        this.height = 0;
+        this.angulo = 0;
+        this.Tr=0;
+        this.tX = 0;
+        this.tY = 0;
+        this.n = false;
+        this.k = false;
+        this.s = false;
+        this.v = false;
+        this.h = false;
+        this.x = false;
+        this.y = false;
+        this.t=false;
+    }
+
     public boolean esEspacio(){
         return " ".equals(palabra);
     }
@@ -102,6 +131,14 @@ public class Palabra {
     
     public void setAngulo(int angulo) {
         this.angulo = angulo;
+    }
+    
+    public int getTr() {
+        return Tr;
+    }
+    
+    public void setTr(int Tr) {
+        this.Tr = Tr;
     }
     
     public int gettX() {
@@ -174,6 +211,30 @@ public class Palabra {
     
     public void setA(boolean A) {
         this.A = A;
+    }
+    
+    public boolean isX() {
+        return x;
+    }
+    
+    public void setX(boolean x) {
+        this.x = x;
+    }
+    
+    public boolean isY() {
+        return y;
+    }
+    
+    public void setY(boolean y) {
+        this.y = y;
+    }
+    
+    public boolean isT() {
+        return t;
+    }
+    
+    public void setT(boolean t) {
+        this.t = t;
     }
     
 }

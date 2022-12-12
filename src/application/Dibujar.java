@@ -7,6 +7,7 @@ package application;
 import java.util.ArrayList;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
 
 public class Dibujar {
     
@@ -89,6 +90,56 @@ public class Dibujar {
                     int j = k;
                     if (k+1 < p.length()){ // cualquier comando valido debe medir almenos 2 posiciones (^N)
                         for (j=k+1;j<p.length() && !salir;j++){
+                            if(esComan2(p.charAt(j-1)) && ( esComan1(p.charAt(j)) || esComan3(p.charAt(j)) )){ // Si el anterior es coman2 y el actual coman1 o coman3
+                                if(esComan1(p.charAt(j))){
+                                    if(j+1<p.length()){ // Si hay un siguiente
+                                        if(!esComan2(p.charAt(j+1))){ // Y no es , o +
+                                            salir = true;
+                                        }
+                                    }
+                                    else{ // Fin de comando
+                                        salir = true;
+                                    }
+                                }
+                                else if (esComan3(p.charAt(j))){
+                                    while(j+1<p.length()){ // Mientras exista un siguiente
+                                        if (esNumero(p.charAt(j+1))){ // Y sea número
+                                            j++;
+                                        }
+                                        else if(!esComan2(p.charAt(j+1))){
+                                            salir = true;
+                                            break;
+                                        }
+                                        else{
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                            else if( (esComan1(p.charAt(j-1)) || esNumero(p.charAt(j-1)) ) && esComan2(p.charAt(j)) ){ // Si el anterior es coman1 o número y el actual coman2
+                                // Se continua el parseo
+                                if(j+1<p.length()){
+                                    if(!esComan3(p.charAt(j+1)) && !esComan1(p.charAt(j+1))){
+                                        salir = true;
+                                        j--;
+                                    }
+                                }
+                                if (p.charAt(j) == ','){
+                                    contComa++;
+                                    cComa = true;
+                                }
+                            }
+                            else if (esComan2(p.charAt(j-1)) &&  esComan2(p.charAt(j))){ // Si el anterior y el actual son coman2
+                                if (!(p.charAt(j-1) == ',' && p.charAt(j) == ',')){ // Para continuar, ambos deben ser ,
+                                    salir = true;
+                                    j--;
+                                }
+                            }
+                            else{
+                                salir = true;
+                                j--;
+                            }
+                            /*
                             if(esComan2(p.charAt(j-1)) && esComan1(p.charAt(j))){ // j-1coman2 jcoman1
                                 if(j+1<p.length()){
                                     if(!esComan2(p.charAt(j+1)) && !esComan1(p.charAt(j+1))){
@@ -133,6 +184,7 @@ public class Dibujar {
                                 salir = true;
                                 j--;
                             }
+                            */
                         }
                         j--;
                     }
@@ -176,6 +228,7 @@ public class Dibujar {
             palabras.get(j).setComando2(comodin.get(i).getComando2());
             j++;
         }
+        palabras.add(new Palabra(" "));
         
         // Recorrer comandos y asignar valores booleanos | Al Final: Objetos Palabra con estilos asignados
         for (int i=0;i<palabras.size();i++){
@@ -254,6 +307,7 @@ public class Dibujar {
                                 }
                                 if (esNumero(der)){
                                     palabras.get(i).settX(Integer.parseInt(der)); //manda todos los numeros
+                                    palabras.get(i).setX(true);
                                 }
                                 break;
                             case 'Y':
@@ -270,8 +324,26 @@ public class Dibujar {
                                 }
                                 if (esNumero(fer)){
                                     palabras.get(i).settY(Integer.parseInt(fer)); //manda todos los numeros
+                                    palabras.get(i).setY(true);
                                 }
                                 break;
+                            case 'T':
+                                String capt="";
+                                int l = k+1;
+                                while(l < com.length()){
+                                    if (esNumero(com.charAt(l))){
+                                        capt = capt.concat(com.charAt(l)+""); // a si mismo se concatena con los numeros de arriba
+                                        l++;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }
+                                if (esNumero(capt)){
+                                    palabras.get(i).setTr(Integer.parseInt(capt));//manda todos los numeros
+                                    palabras.get(i).setT(true);
+                                }
+                                break; 
                             default:
                                 break;
                         }
@@ -280,12 +352,12 @@ public class Dibujar {
                 if (!"".equals(palabras.get(i).getComando2())){ // Si hay comando con comas
                     String com = palabras.get(i).getComando2();
                     boolean salir = false;
-                    int k = com.length()-1; // Guarda la posición final del comando
-                    for (int p=i;p>=0 && !salir;p--){ // Recorre hacia atras las palabras desde la posición i
+                    int k = 1; // Guarda la posición siguiente al ^ del comando con comas
+                    for (int p=0;p<=i && !salir;p++){ // Recorre las palabras desde la primera posición hasta la actual
                         if (!"".equals(palabras.get(p).getPalabra()) && !" ".equals(palabras.get(p).getPalabra())){
                             // Si existe palabra y no es espacio
-                            while (k>0){ // Recorre hacia atras el comando
-                                if (com.charAt(k) != ','){ // ^N,K,S k=5
+                            while (k<com.length()){ // Recorre hacia atras el comando
+                                if (com.charAt(k) != ','){ // com.length=6
                                     switch (com.charAt(k)){
                                         case 'N':
                                             palabras.get(p).setN(true);
@@ -357,6 +429,7 @@ public class Dibujar {
                                             }
                                             if (esNumero(der)){
                                                 palabras.get(p).settX(Integer.parseInt(der)); //manda todos los numeros
+                                                palabras.get(p).setX(true);
                                             }
                                             break;
                                         case 'Y':
@@ -373,8 +446,26 @@ public class Dibujar {
                                             }
                                             if (esNumero(fer)){
                                                 palabras.get(p).settY(Integer.parseInt(fer)); //manda todos los numeros
+                                                palabras.get(p).setY(true);
                                             }
                                             break;
+                                        case 'T':
+                                            String cap="";
+                                            int s = k+1;
+                                            while(s < com.length()){
+                                                if (esNumero(com.charAt(s))){
+                                                    cap = cap.concat(com.charAt(s)+""); // a si mismo se concatena con los numeros de arriba
+                                                    s++;
+                                                }
+                                                else{
+                                                    break;
+                                                }
+                                            }
+                                            if (esNumero(cap)){
+                                                palabras.get(p).setTr(Integer.parseInt(cap)); //manda todos los numeros
+                                                palabras.get(p).setT(true);
+                                            }
+                                            break;    
                                         case '^':
                                             salir = true;
                                             break;
@@ -385,9 +476,9 @@ public class Dibujar {
                                 else{
                                     break;
                                 }
-                                k--;
+                                k++;
                             }
-                            k--;
+                            k++;
                         }
                     }
                 }
@@ -399,6 +490,23 @@ public class Dibujar {
             dibujarPalabra(palabras.get(i));
             estilos.rotarPalabra(palabras.get(i));
             estilos.traslación(palabras.get(i));
+            estilos.tamaño(palabras.get(i));
+            if(palabras.get(i).esEspacio()&& i+1<palabras.size() && i>0){
+                if(palabras.get(i+1).isS()&& palabras.get(i-1).isS()){
+                    if((!palabras.get(i-1).isA() &&!palabras.get(i-1).is_a())&& !palabras.get(i-1).isX()&&!palabras.get(i-1).isY()&&!palabras.get(i-1).isT()){
+                        if((!palabras.get(i+1).isA() &&!palabras.get(i+1).is_a())&& !palabras.get(i+1).isX()&&!palabras.get(i+1).isY()&&!palabras.get(i+1).isT()){
+                            palabras.get(i).setS(true);
+                            Line sub = new Line();
+                            sub.setStartX(30);
+                            sub.setLayoutX(0);
+                            sub.setLayoutY(55);
+                            sub.setStroke(colorActual);
+                            palabras.get(i).getFondo().getChildren().add(sub);
+                        }
+                    }
+                }
+            }
+            //dibujarPalabra(palabras.get(i));
         }
         
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
@@ -407,56 +515,89 @@ public class Dibujar {
         posActualX = 20; // Guardará la posición X a usar al momento de dibujar
         posActualY = 20; // Guardará la posición Y a usar al momento de dibujar
         
-        for (int i=0;i<palabras.size();i++){
-            if (palabras.get(i).getWidth() > espacioEnFila){
-                espacioEnFila = fila;
-                posActualX = 20;
-                posActualY = posActualY + 60;
-            }
-            palabras.get(i).getFondo().setLayoutX(posActualX);
-            palabras.get(i).getFondo().setLayoutY(posActualY);
-            posActualX = posActualX + palabras.get(i).getWidth(); // Aumento de la posición X por el espacio usado
-            espacioEnFila = espacioEnFila - palabras.get(i).getWidth(); // Se resta el espacio usado al disponible
-        }
-        /*
-        // Nuevo Posicionamiento
-        double fila = lienzo.getWidth() - 34;
-        posActualY = 20;
-        int i = 0;
         
-        while (i < palabras.size()){
-            
-            espacioEnFila = fila;
-            double max = palabras.get(i).getHeight();
-            
-            int ini = i;
-            
-            while (i < palabras.size()){
-                if (palabras.get(i).getWidth() < espacioEnFila){ // Se obtiene el MAX Y de la fila
-                    System.out.println(palabras.get(i).getHeight());
-                    if (palabras.get(i).getHeight() > max){
-                        max = palabras.get(i).getHeight();
+        int v = 0; // Primera palabra de una fila, valor inicial
+        double maxY = palabras.get(v).getHeight();
+        for (int i=0;i<palabras.size();i++){
+            if (palabras.get(i).getWidth() > espacioEnFila || i == palabras.size()-1){ // || i == palabras.size()-1
+                for(int s=i-1;s>=v;s--){ // Desde el anterior (última palabra de fila) hasta la primera (v)
+                    palabras.get(s).getFondo().setLayoutY(posActualY + maxY - palabras.get(s).getHeight());
+                    if (palabras.get(s).isT()){
+                        switch (palabras.get(s).getTr()){
+                            case 12 :
+                                palabras.get(s).getFondo().setLayoutY(posActualY + ((palabras.get(s).getHeight() - palabras.get(s).getHeight()/1.2)/2));
+                                break;
+                            case 14 :
+                                palabras.get(s).getFondo().setLayoutY(posActualY + ((palabras.get(s).getHeight() - palabras.get(s).getHeight()/1.5)/2));
+                                break;
+                            case 16:
+                                palabras.get(s).getFondo().setLayoutY(posActualY + ((palabras.get(s).getHeight() - palabras.get(s).getHeight()/1.8)/2));
+                                break;
+                            case 18:
+                                palabras.get(s).getFondo().setLayoutY(posActualY + ((palabras.get(s).getHeight() - palabras.get(s).getHeight()/2.1)/2));
+                                break;
+                            case 20 :
+                                palabras.get(s).getFondo().setLayoutY(posActualY + ((palabras.get(s).getHeight() - palabras.get(s).getHeight()/2.4)/2));
+                                break;
+                            case 22 :
+                                palabras.get(s).getFondo().setLayoutY(posActualY + ((palabras.get(s).getHeight() - palabras.get(s).getHeight()/2.7)/2));
+                                break;
+                            default:
+                                break;
+                        }
+                        if (palabras.get(s).getHeight() != maxY){
+                            palabras.get(s).getFondo().setLayoutY(palabras.get(s).getFondo().getLayoutY() + (maxY - palabras.get(s).getHeight()));
+                        }
                     }
-                    espacioEnFila = espacioEnFila - palabras.get(i).getWidth();
-                    i++;
+                }
+                if (i != palabras.size()-1){
+                    espacioEnFila = fila;
+                    posActualX = 20;
+                    posActualY = posActualY + maxY;
+                    v = i;
+                    maxY = palabras.get(i).getHeight();
+                }
+                else{
+                    //palabras.get(i).getFondo().setLayoutY(posActualY + maxY - palabras.get(i).getHeight());
                 }
             }
             
-            int fin = i;
+            palabras.get(i).getFondo().setLayoutX(posActualX);
+            palabras.get(i).getFondo().setLayoutY(posActualY);
+            //palabras.get(i).getFondo().setLayoutY(posActualY + maxY - palabras.get(i).getHeight());
             
-            espacioEnFila = fila; // Guarda cuanto espacio queda en una fila
-            posActualX = 20; // Guardará la posición X a usar al momento de dibujar
-            posActualY = posActualY + (max/2); // Guardará la posición Y a usar al momento de dibujar
+            if (palabras.get(i).isT()){
+                switch (palabras.get(i).getTr()){
+                    case 12 :
+                        palabras.get(i).getFondo().setLayoutX(posActualX + ((palabras.get(i).getWidth() - palabras.get(i).getWidth()/1.2)/2));
+                        break;
+                    case 14 :
+                        palabras.get(i).getFondo().setLayoutX(posActualX + ((palabras.get(i).getWidth() - palabras.get(i).getWidth()/1.5)/2));
+                        break;
+                    case 16:
+                        palabras.get(i).getFondo().setLayoutX(posActualX + ((palabras.get(i).getWidth() - palabras.get(i).getWidth()/1.8)/2));
+                        break;
+                    case 18:
+                        palabras.get(i).getFondo().setLayoutX(posActualX + ((palabras.get(i).getWidth() - palabras.get(i).getWidth()/2.1)/2));
+                        break;
+                    case 20 :
+                        palabras.get(i).getFondo().setLayoutX(posActualX + ((palabras.get(i).getWidth() - palabras.get(i).getWidth()/2.4)/2));
+                        break;
+                    case 22 :
+                        palabras.get(i).getFondo().setLayoutX(posActualX + ((palabras.get(i).getWidth() - palabras.get(i).getWidth()/2.7)/2));
+                        break;
+                    default:
+                        break;
+                }
+            }
             
-            while (ini < fin){
-                palabras.get(ini).getFondo().setLayoutX(posActualX);
-                palabras.get(ini).getFondo().setLayoutY(posActualY);
-                posActualX = posActualX + palabras.get(ini).getWidth(); // Aumento de la posición X por el espacio usado
-                espacioEnFila = espacioEnFila - palabras.get(ini).getWidth(); // Se resta el espacio usado al disponible
-                ini++;
+            posActualX = posActualX + palabras.get(i).getWidth(); // Aumento de la posición X por el espacio usado
+            espacioEnFila = espacioEnFila - palabras.get(i).getWidth(); // Se resta el espacio usado al disponible
+            if(palabras.get(i).getHeight() > maxY){
+                maxY = palabras.get(i).getHeight();
             }
         }
-        */
+        
     }
     
     public void dibujarPalabra(Palabra palabra){
@@ -564,7 +705,7 @@ public class Dibujar {
     
     public boolean esComan3(char caracter){
         
-        char[] ver = {'a','A','X','Y'};
+        char[] ver = {'a','A','X','Y','T'};
         
         boolean esver = false;
         for (int i=0;i<ver.length;i++){

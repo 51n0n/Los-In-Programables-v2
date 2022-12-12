@@ -203,7 +203,7 @@ public class Estilos {
             double sin = Math.sin(rad);
             double cos = Math.cos(rad);     
 
-            if(a>360){
+            if(a>360){//10000 -360  88000<360
                 while(a>360){
                     a=a-360;
                 }
@@ -251,4 +251,52 @@ public class Estilos {
         palabra.getFondo().setTranslateY(palabra.gettY());
     }
     
+    public void tamaño(Palabra palabra){
+        
+        if(palabra.isT()){
+            
+            int tr = palabra.getTr();
+            
+            switch(tr){
+                case 12 :
+                    palabra.getFondo().setScaleX(1.2);
+                    palabra.getFondo().setScaleY(1.2);
+                    palabra.setWidth(palabra.getWidth()*1.2);
+                    palabra.setHeight(palabra.getHeight()*1.2);
+                    break;
+                case 14 :
+                    palabra.getFondo().setScaleX(1.5);
+                    palabra.getFondo().setScaleY(1.5);
+                    palabra.setWidth(palabra.getWidth()*1.5); // + ((palabra.getWidth()*1.5 - palabra.getWidth())/2)
+                    palabra.setHeight(palabra.getHeight()*1.5);
+                    break;
+                case 16:   
+                    palabra.getFondo().setScaleX(1.8);
+                    palabra.getFondo().setScaleY(1.8);
+                    palabra.setWidth(palabra.getWidth()*1.8);
+                    palabra.setHeight(palabra.getHeight()*1.8);
+                    break;
+                case 18:
+                    palabra.getFondo().setScaleX(2.1);
+                    palabra.getFondo().setScaleY(2.1);
+                    palabra.setWidth(palabra.getWidth()*2.1);
+                    palabra.setHeight(palabra.getHeight()*2.1);
+                    break;
+                case 20 :
+                    palabra.getFondo().setScaleX(2.4);
+                    palabra.getFondo().setScaleY(2.4);   
+                    palabra.setWidth(palabra.getWidth()*2.4);
+                    palabra.setHeight(palabra.getHeight()*2.4);
+                    break;
+                case 22 :  
+                    palabra.getFondo().setScaleX(2.7);
+                    palabra.getFondo().setScaleY(2.7);   
+                    palabra.setWidth(palabra.getWidth()*2.7);
+                    palabra.setHeight(palabra.getHeight()*2.7);
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 }
