@@ -295,11 +295,11 @@
          <center>
             <AnchorPane minHeight="100.0" minWidth="214.0" prefHeight="500.0" prefWidth="1070.0" BorderPane.alignment="CENTER">
                <children>
-                  <BorderPane minHeight="100.0" minWidth="214.0" prefHeight="500.0" prefWidth="1070.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <BorderPane minHeight="100.0" minWidth="214.0" prefHeight="500.0" prefWidth="1030.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <center>
                         <AnchorPane minHeight="90.0" minWidth="214.0" prefHeight="450.0" prefWidth="1070.0">
                            <children>
-                              <AnchorPane fx:id="lienzo" minHeight="90.0" minWidth="214.0" prefHeight="450.0" prefWidth="1070.0" style="-fx-background-color: lightgray; -fx-border-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <AnchorPane fx:id="lienzo" layoutX="-137.0" minHeight="90.0" minWidth="214.0" prefHeight="579.0" prefWidth="1275.0" style="-fx-background-color: lightgray; -fx-border-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-137.0" AnchorPane.rightAnchor="-138.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </center>
