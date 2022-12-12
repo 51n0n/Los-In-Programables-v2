@@ -486,10 +486,20 @@ public class Dibujar {
         
         // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
         for (int i=0;i<palabras.size();i++){
-            dibujarPalabra(palabras.get(i));
+            //dibujarPalabra(palabras.get(i));
             estilos.rotarPalabra(palabras.get(i));
             estilos.traslación(palabras.get(i));
             estilos.tamaño(palabras.get(i));
+            if(palabras.get(i).esEspacio()&& i+1<palabras.size() && i>0){
+                if(palabras.get(i+1).isS()&& palabras.get(i-1).isS()){
+                    if((!palabras.get(i-1).isA() &&!palabras.get(i-1).is_a())&& !palabras.get(i-1).isX()&&!palabras.get(i-1).isY()&&!palabras.get(i-1).isT()){
+                        if((!palabras.get(i+1).isA() &&!palabras.get(i+1).is_a())&& !palabras.get(i+1).isX()&&!palabras.get(i+1).isY()&&!palabras.get(i+1).isT()){
+                            palabras.get(i).setS(true);
+                        }
+                    }
+                }
+            }
+            dibujarPalabra(palabras.get(i));
         }
         
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas

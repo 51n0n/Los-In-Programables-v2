@@ -58,9 +58,9 @@ public class CrearCaracteres {
                 cubicaA2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaA1.setRotate(7);
-                    cubicaA2.setRotate(7);
-                    lineaA.setRotate(7);
+                    cubicaA1.setRotate(9);
+                    cubicaA2.setRotate(9);
+                    lineaA.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaA1,cubicaA2,lineaA);
@@ -139,9 +139,9 @@ public class CrearCaracteres {
                 lineaÁ1.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaÁ1.setRotate(7);
-                    cubicaÁ2.setRotate(7);
-                    lineaÁ.setRotate(7);
+                    cubicaÁ1.setRotate(9);
+                    cubicaÁ2.setRotate(9);
+                    lineaÁ.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaÁ1,cubicaÁ2,lineaÁ, lineaÁ1);
@@ -220,10 +220,10 @@ public class CrearCaracteres {
                 cubicaB4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaB1.setRotate(7);
-                    cubicaB2.setRotate(7);
-                    cubicaB3.setRotate(7);
-                    cubicaB4.setRotate(7);
+                    cubicaB1.setRotate(9);
+                    cubicaB2.setRotate(9);
+                    cubicaB3.setRotate(9);
+                    cubicaB4.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaB1,cubicaB2,cubicaB3,cubicaB4);
@@ -292,9 +292,9 @@ public class CrearCaracteres {
                 cubicaC3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaC1.setRotate(7);
-                    cubicaC2.setRotate(7);
-                    cubicaC3.setRotate(7);
+                    cubicaC1.setRotate(9);
+                    cubicaC2.setRotate(9);
+                    cubicaC3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaC1,cubicaC2,cubicaC3);
@@ -369,10 +369,10 @@ public class CrearCaracteres {
                 cubicaD4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaD1.setRotate(7);
-                    cubicaD2.setRotate(7);
-                    cubicaD3.setRotate(7);
-                    cubicaD4.setRotate(7);
+                    cubicaD1.setRotate(9);
+                    cubicaD2.setRotate(9);
+                    cubicaD3.setRotate(9);
+                    cubicaD4.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaD1,cubicaD2,cubicaD3,cubicaD4);
@@ -449,10 +449,10 @@ public class CrearCaracteres {
                 cubicaE4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaE1.setRotate(7);
-                    cubicaE2.setRotate(7);
-                    cubicaE3.setRotate(7);
-                    cubicaE4.setRotate(7);
+                    cubicaE1.setRotate(9);
+                    cubicaE2.setRotate(9);
+                    cubicaE3.setRotate(9);
+                    cubicaE4.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaE1,cubicaE2,cubicaE3,cubicaE4);
@@ -538,10 +538,10 @@ public class CrearCaracteres {
                 lineaÉ.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaÉ1.setRotate(7);
-                    cubicaÉ2.setRotate(7);
-                    cubicaÉ3.setRotate(7);
-                    cubicaÉ4.setRotate(7);
+                    cubicaÉ1.setRotate(9);
+                    cubicaÉ2.setRotate(9);
+                    cubicaÉ3.setRotate(9);
+                    cubicaÉ4.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaÉ1,cubicaÉ2,cubicaÉ3,cubicaÉ4,lineaÉ);
@@ -628,11 +628,11 @@ public class CrearCaracteres {
                 lineaF2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaF1.setRotate(7);
-                    cubicaF2.setRotate(7);
-                    cubicaF3.setRotate(7);
-                    lineaF1.setRotate(7);
-                    lineaF2.setRotate(7);
+                    cubicaF1.setRotate(9);
+                    cubicaF2.setRotate(9);
+                    cubicaF3.setRotate(9);
+                    lineaF1.setRotate(9);
+                    lineaF2.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaF1,cubicaF2,cubicaF3,lineaF1,lineaF2);
@@ -702,9 +702,9 @@ public class CrearCaracteres {
                 cubicaG3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaG1.setRotate(7);
-                    cubicaG2.setRotate(7);
-                    cubicaG3.setRotate(7);
+                    cubicaG1.setRotate(9);
+                    cubicaG2.setRotate(9);
+                    cubicaG3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaG1,cubicaG2,cubicaG3);
@@ -778,10 +778,10 @@ public class CrearCaracteres {
                 lineaH.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaH1.setRotate(7);
-                    cubicaH2.setRotate(7);
-                    cubicaH3.setRotate(7);
-                    lineaH.setRotate(7);
+                    cubicaH1.setRotate(9);
+                    cubicaH2.setRotate(9);
+                    cubicaH3.setRotate(9);
+                    lineaH.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaH1,cubicaH2,cubicaH3,lineaH);
@@ -849,9 +849,9 @@ public class CrearCaracteres {
                 cubicaI3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaI1.setRotate(7);
-                    cubicaI2.setRotate(7);
-                    cubicaI3.setRotate(7);
+                    cubicaI1.setRotate(9);
+                    cubicaI2.setRotate(9);
+                    cubicaI3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaI1,cubicaI2,cubicaI3);
@@ -926,9 +926,9 @@ public class CrearCaracteres {
                 lineaÍ.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaÍ1.setRotate(7);
-                    cubicaÍ2.setRotate(7);
-                    cubicaÍ3.setRotate(7);
+                    cubicaÍ1.setRotate(9);
+                    cubicaÍ2.setRotate(9);
+                    cubicaÍ3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaÍ1,cubicaÍ2,cubicaÍ3,lineaÍ);
@@ -996,9 +996,9 @@ public class CrearCaracteres {
                 cubicaJ3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaJ1.setRotate(7);
-                    cubicaJ2.setRotate(7);
-                    cubicaJ3.setRotate(7);
+                    cubicaJ1.setRotate(9);
+                    cubicaJ2.setRotate(9);
+                    cubicaJ3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaJ1,cubicaJ2,cubicaJ3);
@@ -1074,10 +1074,10 @@ public class CrearCaracteres {
                 cubicaK4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaK1.setRotate(7);
-                    cubicaK2.setRotate(7);
-                    cubicaK3.setRotate(7);
-                    cubicaK4.setRotate(7);
+                    cubicaK1.setRotate(9);
+                    cubicaK2.setRotate(9);
+                    cubicaK3.setRotate(9);
+                    cubicaK4.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaK1,cubicaK2,cubicaK3,cubicaK4);
@@ -1145,9 +1145,9 @@ public class CrearCaracteres {
                 cubicaL3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaL1.setRotate(7);
-                    cubicaL2.setRotate(7);
-                    cubicaL3.setRotate(7);
+                    cubicaL1.setRotate(9);
+                    cubicaL2.setRotate(9);
+                    cubicaL3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaL1,cubicaL2,cubicaL3);
@@ -1229,11 +1229,11 @@ public class CrearCaracteres {
                 cuadraticaM.setStrokeLineJoin(StrokeLineJoin.ROUND);     
                 
                 if (palabra.isK()){
-                    cubicaM1.setRotate(7);
-                    cubicaM2.setRotate(7);
-                    cubicaM3.setRotate(7);
-                    cubicaM4.setRotate(7);
-                    cuadraticaM.setRotate(7);
+                    cubicaM1.setRotate(9);
+                    cubicaM2.setRotate(9);
+                    cubicaM3.setRotate(9);
+                    cubicaM4.setRotate(9);
+                    cuadraticaM.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaM1,cubicaM2,cubicaM3,cubicaM4,cuadraticaM);
@@ -1311,12 +1311,12 @@ public class CrearCaracteres {
                 cubicaN4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaN1.setRotate(7);
-                    cubicaN2.setRotate(7);
-                    cubicaN3.setRotate(7);
-                    cubicaN4.setRotate(7);
-                }
+                    cubicaN1.setRotate(9);
+                    cubicaN2.setRotate(9);
+                    cubicaN3.setRotate(9);
+                    cubicaN4.setRotate(9);
                 
+                }
                 fondo.getChildren().addAll(cubicaN1,cubicaN2,cubicaN3,cubicaN4);
                 
                 if (palabra.isN()){
@@ -1398,9 +1398,9 @@ public class CrearCaracteres {
                 cubicaÑ5.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaÑ1.setRotate(7);
-                    cubicaÑ2.setRotate(7);
-                    cubicaÑ3.setRotate(7);
+                    cubicaÑ1.setRotate(9);
+                    cubicaÑ2.setRotate(9);
+                    cubicaÑ3.setRotate(9);
                     cubicaÑ4.setRotate(7);
                     cubicaÑ5.setRotate(7);
                 }
@@ -1472,9 +1472,9 @@ public class CrearCaracteres {
                 cubicaO3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaO1.setRotate(7);
-                    cubicaO2.setRotate(7);
-                    cubicaO3.setRotate(7);
+                    cubicaO1.setRotate(9);
+                    cubicaO2.setRotate(9);
+                    cubicaO3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaO1,cubicaO2,cubicaO3);
@@ -1549,9 +1549,9 @@ public class CrearCaracteres {
                 lineaÓ.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaÓ1.setRotate(7);
-                    cubicaÓ2.setRotate(7);
-                    cubicaÓ3.setRotate(7);
+                    cubicaÓ1.setRotate(9);
+                    cubicaÓ2.setRotate(9);
+                    cubicaÓ3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaÓ1,cubicaÓ2,cubicaÓ3,lineaÓ);
@@ -1619,9 +1619,9 @@ public class CrearCaracteres {
                 cubicaP3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaP1.setRotate(7);
-                    cubicaP2.setRotate(7);
-                    cubicaP3.setRotate(7);
+                    cubicaP1.setRotate(9);
+                    cubicaP2.setRotate(9);
+                    cubicaP3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaP1,cubicaP2,cubicaP3);
@@ -1696,10 +1696,10 @@ public class CrearCaracteres {
                 cubicaQ4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaQ1.setRotate(7);
-                    cubicaQ2.setRotate(7);
-                    cubicaQ3.setRotate(7);
-                    cubicaQ4.setRotate(7);
+                    cubicaQ1.setRotate(9);
+                    cubicaQ2.setRotate(9);
+                    cubicaQ3.setRotate(9);
+                    cubicaQ4.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaQ1,cubicaQ2,cubicaQ3,cubicaQ4);
@@ -1775,10 +1775,10 @@ public class CrearCaracteres {
                 cubicaR4.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaR1.setRotate(7);
-                    cubicaR2.setRotate(7);
-                    cubicaR3.setRotate(7);
-                    cubicaR4.setRotate(7);
+                    cubicaR1.setRotate(9);
+                    cubicaR2.setRotate(9);
+                    cubicaR3.setRotate(9);
+                    cubicaR4.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaR1,cubicaR2,cubicaR3,cubicaR4);
@@ -1846,9 +1846,9 @@ public class CrearCaracteres {
                 cubicaS3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaS1.setRotate(7);
-                    cubicaS2.setRotate(7);
-                    cubicaS3.setRotate(7);
+                    cubicaS1.setRotate(9);
+                    cubicaS2.setRotate(9);
+                    cubicaS3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaS1,cubicaS2,cubicaS3);
@@ -1914,9 +1914,9 @@ public class CrearCaracteres {
                 cubicaT3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaT1.setRotate(7);
-                    cubicaT2.setRotate(7);
-                    cubicaT3.setRotate(7);
+                    cubicaT1.setRotate(9);
+                    cubicaT2.setRotate(9);
+                    cubicaT3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaT1,cubicaT2,cubicaT3);
@@ -1982,9 +1982,9 @@ public class CrearCaracteres {
                 cuadraticaU.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaU1.setRotate(7);
-                    cubicaU2.setRotate(7);
-                    cuadraticaU.setRotate(7);
+                    cubicaU1.setRotate(9);
+                    cubicaU2.setRotate(9);
+                    cuadraticaU.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaU1,cubicaU2,cuadraticaU);
@@ -2059,9 +2059,9 @@ public class CrearCaracteres {
                 lineaÚ.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaÚ1.setRotate(7);
-                    cubicaÚ2.setRotate(7);
-                    cuadraticaÚ.setRotate(7);
+                    cubicaÚ1.setRotate(9);
+                    cubicaÚ2.setRotate(9);
+                    cuadraticaÚ.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaÚ1,cubicaÚ2,cuadraticaÚ,lineaÚ);
@@ -2129,9 +2129,9 @@ public class CrearCaracteres {
                 cubicaV3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaV1.setRotate(7);
-                    cubicaV2.setRotate(7);
-                    cubicaV3.setRotate(7);
+                    cubicaV1.setRotate(9);
+                    cubicaV2.setRotate(9);
+                    cubicaV3.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaV1,cubicaV2,cubicaV3);
@@ -2213,11 +2213,11 @@ public class CrearCaracteres {
                 cubicaW5.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 
                 if (palabra.isK()){
-                    cubicaW1.setRotate(7);
-                    cubicaW2.setRotate(7);
-                    cubicaW3.setRotate(7);
-                    cubicaW4.setRotate(7);
-                    cubicaW5.setRotate(7);
+                    cubicaW1.setRotate(9);
+                    cubicaW2.setRotate(9);
+                    cubicaW3.setRotate(9);
+                    cubicaW4.setRotate(9);
+                    cubicaW5.setRotate(9);
                 }
                 
                 fondo.getChildren().addAll(cubicaW1,cubicaW2,cubicaW3,cubicaW4,cubicaW5);
@@ -2287,9 +2287,9 @@ public class CrearCaracteres {
                 cubica2X.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 //TIPOS
                 if (palabra.isK()){
-                    cubicasX.setRotate(7);
-                    cubica1X.setRotate(7);
-                    cubica2X.setRotate(7);
+                    cubicasX.setRotate(9);
+                    cubica1X.setRotate(9);
+                    cubica2X.setRotate(9);
                 }
                 fondo.getChildren().addAll(cubicasX,cubica1X,cubica2X);
                 if (palabra.isN()){
@@ -2367,11 +2367,11 @@ public class CrearCaracteres {
                 cubica4Y.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubica4Y.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 if (palabra.isK()){
-                    cubicasY.setRotate(7);
-                    cubica1Y.setRotate(7);
-                    cubica2Y.setRotate(7);
-                    cubica3Y.setRotate(7);
-                    cubica4Y.setRotate(7);
+                    cubicasY.setRotate(9);
+                    cubica1Y.setRotate(9);
+                    cubica2Y.setRotate(9);
+                    cubica3Y.setRotate(9);
+                    cubica4Y.setRotate(9);
                 }   
                 fondo.getChildren().addAll(cubicasY,cubica2Y,cubica1Y,cubica3Y,cubica4Y);
                 if (palabra.isN()){
@@ -2445,10 +2445,10 @@ public class CrearCaracteres {
                 cubica3Z.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubica3Z.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 if (palabra.isK()){
-                    cubicasZ.setRotate(7);
-                    cubica1Z.setRotate(7);
-                    cubica2Z.setRotate(7);
-                    cubica3Z.setRotate(7);
+                    cubicasZ.setRotate(9);
+                    cubica1Z.setRotate(9);
+                    cubica2Z.setRotate(9);
+                    cubica3Z.setRotate(9);
                 }
                 fondo.getChildren().addAll(cubicasZ,cubica1Z,cubica2Z,cubica3Z);
                 if (palabra.isN()){
@@ -2510,9 +2510,9 @@ public class CrearCaracteres {
                 cubicaa2.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicaa2.setStrokeLineJoin(StrokeLineJoin.ROUND); 
                 if (palabra.isK()){
-                    cubicaa.setRotate(7);
-                    cubicaa1.setRotate(7);
-                    cubicaa2.setRotate(7);
+                    cubicaa.setRotate(9);
+                    cubicaa1.setRotate(9);
+                    cubicaa2.setRotate(9);
                 }
                 fondo.getChildren().addAll(cubicaa,cubicaa1,cubicaa2);
                 if (palabra.isN()){
@@ -2580,9 +2580,9 @@ public class CrearCaracteres {
                 lineaá.setStrokeLineCap(StrokeLineCap.ROUND);
                 lineaá.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 if (palabra.isK()){
-                    cubicaá.setRotate(7);
-                    cubicaá1.setRotate(7);
-                    cubicaá2.setRotate(7);
+                    cubicaá.setRotate(9);
+                    cubicaá1.setRotate(9);
+                    cubicaá2.setRotate(9);
                 }
                 fondo.getChildren().addAll(cubicaá,cubicaá1,cubicaá2,lineaá);
                 if (palabra.isN()){
@@ -2652,10 +2652,10 @@ public class CrearCaracteres {
                 cubicab3.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicab3.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 if (palabra.isK()){
-                    cubicab.setRotate(7);
-                    cubicab1.setRotate(7);
-                    cubicab2.setRotate(7);
-                    cubicab3.setRotate(7);
+                    cubicab.setRotate(9);
+                    cubicab1.setRotate(9);
+                    cubicab2.setRotate(9);
+                    cubicab3.setRotate(9);
                 }
                 fondo.getChildren().addAll(cubicab,cubicab1,cubicab2,cubicab3);  
                 if (palabra.isN()){
@@ -2709,8 +2709,8 @@ public class CrearCaracteres {
                 cubicac1.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicac1.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 if (palabra.isK()){
-                    cubicac.setRotate(7);
-                    cubicac1.setRotate(7);
+                    cubicac.setRotate(9);
+                    cubicac1.setRotate(9);
                 }
                 fondo.getChildren().addAll(cubicac,cubicac1);
                 if (palabra.isN()){
@@ -2768,9 +2768,9 @@ public class CrearCaracteres {
                 cubicad2.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicad2.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 if (palabra.isK()){
-                    cubicad.setRotate(7);
-                    cubicad1.setRotate(7);
-                    cubicad2.setRotate(7);
+                    cubicad.setRotate(9);
+                    cubicad1.setRotate(9);
+                    cubicad2.setRotate(9);
                 }
                 fondo.getChildren().addAll(cubicad, cubicad1,cubicad2);
                 if (palabra.isN()){
@@ -2822,8 +2822,8 @@ public class CrearCaracteres {
                 cubicae1.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicae1.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 if (palabra.isK()){
-                    cubicae.setRotate(7);
-                    cubicae1.setRotate(7);
+                    cubicae.setRotate(9);
+                    cubicae1.setRotate(9);
                 }
                 fondo.getChildren().addAll(cubicae,cubicae1);
                 if (palabra.isN()){
@@ -2881,8 +2881,8 @@ public class CrearCaracteres {
                 lineaé.setStrokeLineCap(StrokeLineCap.ROUND);
                 lineaé.setStrokeLineJoin(StrokeLineJoin.ROUND);
                 if (palabra.isK()){
-                    cubicaé.setRotate(7);
-                    cubicaé1.setRotate(7);
+                    cubicaé.setRotate(9);
+                    cubicaé1.setRotate(9);
                 }
                 fondo.getChildren().addAll(cubicaé,cubicaé1,lineaé);
                 if (palabra.isN()){
@@ -2943,9 +2943,9 @@ public class CrearCaracteres {
                 cubicaf2.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicaf2.setStrokeLineJoin(StrokeLineJoin.ROUND);   
                 if (palabra.isK()){
-                    cubicaf.setRotate(7);
-                    cubicaf1.setRotate(7);
-                    cubicaf2.setRotate(7);
+                    cubicaf.setRotate(9);
+                    cubicaf1.setRotate(9);
+                    cubicaf2.setRotate(9);
                 }
                 fondo.getChildren().addAll(cubicaf,cubicaf1,cubicaf2);
                 if (palabra.isN()){
@@ -3013,10 +3013,10 @@ public class CrearCaracteres {
                 cubicag3.setStrokeLineCap(StrokeLineCap.ROUND);
                 cubicag3.setStrokeLineJoin(StrokeLineJoin.ROUND); 
                 if (palabra.isK()){
-                    cubicag.setRotate(7);
-                    cubicag1.setRotate(7);
-                    cubicag2.setRotate(7);
-                    cubicag3.setRotate(7);
+                    cubicag.setRotate(9);
+                    cubicag1.setRotate(9);
+                    cubicag2.setRotate(9);
+                    cubicag3.setRotate(9);
                 }    
                 fondo.getChildren().addAll(cubicag,cubicag1,cubicag2,cubicag3);  
                 if (palabra.isN()){
@@ -4523,7 +4523,9 @@ public class CrearCaracteres {
                 
                 return fondo;
             case ' ':
-                
+                if (palabra.isS()){
+                    estilos.subrayado(caracter, fondo);
+                }
                 return fondo;
             case '!':
                 Ellipse elipse = new Ellipse(1, 20);
