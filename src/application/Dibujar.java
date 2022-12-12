@@ -7,6 +7,7 @@ package application;
 import java.util.ArrayList;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
 
 public class Dibujar {
     
@@ -486,7 +487,7 @@ public class Dibujar {
         
         // Crear objetos de dibujo en interfaz con estilos asignados | Al Final: Palabras dibujadas con estilos y sin posición
         for (int i=0;i<palabras.size();i++){
-            //dibujarPalabra(palabras.get(i));
+            dibujarPalabra(palabras.get(i));
             estilos.rotarPalabra(palabras.get(i));
             estilos.traslación(palabras.get(i));
             estilos.tamaño(palabras.get(i));
@@ -495,11 +496,17 @@ public class Dibujar {
                     if((!palabras.get(i-1).isA() &&!palabras.get(i-1).is_a())&& !palabras.get(i-1).isX()&&!palabras.get(i-1).isY()&&!palabras.get(i-1).isT()){
                         if((!palabras.get(i+1).isA() &&!palabras.get(i+1).is_a())&& !palabras.get(i+1).isX()&&!palabras.get(i+1).isY()&&!palabras.get(i+1).isT()){
                             palabras.get(i).setS(true);
+                            Line sub = new Line();
+                            sub.setStartX(30);
+                            sub.setLayoutX(0);
+                            sub.setLayoutY(55);
+                            sub.setStroke(colorActual);
+                            palabras.get(i).getFondo().getChildren().add(sub);
                         }
                     }
                 }
             }
-            dibujarPalabra(palabras.get(i));
+            //dibujarPalabra(palabras.get(i));
         }
         
         // Posicionar objetos de dibujo | Al Final: Palabras posicionadas
